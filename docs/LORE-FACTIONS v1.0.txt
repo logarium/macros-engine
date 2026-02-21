@@ -1,0 +1,136 @@
+LORE-FACTIONS v1.0
+(FACTION LORE DOCUMENT • CANONICAL • PLAYER-AUTHORED)
+Source: 43 years of campaign play, player notes, session history
+Authority: This document is canonical for faction history, culture, internal politics, key figures, and long-term agendas. Search this document when narration touches on faction motivations, inter-faction tensions, historical grievances, or political context. For current faction mechanical state (zone control, active clocks, recent moves), use NSV-DELTA and NSV-FACTIONS. For NPC portrayal within factions, use LORE-NPCS.
+
+FOUNDATIONAL FACTIONS (from NSV-FACTIONS)
+BLACKTOOTH ORCS
+Type: They are very traditional and all they want is to be left alone in their forest to be at peace and hunt and sing and drum and eat the special mushroom and commune with the ancestors and dance the dance of their people. Although their initial contact was hostile, Lithoe's fireball impressed them and they struck an alliance with the Gammarians. They trade. They send gifts. They welcome respectful visitors. If you cross them, they will wear your face as a trophy. Just saying.
+History: Have been here for over 6000 years, live completely at one with their forest.
+Territory: Blacktooth Forest (6000+ years of occupation).
+Current state (NSV-DELTA): Active. No offscreen actions resolved. Status unknown.
+Relationships: Despise Hill Scavengers who strip Khuzduk ruins. Remember the Khuzduk dwarves when nobody else does.
+
+BLOODSWAMP HOBGOBLINS
+Type: Local, entrenched. Quiet, stealthy hunters, rangers, trackers. Nomads settled in swamps generations ago.
+History: Helped Gammaria in early years. Careful isolation in Sighing Swamps depths. Uneasy co-existence.
+Territory: Deep Swamps / Sighing Swamps.
+Current state: Active. No offscreen actions resolved. Status unknown.
+
+CHILDREN OF THE DEAD GODS
+Type: Ancient, clandestine. Ordered diabolists. Servants of the bound Dead Gods of Krovekëa.They hide within all manner of organisations, communicating covertly through trained carrier pigeons.
+History: Present since pre-Gammarian ages - small cults drawn to the wilderness by the lore of the Dead Gods. Work with precision and secrecy to weaken ancient bindings. Seek the release of the Dead Gods — the most primordial and catastrophic threat on Erroth.
+Canonical truth (restricted): Krovekëa was dark sister-world, destroyed by Enigma Crystal; Dead Gods are final survivors.
+Current state: Active. No offscreen actions resolved. Status unknown.
+
+CHURCH OF HAADIS
+Type: Global, entrenched. Malevolent, patient, doctrinally absolute. Ancient religion elevated to transnational church. Ruled by Jezrath Hallowsbane in Ellethea - High Reavers have regional control.
+History: Transnational legitimacy-competitor. Unofficially invested in Gammaria through Father Lalholm. Tests moral/jurisdictional boundaries. Officially neutral; slow infiltration; long-horizon pressure. The Church's true concerns are theological - send souls to Haadis by whatever means possible.
+Canonical truth (restricted): Haadis desires to devour souls sent by his Reavers.
+Current state: Active. Testing boundaries. Lalholm's departure from Riverwatch may delay or accelerate jurisdictional push.
+Key NPC: Father Lalholm (companion, with Thoron). The Church's investment is through him whether he likes it or not.
+
+CORRUPTED EDHELLAR
+Type: Degenerate remnants of Edhellar, warped by the diabolical energies of the Dead Gods of Krovekëa. Refugees from Galhennoi, they had been trying to reach Ard Minya after the Bright Conflict but were waylaid on the eastern side of the Vallandor Mountains. Now they are creatures of titanic horror and alien stature. They are mad and evil and warp time and space by their mere presence. A single Edhellar could lay waste to half of Gammaria - and no one knows what they want.
+History: Destroyers of earlier cultures (exterminated People of the Henge ~1500 AS). Corrupted by Krovekëan seepage ~1100 AS. Scattered, monstrous. Active existential threat.
+Current state: Active, hostile. Confirmed in both Eastern and Western Scarps. Wyvern matriarch killed. Ridgeline sighting (Old Maren: "they only kill if you run"). Dimensional instability worsening.
+Canon: Humanity is descended from the remnants of the Kal Therryn (restricted to Corrupted Edhellar knowledge only).
+
+CULT OF ORCUS
+Type: Global, clandestine (local cells). Apocalyptic demon-worshippers. Came with first settlers. Started as small-scale cult that came from Corlaine in Parandia. Possibly invited secretly by Suzanne of Corlaine or called by Yor-Kazh. 
+History: Embedded since founding era. Corrupts existing institutions from within. Predatory outsider; tolerated nowhere, rooted in Seawatch ossuaries.
+Canonical truth (restricted): Orcus seeks the Enigma Moon.
+Current state: Active. No offscreen actions resolved. Status unknown.
+Key NPC: Suzanne of Corlaine (companion, with Thoron). Suzanne serves Orcus not by choice but because the alternative is the annihilation of her soul. Yor-Kazh the Unholy Reaver feeds on death.
+
+FREE HOPE MERCHANTS
+Type: Small mercantile league. Idealistic, reformist traders. Anti-Golden Hind reaction.
+History: Formed to resist exploitative bulk trade. Ideological enemies of Golden Hind. Favoured by Gammaria but structurally weak.
+Founding detail: Free Hope merchant drovers arrived from Torlec via Whiteagle Pass during clearing expedition (Jestrim 15th, 14501); began domesticating cattle. They were among the first civilian economic actors in Gammaria.
+Current state: Active, strained. Competing with Golden Hind. Mara Vence completed grain delivery to Caras (Session 3).
+Key NPCs: Mara Vence (Grey Plains, grain merchant). Torva Selk (Riverlands barge operator — notes Golden Hind running without lights).
+
+GNOME CLANS OF FURDACH
+Type: Independent. Militarised tunnel fighters. Migrated from south after a perpetually losing war with the golbins of Gloatburrow. Provide trade and logistical support to Gammaria in return for military aid and protection - cheerfully transactional about it.
+History: Helped found Gammaria. Independent gnome enclave. Neutral/transactional; potential allies or adversaries.
+Territory: Furdach (underground enclave), Furdach Forest (surface territory — patrol-enforced).
+Current state: Active. No offscreen actions resolved. Status unknown.
+
+GOLDEN HIND MERCHANTS
+Type: Active mercantile. Opportunistic trade consortium; cattle drovers, bulk suppliers. Origin: Imperial Torlec.
+History: Arrived during clearing expedition (Reapmere 4th, 14501) — 20 merchants, 20 drovers, 50 mercenaries, 9th level fighter, 6th level lieutenant, 12× 2nd level guards, 8th level wizard. Trading base permitted; protection promised for commission. Came from Torlec to make money. Increasing influence in Caras (food security). Tolerated but distrusted — Torlec soft power vector.
+Current state: Active, aggressive expansion. Undercutting prices; possible customs anomaly involvement. Golden Hind running without lights on the river (Torva Selk).
+Key NPCs: Valania Lorethor is embedded deep cover in Golden Hind networks in Caras underlayers. Drover Pellan (Grey Plains) reports Golden Hind undercutting; lost cattle to bandits.
+Discovery: Customs Records Anomaly (UA-03) — certain merchant vessels pass inspection unusually fast; identical clearance stamps across multiple clerks; possible stamp forgery.
+
+HIDDEN TEMPLE
+Type: Transcontinental clandestine order. The Hidden Temple is based in Ellethea, in the Reiget Cities, where it combines the temples of Thule and Demetrion (see LORE-WORLD for details) - deceit and justice. The Hidden Temple comprises shadow-clerics, sacred assassins, demon-hunters, and contracts-for-hire. They are particularly focused on rooting out the activity of the Cult of Orcus.
+History: Deniable node in Caras underlayers; conditional service. Anti-demon mandate overlaps local threats; mercenary risk persists.
+Current state: Active. No offscreen actions resolved. Status unknown.
+Clocks (four total):
+Key connection: Valania's findability requires triggering Hidden Temple contact, infiltrating Golden Hind operations, or invoking covert signals in Caras merchant quarter.
+
+IMPERIAL TORLEC
+Type: Established empire. Bureaucratic, expansionist. Western imperial power.
+History: Regional hegemon to the west. Adjacent, watchful. External pressure and refuge source. Tallak was a client state of Torlec before the founding. The Dammaresh Accords (14020 AS) marked Torlec's height; borders peaked 14025 AS.
+Current state: Active. No offscreen actions resolved. Status unknown.
+Connections: Golden Hind as soft power vector. Vallandor Mountains as border (House Vallandor patrols). Whiteagle Keep guards the chief pass. Riverwatch guards the waterborne route through the mountain locks. Torlec envoys arrive at Fort Seawatch and Whiteagle Keep.
+Key canon: Lord Talgar Vallandor (cruel, feared, aggressive). King Morguth of Naërmann covertly backed Thoron during the founding.
+
+IRONMASK COUNCIL
+Type: Ambitious cabal. Loyal to Tirris Vargol above Gammaria; all seek personal gain; internal strife. Shadow-Council within Gammaria — knowledge of existence restricted.
+History: While Thoron was away "adventuring," Tirris Vargol decided he would make a better Helkar. The Council are his secret allies. Vargol is Thoron's oldest companion — they were rolled up as D&D characters on the same day in 1983.
+Current state: Active, advancing. Vargol positioning as successor. Agent dispatched to Caras to assess Conorth (Session 3).
+Key NPC: Tirris Vargol @ Whiteagle Keep. Elf, iron mask. OBJ: seize throne. Unaware of Thoron's return.
+Relationship: Tirris Vargol → Thoron: envy (secret). Oldest friend, now bitter rival.
+Unresolved thread: Tirris Vargol's coup; Ironmask agent en route to Caras (medium priority).
+
+KHUZDUK (dead culture)
+Type: Dead culture with active sites. Dwarven kingdom with lost colonies. Ancient builders.
+History: Metaphysical catastrophe shattered realm. Ruins and isolated holdouts persist. Wounded ally remembered chiefly by Blacktooth Orcs. Dwarves agreed to guard eastern approaches during founding (Jestrim 15th, 14501).
+Territory: Khuzduk Hills (ruins, cairn paths), Khuzduk Peaks (deep ruins, wards), Khuzdukan (ruined citadel).
+Current state: Active (as sites). No offscreen actions resolved.
+
+LOST SETTLERS
+Type: These are the remants of the first wave of settlers who continued to push east but failed to make purchase. A few hamlets. A few holdouts. A few hermits.
+History: Overrun by Krovekëan corruption and Shadow Horrors. Ruins, revenants, warnings, and rare survivors persist. Source of unresolved guilt for Gammaria.
+Current state: Active (dispersed remnants). No offscreen actions resolved. Status unknown.
+Canon: Land beyond the East Marches is intrinsically hostile (public truth).
+
+NATION OF GAMMARIA
+Type: Emerging border state. Militarised survival polity. Founded by Thoron and companions.
+History: First durable human realm in region. Expanding outward from Caras and Vornost. Actively contesting hostile wilderness. Founded 14501 AS. Census 14502: Military 1,574, Tallaki 1,433, Settler 4,017, Total 7,024 (excluding PCs).
+Current state: Active, responsive. Joppa tracking Thoron east; Conorth tightening Caras gates; Bale crisis at Vanguard; patrols active.
+Structure: Helkar (King = Thoron), Tirris (High Council member = Vargol), Castellan (oversees location = Joppa at Vornost, Conorth at Caras, Bale at Fort Vanguard, Merrow Kest at Seawatch, Harren Vael at Riverwatch).
+
+PEOPLE OF THE ZIGGURAT
+Type: Fallen/undead remnants. Void-worshippers. Jun-Mu refugees of the Void Wars.
+History: Introduced voidbeasts and fell lore. Undead masters persist. Source of lingering undead dominion.
+Current state: Active (fallen/undead remnants). No offscreen actions resolved. Status unknown.
+Canon connection: Voidwar ziggurats with undead masters (~7500 AS).
+
+RAVENROOST BRIGANDS
+Type: Local. Predatory survivors. Criminals fleeing justice. They dwell in an abandoned tower on the River of Stone (runs east from Gammaria), built by a forgotten builder - this is Ravenroost, so called because of the dozens of ravens that return there at the end of each day. Best way to find them? Follow the ravens.
+History: Desperate, condemned. East March, Floodplain, further east. Survive through raiding, terrain-knowledge, avoidance. Openly hunted; face cults, patrols, and frontier horrors.
+Current state: Active, aggressive. Coordinated Grey Plains raids; spring exploitation; possible organized leadership (UA-02).
+Key NPC: Captain Rendal (Grey Plains, grizzled cavalry) — protecting caravans, suppressing bandits, requesting reinforcements.
+Unresolved thread: Bandit coordination in Grey Plains; possible organized leadership (UA-02, medium).
+
+SUNDANCER DERVISHES
+Type: Pilgrim-warriors. Martial dance-combat trance. Ancient pre-Temple tradition.
+History: Predate Temple of the Sun. Periodically weaponised by rival nomads. Unsettling but tolerated along Temple roadways.
+Current state: Active. No offscreen actions resolved. Status unknown.
+Splinter group: Penitent's Way Wardens (see below).
+Key NPC: Pilgrim Ossar (Eastern Scarps) — sunburned, barefoot, saffron robe, prayer cord. Serene, stubborn. Walking his pilgrimage through wyvern territory. ML=10.
+
+USH'N'ELTHAR NOMADS
+Type: Semi-settled. Solar-lunar heretics. Schism from Ush'n'Taalgith.
+History: Teach that the moon is dragged by the sun on an obsidian barge. Condemned as apostates. Dismissed by Gammaria as "weird sun people," distinctions ignored. 800 encountered during clearing expedition (Evernew 12th, 14501) — fled a tribal war from lands NE of the River Koss. Initially testy, but Helkar's high charisma won them over. 200 male warriors offered citizenship and places of honour in the army; they accepted.
+Current state: Active. No offscreen actions resolved. Status unknown.
+Conflict: Doctrinal clashes with Ush'n'Taalgith at Temple of the Sun.
+
+USH'N'TAALGITH NOMADS
+Type: Settled. Sun-worshippers. Refugees from religious war with Ush'n'Elthar.
+History: Teach that the sun is dragged by the moon on a silver chariot. Helped settle and found Gammaria. Live as Gammarians, retain tribal ways. Rich tradition, ethnic strife. Dismissed by Gammaria as "weird sun people," distinctions ignored.
+Current state: Active. No offscreen actions resolved. Status unknown.
+Conflict: Same doctrinal fracture as above.

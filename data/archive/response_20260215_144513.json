@@ -1,0 +1,33 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Party travelling Grey Plains to Khuzduk Hills, not at Seawatch/Riverwatch. ADV bullet not met.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "NPAG",
+      "content": "4 NPCs resolved per medium intensity 2d4=4",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "NPAG 25 Ilrym: Ironmask Agent Deryth @ Caras \u2014 fourth meeting with Conorth secured; presented forged trade route documents; Conorth interested but cautious; agent assessing whether to accelerate timeline"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG 25 Ilrym: Lithoe @ Khuzdukan \u2014 counter-sequence breakthrough achieved (trigger fired); viable sequence identified; testing on minor rune-chain fragment; Lalholm providing theological framework for soul-unbinding component"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG 25 Ilrym: Thordak Ironbrow @ Khuzdukan \u2014 tremors steady; ward-chamber secured; received Lithoe's breakthrough report; cautiously optimistic; preparing deep halls access for counter-sequence deployment"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG 25 Ilrym: Conorth @ Caras \u2014 reviewed Vael customs evidence; irregularities confirmed; ordered investigation into Golden Hind caravan routes; does not yet connect evidence to Ironmask operations"
+        }
+      ]
+    }
+  ]
+}

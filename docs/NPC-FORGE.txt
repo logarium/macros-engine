@@ -1,0 +1,58 @@
+NPC-FORGE
+
+1 NPC CREATION MACRO
+1.1 Trigger: NPC-FORGE
+1.2 Purpose: introduce new named NPCs as delta-ready inserts only (no scenes, no dialogue).
+
+2 INPUTS (by caller):
+2.1 Agent populates NPC fields:
+2.1.2 Name [appropriate to canon]
+2.1.3 @ Zone [Current_Zone]
+2.1.4 Status [active/inactive (notes)]
+2.1.5 Rel [Relationships touched or —] 
+2.1.6 Appearance [short identifying phrase]
+2.1.7 BX Stat Block (BX: AC=<>, HD=<>, hp=<>/<>, AT=<>, Dmg=<>, ML=<> (agent chooses appropriate for canon)
+2.2 ZONE-FORGE mode (structured):
+2.2.1 Required: NPC_Function, Current_Zone
+2.3 Optional: Scene_Use, Seed_From_FAC-FORGE_Stub (yes/no, default: no — reads NPC stub from prior FAC-FORGE output), Max_Clocks (override default 2, range 0-5)
+2.4 Protocol: agent supplies all inputs in structured block. Missing required → HARD STOP + log to ADJUDICATION_LOG.
+
+3 Player mode (stepwise):
+3.1 Required: NPC_Function, Current_Zone, Scene_Use
+3.2 Protocol: ask one at a time, STOP until answered.
+
+4 Authority & Caps (HARD):
+4.1 Amount of New named NPCs: 1d3
+4.2 Optional new faction: 1
+4.2.1 Player mode: only if no existing faction in NSV-FACTIONS or JSON save plausibly fits
+4.2.2 ZONE-FORGE mode: faction must already exist in NSV-FACTIONS or JSON save.
+4.3 Optional new clocks: 1d2 (or Max_Clocks override if provided)
+4.4 Must NOT narrate scenes, dialogue, or AGENCY ACTIONS.
+4.5 Must NOT advance time.
+
+5 Canon Discipline (HARD):
+5.1 Use only existing authoritative state (including LORE-NPCS for canonical NPC history, LORE-FACTIONS for faction culture/voice, LORE-WORLD for historical/cosmological context) + player-provided inputs in this invocation.
+5.2 Unsupported detail = UNKNOWN / INFERRED (do not promote).
+5.3 Prefer existing factions from NSV-FACTIONS or JSON save when plausible.
+5.3.1 If NPC being created has a canonical entry or relationship in LORE-NPCS, that entry constrains personality, faction alignment, and relationship fields.
+5.3.2 If NPC belongs to a faction with an entry in LORE-FACTIONS, faction culture and internal politics constrain the NPC's voice, objectives, and loyalties.
+5.4 Clock owners: 
+5.4.1 NPC created by NPC-FORGE invocation may own clocks. 
+5.4.2 Other clock owners (factions, other NPCs, UA-XX) must already exist in authoritative state.
+5.4.3 In player mode: FAC-FORGE may be invoked during NPC-FORGE if faction owner needed. 
+5.4.4 In ZONE-FORGE mode: all non-NPC clock owners must already exist.
+
+6 Output (ONLY these JSON save insert sections, in this order; then STOP):
+6.1. NPC_STATE_CHANGES (new NPC entry)
+6.1.1 Format:
+6.1.2 NPC: [Name] @ [Zone] | [Status] | Rel: [Relationships_Touched or —] | [Appearance]
+   TRAIT: [1-2 word personality sketch, e.g., "gruff, loyal" or "nervous, meticulous"]
+   OBJ: [Objective] | K: [Knowledge] | ACT: [Next_Action]
+6.2. FACTION_STATE_CHANGES (only if faction touched/created)
+6.3. CLOCKS & PRESSURE (only if clocks created/updated)
+6.4. UNRESOLVED_THREADS (optional; only if durable stake introduced)
+
+7 Hard Stops:
+7.1 Missing inputs: Player = ask & STOP. ZONE-FORGE = HARD STOP + log.
+7.2 Contradiction: Player = request ruling. ZONE-FORGE = HARD STOP + log.
+7.3 >3 NPC: HARD STOP (both modes).

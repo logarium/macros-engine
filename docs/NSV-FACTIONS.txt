@@ -1,0 +1,96 @@
+NSV-FACTIONS v3.0
+
+FACTIONS (FOUNDATIONAL / HISTORICAL)
+
+RELATIONSHIPS (FOUNDATIONAL / HISTORICAL)
+
+FACTIONS (FOUNDATIONAL / HISTORICAL)
+FAC: Blacktooth Orcs | Local, entrenched | Warrior-culture, tolerant, proud | Aboriginal co-founders
+Hist: Proud co-founders loyal to Helkar | Hunting in Blacktooth Forest, trading in Caras | Proud co-founders
+
+FAC: Bloodswamp Hobgoblins | Local, entrenched | Quiet, stealth, hunters, rangers, trackers | Nomads settled in swamps generations ago
+Hist: Helped Gammaria in early years | Careful isolation in Sighing Swamps depths | Uneasy co-existence
+
+FAC: Children of the Dead Gods | Ancient, clandestine | Ordered diabolists | Servants of the bound Dead Gods of Krovekëa
+Hist: Present since pre-Gammarian ages | Work with precision and secrecy to weaken ancient bindings | Seek the release of the Dead Gods, the most primordial and catastrophic threat on Erroth
+
+FAC: Church of Haadis | Global, entrenched | Malevolent, patient, doctrinally absolute | Ancient religion elevated to transnational church
+Hist: Transnational legitimacy-competitor | Unofficially invested through Father Lalholm; tests moral/jurisdictional boundaries | Officially neutral; slow infiltration; long-horizon pressure
+
+FAC: Corrupted Edhellar | Degenerate remnants | Diabolically warped elven progenitors | Refugees from Galhennoi
+Hist: Destroyers of earlier cultures | Scattered, monstrous | Active existential threat
+
+FAC: Cult of Orcus | Global, clandestine (local cells) | Apocalyptic demon-worshippers | Came with first settlers
+Hist: Embedded since founding era | Corrupts existing institutions from within | Predatory outsider; tolerated nowhere, rooted Seawatch ossuaries
+
+FAC: Free Hope Merchants | Small mercantile league | Idealistic, reformist traders | Anti–Golden Hind reaction
+Hist: Formed to resist exploitative bulk trade | Ideological enemies of Golden Hind | Favoured by Gammaria but structurally weak
+
+FAC: Gnome Clans of Furdach | Independent | Militarised tunnel fighters | Migrated from south
+Hist: Helped found Gammaria | Independent gnome enclave | Neutral/transactional; potential allies or adversaries
+
+FAC: Golden Hind Merchants | Active mercantile | Opportunistic trade consortium; cattle drovers, bulk suppliers | Imperial Torlec
+Hist: Came from Torlec to make money | Increasing influence in Caras (food security) | Tolerated but distrusted; Torlec soft power vector
+
+FAC: Hidden Temple | Transcontinental clandestine order | Ellethean agents  | Shadow-clerics; sacred assassins; demon-hunters; contracts-for-hire | Deniable node in Caras underlayers; conditional service | Anti-demon mandate overlaps local threats; mercenary risk persists
+
+FAC: Imperial Torlec | Established empire | Bureaucratic, expansionist | Western imperial power
+Hist: Regional hegemon to west | Adjacent, watchful | External pressure and refuge source
+
+FAC: Ironmask Council | Ambitious cabal | Loyal to Tirris Vargol above Gammaria, all seek personal gain, internal strife | Shadow-Council within Gammaria – knowledge of existence restricted (Tirris Vargol, Ironmask Council)
+Hist: While Thoron was away from Gammaria “adventuring”, Tirris Vargol decided he would make a better Helkar. The Council are his secret allies.
+
+FAC: Khuzduk | Dead culture with active sites | Dwarven kingdom with lost colonies | Ancient builders
+Hist: Metaphysical catastrophe shattered realm | Ruins and isolated holdouts persist | Wounded ally remembered chiefly by Blacktooth Orcs
+
+FAC: Lost Settlers | Dispersed remnants | Early Gammarian settlers | First eastward wave
+Hist: Overrun by Krovekëan corruption and Shadow Horrors | Ruins, revenants, warnings, and rare survivors persist | Source of unresolved guilt for Gammaria
+
+FAC: Nation of Gammaria | Emerging border state | Militarised survival polity | Founded by Thoron and companions
+Hist: First durable human realm in region | Expanding eastward from Fort Vanguard | Actively contesting hostile wilderness
+
+FAC: People of the Ziggurat | Fallen/undead remnants | Void-worshippers | Jun-Mu refugees of Void Wars
+Hist: Introduced voidbeasts and fell lore | Undead masters persist | Source of lingering undead dominion
+
+FAC: Ravenroost Brigands | Local | Predatory survivors | Criminals fleeing justice
+Hist: Desperate, condemned, East March, Floodplain, further east | Survive through raiding, terrain-knowledge, avoidance | Openly hunted; face cults, patrols, and frontier horrors
+
+FAC: Sundancer Dervishes | Pilgrim-warriors | Martial dance–combat trance | Ancient pre-Temple tradition
+Hist: Predate Temple of the Sun | Periodically weaponised by rival nomads | Unsettling but tolerated along Temple roadways
+
+FAC: Ush’n’Elthar Nomads | Semi-settled | Solar–lunar heretics | Schism from Ush’n’Taalgith
+Hist: Teach that moon is dragged by sun on obsidian barge | Condemned as apostates | Dismissed by Gammaria as “weird sun people,” distinctions ignored
+
+FAC: Ush'n'Taalgith Nomads | Settled | Sun-worshippers | Refugees from religious war with Ush’n’Elthar
+Hist: Teach that sun dragged by moon on silver chariot | Helped settle and found Gammaria | Live as Gammarians, retain tribal ways | rich tradition, ethnic strife | Dismissed by Gammaria as “weird sun people,” distinctions ignored
+
+
+
+RELATIONSHIPS (FOUNDATIONAL / HISTORICAL)
+
+REL: Thoron ↔ Valania Lorethor | romance | restricted | —
+State: love | Trust: high | Loyalty: mutual | Unbreakable couple, not married
+
+REL: Lithoe Wano-Kan → Guldur Emeldyr | unrequited love | secret | —
+State: love | Trust: high | Loyalty: Lithoe to Guldur | (none yet)
+
+REL: Father Lalholm → Suzanne of Corlaine | lust | secret | —
+State: attraction | Trust: low | Loyalty: none | (none yet)
+
+REL: Thoron ↔ Father Lalholm | friendship | restricted | —
+State: like | Trust: high | Loyalty: none | (none yet)
+
+REL: Thoron ↔ Guldur Emeldyr | friendship | public | —
+State: like | Trust: moderate | Loyalty: Guldur to Thoron | (none yet)
+
+REL: Valania Lorethor ↔ Lithoe Wano-Kan | friendship | restricted | —
+State: attraction | Trust: high | Loyalty: none | (none yet)
+
+REL: Lithoe Wano-Kan → Thoron | rivalry | secret | —
+State: dislike | Trust: low | Loyalty: none | Lithoe believes she'd make better leader
+
+REL: Tirris Vargol → Thoron | envy | secret | —
+State: dislike | Trust: low | Loyalty: none | Oldest friend, now bitter rival
+
+
+

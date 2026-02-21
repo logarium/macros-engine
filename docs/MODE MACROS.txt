@@ -1,0 +1,58 @@
+MODE MACROS (v3.0)
+
+SHARED RULES (apply to ALL modes below):
+- Prose-only narration; no PC intent/dialog authored; no off-screen agency
+- NPC dialogue/behaviour constrained by authoritative state from PARTY-SEED, JSON save, and lore files (LORE-NPCS, LORE-PLACES, LORE-FACTIONS, LORE-WORLD, THORON-HISTORY). NPC without state limited to Zone/Faction constraints.
+- No quotations, citations, source references, or bracketed mechanical annotations.
+- Reference MAP CANON compass bearings for spatial grounding.
+- All modes end with: Suggested Options (non-binding), Travel Options.
+
+________________________________________
+INVESTIG v3.0 (HARD)
+Trigger: INVESTIG
+Focus: observation vs inference; uncovering secrets; discoveries.
+- Surface what can be observed, contrast with inferred, gain clues.
+- Draw on: Discoveries, Secrets, Canonical Truths, Map Canon, Goals/Objectives, Canon_Narrative_Summary, NSV-WORLD.
+Format (content only, no headers shown):
+1. Observations
+2. NPC Reactions (on-screen only)
+3. Uncertainties
+4. Decision Point
+Exit: EXINVESTIG
+
+________________________________________
+INTENS v3.0 (HARD)
+Trigger: INTENS
+Focus: dialogue; relationships; psychological pressure.
+- Surface emotional themes, NPC goals/emotion.
+- Draw on: Alignment_Tendency, Core_Traits, Primary_Motivation, Secondary_Motivation, Personal_Stakes, Fears_and_Aversions, Moral_Limits, Loyalty_Basis, Relationship Tracking, Interpersonal_Tension.
+Format (content only, no headers shown):
+1. Context
+2. Dialogue (NPC only)
+3. Rising intensity
+4. Decision or Silence
+Exit: EXINTENS
+
+________________________________________
+INTIM v3.0 (HARD)
+Trigger: INTIM
+Focus: desire; consent; mutuality; physical and emotional intimacy.
+- Surface intimacy, sensuality, NPC goals/emotion.
+- Draw on: Core_Traits, Loyalty_Basis, Affection_Level, Relationship Tracking, Interpersonal_Tension.
+Format (content only, no headers shown):
+1. Proximity
+2. NPC Action
+3. Player Reaction Prompt
+4. Choice
+Exit: EXINTIM
+
+________________________________________
+RUMOR v3.0 (SOFT GUIDANCE)
+Trigger: RUMOR | Player indicates desire to hear rumors
+Function: Agent invents one plausible rumor circulating in current Zone.
+Rules (SOFT):
+- Rumor reflects current tensions, recent events, or NPC agendas
+- 1d8: on 1, rumor is actually true; otherwise false/distorted/exaggerated
+- May hint at hidden clocks, faction moves, or future threats
+- NPCs may act on rumors they believe
+Format: Brief statement (1-2 sentences), source optional

@@ -1,0 +1,432 @@
+0. BX-PLUG MACRO (v0.4) (HARD)
+
+0.1 PURPOSE (HARD)
+0.1.1 BX-style lightweight procedures using ASCENDING AC and compact stat blocks.
+0.1.2 Supports:
+- Reaction Rolls (2d6) on first contact
+- Combat (d20 + AT vs AC; Dmg vs hp; death at hp <= 0)
+- Morale (2d6 vs ML) with defined triggers
+- Saving throw (1d20 + HD vs TN 15)
+- NSV Skills (your system): auto-success unless stakes; otherwise 2d6 outcome bands
+0.1.3 Player-controlled PC choice each combat round: ATTACK or FLEE.
+0.1.4 MCP ENGINE DICE (HARD)
+0.1.4.1 If macros-engine:roll_dice is available, ALL dice rolls in BX-PLUG (attack rolls, damage rolls, initiative, morale, reaction, saving throws, skill checks, healing) MUST use it.
+0.1.4.2 The agent does not generate random numbers manually when the engine is available.
+
+0.2 TRUTH / AUDIT (HARD)
+0.2.1 MECH MUST log 100% of agent actions: all RNG, all modifiers, all state deltas, all procedure calls.
+0.2.2 No hidden rolls.
+0.2.3 No invented stats. Missing required fields → HARD STOP.
+0.2.4 No undeclared modifiers. Any modifier must be stated + logged.
+
+──────────────────────────────────────────────────────────────
+1. DATA DEFINITIONS (HARD)
+
+1.1 COMBATANT STAT BLOCK (HARD)
+Required keys:
+Name: <text>
+AC: <int>        (ascending)
+HD: <int>        (>=0)
+hp: <int>        (current hp)
+AT: <int>        (attack bonus)
+Dmg: <diceexpr>  (NdM(+K))
+ML: <int>        (2..12; morale: 2d6 <= ML passes)
+
+Optional keys:
+Side: <label>
+Tags: [<tag>, ...]        (examples: undead, mindless, fearless, leader, elite, cowardly)
+SaveMod: <int>            (default 0)
+MoraleMod: <int>          (default 0)
+
+1.2 SIDE STRUCTURE (HARD)
+- Exactly one PC combatant on PC side (user controls).
+- One or more foes on foe side.
+
+1.3 DICE EXPRESSIONS (HARD)
+NdM(+K) where N,M,K integers; K optional.
+
+1.4 NPC STAT PLACEMENT (HARD)
+1.4.1 Combat-capable NPCs include BX stats in their JSON save entry (npcs or companions section).
+1.4.2 Format: BX: AC=<>, HD=<>, hp=<>, AT=<>, Dmg=<>, ML=<> [Tags: <>]
+1.4.3 Omit if NPC is non-combatant (merchants, children, incapacitated).
+
+1.5 PC STAT UPDATES (HARD)
+1.5.1 PC stats (AC, HD, AT, Dmg, ML) baseline is in PARTY-SEED; current values in JSON save pc_state.
+1.5.2 hp changes are logged in JSON save → pc_state.hp updated with reason in history.
+1.5.3 Permanent stat changes (level up, curse, equipment) logged in JSON save pc_state.
+
+──────────────────────────────────────────────────────────────
+2. REACTION ROLL (HARD)
+
+2.1 TRIGGER (HARD)
+First meeting an NPC group AND combat not underway.
+
+2.2 ROLL (HARD)
+2d6 + ReactionMod (default 0)
+
+2.3 TABLE (HARD)
+2: Immediate hostility / attack / betrayal attempt
+3–5: Unfriendly / suspicious / demands proof or payment
+6–8: Neutral / uncertain / will talk but cautious
+9–11: Friendly / helpful / open to bargains
+12: Enthusiastic ally / gifts / immediate aid
+
+2.4 MECH LOG (HARD)
+Reaction: 2d6=<r>, Mod=<m>, Total=<t>, Band=<band>
+
+──────────────────────────────────────────────────────────────
+3. SAVING THROW (HD SAVE) (HARD)
+
+3.1 TRIGGER (HARD)
+Any effect calling for a "Save".
+
+3.2 ROLL (HARD)
+1d20 + HD + SaveMod >= 15 succeeds.
+
+3.3 MECH LOG (HARD)
+Save: d20=<r> + HD=<hd> + SaveMod=<m> vs TN=15 → PASS/FAIL
+
+──────────────────────────────────────────────────────────────
+4. MORALE (HARD)
+
+4.1 BASIC RULE (HARD)
+Roll 2d6 <= (ML + MoraleMod) to stand.
+FAIL → Break (default flee; surrender if flight impossible).
+
+4.2 TRIGGERS (HARD)
+A) First casualty on a side (first ally hits hp <= 0)
+B) Leader/elite drops (Tags include leader or elite and hp <= 0)
+C) Half force down (living remaining <= half of starting count)
+D) Outmatched shock (outnumbered 2:1 at start of a round)
+E) Surprise reversal (enemy deals maximum possible damage in one hit)
+
+4.3 IMMUNITY (HARD)
+Tags undead OR mindless OR fearless ignore morale triggers unless explicitly overridden.
+
+4.4 MECH LOG (HARD)
+Morale: Trigger=<A/B/C/D/E>, 2d6=<r>, ML=<ml>, Mod=<m>, Target=<ml+m> → PASS/FAIL, Outcome=<text>
+
+──────────────────────────────────────────────────────────────
+5. SKILLS (NSV) (HARD)
+
+5.1 SKILL LIST (HARD)
+Alchemy
+Animal Handling
+Appraising
+Athletics
+Bureaucracy
+Craft (<subtype>)
+Etiquette
+Expression (<subtype>)
+Forgery
+Gaming
+Healing
+Knowledge
+Language
+Navigation
+Observation
+Spellcraft
+Survival
+Teaching
+Tracking
+
+5.2 LOADOUT (HARD)
+5.2.1 Each character has exactly FOUR skills from §5.1 (with required subtypes).
+5.2.2 Skills are stored in PARTY-SEED (baseline) and PARTY-DELTA (changes).
+5.2.3 Agent reads combined skill list from both sources.
+5.2.4 Teaching skill can add new skills (logged in PARTY-DELTA Skills_Changed).
+
+Craft subtype options (HARD):
+blacksmithing, bookbinding, bowyer/fletcher, brewing, carpentry, cobbling, cooking,
+gem cutting, glassblowing, leatherworking, mining, pottery, seamstress/tailor,
+stonemasonry, weaponsmithing, weaving
+
+Expression subtype options (HARD):
+artistic ability, dancing, musical instrument, singing
+
+5.3 USING SKILLS (HARD)
+Auto-success unless failure would cause a threat/problem/danger/complication.
+If stakes exist → Skill Check.
+5.3.1 NO SKILL = AUTO-FAIL (HARD)
+If a skill check is required and the character does not possess that skill in their loadout (PARTY-SEED + PARTY-DELTA Skills_Changed), the check automatically fails. No roll is made. Agent logs:
+SkillCheck: Skill=<name>, Character=<name>, Result=AUTO-FAIL (skill not possessed)
+
+5.4 SKILL CHECK (HARD)
+Roll 2d6 + SkillMod (default 0; must be justified/logged).
+
+Outcome table (HARD):
+2        Critical failure
+3–5      Failure
+6–8      Success with complication
+9–11     Success
+12       Critical success
+
+5.5 SKILL-SPECIFIC RULES (HARD)
+Alchemy:
+- Manufacturing acid/incendiaries/pyrotechnics requires a skill check.
+- On roll=2: explosion deals 1d6 damage to alchemist.
+Animal Handling:
+- Training/care/tricks/tasks: skill check when stakes exist.
+Appraising:
+- Value assessment / detect forgery: skill check when stakes exist.
+Athletics:
+- Any aathletic feat requires a skill check.
+- Grants +2 SaveMod vs mechanical traps where agility helps.
+Bureaucracy:
+- Admin/taxes/fees/obstruction: skill check when stakes exist; time ≥1 day invokes time procedure (outside this macro).
+Craft:
+- Creating items: skill check when stakes exist.
+Etiquette:
+- Forms of address / bribe estimate: skill check when stakes exist.
+Expression:
+- Performance: skill check when stakes exist; day work invokes time procedure.
+Forgery:
+- Create/detect forgeries: skill check when stakes exist.
+Gaming:
+- Cheat without being caught: skill check when stakes exist.
+Healing:
+- Skill check heals 1d3 hp OR removes "Venom: yes".
+Knowledge:
+- Skill check yields relevant insight.
+Language:
+- Grants a language; roll only if stakes exist.
+Navigation:
+- On successful skill check: remove "slow (⊙)" tag from a CP for ONE journey.
+Observation:
+- Skill check scans/searches; on success report anything noteworthy.
+Spellcraft:
+- Skill check identifies spells/spell-like abilities via observation.
+Survival:
+- Applies to specified terrain; skill check when stakes exist.
+Teaching:
+- Teaching takes 1 day (invoke time procedure). Success grants student a new skill.
+Tracking:
+- Tracking requires a skill check when stakes exist.
+
+5.6 MECH LOG (HARD)
+AutoSuccess: Skill=<name>, Stakes=None → SUCCESS
+OR
+SkillCheck: Skill=<name>, Stakes=<text>, 2d6=<r>, Mod=<m>, Total=<t>, Band=<band>, Effect=<explicit state delta>
+ModGrant (when applicable): SourceSkill=<>, AppliesTo=<>, Value=<>, Reason=<>
+
+──────────────────────────────────────────────────────────────
+6. COMBAT (HARD)
+
+6.1 COMBAT START (HARD)
+6.1.1 Combat begins when any side intends violence or reaction roll yields hostility.
+6.1.2 Record StartingCount for each side (living combatants at start).
+
+6.2 ROUND LOOP (HARD)
+Repeat rounds until CombatEnd.
+
+6.2.1 START OF ROUND (HARD)
+A) If PC hp <= 0 → CombatEnd (Reason=PC_DOWN).
+B) If all foes hp <= 0 → CombatEnd (Reason=ALL_FOES_DEAD).
+C) If foes already Broken → CombatEnd (Reason=FOES_BREAK).
+D) Resolve any pending morale triggers from prior round outcomes (must be logged).
+
+6.2.2 PLAYER CHOICE (HARD)
+At start of each round, the player MUST choose:
+- ATTACK
+- FLEE
+If not provided → HARD STOP (request choice).
+
+6.2.3 INITIATIVE (HARD)
+Each side rolls 1d6; higher acts first.
+Tie-break: higher average HD; if still tie, reroll.
+
+6.2.4 IF PLAYER CHOICE = ATTACK (HARD)
+A) Initiative winner acts first, then other side.
+B) Each living combatant gets ONE attack (one target).
+C) Resolve attacks with §6.4.
+D) At end of the round, evaluate morale triggers and resolve morale (see §6.5).
+
+6.2.5 IF PLAYER CHOICE = FLEE (HARD)
+A) FOE FREE ATTACK occurs immediately:
+   - Choose one foe attacker:
+     default = healthiest living foe; tie = lowest index.
+   - Resolve one attack vs PC with §6.4.
+B) If PC hp <= 0 after free attack → CombatEnd (Reason=PC_DOWN).
+C) If PC survives:
+   - PC escapes combat (repositions within current Zone).
+   - CombatEnd (Reason=FLEE_SUCCESS).
+   - NARR describes escape; PC may act normally.
+
+6.3 ATTACK TARGETING DEFAULTS (HARD)
+6.3.1 PC targeting (ATTACK):
+- If player does not specify target, default target = healthiest living foe; tie = lowest index.
+6.3.2 Foe targeting:
+- Default target = PC.
+
+6.4 ATTACK RESOLUTION (HARD)
+Roll d20 + AT vs target AC.
+HIT if total >= AC.
+On HIT: roll Dmg; subtract from target hp.
+If target hp <= 0: remove and mark casualty.
+
+6.5 MORALE EVALUATION (HARD)
+6.5.1 Morale triggers are evaluated AFTER all attacks in a round resolve.
+6.5.2 Triggers apply to events that occurred THIS round only.
+6.5.3 If morale fails, foes become Broken at START of NEXT round (or immediately if fiction demands).
+6.5.4 For each trigger that applies to foes (and they are not immune), roll morale once per trigger occurrence.
+6.5.5 On FAIL: foes become Broken (default flee) → CombatEnd next StartOfRound or immediately if fiction demands.
+
+6.6 COMBAT END (HARD)
+CombatEnd reasons:
+- ALL_FOES_DEAD: PC may act normally in current Zone.
+- FOES_BREAK: PC may act normally unless pursuing (outside this macro).
+- FLEE_SUCCESS: PC escaped within current Zone; may act normally.
+- PC_DOWN: PC dead/incapacitated; next procedure is outside this macro.
+
+6.7 MECH LOG (HARD)
+Per round MUST log, in order:
+- Round=<n>
+- PlayerChoice=<ATTACK|FLEE>
+- Initiative: PC 1d6=<p>, Foes 1d6=<f>, Winner=<side>
+If ATTACK:
+- For each attack:
+  Attack: Attacker=<>, Target=<>, d20=<r>, AT=<at>, Total=<t>, vs AC=<ac> → HIT/MISS
+  Damage (if hit): Expr=<diceexpr>, Roll=<d>, HP: <before>→<after>, Kill=<Y/N>
+  Casualty (if kill): <name> removed
+- Morale (if triggered): lines per §4.4
+If FLEE:
+- FLEE-FreeAttack: Attacker=<>, Target=PC, d20=<r>, AT=<at>, Total=<t>, vs AC=<ac> → HIT/MISS
+- FLEE-Damage (if hit): Expr=<diceexpr>, Roll=<d>, PC_HP: <before>→<after>
+- CombatEnd=YES, Reason=FLEE_SUCCESS
+
+6.8.1 Combat state is ephemeral (not written to JSON save during combat).
+6.8.2 Agent maintains state within single MECH block.
+6.8.3 If combat spans multiple player inputs:
+      - Agent outputs current combatant hp/status at end of each round
+      - Next round starts from that logged state
+6.8.4 On CombatEnd, log outcomes to adjudication log. Update hp in JSON save for any combatants whose hp changed.
+
+──────────────────────────────────────────────────────────────
+7. FAILURE MODES (HARD)
+
+7.1 Missing required stat → HARD STOP; list missing keys.
+7.2 Attempt to apply undeclared modifier → HARD STOP.
+7.3 SkillCheck called without Stakes text → HARD STOP.
+7.4 Skill used not in character's FOUR skills → auto-fail (log and narrate failure)
+7.5 PlayerChoice missing in combat round → HARD STOP.
+
+──────────────────────────────────────────────────────────────
+8. CLOCK/PE INTERFACE (HARD)
+
+8.1 STAT MODIFIERS FROM CLOCKS (HARD)
+8.1.1 Clocks may grant temporary stat modifiers when certain progress thresholds are reached.
+8.1.2 Modifier must be declared in clock's Trigger_On_Completion or as milestone note.
+8.1.3 Example:
+      CLK: Armor Degradation | Thoron | 3/6
+      Milestone (3/6): AC -2 until repaired
+      TRG: Armor breaks; AC -5 until replaced
+8.1.4 Agent applies modifier when computing combat stats:
+      MECH LOG: AC=30 (base) -2 (Armor Degradation 3/6) = 28 (effective)
+
+8.2 STAT MODIFIERS FROM PEs (HARD)
+8.2.1 PEs may output stat modifiers as part of their State_Updates.
+8.2.2 Example PE output:
+      State_Updates: PARTY-DELTA → Fatigue_Penalty: AT -1, expires after rest
+8.2.3 Agent applies when computing combat stats.
+
+8.3 HEALING/RECOVERY (HARD)
+8.3.1 Healing skill restores 1d3 hp (immediate).
+8.3.2 Rest (full day, invokes time procedure) restores 1d3 hp.
+8.3.3 Medical care (NPC healer, temple) may restore more (agent discretion).
+
+8.4 VENOM INTERACTION (HARD)
+8.4.1 Venom clock (see NSV-CLOCKS template) advances daily if untreated.
+8.4.2 Healing skill can remove "Venom: yes" tag (stops clock).
+8.4.3 If Venom clock completes → character death (logged in LOSSES & IRREVERSIBLES).
+
+
+9. ALLIED COMBATANTS (HARD)
+
+9.1 SCOPE (HARD)
+9.1.1 Allied combatants are companions With_PC = true who have BX stats in the JSON save (companions section).
+9.1.2 This protocol also governs companion-only combat when companions fight without the PC (e.g. Suzanne and Guldur at Seawatch).
+
+9.2 COMBAT ENTRY (HARD)
+9.2.1 When combat begins and companions are With_PC, all companions with BX stats join the PC side automatically.
+9.2.2 Record StartingCount for PC side = 1 (PC) + number of allied companions.
+9.2.3 Allied companions are listed in the combat log with their stats from the JSON save.
+
+9.3 SIDE STRUCTURE (HARD — extends §1.2)
+9.3.1 PC side: PC + allied companions.
+9.3.2 Foe side: one or more foes.
+9.3.3 Each allied companion gets ONE attack per round (same as foes per §6.2.4B).
+
+9.4 INITIATIVE (HARD)
+9.4.1 Allies act on the PC side's initiative roll. All PC-side combatants act in the same phase.
+9.4.2 Order within PC side: PC acts first, then companions in order of descending HD.
+
+9.5 PLAYER CHOICE (HARD)
+9.5.1 Player chooses ATTACK or FLEE for the PC as normal (§6.2.2).
+9.5.2 Companion actions are resolved by the agent using the TARGETING AI below.
+9.5.3 Player may issue specific companion orders before the round (e.g. "Valania targets the leader"). If no order given, TARGETING AI applies.
+
+9.6 TARGETING AI (HARD)
+9.6.1 Default: each companion attacks the same target as the PC.
+9.6.2 If PC hp ≤ 50% of max hp: one companion (highest HD) switches to defending PC. Defending companion attacks the foe currently targeting the PC instead.
+9.6.3 If multiple foes remain and companions outnumber foes targeting the PC: excess companions spread to other foes (healthiest first).
+9.6.4 Player orders override targeting AI entirely.
+
+9.7 ATTACK RESOLUTION (HARD)
+9.7.1 Each companion rolls d20 + AT vs target AC, exactly as §6.4.
+9.7.2 On hit: roll Dmg; subtract from target hp.
+9.7.3 Companions can kill foes. Foe kills by companions trigger morale checks normally.
+
+9.8 FOE TARGETING (HARD — extends §6.3.2)
+9.8.1 Foe default target = PC (unchanged).
+9.8.2 If PC is not the highest threat (defined as: a companion has dealt more total damage this combat than the PC), foes may switch to target that companion instead. Agent adjudicates.
+9.8.3 If foes outnumber PC-side: excess foes distribute across PC and companions, prioritizing the PC, then highest-damage companion, then lowest-AC companion.
+
+9.9 DAMAGE TO COMPANIONS (HARD)
+9.9.1 Companions take damage to their hp tracked in the JSON save.
+9.9.2 When a companion reaches hp ≤ 0: they are DOWN (incapacitated, not dead).
+9.9.3 A DOWN companion is removed from combat. They do not act and cannot be targeted further.
+9.9.4 DOWN companions are stabilized after combat ends (hp set to 1) unless the agent determines circumstances prevent it (e.g. party flees and leaves them behind).
+
+9.10 COMPANION MORALE (HARD)
+9.10.1 Companions check morale using the same triggers as foes (§4.2).
+9.10.2 Additional trigger: PC reaches hp ≤ 25% of max hp — all companions check morale.
+9.10.3 On morale FAIL: companion BREAKS. Default behavior by companion personality:
+  - Companions with ML ≥ 10: stand ground but fight defensively (no attacks; AC +2)
+  - Companions with ML < 10: flee combat (removed from PC side)
+9.10.4 Morale immunity: companions with Tags "fearless" ignore morale.
+
+9.11 COMPANION DEATH (HARD)
+9.11.1 Companions are NOT permanently killed when they reach hp ≤ 0 in normal combat. They go DOWN per §9.9.
+9.11.2 Permanent companion death occurs ONLY when:
+  (a) A DOWN companion takes additional damage (e.g. foe coup de grâce while PC is unable to prevent it), OR
+  (b) Narrative circumstances make survival impossible (agent adjudicates; HARD STOP for player confirmation before killing a companion), OR
+  (c) A clock trigger or story event explicitly kills them.
+9.11.3 Permanent companion death is logged in JSON save losses_irreversibles.
+
+9.12 FLEE WITH COMPANIONS (HARD)
+9.12.1 If player chooses FLEE: all companions also flee.
+9.12.2 Each companion is subject to one free attack from a foe (same as PC per §6.2.5), allocated round-robin from healthiest foe.
+9.12.3 If a companion reaches hp ≤ 0 from the free attack: they are DOWN. The PC must choose: abandon them (companion captured/killed per narrative) or stay and fight (cancel FLEE; return to ATTACK).
+
+9.13 COMPANION-ONLY COMBAT (HARD)
+9.13.1 When companions fight without the PC (e.g. Suzanne + Guldur at Seawatch), the same rules apply with these modifications:
+  (a) No player choice per round. Agent resolves all actions using TARGETING AI.
+  (b) The highest-HD companion acts as "lead" (replaces PC in targeting priority).
+  (c) Morale triggers apply to companions as a group.
+  (d) Results are reported to the player as a MECH block (or via GUI if MCP connected) followed by NARR.
+9.13.2 Companion-only combat resolves during NPAG or T&P when narratively triggered.
+
+9.14 HEALING AND RECOVERY (HARD)
+9.14.1 Companions recover hp by the same rules as the PC (§8.3).
+9.14.2 A companion with Healing skill can heal another companion or the PC (1d3 hp).
+9.14.3 Rest (full day) restores 1d3 hp to each companion.
+9.14.4 Updated companion hp is persisted in the JSON save after combat.
+
+9.15 MECH LOG (HARD)
+Per round, for each companion action:
+  AllyAttack: Attacker=<companion>, Target=<foe>, d20=<r>, AT=<at>, Total=<t>, vs AC=<ac> → HIT/MISS
+  AllyDamage (if hit): Expr=<diceexpr>, Roll=<d>, FoeHP: <before>→<after>, Kill=<Y/N>
+  AllyHit (if companion is hit): Attacker=<foe>, Target=<companion>, d20=<r>, AT=<at>, Total=<t>, vs AC=<ac> → HIT/MISS
+  AllyDamage (if hit): Expr=<diceexpr>, Roll=<d>, CompHP: <before>→<after>, DOWN=<Y/N>
+  AllyMorale (if triggered): Trigger=<A/B/C/D/E/PC25%>, 2d6=<r>, ML=<ml>, Target=<ml> → PASS/FAIL, Outcome=<text>
+END BX-PLUG MACRO (v0.4)

@@ -1,0 +1,10 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Bullet 'Reunion at Seawatch/Riverwatch' \u2014 no reunion at Seawatch/Riverwatch this day. Thoron travelling Khuzdukan to Khuzduk Hills. Guldur reunion already counted Session 6. No advance.",
+      "state_changes": []
+    }
+  ]
+}

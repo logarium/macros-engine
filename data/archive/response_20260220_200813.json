@@ -1,0 +1,160 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. Party is in Deep Swamps, nowhere near Seawatch or Riverwatch. No reunion event occurred.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "ADVANCE. The Binding Degradation trigger fired: 'Dead God manifests (bound, insane); cult fractures; Orcus +3'. The trigger text explicitly states 'cult fractures' \u2014 the Children of the Dead Gods faction has fractured as a direct consequence of the Dead God manifesting. This constitutes the faction acting (catastrophically) against itself and by extension against Orcus (trigger text says Orcus +3, meaning the cult's collapse benefits Orcus). The faction has taken involuntary but consequential action. ADV bullet satisfied.",
+      "state_changes": [
+        {
+          "type": "clock_advance",
+          "clock": "Cult of Orcus\u2014Enigma Crystal Hunt",
+          "reason": "Children of Dead Gods cult fractured upon Dead God manifestation \u2014 faction acted catastrophically, Orcus gains advantage"
+        }
+      ]
+    },
+    {
+      "id": "req_003",
+      "type": "NPAG",
+      "content": "NPAG \u2014 7 NPC agency actions resolved:\n1. Castellan Joppa (Vornost): Privately sends coded message to Thoron via Valania's network \u2014 'Return to Vornost. The ceremony cannot wait. Conorth moves openly.'\n2. Conorth Baerkudth (Caras): Dispatches envoy to Vargol at Whiteagle Keep \u2014 proposing formal challenge to Helkar succession.\n3. Henric Bale (Fort Vanguard): Tightens patrol rotation after hearing rumors of instability at Vornost. Orders double watch.\n4. Guldur Emeldyr (Khuzduk Hills): Grows restless waiting. Begins asking merchants about road conditions to Vornost.\n5. Lithoe Wano-Kan (Khuzdukan): Counter-sequence monitoring continues. Notes anomalous resonance spike \u2014 something has changed in the binding.\n6. Father Lalholm (Khuzdukan): Receives vision from Haadis during prayer \u2014 the god is pleased by suffering but warns of 'something older stirring.'\n7. Tirris Vargol (Whiteagle Keep): Receives Conorth's envoy. Considers the proposal. The Ironmask Council convenes in secret.",
+      "state_changes": [
+        {
+          "type": "npc_update",
+          "name": "Castellan Joppa",
+          "next_action": "Awaiting Thoron's return; managing Conorth's public challenges"
+        },
+        {
+          "type": "npc_update",
+          "name": "Conorth Baerkudth",
+          "next_action": "Envoy sent to Vargol; awaiting response; public challenge escalating"
+        },
+        {
+          "type": "npc_update",
+          "name": "Lithoe Wano-Kan",
+          "next_action": "Detected anomalous resonance spike in binding; investigating"
+        },
+        {
+          "type": "fact",
+          "text": "Conorth dispatched envoy to Vargol proposing formal succession challenge. Joppa sent coded warning to Thoron via Valania. Lithoe detected anomalous resonance spike in binding."
+        }
+      ]
+    },
+    {
+      "id": "cr_003",
+      "type": "NPC_FORGE",
+      "content": "NPC: Grukka Stillwater @ Deep Swamps | active | Rel: Bloodswamp Hobgoblins | Tall hobgoblin elder, milky left eye, necklace of snake vertebrae, longbow taller than she is\nTRAIT: patient, authoritative\nOBJ: Protect clan territory; maintain isolation from Gammarian expansion | K: Deep Swamps water-paths; location of submerged camps; ancient peat-preserved ruins beneath the mire; knows Skratha Ironjaw as a perimeter scout | ACT: Overseeing fish-trap harvest at clan's hidden camp",
+      "state_changes": [
+        {
+          "type": "npc_create",
+          "name": "Grukka Stillwater",
+          "zone": "Deep Swamps",
+          "role": "Bloodswamp clan elder",
+          "trait": "patient, authoritative",
+          "appearance": "Tall hobgoblin, milky left eye, snake-vertebrae necklace, longbow",
+          "faction": "Bloodswamp Hobgoblins",
+          "objective": "Protect clan territory; maintain isolation",
+          "knowledge": "Deep Swamps water-paths; submerged camps; peat-preserved ruins; knows Skratha",
+          "next_action": "Overseeing fish-trap harvest at hidden camp",
+          "bx_ac": 16,
+          "bx_hd": 3,
+          "bx_hp": 11,
+          "bx_hp_max": 11,
+          "bx_at": 3,
+          "bx_dmg": "1d8",
+          "bx_ml": 10
+        }
+      ]
+    },
+    {
+      "id": "cr_004",
+      "type": "NPC_FORGE",
+      "content": "NPC: Thekk Mudwalker @ Deep Swamps | active | Rel: Bloodswamp Hobgoblins | Young hobgoblin hunter, scarred arms from viper bites, moves barefoot through mire without sound\nTRAIT: reckless, eager\nOBJ: Prove worth to clan by ranging further than any scout | K: Viper nesting grounds; ghoul emergence patterns; has seen strange lights deep in the mire at night | ACT: Tracking something large through the eastern reed beds",
+      "state_changes": [
+        {
+          "type": "npc_create",
+          "name": "Thekk Mudwalker",
+          "zone": "Deep Swamps",
+          "role": "Bloodswamp young hunter",
+          "trait": "reckless, eager",
+          "appearance": "Young hobgoblin, scarred arms, barefoot, silent movement",
+          "faction": "Bloodswamp Hobgoblins",
+          "objective": "Prove worth to clan by ranging further than any scout",
+          "knowledge": "Viper nesting grounds; ghoul emergence patterns; strange lights deep in mire",
+          "next_action": "Tracking something large through eastern reed beds",
+          "bx_ac": 14,
+          "bx_hd": 2,
+          "bx_hp": 12,
+          "bx_hp_max": 12,
+          "bx_at": 2,
+          "bx_dmg": "1d6",
+          "bx_ml": 8
+        }
+      ]
+    },
+    {
+      "id": "cr_005",
+      "type": "NPC_FORGE",
+      "content": "NPC: Pale Urreth @ Deep Swamps | active | Rel: none | Emaciated human hermit, skin bleached white from years without sun, wrapped in rotting linen, speaks to the water\nTRAIT: mad, prophetic\nOBJ: Guard 'the sleeping place' \u2014 refuses to say more | K: Claims the swamp speaks to him; knows locations the hobgoblins avoid; mutters about 'the king beneath' | ACT: Crouching at the edge of a black pool, whispering",
+      "state_changes": [
+        {
+          "type": "npc_create",
+          "name": "Pale Urreth",
+          "zone": "Deep Swamps",
+          "role": "Swamp hermit",
+          "trait": "mad, prophetic",
+          "appearance": "Emaciated, bleached-white skin, rotting linen wrappings",
+          "faction": "none",
+          "objective": "Guard 'the sleeping place'",
+          "knowledge": "Claims the swamp speaks to him; knows locations hobgoblins avoid; mutters about 'the king beneath'",
+          "next_action": "Crouching at edge of black pool, whispering",
+          "bx_ac": 10,
+          "bx_hd": 1,
+          "bx_hp": 6,
+          "bx_hp_max": 6,
+          "bx_at": 1,
+          "bx_dmg": "1d4",
+          "bx_ml": 12
+        }
+      ]
+    },
+    {
+      "id": "cr_006",
+      "type": "EL_FORGE",
+      "content": "NOTE: Deep Swamps already has an EL-DEF registered in NSV-ENGINES (2d6 table, entries 2-12). Same EL-DEF lookup bug as Sighing Swamps. Skipping duplicate creation.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "ENGINE BUG: Deep Swamps EL-DEF exists in NSV-ENGINES but engine reports none. EL_FORGE skipped to avoid duplicate. Existing EL: 2d6, entries 2-12."
+        }
+      ]
+    },
+    {
+      "id": "cr_001",
+      "type": "CLOCK_AUDIT",
+      "content": "no_advance. Party is in Deep Swamps. No reunion at Seawatch/Riverwatch occurred.",
+      "state_changes": []
+    },
+    {
+      "id": "cr_002",
+      "type": "CLOCK_AUDIT",
+      "content": "ADVANCE \u2014 same reasoning as req_002. Binding Degradation trigger fired: Dead God manifests, cult fractures, Orcus +3. Children faction acted catastrophically. However, this clock was ALREADY advanced via req_002 this day. Cannot advance twice in one day per T&P \u00a73.2.2. NO SECOND ADVANCE.",
+      "state_changes": []
+    },
+    {
+      "id": "cr_007",
+      "type": "NARR_ARRIVAL",
+      "content": "The broken causeway crumbles beneath your boots. Stones shift in black water, and what looked solid proves to be little more than memory \u2014 old Gammarian engineering slowly digested by the mire.\n\nYou cross anyway. Valania follows, light-footed where you are heavy, finding the stones that hold.\n\nThe Deep Swamps close around you like a fist.\n\nHere the reed beds rise higher than a mounted man. The water is black and still and gives nothing back \u2014 no reflection, no depth, only surface. Things move beneath it. You hear them. The slow displacement of something large turning in its sleep.\n\nThe air tastes wrong. Not just rot \u2014 something older, something that has been decaying so long it has become its own element. Marsh gas drifts in pale threads. Valania extinguishes the lantern without being told.\n\nSomewhere ahead, in the deep places the hobgoblins claim, fell lights flicker between the rushes. Not fire. Not phosphorescence. Something with intent behind it.\n\nAnd beneath everything \u2014 beneath the midge-drone and the water-lap and the reed-sigh \u2014 a pressure. Not sound. Not quite. A presence, vast and patient, that has been waiting here since before Gammaria was a name spoken by men.\n\nValania touches your arm. She feels it too.\n\n'We shouldn't linger,' she says. Her voice is steady. Her hand on her knife is not.\n\nThe swamp sighs. The whispering isn't the wind.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "Thoron and Valania crossed broken causeway into Deep Swamps on 31 Ilrym. Both sensed oppressive presence in the deep mire. Fell lights observed. Zone is Bloodswamp Hobgoblin territory."
+        }
+      ]
+    }
+  ]
+}

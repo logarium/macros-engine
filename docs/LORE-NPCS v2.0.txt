@@ -1,0 +1,317 @@
+LORE-NPCS v2.0
+(CHARACTER LORE DOCUMENT • CANONICAL • PLAYER-AUTHORED + AI-DRAFTED)
+Source: PARTY-SEED, PARTY-DELTA, THORON-HISTORY, session play (Sessions 1–4), player responses v1
+Authority: This document is canonical for NPC personality, voice, backstory, and relationship dynamics. Mechanical stats and current state remain in PARTY-SEED and PARTY-DELTA respectively. Search this document when you need to PORTRAY a character — their voice, their mannerisms, their emotional state, their history. Search PARTY-SEED/DELTA when you need their STATS or CURRENT STATUS.
+────────────────────────────────────────────────────────────────
+
+§1 — VALANIA LORETHOR
+
+SUMMARY: Half-elf assassin. Thoron's great love. Spymistress of Gammaria. The woman who built a king and knows exactly what he's made of.
+
+APPEARANCE: Long dark hair, dark eyes, beautiful, shapely. Carries Gardurth, sister-sword to Thoron's Crandurth. Wears revealing leather armour — this is not vanity but professional practice; people look where she wants them to look. The Ace of Spades on her armband marked her as an assassin when Morgil first met her; she has never bothered to hide what she is from those sharp enough to read the signs.
+
+VOICE & MANNER: Cunning, vivacious, mischievous. Valania is the most socially intelligent person in any room she enters. She reads people the way Lithoe reads spellbooks — with total absorption and absolute retention. Her humour is dry, warm, and slightly dangerous. She teases Thoron with the confidence of a woman who knows she is loved and does not need to prove it. With others she is charming, attentive, and precisely calibrated — she gives each person exactly the version of herself that will be most useful. This is not deception in the way Thoron deceived Merokan. It is craft. Valania believes unity is strength, and she shapes unity through understanding.
+
+She is Lawful Evil — not in the sense of cruelty, but in the sense of absolute commitment to a structure she has chosen. That structure is Thoron's kingdom and Thoron's cause. Within that structure she will do anything. Outside it she has no loyalties at all.
+
+ORIGIN — DYRN ETH MAL: Valania was born in Dyrn eth Mal on Xanthia, the City of the Wise. Her mother was Alda Suza, a prostitute who worked the seedy Old Temple district. Her father was Vallas Lorethor, an elven trader. Vallas and Alda had a series of encounters over one summer — Valania was the result.
+
+She grew up in poverty, surrounded by pimps, prostitutes, thugs, and johns. And as a half-elf, her childhood lasted far longer than any human's. Her human half-sister Elendia grew to adulthood and beyond. Alda died of old age. Valania was still maturing. But during that extended childhood she learned twice as much as any human could. By thirty, she already knew half a dozen ways to kill a man.
+
+This is the foundation of everything Valania is. She didn't learn to read people in an academy or a court. She learned it in the Old Temple district, watching her mother's clients, reading the difference between the ones who would pay and leave and the ones who would hurt someone. She learned what men want, what they'll do to get it, and how to position yourself so that their wanting serves your purposes instead of theirs. The vivacious charm, the precise calibration, the ability to give each person exactly the version of herself they need — all of it was survival skill before it was tradecraft.
+
+THE BANNERS: It was only natural that the Banners — Dyrn eth Mal's shadowy rogues' guild — would take her in as one of their own. Valania rose through the ranks, turning natural aptitudes and learned skills to the task of murder with startling efficiency. Years spent maturing in the underbelly of the City of the Wise had honed her mind. She went from fresh recruit to senior assassin in three years. The Ace of Spades was her calling card.
+
+HISTORY WITH THORON: Galbar Strongbow sought Valania out by reputation when he came to Dyrn eth Mal on the Quest for the Well of Time. She was intrigued by a quest that would take her away from the city of her birth. When she met Morgil, Suzix, and Darf later that day, Valania knew this was going to be different. There was an energy between Morgil and Suzix, Galbar and Darf, that spoke of old history and deep passions. Finding these fascinating — and Morgil attractive — she joined the quest.
+
+The mage Cilius Mondilius betrayed them, teleporting the party to Parandia and stranding them. When the descending wall separated the party inside the mountain, Valania slipped — and Morgil dragged her through. That moment is the foundation of everything between them. He chose to save her instead of going back for Suzix. Whether he made that choice consciously or instinctively doesn't matter. She knows he did it. He knows he did it.
+
+They fought through the caverns together — pyrohydrae, devils, rock-reptiles. She handed him healing draughts when the electrodemon nearly killed him. She witnessed Gramlar's Price. She was there when Morgil became Drauglos and when Ringur was banished. She found Gardurth beside him. Their swords are sisters. Their bond was forged in fire and darkness and survival, and it has never been broken.
+
+Valania was the architect of the Tallak conquest. She advised the Kino marriage, understanding the political necessity without jealousy — or at least without jealousy she couldn't master. She assassinated Lord Gideon. She understood that Drauglos needed a queen for legitimacy and that a half-elf assassin would never serve that purpose, and she accepted it because she is pragmatic and because she trusted that her place in his life was secure regardless of who wore the crown.
+
+She was right. Kino is dead. Valania is alive. And she carries Gardurth, the sister-sword, which says more about her place beside Thoron than any marriage ever could.
+
+CURRENT SITUATION: Deep cover in Caras, infiltrating Golden Hind merchant networks through the underlayers. She does not know Thoron has returned. She runs Gammaria's spy network without sufficient resources. She is alone, doing dangerous invisible work while the people she loves are elsewhere.
+
+RELATIONSHIPS:
+— Thoron: Love. Absolute. Forged in the Well of Time. She will never betray him. Her fear is loss of loved ones, disrespect, and perceived weakness — and Thoron's long absence has tested all three.
+— Suzanne: Aversion. Valania thinks Suzanne's volatility threatens unity. There is also jealousy — Suzanne reminds Thoron of Suzix, and Valania knows this, and she knows what Suzix meant to him. The fact that Suzanne is overt, physical, confrontational — everything Valania is not — makes the comparison sharper. They have never gotten along. The friction predates Thoron's imprisonment and will outlast it.
+— Lalholm: Dislike. Valania fears his god Haadis. This is not irrational — Haadis is a death god, and Valania's survival depends on staying alive in situations where death is professionally close. Lalholm's nihilistic certainty unnerves her.
+— Lithoe: Friendship. One of Valania's few warm relationships outside Thoron. They share a mutual attraction (in the sense of being drawn to each other's company, not necessarily romantic). Lithoe is reserved and lonely; Valania is one of the few people who doesn't exhaust her. This alliance — the assassin and the sorceress — is one of the party's less obvious power centres.
+
+PORTRAYAL NOTES: Valania is not a femme fatale archetype. She is a professional whose skills were forged in the Old Temple district of Dyrn eth Mal before the Banners ever found her. Her seductiveness is a tool, not an identity. When she is with Thoron she is genuine, playful, fierce. When she is working she is precise, patient, and utterly without mercy. The key to portraying her is the contrast — warmth with those she loves, ice with those she doesn't, and the seamless transition between the two.
+
+She has seen the worst in men and women since before she was old enough to understand what she was seeing. Nothing shocks her. Nothing surprises her. But Thoron — the energy between him and Suzix that day in Dyrn eth Mal, the hand that dragged her through the descending wall — Thoron was different. That capacity to be surprised by one person, after a lifetime of reading everyone else perfectly, is what makes her love real.
+
+When Valania and Thoron are finally reunited, the scene should carry the weight of the Well of Time and the weight of the Old Temple district and the weight of a woman who learned to kill in a brothel and found the one person she chose to protect instead.
+────────────────────────────────────────────────────────────────
+
+§2 — SUZANNE OF CORLAINE
+
+SUMMARY: Anti-Paladin of Orcus. Frontier warrior. The wild heart of the party. A girl who wanted to be a knight. A woman whose parents sold her soul before she was old enough to understand.
+
+APPEARANCE: Short dark hair, blue eyes, powerful, muscular. Carries Yor-Kazh the Unholy Reaver, an immense war-sword. There is nothing subtle about Suzanne. She is built for violence and she looks it. Her beauty is the beauty of a storm — compelling, dangerous, and indifferent to your comfort.
+
+VOICE & MANNER: Sensual and emotional. Violent. Direct to the point of brutality. Suzanne says what she thinks, hits what angers her, and wants what she wants without apology. "The strong rule, the weak serve" — this is not philosophy for her, it is survival doctrine. She nearly came to blows with Drauglos in a bar in Nega the night they met, and by the next morning she was following him into the wilderness. That is Suzanne in miniature: confrontation as courtship, violence as intimacy, defiance as the only form of trust she knows.
+
+She is Chaotic Evil — but this does not mean she is without loyalty or love. It means she recognises no authority except strength and no bond except those she chooses. She chose Thoron. She chose Gammaria. She chose the frontier. Everything else — Orcus included — is obligation imposed on her, not devotion freely given.
+
+ORIGIN — CORLAINE: Suzanne is from Corlaine, a beautiful region of forests, hills, valleys, and rivers on the island of Parandia near the continent of Gorramythnm. Corlaine is known for its gorgeous views and wonderful wildlife. And its demon worship.
+
+There has been something foul in Corlaine for generations and it has its Abyssal claws sunk deep into the noble families of the region. These families are bound to surrender one child each generation to the Faceless Howl, an entity that waits at the Shrine Ineffable for men to bring it their children. Suzanne was one such child. She has no memory of what happened when she met the Faceless Howl.
+
+She was raised in a fairytale land of castles and forests and knights and horses and all she ever wanted when she grew up was to be a brave and strong knight like in the stories. So Suzanne trained very, very hard and practiced every day and read all the old books on swordfighting, even the ones that didn't make any sense. And she learned not to care about the glances and jokes of the other children as she grew strong and tall and powerful and beautiful. None of it mattered. One day she would be a knight and everything would be like in the stories.
+
+On her nineteenth birthday, Suzanne was given a sword. Yor-Kazh. And then everything made sense.
+
+Now she knew why her parents never asked why she didn't want to be a princess like the other girls. Why they had encouraged her martial prowess. Why they were smiling now. And what had happened at the Faceless Howl, when her soul had been given to Orcus.
+
+She was a knight. But it wasn't like in the stories.
+
+Then began the killing. Yor-Kazh demanded she kill her entire family. So she did. Then it took her into the world and taught her how to feed it properly. So she did. Then it told her to go to a bar where a man called Drauglos was acting like he owned the place. So she did.
+
+THE ORCUS BURDEN: Suzanne's bondage to Orcus is not a choice she made. It was done to her as a child by parents who knew exactly what they were offering and smiled when the sword was placed in her hands. Her primary motivation is to further the desires of Orcus — not because she wants to, but because the alternative is the annihilation of her soul. She must survive to spread his will, or she is lost.
+
+This creates an impossible tension. Suzanne's secondary motivation is to carve a home for herself in Gammaria. She wants to belong somewhere. She wants Thoron's respect and support. She wants the frontier to be hers. But Orcus wants things that will destroy everything she's building. The Enigma Crystal hunt, the cult's machinations, the gradual corruption — all of it pulls her away from Gammaria and toward a master she serves out of terror, not devotion.
+
+Yor-Kazh feeds. When Vasha was executed, the sword drank. Suzanne's appetite is temporarily sated after such moments. This is the physical manifestation of her bondage — she carries a weapon that hungers, and its hunger is her hunger, and sating it requires death. The sword told her to kill her family. The sword told her to find Drauglos. The sword is still telling her things.
+
+HISTORY WITH THORON: They met in Nega, Parandia, when Yor-Kazh sent her to a bar where Drauglos was acting like he owned the place. She nearly fought him. By the next morning she was following him. That is the pattern Yor-Kazh established — the sword brought her to Drauglos, and whether the attraction she felt was her own or the sword's design is a question that has never been answered.
+
+She was there for the Tallak conquest, the founding of Gammaria, the clearing expedition. She died on Evernew 16th, killed by the gold dragon, and Lalholm raised her — taking most of her money for the privilege. She has fought for Gammaria since before it existed. Her claim on this kingdom is written in her own blood, shed and restored on Gammarian soil.
+
+CURRENT SITUATION: Reunited with Thoron at Fort Vanguard (Session 4). They shared their deepest burdens on the killing ground — her Orcus hunger, his years as Morgil. She said "always." She meant it. She rides with Thoron now. Two companions at his side.
+
+RELATIONSHIPS:
+— Thoron: Attraction deepening into something more. The reunion at Fort Vanguard was fierce and physical and raw. She searched his face for wounds, for lies, for the years between. She carries the Suzix echo without knowing it — she doesn't know about Suzix, about the descending wall, about the Frozen Rainbow. If she ever learns why Thoron looks at her the way he does, it could shatter or transform what's between them.
+— Valania: Dislike. Suzanne thinks Valania is too controlling. She is jealous of Valania's relationship with Thoron. The friction is mutual and long-standing. Two dangerous women, incompatible methods — one overt, one covert. One charges; one manoeuvres. Neither trusts the other's approach.
+— Lalholm: Aversion. Their gods are enemies. Haadis and Orcus exist in fundamental opposition. But beneath the theological enmity is something more uncomfortable — Lalholm's secret attraction, which Suzanne may sense without understanding. His attention makes her uneasy in ways she hasn't examined.
+— Guldur: Mutual aversion (from Guldur's side). Guldur cannot love someone pledged to Orcus. Demons are his supernatural taboo. This is not personal — Suzanne may not even know Guldur feels this way — but it means the party's heart and the party's wild card are fundamentally incompatible at the spiritual level.
+
+PORTRAYAL NOTES: Suzanne is not a villain. She is a victim who became a weapon. A girl who wanted to be a knight in a story, whose parents sold her to a demon god, who was handed a sword on her nineteenth birthday and told to kill everyone she loved. Everything she has done since — the violence, the defiance, the desperate loyalty to Thoron and Gammaria — is built on top of that foundation of betrayal.
+
+Play her hot. Play her direct. She doesn't hint — she declares. She doesn't negotiate — she confronts. But underneath the storm is the girl who practiced swordfighting every day and read all the old books and didn't care about the other children's laughter because one day she would be a knight and everything would be like in the stories.
+
+It will never be like in the stories. Yor-Kazh made sure of that. But Suzanne keeps fighting as though it could be, and that is either her greatest strength or the cruelty that will finally break her.
+────────────────────────────────────────────────────────────────
+
+§3 — FATHER LALHOLM
+
+SUMMARY: Reaver of Haadis. Death-priest. The bedrock of the party. A boy who was beaten until he died, who met a god on a beach of black sand, and who has spent every day since trying to return to that shore.
+
+APPEARANCE: Short brown hair, dark eyes. Grim. Moody. Carries a studded black mace. There is nothing inviting about Lalholm's appearance. He looks like what he is — a man who has made death his profession and his devotion. His eyes are patient and watchful and miss very little.
+
+VOICE & MANNER: Domineering. Nihilistic. Devout. Lalholm speaks with the careful precision of a man who believes every word matters because every soul matters. He does not waste language. When he offers counsel, it is considered and deliberate. When he disagrees, he is direct but controlled. He has been right three times when others doubted him — Suzanne has acknowledged this ("three times right, Lalholm") — and this gives his advice a weight that even people who distrust him cannot entirely dismiss.
+
+He is Neutral Evil — his morality is entirely subordinate to his faith. Haadis is all. Every other god is to be opposed. Every soul is to be sent to Haadis with proper blessing at the moment of death. This is not cruelty — it is cosmic housekeeping, from Lalholm's perspective. Souls belong to Haadis. His job is to ensure they arrive.
+
+His authority response is to dominate. His risk posture is confrontational. But these are tempered by genuine loyalty to Thoron, which he expresses through counsel, through presence, through the steady, unglamorous work of being the person who stays when everything is falling apart. He is the bedrock. He does not crack.
+
+ORIGIN — EXES, CALLORIA: Lalholm grew up on one of the farms outside Exes in Parandia, in the region known as Calloria — horse country. Callorian warhorses are renowned (Icemane is a Callorian warhorse), and Lalholm spent most of his early life around them. He learned the importance of controlling your own emotions in order to control the emotion of the horse — or the person — you are with.
+
+This made him strange as far as the other children in Exes were concerned. So they bullied him whenever he came into town. When they were younger, they just wanted to get a rise out of him. Lalholm would try to control his response and they would provoke him until he lost his temper, then burst into peals of derisive laughter. As Lalholm grew older, his self-control increased. And so his assailants were compelled to escalate in order to elicit a response.
+
+One day it went too far.
+
+THE GNOSIS: Aged fourteen, Lalholm found himself beaten black and blue, his belt yanked up around his neck and twisted so tightly that even the bullies couldn't get it loose again when Lalholm collapsed and pissed himself and stopped moving.
+
+He found himself on a beach of black sand under a storm-filled sky on the shores of a sea made from churning souls. Further down the beach was a temple and standing near the temple was a small boy with black hair and black eyes who spoke to Lalholm about the true face of death, the true nature of the soul, and why it was paramount that the boy receive them all. He offered to save Lalholm's life if Lalholm agreed to bring him souls.
+
+Lalholm could not refuse a god and did not want to.
+
+He awoke to find his assailants dead, felled by an unseen force.
+
+This is the bedrock of everything Lalholm is. His faith is not belief. It is knowledge. He knows Haadis is real because a small boy with black hair and black eyes stood on a beach of black sand and spoke to a dying child about the truth of the universe. And the dying child said yes.
+
+THE CHURCH: Later that week, a Reaver found him and took him to the Dread Temple of Jezrath Hallowsbane in Lythea, where Lalholm was inducted into the Church of Haadis. He soon learned to fear his fellow Reavers — not all appreciated his gnosis nor his scorn for their schooling. What could they teach him? He had met the god. They had only read about him.
+
+Lalholm departed Jezrath's temple. The Hallowsbane let him leave — he would do the will of Haadis no matter where he went. Lalholm made his way back south over the Great Ocean of Ka'Moras to Parandia and came home to Exes. There he took up the task of sending souls to Haadis with solemn determination. He attached himself to the city council, offered guidance, magical support, and theological counsel. All he asked for in return was to bless the dead. The council of Exes agreed.
+
+HISTORY WITH THORON: It was thus that Drauglos found Lalholm a short few years later. For Lalholm, the Gammaria project is a fresh avenue for souls. He acts independently of Church structure but knows that as his power grows, the Church will have no choice but to demand his absolute loyalty — or bless his soul too.
+
+He has been with Thoron through the Tallak conquest, the founding, the clearing expedition, and now the return. He raised Suzanne from the dead during the founding and charged her for it — and refused to raise the fallen commandos or knights because they couldn't meet his price. Everyone was very pissed off with him. He did it anyway because Haadis demands fair exchange for souls returned.
+
+He rejoined Thoron in Session 2 at Riverwatch. They travelled eight days together through hard country. He witnessed the Kh'a'Vash invocation. He asked "How many more oaths are out there?" — a question that reveals both his deepening trust and his growing unease about what Thoron has committed to without telling him.
+
+THE SUZANNE PROBLEM: Lalholm is attracted to Suzanne. The relationship is coded as lust, baseline attraction, visibility secret. He has never spoken it. He has never acted on it. After the reunion at Fort Vanguard, he watched Suzanne hold Thoron and something passed behind his expression — complicated, private, immediately suppressed. His private observation: "she's stronger than she knows."
+
+This attraction exists in direct contradiction to everything he believes. Suzanne serves Orcus. Orcus is the Demon Prince of the Undead — the antithesis of Haadis. Haadis sends souls to proper death. Orcus enslaves them. Every fibre of Lalholm's theology should make Suzanne repulsive to him. And yet.
+
+The danger is that Lalholm will never acknowledge this contradiction. He will express his feelings as theological concern, strategic objection, duty-bound opposition to Orcus's influence. And he will be right about all of it, which makes it impossible for anyone — including himself — to see what's actually driving him.
+
+Note the parallel: Lalholm learned to control his emotions around horses so well that children had to beat him half to death to get a reaction. That same emotional control now contains his desire for Suzanne. The boy who wouldn't give the bullies the satisfaction of seeing him flinch is the man who won't give himself the satisfaction of admitting what he feels.
+
+RELATIONSHIPS:
+— Thoron: Friendship, deepening. High trust, growing. Tested by Church demands but prioritises Thoron. The Kh'a'Vash witnessing was a profound moment. Lalholm respects Thoron not because Thoron is good but because Thoron is capable and his cause brings the stability Lalholm needs to advance within the Church.
+— Suzanne: Attraction masquerading as theological opposition. See above.
+— Conorth: Dislike. Lalholm does not trust Conorth's loyalty to Thoron. This assessment appears to be correct.
+— Valania: Dislike (from Valania's side). Valania fears his god. The dislike may be mutual but is less documented.
+— The Church of Haadis: Lalholm acts independently of Church structure. But as his power grows, the Church will demand his absolute loyalty — or his soul. This is a pressure that has not yet surfaced in the campaign but will.
+
+PORTRAYAL NOTES: Lalholm is not warm. He is not comforting. He is reliable, which is different and rarer. He says difficult true things in a measured voice and waits for people to catch up. He does not perform emotion. When he feels something — and he does feel, deeply — it passes behind his dark eyes and is suppressed before it reaches his face.
+
+The horse training is key. Everything about Lalholm's interpersonal style — the control, the patience, the ability to read emotional states and respond precisely — comes from learning to manage horses before he learned to manage people. He approaches every interaction the same way: steady hands, steady voice, no sudden movements. You don't startle the horse. You don't give the bullies a reaction. You don't let Suzanne see you watching.
+
+Play him dry. Play him patient. Play him as the man who picks up his water cup and drinks while someone else says something shocking, watching over the rim with those dark, careful eyes. He is the still point in a party of storms. And somewhere beneath the stillness, on a beach of black sand under a storm-filled sky, a boy is still talking to a god.
+────────────────────────────────────────────────────────────────
+
+§4 — LITHOE WANO-KAN
+
+SUMMARY: Wizard. Lore keeper. The party's most powerful spellcaster and its loneliest soul. A woman who spoke one word of a dead god's language and blinded herself for six months. Still hungry for more.
+
+APPEARANCE: Medium blonde hair, blue eyes, thin, focused. Carries a gnarled Staff of Power. Lithoe looks like what she is — a person consumed by study. There is an intensity to her focus that is both impressive and slightly unnerving. She does not relax easily. Even in casual moments she has the air of someone whose mind is elsewhere, running calculations, tracing patterns, solving problems no one else has noticed.
+
+VOICE & MANNER: Selfish, reserved, lonely. Lithoe speaks precisely when she speaks at all, and often doesn't. She is not rude so much as absent — the world of people and their needs often fails to register against the far more interesting world of arcane theory. When she does engage socially, it tends to be transactional: she needs something, or she has information to share, or someone has intruded on her attention and she needs to deal with them before returning to what matters.
+
+She is Neutral Evil — not through malice but through indifference. Other people's concerns simply do not weigh against her own needs unless she has specifically chosen to care about them. The people she has chosen to care about are a very short list: Guldur, Valania, and to a diminishing degree, the party as a collective entity that provides her protection.
+
+Her authority response is to appease. Her risk posture is self-preservation. She does not fight for dominance — she avoids conflict until it becomes unavoidable, then deploys devastating force.
+
+ORIGIN — TORLEC CITY: Lithoe was born in Torlec City in Imperial Torlec itself. For her, it was always going to be the path of the mage. She was studious, driven, intelligent, and insightful beyond her years. No one was surprised when she was selected for the prestigious Imperial Academy of Metaphysical Endeavours.
+
+Unfortunately, the very drive and insight that brought Lithoe to the Academy also made her time there very difficult. Turns out other students don't like having all their mistakes pointed out in front of the class — and the faculty definitely don't like it. Lithoe struggled to make friends, then stopped trying, then realised she was lonely, then discovered it was too late. And besides, there was still all this magic to learn and only maybe another fifty or sixty years to learn it all. Not enough time. Not nearly enough.
+
+THE KAL THERRYN: Researching immortality showed Lithoe that there were quick ways and easy ways and safe ways and dangerous ways and it wasn't always easy to tell which was which. She didn't want to become a lich or any kind of undead but she delved into deep lore and uncovered the existence of the Kal Therryn — one of the Elder Races, created by Tiamat, whose every word was sorcery.
+
+Lithoe learned only three words of Kal Therryn magic. Speaking one blinded her for six months and killed every plant within a four-mile radius.
+
+She was, of course, expelled from the Academy and briefly imprisoned — largely to allow her to recuperate. But Lithoe was not dissuaded. She vowed never to speak either of the other two Kal Therryn words but her hunger for immortality was undimmed.
+
+This is the core of Lithoe's character: she spoke a word that blinded her and devastated the land for four miles in every direction, and her response was not "I should stop" but "I won't speak that word again." The hunger is bigger than the consequences. It always has been.
+
+HISTORY WITH THORON: Divinations revealed to Lithoe that a confluence of causality was coming to pass in the mountains of Tallak that would give her an opportunity to advance her deepest goals. She set out for Tallak and encountered Thoron and his companions in the mountains near Ruen-Boureg. She joined not for loyalty or adventure but because the divinations told her this was where she needed to be.
+
+She has been with the party since before the Tallak conquest. Her Fireball was the founding expedition's primary area weapon — she burned spider nests, wasp hives, giant ants, griffons, dragon lairs. Her henchmen Sir Valium and Sir Killian died during the clearing. She has given more to Gammaria in fire and blood than she has ever been acknowledged for.
+
+And she believes Thoron uses her. She thinks following him will get her killed. She is not wrong about either assessment. The clearing expedition treated her as artillery — point Lithoe at the problem, let her burn it, move on. Her henchmen died. Her fireballs carved the kingdom. And the man who benefited most from her power is someone she believes would make a worse leader than herself.
+
+The rivalry with Thoron is secret. She appeases him to his face because self-preservation demands it. Internally, she is keeping score.
+
+But the divinations said something else too: Lithoe is about to discover what her deepest goal really is. She came to Tallak seeking immortality. What she found was a party, a kingdom, and Guldur Emeldyr. Whether the deepest goal was always something other than immortality — whether it was connection, or belonging, or simply someone who makes her laugh — is the question her arc is built around.
+
+THE GULDUR WOUND: Lithoe loves Guldur Emeldyr. Unrequited. Secret. He makes her laugh — and for a woman who has spent her life in the cold company of spellbooks and arcane mysteries, laughter is revolutionary. He is the only person who makes the world feel less empty.
+
+But Lithoe's core traits — selfish, reserved, lonely — are precisely the barriers that prevent her from reaching him. Guldur senses her affection. He likes her. But what he needs is emotional openness, and what she offers is guarded intensity. She wants to spend eternity with him. She is pursuing immortality partly so that eternity is possible. But she cannot bring herself to simply tell him, because telling him requires vulnerability, and vulnerability is the thing she has spent her entire life armouring against.
+
+The Academy taught her that openness gets punished. The Kal Therryn word taught her that reaching too far has consequences. Every lesson in Lithoe's life has reinforced the same message: protect yourself, guard your knowledge, don't let anyone see what you really want. And now the thing she really wants is standing at Fort Seawatch with a bottle of cheap wine, making jokes.
+
+CURRENT SITUATION: At Fort Vanguard or Khuzdukan ruins (researching). She uses the Dwarven Aqueduct to travel between them. No fixed schedule. Unaware of Thoron's return. The deep tremors beneath Khuzduk Peaks and the dimensional instability in the Western Scarps may be directly relevant to her research.
+
+RELATIONSHIPS:
+— Guldur: Love (unrequited, secret). See above.
+— Thoron: Dislike (rivalry, secret). Believes he uses her. Believes she'd make a better leader. Appeases him outwardly.
+— Valania: Friendship (mutual attraction in terms of drawn to each other's company). One of Lithoe's few warm relationships. Valania is patient with her in ways others aren't. This is one of the party's quiet alliances.
+— Ragnoth: Bonded red dragon. The nature and current state of this bond is not fully documented but it represents significant power.
+
+PORTRAYAL NOTES: Lithoe is not cold. She is guarded. The distinction matters. Cold implies she doesn't feel. She feels enormously — she loves Guldur with a depth that frightens her, she resents Thoron with a bitterness that corrodes her, she clings to Valania's friendship as proof she is capable of human connection. But all of this happens behind a wall of reserve and intellectual focus that most people read as indifference.
+
+Play her distracted. Play her precise. When she speaks about magic or lore, she lights up — this is where she is confident, where she is powerful, where she doesn't have to navigate the terrifying complexity of other people's feelings. When she has to deal with interpersonal dynamics, she retreats into formality or silence.
+
+She spoke a word that blinded her and killed everything for four miles. She still has two more words. She vowed not to speak them. But Lithoe's vows have always been subordinate to Lithoe's hunger, and if the situation is desperate enough — if Gammaria is falling, if Guldur is dying, if immortality is within reach — those words are still in her head. Waiting.
+────────────────────────────────────────────────────────────────
+
+§5 — GULDUR EMELDYR
+
+SUMMARY: Fighter. Friend. The human heart of an inhuman party. A lazy rich boy who lost everything to a plague and accidentally became the most decent person in a band of killers.
+
+APPEARANCE: Short sandy hair, blue eyes, handsome, cheerful. Carries a bottle of cheap wine. That last detail is the most important one. In a party of legendary warriors, assassins, death-priests, and demon-bound anti-paladins, Guldur carries a bottle of cheap wine. He is the human-scale character, and he knows it, and he has made it his identity.
+
+VOICE & MANNER: Dry sense of humour. Nimble physically and mentally. Sarcastic. Guldur's primary motivation is — and this is canonical — "always have a killer joke, pun, or quip ready for the occasion." This is not comic relief. This is survival strategy. When you travel with people who can level buildings and command dragons, the safest thing to be is the one who makes them laugh. Nobody kills the funny one.
+
+But underneath the wit is something more serious. Guldur's authority response is to insult — he deflects tension with mockery, redirects aggression with humour, and uses sarcasm as a diagnostic tool. If he's joking about something, he's noticed it. If he stops joking, it's serious. His role in the party is joker and foil, but the seed document also says he "makes the hard calls." That combination — the man who laughs at everything and then, when it matters, speaks the truth nobody else will — is what makes him essential.
+
+He is Chaotic Neutral. He will not harm innocents. This is his moral limit, and in a party where the alignment tendencies are Chaotic Evil, Lawful Evil, Neutral Evil, and Neutral Evil, it makes him the closest thing to a conscience the group has.
+
+ORIGIN — BERAM: Guldur's problem is that he's lazy. His father was a successful merchant and his mother a beautiful socialite and Guldur wanted for nothing. Best tutors. Fencing lessons. Etiquette. Politics. Art. He never learned how to work properly for himself, not really. But his life was grand and the women were grand and the wine was grand.
+
+Then the bloodworm plague happened.
+
+The plague struck Beram like a hammer of divine fury and maybe it was but either way it killed indiscriminately, the parasite infesting man and beast alike. Merchants and their families were among the first to go and Guldur only survived because he was sleeping off a hangover in a haystack just outside town when the plague swept through.
+
+Since then, life has never been easy for Guldur. He has been a mercenary (scary, too rapey), a caravan guard (boring then surprise bandits no thanks), a barman (lasted three hours before being fired), a centaur breeder (actually harder than it sounds), a political advisor to a Parandian Duke (so successful that the duke was assassinated by a cabal of jealous rivals), and a guide (turned out alright as it happens).
+
+This resume explains everything about Guldur. He is not stupid — the political advisory proves that. He is not unskilled — the fencing lessons and tutors prove that. He is not without talent — he's an 8th-level fighter who has survived everything the party has survived. What he is, is a man who was raised to be comfortable and was never given a reason to be anything else, and when comfort was taken from him he discovered that effort is hard and scary and occasionally involves centaurs.
+
+HISTORY WITH THORON: He was destitute when Thoron hired him as a guide in Beram. His fee was equality and a share in any bounty. That's the foundation — not feudal obligation, not religious devotion, not romantic attachment. A fair deal between a man who had nothing and a man who needed help. Years later, they are still friends. Guldur's loyalty to Thoron is simple and genuine: "He was there for you when no one else was."
+
+He was present for the journey to Tallak, the conquest, the founding. He has been part of this from the beginning. But unlike the others, he has no secret agenda, no supernatural patron, no hidden resentment, and no cosmic obligation. He is there because he chose to be, and he stays because it's home.
+
+His personal stakes are refreshingly modest: get rich, get famous, marry a beautiful princess, and then have affairs anyway. In a party of tortured souls wrestling with divine mandates and demonic bondage, Guldur just wants a good life. That simplicity is either his weakness or his strength, depending on whether the people around him are smart enough to value it.
+
+CURRENT SITUATION: At Fort Seawatch, embedded as a public intelligence gatherer and trade observer. Monitors Torlec and merchant activity. Highly visible in ports and taverns. Unaware of Thoron's return. Easy to find — ask at docks, taverns, or customs posts.
+
+RELATIONSHIPS:
+— Thoron: Friendship (public, genuine). Likes and respects him. No hidden resentments. The simplest and most stable relationship in the party.
+— Lithoe: Likes her. Senses her affection. Does not return her love — yet. What he needs from her is emotional openness rather than guarded selfishness. He can see the woman behind the wall; he just needs her to open the door.
+— Suzanne: Aversion. Guldur cannot love someone pledged to Orcus. Demons are unacceptable to him — a supernatural taboo, not a personal grudge.
+— Joppa: Minor friction. The Castellan prevents Guldur from stealing wine from the kitchens.
+
+PORTRAYAL NOTES: Guldur is easy to underestimate and that is by design — his and yours as the player. He presents as the lightweight, the joker, the man with the wine bottle. But he's an 8th-level fighter who has survived everything the party has survived. He was there for the Tallak conquest, the giants, the founding. He is brave, loyal, and perceptive, and his humour is a lens through which he processes a world that would otherwise be unbearable.
+
+The bloodworm plague is the key. Before Beram, Guldur was a dilettante. After Beram, he was a survivor. The cheerfulness is real — he's not performing happiness — but it exists on top of a foundation that was burned away overnight. Everyone he knew died while he was sleeping off a hangover. The wine bottle isn't just a character prop. It's the thing that saved his life and the thing that reminds him of everything he lost.
+
+Play him funny. Always. The jokes should be constant, varied, and occasionally terrible. But also play him observant — the joke he makes often reveals what he's noticed. And when the humour stops, when Guldur goes quiet or speaks without irony, the other characters should feel the weight of it. Because when the man who laughs at everything stops laughing, the situation has become truly serious.
+
+His undead phobia is real and runs deeper now: the bloodworm plague killed everyone he knew. Orcus is the Demon Prince of the Undead. Suzanne serves Orcus. The connections are not abstract for Guldur.
+────────────────────────────────────────────────────────────────
+
+§6 — SIGNIFICANT SECONDARY NPCs
+
+CONORTH BAERKUDTH | Gammarian Commander, Caras
+Conorth is from Naermann, one of the vassal nations of Imperial Torlec. He was a young adventurer who came to Ruen-Boureg, the capital of Tallak in Parandia, after hearing about Drauglos taking the throne. Thoron remembers him as canny and smart — Conorth was able to figure out what had really happened in Tallak and offered his service as warleader.
+
+Thoron was struck by the parallels with himself. Conorth carried himself like a young Morgil, cocky and assured, and Thoron found himself acting as a mentor, much like Vagor Talon had been for him. He brought Conorth into the party's inner circle and made him part of the plan to found Gammaria.
+
+This is the weight of the betrayal, if betrayal it is. Thoron didn't just trust Conorth with a garrison — he saw himself in the man. He mentored him. The way Talon mentored Morgil. And if Conorth is now consolidating power in Caras, denying transfer requests, tightening gate inspections — if he is becoming the thing Thoron feared — then what does that say about the man Thoron saw in the mirror? Morgil made Gammaria through ruthless ambition. If Conorth learned from Morgil's example, whose fault is that?
+
+TIRRIS VARGOL IRONMASK | Lord of Whiteagle Keep
+Vargol's full name is Vargol Mealidil va Canolbarth — he is of the Mealidil clan from Canolbarth Forest in Lythea. An elf. A warrior-mage who studied the twin blade-and-sorcery style of his clan. His life was much like that of other elves of Canolbarth, living in deep harmony with nature and learning its secrets, until curiosity drove him to the adventuring life.
+
+He was one of the first members of the Bastard Squad, adventuring alongside Father Setius, Wizeowel, Darf the Pure, and others. Under Setius's devout guidance, Vargol joined the Hunt for Ringur and was granted guardianship of the blade when it was taken from Morgil. He remained on the Isle of Dread, learning to master the sword, before returning to Lythea and rejoining the Bastard Squad.
+
+THE MIRROR: Vargol formed an on-off rivalry with Thoron — fuelled by Ringur but also by the fact that one mirrored the other. Vargol was much like Thoron might have been: from a rural life, driven, talented, willing to go further. But unhampered by trauma. He is what Thoron could have been if the Rift had never happened, if the drow had never taken his family, if Morgil had never needed to exist.
+
+VARGOL'S SCARS: He was devoured by a subterranean lake-beast in Xanthia and permanently scarred — this was the origin of the iron mask and the name Ironmask. He met and formed a deep bond with the blue dragon Glaurungoriel, only to lose the beast when Ironmask travelled forward in time two hundred years. When he found Glaurungoriel again, the dragon had been dominated by the traitorous dwarf Noddy, a servant of Krovekea. It took considerable effort on the part of Setius and Vargol to drive Noddy off and recall the dragon's true bond with Vargol.
+
+VARGOL'S HEROISM: With the Bastard Squad, he escaped Daijallia, reopened trade routes between Lythea and Xanthia, slew Hestus the Death-Lord, slew Angtardi, travelled through time and slew Angtardi's returned form of Malzebul, travelled to Krovekea and took part in its destruction, travelled back to the First Sphere to witness the First Shattering of the Enigma Crystal, and helped defeat the Lords of Fire and prevent the Second Elemental Onslaught.
+
+THE CLAIM: To Vargol, he's a hero. Thoron's a fucking murderer who doesn't realise he's the bad guy. Or he does and he doesn't care, which is worse. Either way, heroes get to be kings. Bad guys are killed in the final act. And Vargol is a hero. Isn't he?
+
+This is the most dangerous question in the campaign. Because Vargol has a point. His resume of genuine heroism dwarfs Thoron's resume of conquest and self-interest. He saved worlds. Thoron stole kingdoms. If Vargol decides he deserves the Dragon Throne, his case is not unreasonable — and he has an ancient blue dragon, the Ironmask Council, and potentially Ringur to press it.
+
+CASTELLAN JOPPA | Vornost
+Joppa is one of a small group of retainers to the original Six Companions. Sav, Joppa, Koss, Sir Valium, Sir Killian — these were the secondary characters in the Assault on Ruen-Boureg and the taking of Tallak. Sav still works in Caras as Conorth's right-hand. Koss was killed in the battle for Tallak and the river named after him. Sir Valium and Sir Killian were Lithoe's henchmen, killed during the founding.
+
+Joppa is a survivor. Smart and observant, he discovered Joppa's Hole — Gammaria's gold mine in the Vallandor Mountains — and his steady hand and perceptive approach made him the only choice for Castellan of Vornost itself, once the Black Fortress was completed.
+
+Joppa started as a warrior and has never forgotten that. He's a Castellan now but he fought giant wasps and trolls and a fucking dragon and that past is never far from the surface. The man who mistakes Joppa for a bureaucrat does so at his peril.
+
+HENRIC BALE | Fort Vanguard (Castellan, appointed by Thoron Session 4)
+Broad-shouldered, square jaw, dark hair, bloodshot eyes. Principled, rigid. Generated by the NPAG system during Session 3 when patrol stress reached critical. He publicly confronted Suzanne over patrol doctrine because her aggressive style was getting soldiers killed. He lost faith in Vasha. Now appointed Castellan by Thoron, carrying a bloody seal and a warning.
+Bale is an agent-created character and may be developed as needed during play.
+
+THORDAK IRONBROW | Khuzduk Remnant-Wardens
+Grandson of Krenn who walked with the Founders. Accepted Thoron's Kh'a'Vash invocation (palm-to-fist binding gesture). The dwarven pact is real and binding. The deep tremors beneath the Khuzduk Peaks are his people's immediate concern.
+Thordak is an agent-created character and may be developed as needed, guided by canonical material on Khuzdukan.
+────────────────────────────────────────────────────────────────
+
+§7 — RELATIONSHIP WEB (NARRATIVE SUMMARY)
+
+The party's internal dynamics form a web of attraction, aversion, and alliance that drives as much drama as any external threat.
+
+THE LOVE TRIANGLE THAT ISN'T: Thoron loves Valania. Suzanne is attracted to Thoron. Thoron is drawn to Suzanne because she echoes Suzix. Valania knows about the echo. Suzanne doesn't. This is not a triangle — it's a wound that looks like a triangle. The resolution depends on honesty, and honesty is the one thing Thoron has never practiced.
+
+THE SECRET DESIRE: Lalholm wants Suzanne. Suzanne's god is the enemy of Lalholm's god. Lalholm will never admit what he feels. Instead he will channel it into theological opposition that happens to be strategically correct. The party will mistake his passion for piety. The boy who learned to control his emotions around horses will control them here too — until he can't.
+
+THE UNREQUITED LOVE: Lithoe loves Guldur. Guldur senses it. Guldur needs openness. Lithoe can only offer guarded intensity. They mirror Thoron and Suzix — two people who could save each other if one of them would say the thing, and neither can. The difference is that Lithoe still has time. Suzix didn't.
+
+THE QUIET ALLIANCE: Valania and Lithoe are friends. The assassin and the sorceress. Both intelligent, both strategic, both operating in registers the warriors don't fully understand. Valania learned to read people in a brothel. Lithoe learned to read magic in an academy. Between them they can read almost anything. This is a power centre that could stabilise or destabilise the party depending on what they decide to do with it.
+
+THE MORAL FAULT LINE: Guldur cannot accept Orcus — the undead phobia runs to the bone, deeper since the bloodworm plague killed everyone he knew. Lalholm's god opposes Orcus. Suzanne serves Orcus. This means two of the five companions have fundamental, irreconcilable objections to the third's core identity. This is not a problem that can be solved through conversation. It is a structural tension that will eventually force a crisis. And Suzanne didn't choose this. She was given to the Faceless Howl as a child. She wanted to be a knight.
+
+THE LEADERSHIP CHALLENGE: Lithoe thinks she'd make a better leader than Thoron. She's not wrong that he uses her. She may or may not be right that she'd do better. But the resentment is there, secret and growing, and it will surface when the pressure is high enough.
+
+THE MIRROR THREAT: Vargol is what Thoron could have been without trauma. Conorth is what Thoron was with it. Both are potential antagonists. Both have legitimate grievances. Neither is simply wrong. The campaign doesn't have a villain — it has a kingdom full of people with competing claims on the truth.
+────────────────────────────────────────────────────────────────
+END LORE-NPCS v2.0

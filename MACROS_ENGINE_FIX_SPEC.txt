@@ -1,0 +1,158 @@
+MACROS ENGINE — MANDATORY FIX SPEC
+ALL ITEMS. NO EXCEPTIONS. NO DEFERRALS.
+
+────────────────────────────────────────────────────────────────────
+HIGH PRIORITY — MECHANICAL FAILURES
+────────────────────────────────────────────────────────────────────
+
+H1: CALENDAR SYSTEM — WRONG MONTH ORDER AND DAY COUNTS
+File: engine.py lines 29-36
+Fix: Replace entire calendar definition with canonical Nurrian Calendar:
+
+  Day of Awakening  — 1 day  (intercalary)
+  Demes             — 30 days
+  Fasting           — 28 days
+  Tryphor           — 30 days
+  Day of the Moot   — 1 day  (intercalary)
+  Ilrym             — 30 days
+  Evernew           — 31 days
+  Jestrim           — 23 days
+  The Stand         — 7 days  (intercalary)
+  Rannifer          — 31 days
+  Reapmere          — 30 days
+  Grismere          — 30 days
+  Aphistri          — 31 days
+  Frithium          — 30 days
+  Revini            — 31 days
+
+Total: 365 days per year. 12 months + 3 intercalary periods.
+Date format: "DD MonthName" (e.g. "29 Ilrym", "1 Day of Awakening").
+
+H2: SEASON ASSIGNMENTS — WRONG MAPPINGS
+File: engine.py lines 38-43
+Fix: Replace with canonical season assignments:
+
+  Spring: Tryphor, Ilrym, Evernew
+  Summer: Jestrim, Rannifer, Reapmere
+  Autumn: Grismere, Aphistri, Frithium
+  Winter: Revini, Demes, Fasting
+
+Intercalary seasons:
+  Day of Awakening → Winter (precedes Demes)
+  Day of the Moot → Spring (between Tryphor and Ilrym)
+  The Stand → Summer (between Jestrim and Rannifer)
+
+Season transitions:
+  Fasting→Tryphor = Winter→Spring
+  Evernew→Jestrim = Spring→Summer
+  Reapmere→Grismere = Summer→Autumn
+  Frithium→Revini = Autumn→Winter
+
+H3: HALT CONDITION KEYWORD MATCHING — SUBSTRING BUG
+File: engine.py line 519
+Fix: Change from substring (kw in facts_text) to whole-word
+(kw in facts_words set). Match the approach at line 648.
+
+H4: load_game() MISSING BACKFILL CALLS
+File: game_loop.py lines 1246-1272
+Fix: Call ALL 4 backfills that _auto_load() calls:
+  _backfill_crossing_points()
+  _backfill_companion_stats()
+  _backfill_pc_stats()
+  _backfill_encounter_lists()
+
+H5: BLACKTOOTH FOREST EL MISSING ENTRY 3
+File: Save JSON, encounter_lists.Blacktooth Forest
+Fix: Add missing entry for range "3". Check NSV-ENGINES.txt for
+canonical entry. If none exists, add:
+  range: "3", prompt: "Orc warband remnants — campfire smoke,
+  discarded weapons; recently fled or recently arrived",
+  ua_cue: false, bx_plug: {}
+
+────────────────────────────────────────────────────────────────────
+MEDIUM PRIORITY — FUNCTIONAL GAPS
+────────────────────────────────────────────────────────────────────
+
+M1: 13 CREATIVE BUILDERS MISSING CONSTRAINTS FIELDS
+File: creative_bridge.py (12 locations in audit)
+Fix: Every builder must include ALL 5 CONSTRAINTS keys:
+  max_words, tone, style, voice, instruction
+DEFAULT_CONSTRAINTS:
+{
+  "max_words": 300,
+  "tone": "sword_and_sorcery",
+  "style": "Compressed prose. Inspirations: Elric, Conan, Dark Crystal, Krull, Willow, LotR.",
+  "voice": "Second person present tense. The player IS the character.",
+  "instruction": ""
+}
+
+M2: build_narr_arrival MISSING INSTRUCTION
+File: creative_bridge.py lines 241-245
+Fix: Add instruction to CONSTRAINTS:
+  "instruction": "Narrate arrival at this zone. Cover: journey,
+  first impressions, sensory detail, companion reactions,
+  immediate situation. Do NOT advance time or resolve encounters."
+
+M3: npc_update STATE CHANGE KEY MISMATCH
+File: creative_bridge.py line 1402
+Fix: Code uses change.get("npc", ""). Spec sends "name".
+Change to: npc_name = change.get("name", "") or change.get("npc", "")
+
+M4: NPAG eligible_npcs MISSING role AND trait
+File: creative_bridge.py lines 430-438
+Fix: Add role and trait to NPC dict in eligible_npcs.
+
+M5: NPAG LORE MISSING COMPANION PROFILES
+File: creative_bridge.py lines 441-454
+Fix: For each companion (is_companion=True), fetch lore and add:
+  lore_dict[f"npc:{name}"] = comp_lore
+
+M6: ZONE NAME SUBSTRING MATCHING IN BULLET FILTER
+File: engine.py line 565
+Fix: Use word-boundary regex:
+  re.search(r'\b' + re.escape(zone_name) + r'\b', bullet, re.IGNORECASE)
+
+M7: DOUBLE SESSION_ID INCREMENT
+File: game_loop.py lines 186 + 751
+Fix: Remove increment from start_session(). _auto_load() is canonical.
+
+M8: VORNOST EMPTY threat_level
+File: Save JSON
+Fix: Set Vornost threat_level to "low".
+
+────────────────────────────────────────────────────────────────────
+LOW PRIORITY — CLEANUP (STILL MANDATORY)
+────────────────────────────────────────────────────────────────────
+
+L1: DEAD IMPORT
+File: engine.py line 19
+Fix: Remove unused import of intensity_gate_check.
+
+L2: build_narr_combat_end ZONE FORMAT INCONSISTENCY
+File: creative_bridge.py line 577
+Fix: Send zone as dict {zone_name, description, controlling_faction,
+threat_level} matching all other builders.
+
+L3: DUPLICATE NPC RISK FLAG
+File: Save JSON lines 6957-6982
+Fix: Remove duplicate risk flag for "Wardens Grull and Torvash".
+
+L4: INCONSISTENT RISK FLAG CASING
+File: Save JSON lines 6942-6978
+Fix: Normalise all level fields to UPPERCASE (CRITICAL, HIGH, MODERATE).
+
+L5: 15 ZONES EMPTY controlling_faction
+File: Save JSON
+Fix: For each zone, set controlling_faction from NSV-ZONES or
+NSV-FACTIONS canonical data. If genuinely factionless, set
+no_faction: true. Do not leave ambiguous.
+
+L6: set_pc_zone DOCSTRING MISSING ZONE
+File: mcp_server_v3.py line 625
+Fix: Add "Sighing Swamps" to zone list in docstring.
+
+────────────────────────────────────────────────────────────────────
+IMPLEMENTATION ORDER: H1 H2 M7 H3 H4 H5 M3 M1 M2 M4 M5 M6 M8
+L1 L2 L3 L4 L5 L6. Then test.
+────────────────────────────────────────────────────────────────────
+END SPEC

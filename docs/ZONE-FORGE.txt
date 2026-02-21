@@ -1,0 +1,54 @@
+ZONE-FORGE
+1.0 Trigger: PC enters Current_Zone (spawn/travel/explicit)
+1.1 Validate + Normalize Zone Name
+1.1.1 Validate Current_Zone exists in NSV-ZONES; if not → HARD STOP and list closest matching Zone names from NSV-ZONES
+1.1.2 Normalize Current_Zone = exact NSV-ZONES Zone_Name
+1.2 PC_Zone Binding
+1.2.1 Set PC_Zone = Current_Zone (authoritative)
+1.2.2 If macros-engine:set_pc_zone is available, call it with Current_Zone to sync engine state.
+1.3 With_PC Cohesion
+1.3.1 For each NPC/Entity with With_PC: yes → set their Current_Zone = PC_Zone in JSON save and record in ADJUDICATION_LOG
+1.3.2 If any With_PC: yes record still conflicts with PC_Zone after 1.3.1 → HARD STOP (state inconsistency)
+
+2.0 Controlling_Faction Resolution (DELTA FIRST)
+2.1 If Controlling_Faction for Current_Zone is present in JSON save (factions or zones section) → 2.2
+2.2 Else if Controlling_Faction is present in NSV-ZONES → 2.3
+2.3 Else run FAC-FORGE for Current_Zone
+
+2.4 NPC Presence (HARD)
+2.4.1 Count NPCs in JSON save npcs section where zone = Current_Zone
+2.4.2 If count ≥ 3 → skip NPC-FORGE; proceed to 2.5
+2.4.3 Else (count < 3) → run NPC-FORGE for Current_Zone
+
+2.5 Clocks / PEs
+2.5.1 Run CL-FORGE or PE-FORGE for Current_Zone (agent chooses)
+
+2.6 Encounter List
+2.6.1 If EL-DEF exists for Current_Zone in NSV-ENGINES → 3.0
+2.6.2 Else run EL-FORGE for Current_Zone
+
+2.7 Discoveries
+2.7.1 If UA is active in Current_Zone → 3.0; else → 2.7.2
+2.7.2 Run CAN-FORGE for Current_Zone
+
+3.0 CP Expansion (NSV-ZONES is CP registry)
+3.1 Read CP list for Current_Zone from NSV-ZONES; if missing → HARD STOP (zone exists but CP data absent)
+3.2 If CP_Count <= 1 → roll 1d3 new CPs and for each: create Destination Zone via 4.0; add reciprocal CP back
+3.3 Else skip CP expansion
+
+4.0 Create New Zone (when required)
+4.1 Invent from setting canon (NSV-WORLD, LORE-WORLD, LORE-PLACES, LORE-FACTIONS for regional and historical context): Zone_Name, Zone_Type, Risk_Profile
+4.2 Create CP pair: parent→new and new→parent
+4.3 If contradiction with canon geography → abort that Zone and create a different Zone
+
+5.0 Outputs (to JSON save)
+5.1 FACTION_STATE_CHANGES (if created)
+5.2 NPC_STATE_CHANGES (if created/updated)
+5.3 CLOCKS & PRESSURE (if created/advanced)
+5.4 PROCEDURAL_ENGINES_ACTIVE (if created/updated)
+5.5 ENCOUNTER_LISTS_REGISTRY (if EL created)
+5.6 DISCOVERIES (always ≥1)
+5.7 ZONE_CHANGES (note new Zones; update existing Zone with content + CPs)
+5.8 ADJUDICATION_LOG (mode, Zone(s), what was created, timestamp)
+
+6.0 Return to caller; caller runs NARR

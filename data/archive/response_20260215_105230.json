@@ -1,0 +1,133 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. The bullet 'Reunion at Seawatch/Riverwatch' requires Thoron to reunite with a companion at one of those locations. Thoron departed Riverwatch on the 22nd Ilrym and is heading for Caras. No reunion event occurs at Seawatch or Riverwatch on the 30th. The party is in transit. The VP ambiguous contact roll has no bearing on this bullet.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. The bullet 'Underlayer contact reused' requires the Hidden Temple's Caras cell to reuse an existing contact, leaving operational traces. No facts establish any Hidden Temple underlayer activity today. The HT-DH engine being active makes the clock eligible for audit but does not itself satisfy any ADV bullet. No evidence of contact reuse exists.",
+      "state_changes": []
+    },
+    {
+      "id": "req_003",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. The bullet 'Children advance' refers to the Children of the Dead Gods faction making an active agency advance \u2014 not the cadence tick of Binding Degradation. The Binding Degradation trigger has already fired (Dead God manifested). No new Children faction agency action is established in today's facts. The VP ambiguous contact and HT-DH engine activity are unrelated to Orcus Crystal research.",
+      "state_changes": []
+    },
+    {
+      "id": "req_004",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. The bullet 'Orcus contact' requires Suzanne to have direct or indirect contact with Orcus cult elements. The delta explicitly notes this clock is gated behind Enigma Crystal Hunt reaching 14/14, and no cult contact occurs today. Suzanne is travelling with Thoron toward Caras. VP ambiguous contact refers to patrol doctrine, not cult activity.",
+      "state_changes": []
+    },
+    {
+      "id": "req_005",
+      "type": "NPAG",
+      "content": "NPAG \u2014 30th Ilrym \u2014 7 NPCs act.\n\n1. LITHOE WANO-KAN (Khuzdukan): Integrates Lalholm's communion data identifying specific rune-chain architecture. Counter-sequence mapping advances \u2014 she isolates the tertiary binding layer where soul-anchors intersect ward geometry. Progress narrowing but incomplete. Needs one more data point from the deep halls.\n\n2. FATHER LALHOLM (Khuzdukan): Catalogues rune-chain candidates from his communion vision. Cross-references with Lithoe's tertiary layer findings. Identifies two candidate chains \u2014 one structural, one parasitic. Cannot determine which holds the wardens' souls without physical inspection of the ward-chamber inscriptions.\n\n3. THORDAK IRONBROW (Khuzdukan): Reports to Kelda at aqueduct: tremor frequency unchanged since last report. Maintains ward-chamber perimeter. Rotates warden shifts. Tends Grull and Torvash \u2014 no change in soul-suspension state.\n\n4. CASTELLAN CONORTH (Caras): Receives Ironmask agent Deryth for third meeting. Deryth shifts approach \u2014 hints at 'allies beyond the mountains who value strong leadership.' Conorth listens, offers nothing, but does not refuse the meeting. Gate inspections continue. Vael evidence courier now one day out.\n\n5. CASTELLAN JOPPA (Vornost): Sealed letter reaches Fort Seawatch \u2014 but Thoron has already departed. Seawatch harbour master holds letter. Joppa continues Dragon Throne preparations. Honour guard drilling daily.\n\n6. TIRRIS VARGOL (Whiteagle Keep): Receives Deryth's latest dispatch via Golden Hind caravan route. Assessment updated: 'Conorth receptive but cautious. Third meeting secured. Recommend continued patience \u2014 he will not move until he sees advantage.' Vargol adjusts timeline. Awaits next report.\n\n7. HARREN VAEL (Riverwatch): Evidence courier departs Riverwatch at dawn, bearing sealed documents toward Caras. Vael watches from the customs house window. The documents detail Golden Hind customs stamp irregularities across three port cities. Courier expected in Caras within two days.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "NPAG 30th Ilrym: Lithoe isolates tertiary binding layer where soul-anchors intersect ward geometry; Lalholm identifies two candidate rune-chains; Thordak reports tremor frequency stable"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG 30th Ilrym: Conorth-Deryth third meeting \u2014 Deryth hints at allies beyond mountains; Conorth listens but offers nothing"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG 30th Ilrym: Joppa's sealed letter reaches Seawatch but Thoron already departed; Vargol receives updated assessment; Vael evidence courier departs Riverwatch for Caras (2 days)"
+        }
+      ]
+    },
+    {
+      "id": "req_006",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. Same reasoning as req_001. Thoron remains in transit toward Caras on the 31st Ilrym. No reunion at Seawatch or Riverwatch. The party has left both locations.",
+      "state_changes": []
+    },
+    {
+      "id": "req_007",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. Same reasoning as req_002. No established facts on the 31st indicate Hidden Temple underlayer contacts being reused. HT-DH engine eligibility does not equal bullet satisfaction.",
+      "state_changes": []
+    },
+    {
+      "id": "req_008",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. Same reasoning as req_003. No Children of the Dead Gods faction agency action occurs on the 31st. The Binding Degradation trigger has already fired. Cadence advancement of that clock is not the same as the 'Children advance' bullet on Enigma Crystal Hunt.",
+      "state_changes": []
+    },
+    {
+      "id": "req_009",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. Same reasoning as req_004. Clock remains gated behind Enigma Crystal Hunt 14/14. No Orcus contact established on the 31st.",
+      "state_changes": []
+    },
+    {
+      "id": "req_010",
+      "type": "NPAG",
+      "content": "NPAG \u2014 31st Ilrym \u2014 5 NPCs act.\n\n1. LITHOE WANO-KAN (Khuzdukan): Descends to deep hall junction point where tertiary binding layer is physically accessible. Begins transcribing ward-chamber inscriptions at the parasitic rune-chain candidate site. Work is slow \u2014 the corridors shake intermittently. She works by staff-light, alone, methodical.\n\n2. FATHER LALHOLM (Khuzdukan): Prepares theological framework for soul-extraction procedure based on Haadis jurisdictional principles. If the rune-chains can be severed, the souls need somewhere to go. Lalholm reasons Haadis can claim them \u2014 but only if the entity's grip is broken first. Drafts a ritual outline. Untested.\n\n3. MERROW KEST (Seawatch): The Torlec ghost vessel in harbour has now been anchored eight days. No movement. No contact. Kest dispatches a harbour boat for visual inspection at dawn \u2014 crew reports deck empty, rigging secure, hull sound. No name plate visible. Kest orders continued observation and sends word to Joppa.\n\n4. CAPTAIN RENDAL (Grey Plains): Intercepts bandit scouts two leagues south of Caras road. Brief skirmish \u2014 bandits flee east. Rendal notes improved coordination: scouts used signal mirrors. Reports to garrison at Caras gate.\n\n5. CONORTH (Caras): Receives Rendal's bandit report. Deploys additional mounted patrol to Caras southern approach. Tightens evening curfew by one hour. Does not connect bandit coordination to any larger pattern.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "NPAG 31st Ilrym: Lithoe transcribing ward-chamber inscriptions at parasitic rune-chain site; Lalholm drafting soul-extraction ritual framework based on Haadis jurisdictional principles"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG 31st Ilrym: Torlec ghost vessel at Seawatch \u2014 8 days anchored, no contact; Kest dispatches inspection boat (empty deck, no name plate); Kest sends word to Joppa"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG 31st Ilrym: Rendal intercepts bandit scouts with signal mirrors south of Caras road; Conorth deploys additional patrol and tightens curfew"
+        }
+      ]
+    },
+    {
+      "id": "req_011",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. 1st Evernew \u2014 season changes to Summer. Thoron is now in Caras, not Seawatch or Riverwatch. No reunion occurs at either coastal location. SRP Summer trigger (raw materials peak) has no bearing on recognition. The party has been gone from Seawatch/Riverwatch for over a week.",
+      "state_changes": []
+    },
+    {
+      "id": "req_012",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. 1st Evernew. No facts establish Hidden Temple underlayer contact reuse. The season change and SRP raw materials trigger are economic/military events with no Hidden Temple operational bearing. HT-DH engine eligibility remains insufficient alone.",
+      "state_changes": []
+    },
+    {
+      "id": "req_013",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. 1st Evernew. No Children of the Dead Gods faction agency action is established. The season change, VP roll, and SRP trigger are unrelated to Enigma Crystal research or cult advancement. Binding Degradation trigger already fired \u2014 no new 'Children advance' event occurs.",
+      "state_changes": []
+    },
+    {
+      "id": "req_014",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "no_advance. 1st Evernew. Clock remains gated behind Enigma Crystal Hunt 14/14. Suzanne is with Thoron in Caras. No Orcus cult contact occurs. Season change and SRP are irrelevant to this bullet.",
+      "state_changes": []
+    },
+    {
+      "id": "req_015",
+      "type": "NPAG",
+      "content": "NPAG \u2014 1st Evernew \u2014 5 NPCs act.\n\n1. LITHOE WANO-KAN (Khuzdukan): Completes transcription of parasitic rune-chain inscriptions. Cross-references with counter-sequence map. The data aligns \u2014 parasitic chain is confirmed as the soul-anchor mechanism. Counter-sequence research advances significantly. She sends word to Lalholm: 'I know which chain. Come down.'\n\n2. FATHER LALHOLM (Khuzdukan): Receives Lithoe's message. Descends to deep hall junction with ritual materials and theological notes. First joint inspection of the parasitic rune-chain in person. Both scholars now working at the same site \u2014 convergence accelerating.\n\n3. VAEL EVIDENCE COURIER (en route to Caras): Courier passes through Grey Plains, encounters Rendal's expanded patrol. Papers checked, cleared. One day from Caras. The sealed evidence \u2014 customs stamp irregularities across three ports \u2014 will reach Conorth tomorrow.\n\n4. TIRRIS VARGOL (Whiteagle Keep): Summer brings increased trade traffic through Whiteagle Pass. Vargol uses the bustle to position two additional agents in merchant caravans bound for Caras and Seawatch. Information network expanding quietly.\n\n5. THORDAK IRONBROW (Khuzdukan): Notes a subtle change \u2014 tremor frequency has decreased slightly since Lithoe began working at the parasitic rune-chain site. Correlation uncertain. Reports to Kelda. Maintains vigilance.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "NPAG 1st Evernew: Lithoe confirms parasitic rune-chain as soul-anchor mechanism; sends word to Lalholm; both scholars now working at same site in deep halls"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG 1st Evernew: Vael evidence courier one day from Caras (cleared through Rendal's patrol); Vargol positions two additional agents in summer trade caravans"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG 1st Evernew: Thordak notes slight decrease in tremor frequency since Lithoe began work at parasitic rune-chain site \u2014 correlation uncertain"
+        }
+      ]
+    }
+  ]
+}

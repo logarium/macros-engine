@@ -1,0 +1,10 @@
+{
+  "responses": [
+    {
+      "id": "cr_003",
+      "type": "PLAYER_INPUT",
+      "content": "[OOC] No mode currently active. Standard play mode. INTIM was active for the earlier Valania scene but has since cleared.",
+      "state_changes": []
+    }
+  ]
+}

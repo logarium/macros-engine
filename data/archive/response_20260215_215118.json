@@ -1,0 +1,10 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No reunion at Seawatch/Riverwatch this day. Thoron departed Khuzdukan toward Khuzduk Hills. No advance.",
+      "state_changes": []
+    }
+  ]
+}

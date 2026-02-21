@@ -1,0 +1,36 @@
+EL-FORGE
+1 DESIGN 1 ENCOUNTER LIST
+1.1 Trigger: EL-FORGE
+1.2 authors exactly ONE EL-DEF. Does NOT run encounters.
+
+2 STRUCTURED INPUT MODE (when Caller = ZONE-FORGE):
+2.1 Required:
+2.1.1 Zone_Scope: (Zone this EL covers)
+2.1.2 EL_Name: (default: "[Zone_Scope] Encounters")
+2.1.3 Registry_Target: (default: NSV_DELTA_REGISTRY)
+2.1.4 Adjacency_Notes: (default: blank)
+2.1.5 Fallback_Priority: (default: 1)
+2.1.6 Entry_Count: (default: 6)
+2.1.7 Runtime_Randomizer: (default: 1d6)
+2.1.8 Tone_Constraints: (inherit from LORE-PLACES for current zone if entry exists, else NSV-INTRO Tone if omitted)
+2.1.9 Allowed_Heat_Level: (default: routine_only)
+2.1.10 Red_Lines: (inherit from NSV-INTRO Genre_Constraints if omitted)
+2.2 Protocol: all inputs provided in structured block. Apply defaults for any omitted optional fields.
+
+3 INPUT PROTOCOL:
+3.1 Player mode: stepwise protocol (ask field, STOP, ask next field, STOP)
+3.2 ZONE-FORGE mode: all inputs in structured block; agent applies defaults for omitted fields
+
+4 Inputs (player mode — stepwise; STOP after each):
+4.1 Identity: EL_Name, Registry_Target (SSM_1A|NSV_DELTA_REGISTRY)
+4.2 Scope: Zone_Scope (named), Adjacency_Notes, Fallback_Priority (int)
+4.3 Entries: Entry_Count (default 6), Runtime_Randomizer (1d6|2d6|1d8|1d10)
+4.4 Constraints: Tone_Constraints, Allowed_Heat_Level (routine_only|may_include_UA_cues)
+4.5 Optional: Red_Lines
+
+5 Rules (HARD):
+5.1 Entries are prompts/themes, not outcomes.
+5.2 No new named persistent NPC/faction/Zone as facts; use descriptors or UA-XX if agency implied.
+
+6 Output (HARD):
+6.1 Emit one full EL-DEF; then STOP.

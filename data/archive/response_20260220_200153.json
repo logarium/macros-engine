@@ -1,0 +1,10 @@
+{
+  "responses": [
+    {
+      "id": "cr_003",
+      "type": "NARR_COMBAT_END",
+      "content": "[DISMISSED \u2014 triplicate ghost combat. Skratha Ironjaw still dead.]",
+      "state_changes": []
+    }
+  ]
+}

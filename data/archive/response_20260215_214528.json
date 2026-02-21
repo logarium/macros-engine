@@ -1,0 +1,54 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Helkar Recognition Seawatch/Riverwatch: no reunion event occurred at Seawatch/Riverwatch during these days. Thoron is travelling toward Vornost, not coastal zones. No advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Suzanne Loyalty: Suzanne is travelling toward Seawatch with Guldur. No direct Orcus contact has occurred during travel. Yor-Kazh is sheathed and silent post-counter-sequence. No advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_003",
+      "type": "NPAG",
+      "content": "28th Ilrym NPAG x5: Lithoe begins sending network preparation (resting first day \u2014 no ritual work yet, sleep only); Lalholm assists with ward-chamber monitoring and begins theological resonance study; Thordak maintains security at deep stairs; Joppa continues Vornost preparations (second courier en route); Conorth processes Vael evidence on desk (no action yet \u2014 bureaucratic pace).",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "NPAG 28th: Lithoe resting (day 1 of 3 prep). Lalholm ward monitoring. Thordak security. Joppa preparations. Conorth reviewing Vael evidence."
+        }
+      ]
+    },
+    {
+      "id": "req_004",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Helkar Recognition Seawatch/Riverwatch Day 2: still no reunion event. No advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_005",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Enigma Crystal Hunt 'Children advance' bullet: Binding Degradation TRG was erroneously fired by engine but is corrected to NOT FIRED (counter-sequence halted Decay). Without Binding Degradation TRG firing, Children do not cascade +3 to Orcus. However, the Enigma Crystal advance from 7\u21928 on 28th Ilrym via its own cadence bullet is valid. The 'Children advance' review bullet does not apply because Binding Degradation TRG has not actually fired. No additional advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_006",
+      "type": "NPAG",
+      "content": "29th Ilrym NPAG x4: Lithoe begins ritual inscription work (day 2 \u2014 rested, now preparing resonance anchors at Khuzdukan); Lalholm assists with theological binding layer; Ironmask agent Deryth fourth meeting with Conorth (rapport deepening \u2014 trade route details discussed); Vael awaits response from Conorth (nervous, no word yet).",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "NPAG 29th: Lithoe ritual prep day 2. Lalholm assists. Deryth fourth meeting with Conorth (trade routes discussed, rapport deepening). Vael still waiting."
+        },
+        {
+          "type": "fact",
+          "text": "Lithoe Sending Network clock: 0\u21921/4 (rest completed 28th); 1\u21922/4 (ritual prep begun 29th)."
+        }
+      ]
+    }
+  ]
+}

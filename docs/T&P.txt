@@ -1,0 +1,45 @@
+T&P
+0.0 MCP ENGINE DELEGATION (HARD)
+0.0.1 If macros-engine:run_tp_days is available, the agent MUST use it instead of manually executing the day loop below.
+0.0.2 After calling run_tp_days, the agent MUST call macros-engine:get_pending_requests to retrieve clock audit reviews, NPAG gates, and encounter prompts requiring creative judgment.
+0.0.3 The agent resolves pending requests narratively, then calls macros-engine:apply_llm_judgments to commit results to engine state.
+0.0.4 The procedural steps in §2.0–§6.0 below define the logic the engine implements. They remain authoritative for understanding what the engine does, but the agent does not execute them manually when the engine is available.
+0.0.5 §7.0 (NARR) is always the agent's responsibility regardless of engine availability.
+
+1.0 Trigger: T&P OR explicit player time skip
+1.1 Authority_Tier: GLOBAL
+1.2 Input: Time_Increment = N days (default N=1)
+1.3 If PC_Zone (from JSON save) is blank/unknown → STOP
+
+2.0 DAY LOOP
+2.1 Set Day = 1
+2.2 If Day > N → 7.0
+2.3 Advance in-game date by +1 day
+
+3.0 TIME ADVANCE (NO AGENCY)
+3.1 Run all cadence PEs registered in NSV-ENGINES and JSON save
+3.2 Advance time-triggered clocks in NSV-ENGINES and JSON save
+3.2.1 CLOCK AUDIT (MANDATORY): Scan ALL active clocks in NSV-ENGINES and JSON save (and any clock objects advanced/created today) and check their ADV bullets against facts already established this Day.
+3.2.2 If an ADV bullet is unambiguously satisfied and the clock has not already advanced this Day, advance it exactly once and set Trigger_Fired = the exact ADV bullet text.
+3.2.3 If satisfaction is ambiguous, do not advance. No new events may be invented to satisfy triggers.
+3.2.4 CLOCK INTERACTION EVALUATION: After standard clock audit (§3.2.1–3.2.3), evaluate all CLOCK INTERACTION RULES from NSV-CLOCKS. For each rule where both threshold conditions are met AND the interaction has not previously fired at these thresholds, apply the effect. Log per MACROS §5.6.7.
+3.3 Prohibition: do not resolve agency actions; do not invent threats/NPCs/factions/objectives
+3.4 Log off-screen effects to JSON save state: zones, factions, and/or NPCs as applicable.
+
+4.0 ENCOUNTER PROMPT GATE (ROLL #1)
+4.1 Read Campaign_Intensity_Level from JSON save
+4.2 Roll 1d6 and map: low=1–2; medium=1–3; high=1–4; extreme=auto
+4.3 If fail → 5.0
+4.4 If EL-DEF exists for PC_Zone in NSV-ENGINES or JSON save (prefer highest FP if multiple) → roll its randomiser, select exactly one result, record as Encounter_Prompt for narration
+
+5.0 NON-CADENCE PE (OPTIONAL)
+5.1 If any non-cadence PE exists with Zone_Scope = PC_Zone in NSV-ENGINES or NSV-DELTA → run exactly one (agent chooses); else skip
+
+6.0 NPAG GATE (ROLL #2)
+6.1 Using Campaign_Intensity_Level from 4.1, roll 1d6 and map: low=1–2; medium=1–3; high=1–4; extreme=auto
+6.2 If pass → run NPAG; else skip
+6.3 ADJUDICATION_LOG records: Day, Encounter_Prompt (if any), all clock/PE/NPC/faction changes
+
+6.4 Set Day = Day + 1 → go to 2.2
+
+7.0 Agent runs NARR

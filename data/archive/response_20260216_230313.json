@@ -1,0 +1,15 @@
+{
+  "responses": [
+    {
+      "id": "req_004",
+      "type": "NPAG",
+      "content": "5 NPCs resolved. (1) Lithoe@Khuzdukan: rests one full day per Thoron's order, then begins sending network construction \u2014 first resonance calibration tests using ward-chamber acoustics. (2) Lalholm@Khuzdukan: conducts Haadis communion at upper terrace near Dwarven Gate \u2014 sunlight access critical for divine contact. Attempts preliminary soul-assessment of wardens Grull and Torvash. (3) Castellan Joppa@Vornost: receives second raven from frontier (Bale's report on Vasha execution and new command structure). Begins preparing Black Fortress garrison for potential Helkar arrival. (4) Ironmask Agent Deryth@Caras: cultivating Conorth's secretary \u2014 second meeting at the Copper Cup tavern. Building trust, probing Conorth's reaction to frontier reports. (5) Harren Vael@Riverwatch: reviews customs ledger discrepancy evidence. Drafts formal complaint to Vornost regarding Golden Hind stamp anomalies. Courier dispatched.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "S10 NPAG: Lithoe resting then begins sending network construction. Lalholm attempts warden soul-assessment. Joppa preparing Black Fortress for Helkar arrival. Deryth cultivating Conorth secretary. Vael dispatches formal customs complaint to Vornost."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+NSV-INTRO v3.0
+PLAYER INTRODUCTION
+[META]
+OPENING SCENARIO (v3.0)
+
+[PLAYER INTRODUCTION]
+PLAYER INTRODUCTION
+YOUR PAST
+You are **Thoron, Helkar of Gammaria**. But no one knows that.
+You've been away adventuring for years—your face forgotten, even if your title isn't. When you left, Gammaria was a handful of frontier forts, secure in the hands of five companions. You return to find a young kingdom, fragile and fierce, carved from wilderness and ruin. But your companions are scattered or in hiding. And your subjects? They don't recognise you. They know the name **Helkar**. They don't know it's you.
+
+YOUR REALM
+Rugged escarpments surround the inland **Sea of Birds**, its rivers arteries of trade and travel. The capital **Caras** and the Black Fortress of **Vornost** dominate a dusty heartland. Beyond lie dwarven ruins, haunted forests, goblin-infested hills, and – in the far south – **Vargol's Reach**, where the sound of leather wings is never distant.
+Merchants and **Imperial Torlec** test your borders. Cults and strange gods cast alien shadows. The land itself writhes—**undead** rising from rivers, **dimensional instability** cracking the Western Scarps, and things older than kingdoms stirring in swamps and forests.
+
+YOUR COMPANIONS (SCATTERED)
+**Valania Lorethor** — Assassin, spymistress. Last known location: deep cover in **Golden Hind** merchant networks (Caras underlayers). **Findability: Hard.** She won't be found unless you trigger the right contacts.
+**Suzanne of Corlaine** — Anti-paladin, frontier weapon. Last known location: patrol commander at **Fort Vanguard** or roaming the **East March**. **Findability: Medium.** Public role but mobile.
+**Father Lalholm** — Death-priest, chief advisor. Last known location: religious liaison at **Riverwatch** or the **Temple of the Sun**. **Findability: Easy.** Public religious role.
+**Lithoe Wano-Kan** — Sorceress, lore keeper. Last known location: metaphysical researcher at **Fort Vanguard** or **Khuzdukan** ruins. **Findability: Medium.** Semi-public role, sometimes absent.
+**Guldur Emeldyr** — Warrior, friend. Last known location: intelligence gatherer at **Fort Seawatch** or **Riverwatch**. **Findability: Easy.** Public role in ports and trade hubs.
+
+You built this kingdom with blood and determination. Now you must find your friends, reclaim your name, and hold it together.
+
+**Welcome home, Helkar.**
+[PLAYER INTRODUCTION ENDS]
+
+[META]
+Region: Eastern Marches / Fort Vanguard Frontier
+Scope: regional
+Tone: Bleak frontier survival, occult aftermath, hard-earned civilisation
+Genre_Constraints: Sword & sorcery; post-cataclysmic fantasy; AD&D 1e assumptions
+Primary_Threat_Mode: Environmental malignancy, undead persistence, dormant cosmic forces
+Metaphysics_Notes: Residual divine, draconic, and Krovekëan energies warp land and fate
+
+OPENING SCENARIO (v3.0)
+NPCs: Companions scattered. Most NPCs do not recognize Thoron's face (title "Helkar" known; person forgotten). Companions always recognize.
+Goals: Find companions, reclaim authority. Mechanics: see Foundational Clocks + PARTY-SEED assignments.
+
+SIX FOUNDERS GATE — DRAGON-SKULL GATE ONLY (HARD):
+
+Thoron cannot enter Vornost via Dragon-Skull Gate until all five companions have rejoined.
+
+POLITICAL NECESSITY:
+Castellan Joppa recognizes Thoron but requires public legitimacy.
+The original six founders must ride together through Dragon-Skull Gate to reclaim the Dragon Throne.
+
+GATE RULE (HARD):
+Dragon-Skull Gate remains closed to Thoron until:
+  • Companion Reunion—Valania: COMPLETE
+  • Companion Reunion—Suzanne: COMPLETE
+  • Companion Reunion—Lalholm: COMPLETE
+  • Companion Reunion—Lithoe: COMPLETE
+  • Companion Reunion—Guldur: COMPLETE
+
+Once all five companions rejoin:
+  • Dragon-Skull Gate opens to Thoron
+  • Six Founders triumphant entry becomes available
+  • Opening Scenario completes properly
+
+If Thoron attempts Dragon-Skull Gate entry before all companions gathered:
+  • Guards respectful but firm: "Castellan's orders, Helkar. The six must ride together."
+  • Joppa's message if contacted: "Political necessity. I know it's you. But Gammaria needs to see all six."
+
+ALTERNATE ENTRANCES (HARD):
+Vornost has three entrances (per NSV-ZONES):
+  1. Dragon-Skull Gate → Grey Plains (CEREMONIAL; Six Founders rule applies)
+  2. low stairs → Sighing Swamps (BACK entrance; open but...)
+  3. River Koss → Khuzduk Hills (RIVER access; open but...)
+
+Thoron CAN enter via low stairs or River Koss WITHOUT all companions.
+BUT: Consequences apply (see below).
+
+SNEAKING CONSEQUENCES — MECHANICAL (HARD):
+
+If Thoron enters Vornost via low stairs or River Koss before all companions rejoin:
+
+IMMEDIATE:
+  • Create CLK: Vornost Legitimacy Crisis | Thoron | 0/6
+    ADV: Week passes without public Six Founders ceremony; Conorth challenges authority publicly; Vargol learns of irregular entry; Popular rumor questions Helkar identity; Military commander refuses order citing "unclear succession"
+    HALT: Six Founders ceremony completed at Dragon-Skull Gate
+    RED: Thoron demonstrates authority decisively in public; Companion vouches for Thoron publicly; Enemy defeated with witnesses
+    TRG: Political crisis: Conorth/Vargol challenge legitimacy openly; military loyalty fractures; civil conflict imminent
+
+  • HALT all Recognition clocks (cannot advance while Legitimacy Crisis active)
+  
+  • Helkar Recognition—Vornost does NOT complete automatically (remains at current progress)
+
+  • Opening Scenario does NOT retire (remains active; reunions still required for proper completion)
+
+FACTIONAL:
+  • Ironmask Council (Vargol): +2 to any active conspiracy clocks
+  • Conorth Baerkudth: Publicly questions Thoron's identity and authority
+  • Church of Haadis: Withdraws support; declares succession unclear until proven
+  • Golden Hind: Openly operates without Helkar authority; ignores trade restrictions
+
+NPC RESPONSES (HARD):
+  • Castellan Joppa: Privately supports Thoron but publicly must remain neutral ("You put me in an impossible position")
+  • Kael Dravorn (commandos): Loyal but conflicted; follows orders but morale damaged
+  • Companions (when found): Angry/disappointed at political blunder; must be convinced to proceed
+
+SNEAKING CONSEQUENCES — NARRATIVE (HARD):
+
+Agent must narrate these elements if sneaking occurs:
+
+VORNOST INTERIOR:
+  • Garrison uncertain; soldiers exchange glances when Thoron passes
+  • No salutes; formal but cold respect
+  • Whispers follow: "Is that really him?" "Thought the Helkar was taller" "Why'd he sneak in?"
+  • Black Fortress chambers opened but feel hollow; throne room empty of witnesses
+
+WORD SPREADS:
+  • Merchants in Caras: "Heard someone claiming to be Helkar slipped into Vornost through the back. Sounds like an impostor to me."
+  • Soldiers at Fort Vanguard: "If he was really the Helkar, why didn't he ride through the gate like a king?"
+  • Temple of the Sun: "Sneaking suggests guilt. Or lies. Either way, not legitimate."
+
+COMPANION REACTIONS (when found):
+  • Valania: "You *what*? Do you have any idea what you've done to our position?"
+  • Suzanne: "I don't care about politics, but now half the realm thinks you're fake. That's a problem."
+  • Lithoe: "Tactically idiotic. Strategically disastrous. Why?"
+  • Guldur: "So... we're doing this the hard way, then. Great. Love it. (sarcasm thick)"
+  • Lalholm (if present): "I *told* you. Now we fix it or we lose everything."
+
+ENEMY EXPLOITATION:
+  • Vargol sends messengers: "The real Helkar would never skulk. This pretender insults Gammaria."
+  • Conorth: "Until proven otherwise, I hold Caras for the *legitimate* Helkar—whoever that is."
+  • Cults/factions: Exploit confusion; "Succession is unclear; act now while they're weak"
+
+RECOVERY PATH (HARD):
+
+To resolve Legitimacy Crisis clock:
+  1. Gather all five companions (original requirement)
+  2. Exit Vornost
+  3. Stage proper Six Founders entry via Dragon-Skull Gate
+  4. Public ceremony with all six present
+  5. Then: Legitimacy Crisis clock retires; Recognition resumes; Opening Scenario completes
+
+OR: Advance Legitimacy Crisis to completion (political disaster; civil war likely)
+
+AGENT ENFORCEMENT (HARD):
+
+Agent MUST:
+  • Create Legitimacy Crisis clock if sneaking occurs
+  • Halt Recognition advancement until resolved
+  • Narrate cold/uncertain garrison responses
+  • Generate companion anger/disappointment
+  • Show enemy exploitation
+  • Require proper ceremony to fix
+
+Agent MUST NOT:
+  • Let sneaking pass without consequences
+  • Allow Recognition to advance normally
+  • Narrate triumphant entry if sneaking occurred
+  • Complete Opening Scenario without proper Six Founders ceremony
+
+

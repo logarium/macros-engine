@@ -1,0 +1,53 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No reunion event at Seawatch/Riverwatch today. Thoron is on Grey Plains heading to Sighing Swamps. No advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No underlayer contact reused today. Thoron and Valania are traveling, not in Caras. No advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_003",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No Orcus contact today. Suzanne is in Khuzduk Hills, not with Thoron. No advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_004",
+      "type": "NPAG",
+      "content": "6 NPCs eligible. Resolving off-screen actions for NPCs not with PC.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "Guldur continues intelligence gathering in Khuzduk Hills; monitoring trade routes for Ironmask activity"
+        },
+        {
+          "type": "fact",
+          "text": "Suzanne patrols Khuzduk Hills perimeter; restless, brooding on Orcus bond"
+        },
+        {
+          "type": "fact",
+          "text": "Lalholm maintains religious liaison at Khuzdukan; consulting Thordak on ward stability"
+        },
+        {
+          "type": "fact",
+          "text": "Lithoe continues counter-sequence research at Khuzdukan; Binding Degradation now 15/16 \u2014 urgency mounting"
+        },
+        {
+          "type": "fact",
+          "text": "Captain Rendal increases Grey Plains patrols; bandit coordination worsening with spring trade"
+        },
+        {
+          "type": "fact",
+          "text": "Henric Bale drills Fort Vanguard garrison; Vanguard Patrol reports ambiguous contact on eastern perimeter"
+        }
+      ]
+    }
+  ]
+}

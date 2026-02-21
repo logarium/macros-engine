@@ -1,0 +1,16 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Party travelling Grey Plains, not at Seawatch/Riverwatch. ADV bullet not met.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No one in East March. No new tracks found. ADV bullet not met.",
+      "state_changes": []
+    }
+  ]
+}

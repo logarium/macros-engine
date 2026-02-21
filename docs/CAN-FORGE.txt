@@ -1,0 +1,93 @@
+CAN-FORGE
+1 Trigger: CAN-FORGE
+1.1 Caller = ZONE-FORGE/THREAT-SCAN/PLAYER-INVOKED
+1.2 If PLAYER-INVOKED →  2.0; else → 3.0
+
+2.0 PLAYER-INVOKED FULL MODE
+2.1 Run FAC-FORGE and create 1 new Faction for Current_Zone.
+2.2 Run NPC-FORGE and create 1 new_named_npc for Current_Zone
+2.3 Run CL-FORGE and create 1d2 new clocks for Current_Zone
+2.4 Run EL-FORGE and create 1 EL for Current_Zone
+2.5 Run PE-FORGE and create 1 PE for Current_Zone
+2.6 Run UA-FORGE and create 1 UA for Current_Zone
+
+3.0 DISCOVERIES AND THREADS
+3.1 Agent creates 1 new DISCOVERY in Current_Zone
+3.2 Agent creates 1 new UNRESOLVED_THREAD in Current_Zone
+
+4.0 STRUCTURED INPUT MODE (when Caller = ZONE-FORGE/THREAT-SCAN):
+4.1 Required: Zone_Scope (which Zone to populate)
+4.2 Fixed (non-overrideable):
+4.2.1 Output_Mode: ZONE-FORGE
+4.2.2 Visibility_Policy: secret
+4.2.3 PC_Targeting: forbidden
+
+5 INPUT PROTOCOL:
+5.1 Player: ask Zone_Scope, Visibility_Policy, Output_Mode. If missing, STOP.
+5.2 CAN-FORGE-AUTO: UA-only mode, secret, PC_Targeting forbidden, Zone auto.
+5.3 ZONE-FORGE: Zone_Scope in structured input, ZONE-FORGE mode fixed, secret, PC_Targeting forbidden.
+
+6 CAN-FORGE.AUTHORITY (HARD)
+6.1 CAN-FORGE may create JSON save inserts only:
+6.1.1 UA codes
+6.1.2 clocks
+6.1.3 unresolved threads
+6.1.4 discoveries
+6.1.5 optional EL-DEF / PE-DEF blocks (registry inserts)
+6.2 CAN-FORGE MUST NOT:
+6.2.1 resolve AGENCY ACTIONS
+6.2.2 advance time
+6.2.3advance clocks (new clocks start at 0 unless player authorises 1)
+
+7 CAN-FORGE.OWNERSHIP GATES (HARD)
+7.1 If output would create a named NPC → NPC-FORGE required (or NPC-FORGE-AUTO if delegated)
+7.2 If output would create a new faction → FAC-FORGE required (or FAC-FORGE-AUTO if delegated)
+7.3 UA-only mode may create UA codes without NPC-FORGE/FAC-FORGE (UA rules still apply)
+
+8 CAN-FORGE.CAPS (by Output_Mode):
+8.1 UA-only mode:
+8.1.1 new_UA_codes: 1
+8.1.2 new_discoveries: 1 (UA anchor only)
+8.1.4 new unresolved_threads: 1
+8.1.4 All other caps: 0
+
+9 ZONE-FORGE mode:
+9.1 new_UA_codes: 1
+9.2 new_clocks: 1 (owner = the UA just created, or environment)
+9.3 new_discoveries: 1
+9.4 All other caps: 0
+
+10 Full mode (defaults unless player authorises more):
+10.1 new_factions: 1
+10.2 new_named_npcs: 1 (requires NPC-FORGE path)
+10.3 new_clocks: 1d2
+10.4 new_EL_DEF: 1
+10.5 new_PE_DEF: 1
+10.6 Plus: UA codes, discoveries, threads as needed within above caps
+
+11 CAN-FORGE.AUTO
+11.1 Permitted only if session delegation exists (CAN-FORGE-AUTO) AND anti-overlap satisfied AND cooldown satisfied.
+11.2 Auto params fixed:
+11.2.1 Output_Mode: UA-only (creates UA codes only, no clocks/threads/EL/PE)
+11.2.2 Visibility_Policy: secret
+11.3.3 PC_Targeting: forbidden
+11.3.4 ZONE-FORGE does not use CAN-FORGE-AUTO. It invokes CAN-FORGE directly via structured caller path with Output_Mode = ZONE-FORGE.
+
+12 CAN-FORGE.REGISTRY WRITING (HARD)
+12.1 Any EL-DEF/PE-DEF created by CAN-FORGE MUST be emitted as save-ready registry inserts:
+12.2 ENCOUNTER_LISTS_REGISTRY (EL-DEF)
+12.3 PROCEDURAL_ENGINE_DEFS_REGISTRY (PE-DEF)
+12.4 Registry immutability: once registered, redefine only under UBER.
+
+13 CAN-FORGE.OUTPUT SHAPE (HARD)
+13.1 CAN-FORGE outputs ONLY save-ready inserts, limited to these sections:
+13.1.1 DISCOVERIES (mandatory)
+13.1.2 CLOCKS & PRESSURE (if clocks created)
+13.1.3 UNRESOLVED_THREADS (if durable stakes created)
+13.1.4 ENCOUNTER_LISTS_REGISTRY (if EL-DEF created)
+13.1.5 PROCEDURAL_ENGINE_DEFS_REGISTRY (if PE-DEF created)
+13.1.6 PROCEDURAL_ENGINES_ACTIVE (only if created PE is declared active now)
+13.1.7 JSON save npcs section (only if NPC-FORGE run)
+13.1.8 JSON save factions section (only if FAC-FORGE run)
+13.1.9 ADJUDICATION_LOG (mandatory: record trigger, scope, mode, caps used; cold-state proof if auto)
+13.2 No narration/prose inside inserts.

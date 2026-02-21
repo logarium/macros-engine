@@ -1,0 +1,235 @@
+LORE-WORLD v1.0
+(WORLD LORE DOCUMENT • CANONICAL • PLAYER-AUTHORED)
+Source: 43 years of campaign play, player notes, session history
+Authority: This document is canonical for cosmology, divine taxonomy, global history, continental geography, and regional history. It is the ceiling reference for all world-level facts. Search this document when narration touches on gods, pantheons, deep history, the Ages of Erroth, continental context, or the geopolitical situation around Gammaria and Imperial Torlec. Do NOT use this document for NPC portrayal (use LORE-NPCS) or current game state (use NSV-DELTA, PARTY-SEED, PARTY-DELTA). For world-level mechanics, see NSV-WORLD.
+
+[WORLD OVERVIEW]
+THE WORLD
+Erroth moves through Cycles of existence caused by the cosmic entity from which Erroth itself springs: the Sleeping Deep Dragon. The world and almost everything in it come from its dreaming mind. When the Sleeping Deep Dragon wakes, the world endures great change. When the Sleeping Deep Dragon returns to its slumber, a new Cycle of the world begins.
+ 
+ERROTHSPACE
+Erroth lies within a great Crystal Sphere that floats in an eternal cosmic sea, known as Errothspace. In addition to the sun, other worlds also exit in Errothspace, at times drawing close in a grand Conjunction. These are called the Golden Sister, the Emerald Sister, and the Dark Sister by Errothians (for their hues). Their true names are Glamlax (Golden Sister), Oerth (Emerald Sister), and Krovekëa (Dark Sister). The Dark Sister was recently destroyed by the uncontrolled energies of the Enigma Crystal.
+ 
+COSMIC PRINCIPLES
+Certain Principles underly all existence. Their existence is unknown to most mortals. Some gods adhere to these Principles. One Principle is THE LIGHTLESS – it is the essence of oblivion and wants only endings. Another Principle is THE ANIMA – it is the essence of existence and wants only creation. Other Principles may exist.
+ 
+THE GODS
+Erroth has many gods. Ancient laws known as the Edicts prevent gods from exerting excessive influence over life on Erroth, but gods often find ways to bypass the Edicts. Errothians group their gods into Pantheons.
+ 
+THE OPENER OF THE WAYS
+an Elder God who brought other gods to Erroth. Also known as Ninefold Io.
+ 
+THE FOUNDERS
+Nine gods brought to Erroth by the Opener of the Ways. They banished the Hellfires and the forces of Krovekëa and forged the world into its current form. Most are dead or vanished.
+ 
+THE DISCIPLES OF THE LIGHTLESS
+A group of gods who adhere to the Principle of the Lightless and seek oblivion in one form or another. The Disciples of the Lightless include:
+•	The God Outside Time
+•	Haadis, the Soulgrinder
+•	Abaddon, Dark Angel of Krovekëa
+•	Faluzure, the Night-Dragon
+•	Asmodeus, Lord of the Nine Hells
+•	Tiamat, Devourer of Children.
+ 
+THE ELDER GODS
+Primordial deities worshipped by ancient humans – some still persist but their worship has largely been replaced by the Blessed Kindred. They governed the elements and the natural world. Only Silvanus still enjoys worship from druid circles – others are little more than cults now.
+ 
+THE BLESSED KINDRED
+Large group of seventeen greater and lesser deities who have been deeply involved in Erroth since the Elemental Onslaught. Their worship is the most widespread. They are:
+•	Theggyn (Knowledge; Thought; Wisdom)
+•	Chronos (Time)
+•	Vallama (Magic)
+•	Vishtri (Life)
+•	Amacar (Guardan of the Dead, deep rival of Haadis)
+•	Demetrion (Justice; Truth; Mercy)
+•	Morpheus (Dreams)
+•	Kiralla (Love)
+•	Korhist (Battle)
+•	Lathander (Light, the Sun)
+•	Thule (Secrets; Subterfuge)
+•	Tymora (Fortune)
+•	Angrim (Smithcraft)
+•	Teredeme (Agriculture)
+•	Amrissa (The Hunt)
+•	Helm (Guardianship)
+•	Celene (The Moon)
+ 
+THE GODLINGS
+Demigods and quasi-deities that watch over lesser aspects of life and the world:
+•	Ilmirri (Festivals; Song)
+•	Lyrië (Joy)
+•	Waikini (Commerce)
+•	Arrisha (The Arts)
+•	Olympa (Excellence)
+•	Vairdun (Lies)
+•	Chuchavergi (Lust)
+•	Lovtaras (Pain; Suffering)
+ 
+THE NIGHTBORN
+A group of gods dedicated to darkness and evil. Some of these are also Disciples of the Lightless:
+•	Haadis, the Soulgrinder
+•	Asmodeus, Lord of the Nine Hells
+•	Tirrian (Darkness)
+•	Leikuni (Destruction; Chaos; Storms)
+•	Bhaal (Murder)
+•	Hekrimate (Black Magic)
+•	Valathirium (Madness)
+ 
+CULT OF GRAMLAR
+Unique to Gammaria. A small soldier’s cult dedicated to the Gramlar the Steeler, Glamlaxian god of war. Brought to Erroth by Thoron and spread quietly and simply as men and women saw his devotion in the early years and followed suit. A person battle-religion followed by those who need it.
+[WORLD OVERVIEW ENDS]
+
+ 
+[GLOBAL HISTORY]
+GLOBAL HISTORY
+Erroth’ dating system revolves around the Sundering of the Kal Therryn into humanity.
+AS – After Sundering (years)
+You will also see a reference to Earth’s CE dating system. This is not an error.
+
+THE FIRST SPHERE
+Dates unknown
+Another universe. Here, the gods come into being and make war on each other. Ninefold Io discovers the Cosmic Principle of the Anima and uses it to transcend beyond the First Sphere and into the multiverse, becoming the Opener of the Ways. He brings the other gods with him. Haadis discovers the Cosmic Principle of the Lightless and follows them, corrupting others to become its Disciples.
+ 
+THE THREE WORLDS
+c. 8000 CE
+Humans are a starfaring race. They build a second Earth to orbit Sol (7850 CE) and terraform Venus (8000 CE). These Three Worlds are the core of their civilisation. Humans war against a cybernetic race called the Puranoids, who an ancient cosmic artifact known as the Enigma Crystal. To prevent Puranoids from obtaining it, humans devise a weapon to destroy it. Using the weapon shatters the Crystal (8253 CE) but fatally damages Sol. Humans create a Dimensional Shift Device that moves the Three Worlds to another dimension (8410 CE). They erect forcefields around the Three Worlds to protect them from the energies of the new dimension. There, civilisation flourishes for almost another millennium in the Silver Empire of a Thousand Years.
+ 
+THE SILVER EMPIRE OF A THOUSAND YEARS
+The Three Worlds flourish into a high-tech civilisation of wonder. A new planet is detected, approaching the Three Worlds (9395 CE). This is Krovekëa, home to infernal horrors ruled over by Abaddon, Angel of the Abyss. Krovekëa demands the Dimensional Shift Device and attacks the Three Worlds, scouring them bare with a conflagration known as Hellfires. Humans refuse to hand over the Device and are defeated. A few survivors hide beneath the surface, retreating into suspended animation, known only in legend as “the Ancients”. Some of the lords of Krovekëa are bound by them, becoming the Dead Gods of Krovekëa. (9428 CE).
+ 
+THE FIRST AGE
+The Opener of the Ways finds the Three Worlds. He lays a Sleeping Deep Dragon at the heart of Earth (now known as Erroth) and sets the worlds within the Crystal Sphere of Errothspace. He calls the Founders and they heal and reforge the Three Worlds. The Elder Races are created: 
+•	Dragons (birthed by Io and Tiamat)
+•	Edhellar (elven progenitors, created from drops of blood shed when god Corellon Larethian battled demoness Lolth over Erroth
+•	Isstossef (reptilian lords made by god Semanyua)
+•	Kal Therryn (demonic monstrosities made by Tiamat and other demonic powers)
+•	Dhurinuë (cosmic malformations).
+The Isstossef rule first in the Age of Thunder. Tiamat and other demonic forces create the Kal Therryn and tip the globe on its axis, causing an Age of Ice. The Kal Therryn overthrow the Isstossef and rule unchallenged in an Empire of Might. They devise portals and explore time and the planes. They find the Edhellar homeland of Galhennoi and attack it. The Edhellar respond in the Bright Conflict.
+The Edhellar capture a Kal Therryn city and use its portals to attack all Kal Therryn everywhere. They Sunder each Kal Therryn into three lesser beings – and then kill one out of every three of these lesser beings so the Kal Therryn can never reform. The surviving members of the lesser species are the first humans. In revenge, the Kal Therryn empress Hyleria Chthulex has Tiamat poison Erroth’s Sleeping Deep Dragon before fleeing Erroth.
+ 
+THE SECOND AGE
+Humans spread out across the world from Kal Therryn ruins, primitive and weak.
+1 AS – The poisoning of the Sleeping Deep Dragon causes the Edhellar to degenerate into elves. They realise what is happening and found Ard Minya to give themselves a home
+~3300 AS – Eventually merely elves, some try to recapture Kal Therryn lore and become the Drow
+~5500 AS – The Lightless sends the God Outside Time to destroy Erroth. The other gods unify and banish it in the Voidwars. Early human realms collapse during the Voidwars. The continents of Jun-Mu and Attal-Entarrys sink.
+ 
+THE THIRD AGE
+Humanity recovers with the aid of elves and dwarves. Humans form several great and ancient civilisations but their ambition and hunger outstrip all other races. 
+8483 AS – A group of human sorcerers form a pact with the Lords of Fire for conquest of Erroth, causing the Elemental Onslaught. The Founders call for aid from other gods. 
+8500 AS – Khel-Varyan the Magus enacts the Forbiddance under divine guidance. The Elemental Onslaught is halted. Erroth begins to heal.
+ 
+THE FOURTH AGE
+~8900 AS – The newly arrived gods start fighting for dominance, leading to the Godwars. 
+8945 AS – The Opener of the Ways issues the Edicts, restoring a tentative order. Great realms such as Nurria arise (~9500 AS), bringing their beliefs to many realms.  Erroth prospers at last.
+14500 AS – Krovekëa returns. Abaddon has been rebuilding the Enigma Crystal and seeks the last Shards – which are on Erroth. The Bastard Squad complete the Enigma Crystal and destroy the devices controlling its power. Krovekëa is annihilated. Thoron founds Gammaria (14501 AS) The Bastard Squad travel back in time to the First Sphere, steal the weapon used to destroy the Enigma Crystal, return to Erroth, then use it again to shatter the Enigma Crystal a second time (14503 AS).
+[GLOBAL HISTORY ENDS]
+
+[REALMS OVERVIEW]
+THE REALMS
+Erroth is home to many lands and realms. What follows is a broad overview of the major lands of the world, and the realms that call them home. A map is overleaf.
+ 
+AVANOST
+This equatorial land of jungles is home to an ancient people who build vast cities of stone amidst the forests. Their gods are said to hail from another reality. Explorers from Galorien named this continent Van Thorden’s Land but this nomenclature exists now only on the most outdated of maps.
+ 
+ELLETHEA
+A sprawling tapestry of realms in Erroth’s northeast hemisphere, Ellethea was home to Nurria, from which sprang much of the modern world’s understanding of magic. Nurria’s gods spread their influence across the world and its echoes can still be heard. Now Ellethea comprises several smaller warring kingdoms in Nurria’s shadow.
+ 
+GALORIEN
+Galorien in Erroth’s northwest hemisphere is best known for being the location of Ard-Minya, the high kingdom of elvenkind on Erroth. From behind the impassable mountains of the Ered Thalion, the denizens of this ancient land work at mysteries forgotten by the rest of Erroth. Ard Minya is surrounded on its southern borders by the immense primordial forest of the Ordenwud. Here, it is said, the Founders first set foot on Erroth. A crumbling human kingdom known as Hintria huddles in the moody shadows of the Ordenwud.
+ 
+GORRAMYTHNM
+This vast continent spans much of Erroth’s southern hemisphere. Here is the Empire of Torlec, gripped by perpetual strife. Here also is Gammaria, a young kingdom founded after the destruction of Krovekëa. And here is lost Galhennoi, the ancient homeland of the elves, whence they were driven by the Kal Therryn, settling after years of wandering in Ard Minya. Gorramythnm is also home to the great magocracy of Thay. Under the all-seeing eye of its immortal God-King, Thay is a true global power.
+ 
+KARA-TUR
+Immense and bedecked with a panoply of civilisations, Kara-Tur in the east is home to empire and warlord, kingdom and village. From mighty Shou Lung to the impenetrable jungles of its southern shores, Kara-Tur is a world unto itself. Of all the realms of Kara-Tur, the Empire of Shou Lung is best known, not least for its spelljamming ships, which can be seen high aloft in the skies of Erroth.
+ 
+KISHALTA
+This land lies to the far frozen north and is mostly home to great, dark forests of pine swaying in bitter winds. The implacable Avak Bolgen mountains lie like a barrier across its midriff, said to be riddled with caverns and dungeons. Beyond the Avak Bolgen, so the tundra-folk of Kishalta say, there lies a fertile green valley where the winds do not howl and the snow does not fall, and all dwell in peace and prosperity under an eternal golden sun.
+ 
+KO-BORTHEX
+Known colloquially as “the Arm”, Ko-Borthex is an immense peninsula that spans the equator and finds its terminus in the southern oceans. It is mountainous and covered in jungles, known as one of the least-hospitable places on Erroth. Kal Therryn ruins dot Ko-Borthex, some preserving lore from ages long gone. Other ruins have more sinister provenance, echoes of a time when fiends from Krovekëa had a foothold on the young world
+ 
+LYTHEA
+Lying in Erroth’s central north, between Xanthia and Ellethea, Lythea was where the Bastard Squad were founded. A collection of feudal kingdoms, elven forests, and dwarven mountains, Lythea is a peaceful realm whose adventurers do much to affect the rest of Erroth.
+ 
+TOL URKANIA
+A land of barbarian kingdoms in Erroth’s far south, gripped in perpetual thaumaturgical war, whipped by the freezing winds of the south. Were these realms united, Tol Urkania would be a power to be reckoned with.
+ 
+TRYGIA
+Powerful city-states vie with each other for supremacy in this subtropical land of rolling, rocky hills, titanic mountains, and deep, burgeoning woodlands. Terrifying beasts stalk the land, spawned by some hoary well of calamity deep in the Trygian wilds.
+ 
+TURINTHIA
+This northern land is a land of extremes, from the freezing cold of the Tundra of Stars, to the blazing depths of the Rift of Fire and the soaring heights of the Thunder Peaks. The people of Turinthia are brave and hardy, forged in the trials of their home. Turinthia is home to the Empire of the Sun, a long-lasting and powerful realm, the only rival to Shou Lung or Ard-Minya in the northern hemisphere.
+ 
+VIIDAROS
+A great continent in the south of Erroth, Viidaros is home to an ancient society of priest-kings who are convinced that a magical mountain will appear from the planes one day and destroy their land. They’re right.
+ 
+XANTHIA
+A small land in the northwest of Erroth, Xanthia is home to the city of Dyrn eth Mal, a magocracy with eep lore and wisdom. It is also home to Vanyai Forest, where the Maid of Vanyai watches over all of Erroth from her sacred grove.
+ 
+YAR-TIRRIOS
+A southern land of lofty mountains dotted with the tombs of forgotten witch-kings, Yar-Tirrios is ancient, built on the bones of millennia. Its mariners are reckoned as the finest on Erroth, their brass-hulled galleons circling the world in search of adventure.
+[REALMS OVERVIEW ENDS]
+
+[GAMMARIA AND NEIGHBOURS]
+Specific information on the history of Gammaria and neighbouring lands.
+ 
+SILVER EMPIRE OF A THOUSAND YEARS
+An outpost of the Ancients was located in eastern Gorramythnm and was key in the war against Krovekëa. This outpost managed to bind some of the infernal lords of the Dark Sister (the Dead Gods of Krovekëa) in a pocket in subspace but were themselves defeated in turn. Some survived and retreated into a subterranean facility and entered suspended animation. No one in the region knows of their existence. On rare occasions, Ancients emerge to explore, catalogue, or intervene before returning to their sleep of ages.
+ 
+THE FIRST AGE
+The creation of the Edhellar (blood falling from Corellon Larethian during battle with Lolth) happened in Gorramythnm – the lost Edhellar homeland of Galhennoi lies in western Gorramythnm.
+ 
+AGE OF THUNDER & AGE OF ICE
+Most Isstossef cities were destroyed by the Kal Therrn but a handful remain, trapped in Gorramythnm’s southern ice and the neighbouring tundras. These are the oldest true ruins in the area – the first civilization that left its mark was reptilian. 
+ 
+EMPIRE OF MIGHT
+A Kal Therryn city was founded in Gorramythnm: Kheres Taanos. From here, Kal Therryn launched their attacks on Galhennoi. Kheres Taanos was also the city captured by the Edhellar, allowing their victory over the Kal Therryn. It lies in eastern Gorramythnm. A solitary Kal Therryn (Taaras Razaniax) was trapped there by a band of Ancients who didn’t know what to do with it (239 AS).
+Taaras Razaniax’s dreaming mind intersects with Krovekëan seepage, birthing phantasmagorical entities.
+ 
+CORRUPTED EDHELLAR
+A group of Edhellar fleeing the ruin of Galhennoi are unable to find Ard Minya. They run afoul of Taaras Razaniax’s dreams and are infected by seepage from the Dead Gods of Krovekëa, becoming warped and diabolical (~1100 AS). They phase in and out of reality, their design malign and inscrutable.
+ 
+THE PEOPLE OF THE HENGE
+Human survivors of the Bright Conflict emerge from the ruins of Kheres Taanos. Hapless primitives, they build stone circles and henges across the region for a millennium and a half. Eventually the Corrupted Edhellar find them and destroy them for being “descendants of the Kal Therryn” (~1500 AS).
+ 
+THE VOID WARS
+Refugees from the destroyed continent of Jun-Mu reach Gorramythnm (~5500 AS). Some bring with them the worship of the God Outside Time and the self-devouring doctrine that creates Voidbeasts from the God’s adherents. They build ziggurats in praise of the God Outside Time before their cults collapse into self-negation, cannibalism, degeneration, and eventually undeath (~7500 AS). Now endure as undead masters within haunted ziggurats to the east of Gammaria.
+ 
+THE DIASPORA OF HUMANITY
+Humans spread across Erroth. Ringur first appears on Erroth (~6000 AS).
+From time to time, scouting expeditions from other realms that grow following the Void Wars visit the region. They soon learn to stay away from the interior, forming colonies on the outer shores but little more.
+ 
+THE ELEMENTAL ONSLAUGHT
+Gorramythnm is badly scoured during the Onslaught. Only the most hardy and ancient ruins survive this period.
+ 
+THE INTERCESSIONS
+During the Intercessions, two gods battle in the region – Verrek Verana (god of nine fatal plagues) and Cathamanda Unfane (a mortal witch risen to divinity through deicide). Verrek is slain but Cathamanda Unfane is bound in a pocket dimension (8933 AS). Her powers seep into the world, spawning cults in the wilds.
+
+IMPERIAL TORLEC
+Gorramythnm is a massive continent in Erroth’s southern hemisphere. Parandia is an island off its northern coast. Torlec occupies most of the mainland, filling the centre and northern coast. Gammaria is a small nation down on Torlec’s south-eastern border (formed by the Vallandor Mountains)
+11025 AS – The Tzer Lek barbarians of Gorramythnm rebel against their Thayvian overlords, desiring to worship non-Thayvian deities, instead choosing religions filtering down from Nurria. 
+11112 AS – The Tzer Lek unite local tribes into a proto-kingdom. They are the ancestors of the noble house that will become known as House Torlec.
+13509 AS – House Torlec obtains the Crown of Dragons (an artifact which allow bonding with dragons) and forges an alliance with the Brood of Vorumcathriax (a wyrm from Dragon Mountain who remained on Errot when Dragon Mountain visited once). They begin conquest of surrounding realms.
+14020 AS – The conquests of House Torlec reach their end with the Dammaresh Accords.
+Notable realms in the Empire:
+•	Parandia: Island of three allied kingdoms (Tallak was one), home to the world-famous Callorian horses and Corlaine wine.
+•	Naërmann: A militaristic realm that chafes under Torlec rule. Its King Morguth provided covert support for Thoron’s conquest of Tallak as a way to destabilize the empire.
+•	Vallandor: A great southern realm, known for its cruelty and aggression. Lord Talgar Vallendor is feared and hated.
+•	Kashagari: A cold desert in the emprire’s far south, said to be home to demonic cults, including one dedicated to Orcus.
+14025 AS – The borders of Imperial Torlec in Gorramythnm reach their largest extent.
+14090 AS – Formation of the Gammarian Commandos in Lythea by the Grand Emir of Ylaruam, Gammar III.
+14500 – Tallak secedes from Imperial Torlec but is sacked by a band of adventurers. These adventurers work with the archmage Mormerg to create a gate from the island of Parandia to the Gorramythnm mainland – this will transport willing Tallaki settlers to a new land to live in freedom from empire. Efforts are also made to attract settlers from Naërmann and Torlec.
+14501 – Gammaria is founded with loot from the Sack of Tallak. See THORON-HISTORY §4 — THE FOUNDING OF GAMMARIA (CLEARING EXPEDITION LOG) for full details.
+14502 – Within a year, Gammaria has 7000 inhabitants.
+14503 –The Temple of the Sun, Forgaard, Highguard, Fort Vanguard, Riverwatch, and Seawatch are all completed by the summer, and Vornost is finished by autumn. At the end of the year, Thoron is trapped in the Elemental Plane of Fire. He is forced to escape by a circuitous route.
+14505 – After weeks go by with no word from the Helkar, his companions call a council. They cannot conceal Thoron’s absence. Lalholm communes with Haadis – the god replies that Thoron was betrayed and has gone where Haadis cannot see (true: Toril does not have Haadis as one of its deities).
+They decide to assign tasks. Lithoe will monitor the East March for incursions, with Suzanne as support – it is Gammaria’s weakest flank. Lalholm will watch the north and the rivers from Torlec, while Guldur will station himself in the south and do likewise. Valania will remain in the heartland and see to matters there as best she can. They pledge to trust no one else – not even Joppa. They are a party again, and one of them is missing. They must hold the line.
+14506 – Unrest ripples throughout Gammaria as the truth spreads that the Helkar is gone. Conflicting stories spread and multiply. At Whiteagle, Tirris Vargol slowly begins assessing the longer term situation and drawing allies close. He is an elf. He has all the time in the world.
+14507 – Imperial Torlec uses the Golden Hind Trading Coster to make inroads of various types into Gammaria. This goes unseen at first but is eventually noticed.
+14508 – Gammaria sends a settler expedition into the East Marches. It never returns. Valania and Guldur decide to pay closer attention to the Golden Hind, both in the heartlands and the ports at Riverwatch and Seawatch. Conorth notice this and starts moving funds to the military – invasions may start economically but they do not end that way. He will be ready.
+14509 – Gammaria sends a scouting party to find the settler expedition. It never returns. This fact is more terrifying to the Gammarians than the loss of the original patrol. Tales about the East March and the things that live beyond it spread.
+14510 – Gammaria’s factions entrench, all sensing some coming change but none being in the position to tell what it is, much less prevent it. Valania goes undercover in an attempt to learn just what the Golden Hind is doing – are they preparing for a move from Imperial Torlec? Lithoe and Suzanne grow increasingly remote, leaving Lalholm and Guldur to hold matters together. The edges fray – the centre must hold.
+14511 – Thoron returns to Gammaria.
+[GAMMARIA AND NEIGHBOURS ENDS]
+

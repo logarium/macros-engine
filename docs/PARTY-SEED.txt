@@ -1,0 +1,306 @@
+PARTY-SEED v3.0
+ROSTER (PC and CORE COMPANIONS)
+RELATIONSHIP BASELINES
+FINDABILITY & REUNION RULES
+Campaign_Name: Gammaria
+
+PC_Name: Thoron
+Class_and_Level: Fighter 16
+AC: 30, HD: 16, hp: 131, AT: +27, Dmg: 1d8+15, ML 12
+Skills: [Athletics, Observation, Survival, Tracking]
+Cultural_Origin: Human from the world of Glamlax
+Alignment_Tendency: Chaotic Evil
+Appearance: long dark hair, dark eyes, handsome, tall and muscular, carries Crandurth (bastard sword with horned skull hilt)
+Role_in_Party: Leader, warrior
+Core_Traits: Violent; headstrong; passionate; merciless
+Primary_Motivation: Secure legacy and safety of Gammaria
+Secondary_Motivation: Seek adventure with Valania or Suzanne
+Personal_Stakes: My power is my will - Gammaria must succeed
+Fears_and_Aversions: Loss of personal control
+Moral_Limits: None
+Loyalty_Basis: Valania (reciprocal love)
+Affection_Level: Valania (love), Lalholm (like) Guldur (like)
+
+RELATIONSHIP_TRACKING
+Relationship_ID: REL-Thoron-Valania-love-01
+Parties: Thoron ↔ Valania Lorethor
+Relationship_Type: romance
+Baseline_State: love
+Visibility: public
+
+Relationship_ID: REL- Suzanne-Thoron-attraction-01
+Parties: Suzanne of Corlaine → Thoron
+Baseline_State: attraction
+Visibility: secret
+
+Relationship_ID: REL-Lithoe-Thoron-dislike-01
+Parties: Lithoe Wano-Kan → Thoron
+Relationship_Type: rivalry
+Baseline_State: dislike
+Visibility: secret
+
+Relationship_ID: REL-Guldur-Thoron-friends-01
+Parties: Thoron ↔ Guldur Emeldyr
+Relationship_Type: friendship
+Baseline_State: like
+Visibility: public
+
+Default_Risk_Posture: Uncaring
+Authority_Response: Attack
+Interpersonal_Tensions: With Suzanne: repressed desire; With Lithoe: rivalry for leadership
+Backstory_Anchor: Magically displaced from Glamlax to Erroth
+
+OPENING SCENARIO ASSIGNMENT:
+Current_Assignment: Seeking companions
+Location: PC_Zone
+Findability: N/A
+Finding_Method: N/A
+Recognition_Threshold: N/A
+Reunion_Impact: N/A
+
+PARTY_NPC_Name: Valania Lorethor
+Class_and_Level: Assassin 10
+AC: 21, HD: 10, hp: 60, AT: +10, Dmg: 1d8+8, ML 10
+Cultural_Origin: Half-elf from Dyrn eth Mal
+Alignment_Tendency: Lawful Evil
+Appearance: long dark hair, dark eyes, beautiful, shapely, carries Gardurth, sister-sword to Crandurth
+Role_in_Party: Scout, assassin, spymistress, internal stabiliser
+Core_Traits: Cunning; vivacious; mischievous; believes unity is strength
+Primary_Motivation: Excitement and fierce love for Thoron
+Secondary_Motivation: Maintain group cohesion; ensure Gammaria’s survival
+Personal_Stakes: Gammaria must succeed—there is no alternative
+Fears_and_Aversions: Loss of loved ones; disrespect; perceived weakness
+Moral_Limits: Will never betray Thoron
+Loyalty_Basis: Thoron (reciprocal love)
+Affection_Level: Thoron (love), Suzanne (aversion), Lalholm (dislike)
+
+RELATIONSHIP_TRACKING
+Relationship_ID: REL-Thoron-Valania-love-01
+Parties: Thoron ↔ Valania Lorethor
+Relationship_Type: romance
+Baseline_State: love
+Visibility: public
+
+Relationship_ID: REL-Lithoe-Valania-friends-01
+Parties: Valania Lorethor ↔ Lithoe Wano-Kan
+Relationship_Type: friendship
+Baseline_State: attraction
+Visibility: restricted
+
+Relationship_ID: REL-Lalholm-Thoron-friends-01
+Parties: Thoron ↔ Father Lalholm
+Relationship_Type: friendship
+Baseline_State: like
+Visibility: restricted
+
+
+Default_Risk_Posture: Cautious, calculating
+Authority_Response: Assesses, then negotiates or resists
+Interpersonal_Tensions: With Suzanne: volatility threatens unity; With Lalholm: fear of his god
+Backstory_Anchor: Magically displaced from Dyrn eth Mal; bound to Thoron’s fate
+
+AD&D_Specific_Pressures:
+Training_Expectations: Runs Gammaria’s spy network without sufficient resources
+Reputation_Concerns: Needs Thoron’s respect and support
+Supernatural_Taboo: None
+
+OPENING SCENARIO ASSIGNMENT:
+Current_Assignment: Deep cover in Golden Hind merchant networks (Caras underlayers)
+Location: Caras (hidden)
+Findability: Hard
+Finding_Method: Trigger Hidden Temple contact, infiltrate Golden Hind operations, or invoke covert signals in Caras merchant quarter
+Recognition_Threshold: Immediate (always recognizes Thoron instantly)
+Reunion_Impact: Reveals Golden Hind infiltration depth; accelerates Caras recognition; unlocks spy network access
+
+PARTY_NPC_Name: Suzanne of Corlaine
+Class_and_Level: Anti-Paladin 7
+AC: 19, HD: 7, hp: 70, AT: +16, Dmg: 1d8+10, ML 12
+Cultural_Origin: Human from Corlaine
+Alignment_Tendency: Chaotic Evil
+Appearance: short dark hair, blue eyes, powerful, muscular, carries Yor-Kazh the Unholy Reaver (immense war-sword)
+Role_in_Party: Unholy warrior, wild card, brute force
+Core_Traits: Sensual and emotional; violent; the strong rule, the weak serve
+Primary_Motivation: Further the desires of Orcus, Demon Prince of the Undead
+Secondary_Motivation: Carve a home for herself in Gammaria at any cost
+Personal_Stakes: She must survive to spread the will of Orcus or her soul is lost
+Fears_and_Aversions: Failing Orcus – his rage is endless
+Moral_Limits: Will not turn on Orcus. Has no other loyalties.
+Loyalty_Basis: Orcus (terrified service at the feet of a demon god)
+Affection_Level: Valania (dislike), Lalholm (aversion), Thoron (attraction)
+
+Relationship_ID: REL-Lalholm-Suzanne-lust-01
+Parties: Father Lalholm → Suzanne of Corlaine
+Baseline_State: attraction
+Visibility: secret
+
+Relationship_ID: REL- Suzanne-Thoron-attraction-01
+Parties: Suzanne of Corlaine → Thoron
+Baseline_State: attraction
+Visibility: secret
+
+Default_Risk_Posture: Confrontational
+Authority_Response: Defies, then attempts to corrupt morally
+Interpersonal_Tensions: With Valania: Suzanne thinks Valania is too controlling, is jealous of her and Thoron; With Lalholm: their gods are enemies
+Backstory_Anchor: She sold her soul to a demon god and can never escape
+
+AD&D_Specific_Pressures:
+Training_Expectations: Must advance the will of Orcus
+Reputation_Concerns: Needs Thoron’s respect and support
+Supernatural_Taboo: None
+
+OPENING SCENARIO ASSIGNMENT:
+Current_Assignment: Frontier patrol commander
+Location: Fort Vanguard or East March patrols
+Findability: Medium
+Finding_Method: Ask at Fort Vanguard, track patrol schedules, or encounter during East March travel
+Recognition_Threshold: Immediate (always recognizes Thoron instantly)
+Reunion_Impact: Demonstrates frontier loyalty; accelerates Fort Vanguard recognition; unlocks commando deployment; foregrounds Cult of Orcus
+
+PARTY_NPC_Name: Lithoe Wano-Kan
+Class_and_Level: Wizard 10
+AC: 25, HD: 10, hp: 40, AT: +5, Dmg: 1d6+2, ML 8
+Cultural_Origin: Human from Imperial Torlec
+Alignment_Tendency: Neutral Evil
+Appearance: medium blonde hair, blue eyes, thin, focused, carries gnarled Staff of Power
+Role_in_Party: Wizard, lore keeper, analyst
+Core_Traits: Selfish; reserved and lonely; addicted to mysteries
+Primary_Motivation: Further her magical power to attain immortality
+Secondary_Motivation: Find a companion with whom to spend eternity – at present she wishes this to be Guldur Emeldyr because he makes her laugh
+Personal_Stakes: She does not want to be alone but she pushes people away – she longs to resolve this tension
+Fears_and_Aversions: Driving Guldur away through her own hunger for power
+Moral_Limits: Will not destroy storehouses or individuals who preserve arcane knowledge
+Loyalty_Basis: Her party / protection, Guldur/love
+Affection_Level: Guldur (love), Thoron (dislike), Valania (like)
+
+RELATIONSHIP_TRACKING
+Relationship_ID: REL-Guldur-Lithoe_love-01
+Parties: Lithoe Wano-Kan → Guldur Emeldyr
+Relationship_Type: unrequited love
+Baseline_State: love
+Visibility: secret
+
+Relationship_ID: REL-Lithoe-Valania-friends-01
+Parties: Valania Lorethor ↔ Lithoe Wano-Kan
+Relationship_Type: friendship
+Baseline_State: attraction
+Visibility: restricted
+
+Relationship_ID: REL-Lithoe-Thoron-dislike-01
+Parties: Lithoe Wano-Kan → Thoron
+Relationship_Type: rivalry
+Baseline_State: dislike
+Visibility: secret
+
+Default_Risk_Posture: Self-preservation
+Authority_Response: Appeases
+Interpersonal_Tensions: With Thoron: She thinks he uses her and this will get her killed; With Guldur: He does not yet return her love
+Backstory_Anchor: Lithoe needs a companion but doesn’t know how to make people like her
+
+AD&D_Specific_Pressures:
+Training_Expectations: Must seek magical lore
+Reputation_Concerns: Craves Guldur’s affection
+Supernatural_Taboo: Kal Therryn magic terrifies her
+
+OPENING SCENARIO ASSIGNMENT:
+Current_Assignment: Metaphysical researcher and lore keeper
+Location: Fort Vanguard (when present) or Khuzdukan ruins (when researching)
+Findability: Medium
+Finding_Method: Ask at Fort Vanguard, check Khuzdukan expedition logs, or encounter during ruin exploration
+Recognition_Threshold: Immediate (always recognizes Thoron instantly)
+Reunion_Impact: Unlocks metaphysical intelligence; accelerates recognition among scholars/mages; reveals ancient threat assessments
+
+
+PARTY_NPC_Name: Father Lalholm
+Class_and_Level: Reaver 11
+AC: 26, HD: 11, hp: 75, AT: +8, Dmg: 1d6+2, ML 10
+Cultural_Origin: Human from Imperial Torlec
+Alignment_Tendency: Neutral Evil
+Appearance: short brown hair, dark eyes, grim, moody, carriess studded black mace
+Role_in_Party: Protector, judge, bedrock
+Core_Traits: Domineering; nihilistic; devout
+Primary_Motivation: Send souls to his god Haadis by blessing them at the time of death
+Secondary_Motivation: Support Thoron in his endeavours as this brings stability
+Personal_Stakes: Rise to political power within the global Church of Haadis
+Fears_and_Aversions: Other Reavers – they are all rivals and enemies
+Moral_Limits: Must not deny faith in Haadis – his god is all.
+Loyalty_Basis: Haadis/devotion, Thoron/friendship, Church of Haadis/power
+Affection_Level: Thoron (like), Suzanne (attraction), Conorth (dislike)
+
+RELATIONSHIP_TRACKING
+Relationship_ID: REL-Lalholm-Thoron-friends-01
+Parties: Thoron ↔ Father Lalholm
+Relationship_Type: friendship
+Baseline_State: like
+Visibility: restricted
+
+Relationship_ID: REL-Lalholm-Suzanne-lust-01
+Parties: Father Lalholm → Suzanne of Corlaine
+Relationship_Type: lust
+Baseline_State: attraction
+Visibility: secret
+
+Default_Risk_Posture: Confrontational
+Authority_Response: Dominate
+Interpersonal_Tensions: With Suzanne: Her demon-god is a foul beast and she is its spawn; With Conorth Baerkudth: Lalholm does not trust Conorth’s loyalty to Thoron
+Backstory_Anchor: Lalholm suffered brutal bullying as a child – he met Haadis during a near-death experience because of this. Thus his faith is founded in gnosis.
+
+AD&D_Specific_Pressures:
+Training_Expectations: Must advance his political status in the Church of Haadis
+Reputation_Concerns: Desires to rule the Church and meet Haadis again
+Supernatural_Taboo: All other gods are to be opposed. All.
+
+OPENING SCENARIO ASSIGNMENT:
+Current_Assignment: Religious liaison and death-priest
+Location: Riverwatch or Temple of the Sun
+Findability: Easy
+Finding_Method: Ask at temples, customs posts, or religious sites; highly visible public role
+Recognition_Threshold: Immediate (always recognizes Thoron instantly)
+Reunion_Impact: Signals Church of Haadis alignment; accelerates recognition in religious communities; unlocks spiritual authority
+
+
+PARTY_NPC_Name: Guldur Emeldyr
+Class_and_Level: Fighter 8
+AC: 23, HD: 8, hp: 80, AT: +11, Dmg: 1d8+10, ML 9
+Cultural_Origin: Human from Imperial Torlec
+Alignment_Tendency: Chaotic Neutral
+Appearance: short sandy hair, blue eyes, handsome, cheerful, carries bottle of cheap wine
+Role_in_Party: Joker, foil, makes the hard calls
+Core_Traits: Dry sense of humour; nimble physically and mentally; sarcastic
+Primary_Motivation: Always have a killer joke, pun, or quip ready for the occasion
+Secondary_Motivation: Support Thoron in his endeavours – he was there for you when no-one else was
+Personal_Stakes: Get rich and famous and marry a beautiful princess and then have affairs anyway
+Fears_and_Aversions: Undead are terrifying; does not like having to work very hard
+Moral_Limits: Will not harm innocents
+Loyalty_Basis: Thoron/friendship, Gammaria/safe haven
+Affection_Level: Thoron (like), Suzanne (aversion), Lithoe (like)
+
+Relationship_ID: REL-Guldur-Thoron-friends-01
+Parties: Thoron ↔ Guldur Emeldyr
+Relationship_Type: friendship
+Baseline_State: like
+Visibility: public
+
+Relationship_ID: REL-Guldur-Lithoe_love-01
+Parties: Lithoe Wano-Kan → Guldur Emeldyr
+Relationship_Type: unrequited love
+Baseline_State: love
+Visibility: secret
+
+Default_Risk_Posture: Mocking
+Authority_Response: Insult
+Interpersonal_Tensions: With Joppa: The Castellan prevents Guldur from stealing wine from the kitchens; With Suzanne: She serves Orcus. Guldur cannot love someone pledged to Orcus. With Lithoe: He senses her affection but needs her to be emotionally open instead of selfish
+Backstory_Anchor: Guldur was destitute when Thoron hired him as a guide. Now, years later, they are still friends.
+
+AD&D_Specific_Pressures:
+Training_Expectations: Improve skills as a warrior
+Reputation_Concerns: Appear dashing and attractive
+Supernatural_Taboo: Demons are unacceptable
+
+OPENING SCENARIO ASSIGNMENT:
+Current_Assignment: Intelligence gatherer and trade observer
+Location: Fort Seawatch or Riverwatch
+Findability: Easy
+Finding_Method: Ask at docks, taverns, or customs posts; highly visible public role
+Recognition_Threshold: Immediate (always recognizes Thoron instantly)
+Reunion_Impact: Reveals Torlec/merchant intelligence; accelerates port recognition; unlocks humor and morale boost
+

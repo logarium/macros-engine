@@ -1,0 +1,21 @@
+{
+  "responses": [
+    {
+      "id": "cr_008",
+      "type": "NARR_COMBAT_END",
+      "content": "She appears from the reed wall like a thing born of it \u2014 tall for a hobgoblin, milky eye catching the grey light, longbow half-drawn. The snake-bone necklace rattles once.\n\nShe sees Crandurth. Sees the blood on it \u2014 Skratha's blood, still dark on the steel. Her one good eye widens.\n\nThe bow comes up.\n\nCrandurth comes down.\n\nThe elder folds where she stands. The longbow drops into the water. The necklace breaks, vertebrae scattering across the mire like dice thrown by a careless god. She sinks to her knees in the mud, and the mud accepts her, and the black water rises around her shoulders like a burial shroud woven by the swamp itself.\n\nValania says nothing for a long moment. Then: 'That was a clan elder. The necklace \u2014 leadership markings. Bloodswamp don't have many of those.'\n\nShe crouches, recovers the longbow from the shallows. Good sinew. Good wood. Worth keeping or worth leaving as a message \u2014 your choice.\n\n'The Bloodswamp helped found Gammaria,' Valania says quietly. Not accusation. Observation. The kind she makes when she wants you to think about what you've done without her having to say so.\n\nSomewhere in the deep reeds, a bird calls three times. Fast. Alarm.\n\nThekk Mudwalker is out there somewhere. And Grukka Stillwater will not be returning to camp tonight.\n\nThe Bloodswamp Hobgoblins will know. They always know.",
+      "state_changes": [
+        {
+          "type": "npc_update",
+          "name": "Grukka Stillwater",
+          "status": "dead",
+          "next_action": "none"
+        },
+        {
+          "type": "fact",
+          "text": "Grukka Stillwater (Bloodswamp clan elder) killed by Thoron in Deep Swamps. Two Bloodswamp leaders now dead. Faction will respond. Alarm raised in reed beds."
+        }
+      ]
+    }
+  ]
+}

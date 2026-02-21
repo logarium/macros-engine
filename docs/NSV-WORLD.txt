@@ -1,0 +1,133 @@
+NSV-WORLD v3.0
+
+EXTINCT / FALLEN CULTURES
+
+MAJOR HISTORICAL EVENTS
+
+REGIONAL DYNAMICS
+
+CANONICAL TRUTHS
+
+EXTINCT / FALLEN CULTURES
+
+Culture_Name: Ancients
+Origin: Humans from former Cycle of Existence
+Fate: Retreated into concealed suspended animation
+Legacy_Sites: Ancients Outpost
+Responsible_Parties: Dead Gods of Krovekëa
+
+Culture_Name: Dead Gods of Krovekëa
+Origin: Infernal terrors from destroyed planet
+Fate: Bound by the Ancients
+Legacy_Sites: Ancients Outpost
+Responsible_Parties: Ancients
+
+Culture_Name: Isstossef
+Origin: Lizardfolk elevated by god Semanyua
+Fate: Froze to death in Age of Ice
+Legacy_Sites: Isstosseff Tombs, Isstossef Pyramids
+Responsible_Parties: Kal Therryn
+
+Culture_Name: Kal Therryn
+Origin: Demonic race created by Tiamat
+Fate: Sundered into humans by Edhellar
+Legacy_Sites: Kal Therryn City
+Responsible_Parties: Edhellar
+
+Culture_Name: Khuzdukan Colonists
+Origin: Dwarven settlers
+Fate: Colony collapse
+Legacy_Sites: Ruined delvings, graveyards
+Responsible_Parties: Regional malign influence
+
+Culture_Name: People of the Henge
+Origin: First humans sundered from Kal Therryn
+Fate: Exterminated by Corrupted Edhellar
+Legacy_Sites: Dolmen of the Henge People
+Responsible_Parties: Corrupted Edhellar
+
+
+MAJOR HISTORICAL EVENTS
+
+Event_Name: Hellfires
+Era: Primordial
+Participants: Ancients, Dead Gods of Krovekëa
+Outcome: Ancients enter suspended animation, Dead Gods of Krovekëa imprisoned imperfectly
+Lasting_Consequences: World is open for new factions to arise
+
+Event_Name: Age of Ice
+Era: Primordial
+Participants: Isstossef, Kal Therryn
+Outcome: Ice age
+Lasting_Consequences: Globe tips on axis, Isstossef falls
+
+Event_Name: Bright Conflict
+Era: Ancient
+Participants: Edhellar, Kal Therryn
+Outcome: Catastrophic collapse, Kal Therryn Sundered
+Lasting_Consequences: Magical contamination, Kal Therryn broken, become humanity
+
+Event_Name: Corruption of the Edhellar
+Era: Ancient
+Participants: Edhellar, Dead Gods of Krovekëa
+Outcome: Edhellar corrupted by Dead Gods of Krovekëa, become Corrupted Edhellar
+Lasting_Consequences: Corrupted Edhellar now an ever-present threat in region
+
+Event_Name: Voidwars
+Era: Ancient
+Participants: God Outside Time vs everyone else
+Outcome: Banishment
+Lasting_Consequences: Cult formation, voidbeasts
+
+Event_Name: Godsdeath
+Era: Intercessions
+Participants: Two gods
+Outcome: One slain, one bound
+Lasting_Consequences: Cult formation, godsblood relics
+
+Event_Name: Horned Crusade
+Era: Distant pre-founding
+Participants: Trygian minotaurs
+Outcome: Legacy of ruined citadels
+Lasting_Consequences: Ruins, echoes of failed war
+
+
+REGIONAL DYNAMICS
+
+Threats: Shadow-Horrors, undead patrols, cult activity
+Environmental_Hazards: Cold-temperate climate, mists, rain, storms.
+Supernatural_Conditions: Krovekëan seepage, godsblood residue, undead malignance
+Cultural_Taboos: Deep interior travel without cause
+
+
+CANONICAL TRUTHS
+•	public: known to everyone
+•	restricted (Faction_Name/NPC_Name): known ONLY to members of that Faction, or to listed NPC(s)
+•	secret: known to no-one
+
+TRUTH: Gammaria is on the continent of Gorramythnm on the world of Erroth | public
+TRUTH: Erroth + everything in it is dream of cosmic entity (the Sleeping Deep Dragon) | secret
+TRUTH: Enigma Moon holds Enigma Crystal, which can grant True Wish - even gods must obey | secret
+TRUTH: Humanity is descended from the remnants of the Kal Therryn | restricted (Corrupted Edhellar)
+TRUTH: Krovekëa was dark sister-world, destroyed by Enigma Crystal, Dead Gods are final survivors | restricted (Children of the Dead Gods)
+TRUTH: Orcus seeks the Enigma Moon | restricted (Cult of Orcus)
+TRUTH: Shadow-Horrors originate from Krovekëan seepage | secret
+TRUTH: The Lost Patrol is undead and unresting | restricted (personal experience)
+TRUTH: Land beyond the East Marches is intrinsically hostile | public
+TRUTH: Some ancient intelligences persist not through action/worship, but by benefiting from prolonged instability, moral compromise, fragmented authority; they are not architects of catastrophe, only its long-term inheritors | secret
+TRUTH: Haadis desires to devour souls sent by his Reavers | restricted (Church of Haadis)
+TRUTH: Temple of the Sun is permanently destabilised doctrinal site whose internal conflicts generate ongoing political/religious pressure | public
+TRUTH: Gammarian titles: Helkar (King), Tirris (High Council member), Castellan (oversees Location) | public
+TRUTH: Gammaria uses Nurrian Calendar: Day of Awakening (1d), Demes (30d), Fasting (28d), Tryphor (30d), Day of the Moot (1d), Ilrym (30d), Evernew (31d), Jestrim (23d), The Stand (7d), Rannifer (31d), Reapmere (30d), Grismere (30d), Aphistri (31d), Frithium (30d), Revini (31d) | public
+TRUTH: Thoron is from the world of Glamlax | restricted (Thoron, Valania)
+TRUTH: Thoron was 13 when he and his family were accidentally tranported to Erroth, where his family were enslaved by drow - Thoron has never seen his family since. | restricted (Thoron, Valania, Tirris Vargol)
+TRUTH: Thoron was controlled by a sentient, soul-drinking sword called Ringur for years - during this time he changed his name to Morgil "Dark Star" | restricted (Thoron, Valania, Tirris Vargol)
+TRUTH: Thoron threw Ringur into the Well of Time, banishing it, and took Crandurth as his sword  | restricted (Thoron, Valania)
+TRUTH: Thoron and his companions infiltrated, overthrew, and looted the kingdom of Tallak - then used the loot to fund the founding of Gammaria | restricted (Thoron, Valania, Lalholm, Suzanne, Lithoe, Guldur, Conorth, Joppa)
+TRUTH: Thoron is the last of the original Gammarian Commandos, an elite fighting force from the lost realm of Lythea - Gammaria is named after them | public
+TRUTH: Gammaria has three dragons - Soreth (young white), Ragnoth (adult red), Glaurungoriel (ancient blue) | public
+TRUTH: Soreth was hatched by Thoron and is bonded to him | restricted (Thoron, Valania, Lalholm, Suzanne, Lithoe, Guldur, Conorth, Joppa)
+TRUTH: Ragnoth is the mount of Lithoe Wano-Kan | restricted (Thoron, Valania, Lalholm, Suzanne, Lithoe, Guldur, Conorth, Joppa)
+TRUTH: Glaurungoriel is bonded to Tirris Vargol | restricted (Tirris Vargol, Thoron)
+TRUTH: Thoron and Tirris Vargol started out as adventurers together, many years ago. They have been friends and rivals | restricted (Thoron, Valania, Lalholm, Suzanne, Lithoe, Guldur, Conorth, Joppa)
+TRUTH: Vargol once bore Ringur, the soul-draining sword that possessed Thoron. | restricted (Thoron, Tirris Vargol)

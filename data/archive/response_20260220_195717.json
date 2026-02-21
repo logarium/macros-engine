@@ -1,0 +1,21 @@
+{
+  "responses": [
+    {
+      "id": "cr_001",
+      "type": "NARR_COMBAT_END",
+      "content": "Valania slips into the reeds like smoke, silent, her dark hair vanishing among the rushes. You wait. Crandurth loose in its scabbard. The horned skull hilt warm against your palm.\n\nA shriek of alarm from the reed bed \u2014 not Valania's voice. Something guttural, cut short by surprise. The rushes thrash. A squat figure bursts from cover, iron-filed teeth bared, shortbow half-drawn, and you are already moving.\n\nCrandurth comes free in a rising arc that catches Skratha Ironjaw beneath the jaw. The blade punches through bone-and-leather armour like it isn't there. The hobgoblin's feet leave the ground. She folds around the steel and drops into the black water with a sound like a sack of wet grain hitting stone.\n\nThe reeds settle. The birds resume their calls.\n\nValania emerges, knife in hand, not a mark on her. She looks at the body floating face-down in the shallows, iron teeth glinting beneath the surface. Looks at you. One eyebrow rises.\n\n'I was supposed to flush her toward you,' she says. 'Not watch you cut her in half before I'd taken three steps.'\n\nShe sheathes her knife and crouches beside the body. Bone-and-leather armour, a shortbow of sinew and marsh-wood, a quiver of black-fletched arrows. A pouch at the belt contains three smooth river stones marked with Bloodswamp clan signs \u2014 territorial markers, meant to be placed along a perimeter.\n\nThis was a scout. And scouts report to someone.\n\nThe swamp sighs around you. Somewhere in the deep rushes, something heard the shriek. Something is listening.",
+      "state_changes": [
+        {
+          "type": "npc_update",
+          "name": "Skratha Ironjaw",
+          "status": "dead",
+          "next_action": "none"
+        },
+        {
+          "type": "fact",
+          "text": "Skratha Ironjaw (Bloodswamp scout) killed by Thoron in Sighing Swamps. Clan territorial markers found on body. Bloodswamp Hobgoblins may respond to missing scout."
+        }
+      ]
+    }
+  ]
+}

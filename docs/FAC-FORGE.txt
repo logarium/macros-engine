@@ -1,0 +1,41 @@
+FAC-FORGE
+1 NPC MANAGEMENT MACRO
+1.1 Trigger: FAC-FORGE
+
+2 INPUTS (by caller):
+2.1 ZONE-FORGE mode (structured):
+2.1.1 Required:
+2.1.1.1 Zone_Scope: (existing Zone/region from authoritative state)
+2.1.1.2 Faction_Function: (role/purpose of this faction)
+2.1.1.3 Optional (with defaults):
+2.1.1.4 Visibility_Policy: (known/secret, default: known)
+2.1.1.5 Max_NPCs: (override default 3, range 0-5)
+2.1.1.6 Max_Clocks: (override default 3, range 0-5)
+2.1.2 Protocol: all inputs in structured block. Missing required → HARD STOP + log to ADJUDICATION_LOG.
+2.2 Player mode (freeform):
+2.2.1 Source: player text + authoritative state (NSV-FACTIONS / JSON save / PARTY-SEED)
+2.3 Inputs: taken from:
+2.3.1 Player mode: player text in this invocation + authoritative state
+2.3.2 ZONE-FORGE mode: structured input from caller + authoritative state
+
+3 Canon Discipline (HARD):
+3.1 Unsupported detail = UNKNOWN / INFERRED (do not promote to fact).
+3.1.1 Consult LORE-FACTIONS and LORE-WORLD for canonical faction and world history before creating factions; new factions must not duplicate or contradict existing canonical factions or established historical events.
+3.2 Do NOT introduce >3 named NPCs unless player explicitly authorises more.
+3.3 Do NOT narrate scenes or outcomes.
+
+4 Clock Discipline (HARD):
+4.1 Max clocks per FAC-FORGE = 3 total (or Max_Clocks override if provided)
+4.2 Faction-owned or UA-owned only
+4.3 NPC-owned clocks require NPC-FORGE to run first (NPC must exist in authoritative state)
+4.4 Full clock fields required
+
+5 OUTPUT MODE (based on Caller):
+5.1 Player mode: emit all 4 blocks (FACTION PROFILE (concise), NPC CADRE (up to 3 stubs), DELTA INSERTS, CLOCK INSERTS)
+5.2 ZONE-FORGE mode: emit blocks 3-4 only (DELTA INSERTS, CLOCK INSERTS); suppress blocks 1-2
+
+6 Hard Stops:
+6.1 Any attempt to resolve AGENCY ACTIONS or time → HARD STOP
+6.2 Any contradiction with existing canon:
+6.2.1 Player mode: STOP and request ruling
+6.2.2 ZONE-FORGE mode: HARD STOP with error logged to ADJUDICATION_LOG; abort this FAC-FORGE call

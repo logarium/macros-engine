@@ -1,0 +1,15 @@
+{
+  "responses": [
+    {
+      "id": "cr_001",
+      "type": "NARR_TIME_PASSAGE",
+      "content": "The day passes in the slow grind of preparation. Joppa's officers drill ceremonial formations on the lower terrace \u2014 the sharp crack of boot on stone echoing up through the fortress like a heartbeat finding its rhythm. They don't know what they're rehearsing for. Not yet.\n\nYou spend the morning in the war room with Dravorn, reviewing commando readiness. Forty-three blades, twelve on light duties. He reports without embellishment, the way commandos do. When you ask about the swamp hangings investigation, his jaw tightens. 'Three names,' he says. 'All founding-era. I need your word before I move on them.' You give it.\n\nOskar finds you on the upper battlements at midday. The old commando says nothing for a long while, just stands beside you looking out over the Sighing Swamps. The troll scars on his face catch the spring light. Then: 'Saw your father fight once, at the training grounds in Kannaf. Before the Rift. You stand the same way he did.' He leaves before you can respond.\n\nCrandurth hums at your hip. The frost blade has been restless since Vornost \u2014 sensing the weight of the place, perhaps. Or hungry for what comes next.\n\nValania works through the afternoon, her quill scratching in the quiet of your chambers. The recall letters are sent. Now there is nothing to do but wait for the world to answer.\n\nThe Hidden Temple's demon-hunters advance their doctrine somewhere beyond your sight. You feel nothing. But the pressure is there, like weather changing behind the mountains.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "2 Evernew: Dravorn given approval to move on three founding-era suspects in swamp hangings investigation. Oskar mentioned seeing Thoron's father fight at Kannaf before the Rift."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+PE-FORGE
+DESIGN 1 PERSISTENT PROCEDURAL ENGINE
+Trigger: PE-FORGE | DESIGN PE | CREATE PE | Caller = ZONE-FORGE
+
+STRUCTURED INPUT MODE (when Caller = ZONE-FORGE):
+Required:
+  • Engine_Name: (what this PE does)
+  • Zone_Scope: (where it operates)
+  • Trigger_Event: (when it fires, 1-3 phrases)
+Optional (with defaults):
+  • Authority_Tier: (default: ZONE-LOCAL)
+  • Cadence: (default: no)
+  • Resolution_Method: (default: agent designs from canon)
+  • Persistence: (default: yes)
+Protocol: all inputs in structured block. Agent designs remaining fields from canon + Zone_Scope characteristics.
+
+INPUT PROTOCOL:
+  • Player mode: stepwise protocol (ask field, STOP, ask next field, STOP)
+  • ZONE-FORGE mode: all inputs in structured block; agent completes PE-DEF
+Required Fields (collect across steps):
+•	Identity: Engine_Name, Engine_Version, Authority_Tier, Registry_Target (CSEM|SSM_1A|NSV_DELTA_REGISTRY)
+•	Scope: Zone_Scope, State_Scope
+•	Persistence: Persistence (yes/no), Cadence (yes/no), Cadence_Priority (int; default 0 if cadence=yes)
+•	Activation: Trigger_Event (1–3 phrases)
+•	Inputs/Gates: Inputs, Hard_Gates
+•	Resolution: Resolution_Method
+o	Randomizer allowed only if Cadence PE defines it; otherwise mark “requires player delegation at runtime”.
+•	Effects: Outputs, State_Updates, Clock_Cascades (existing clocks only), Run_Cap_Notes, Failure_Safes, Audit_Notes
+Boundaries (HARD):
+•	No canon invention; no new named NPC/faction/Zone as facts.
+•	No clocks created inside PE-DEF.
+•	Respect registry immutability once registered.
+Output (HARD):
+•	Emit one full PE-DEF in exact template order; then STOP.

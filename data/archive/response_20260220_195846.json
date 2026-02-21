@@ -1,0 +1,10 @@
+{
+  "responses": [
+    {
+      "id": "cr_002",
+      "type": "NARR_COMBAT_END",
+      "content": "[DISMISSED \u2014 duplicate combat. Skratha Ironjaw already dead from prior encounter. Engine allowed re-fight due to UI not filtering dead NPCs. No narrative or state changes applied.]",
+      "state_changes": []
+    }
+  ]
+}

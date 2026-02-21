@@ -1,0 +1,453 @@
+TEMPLATES (v3.0)
+
+NOTE (v4.0): NSV-DELTA and PARTY-DELTA templates below are HISTORICAL REFERENCE ONLY.
+The JSON save file is the canonical state format. Delta text files are no longer generated.
+Templates for clocks, NPCs, factions, relationships, discoveries, ELs, zones, PEs,
+and entity cards remain valid as field-set references for JSON save entries.
+
+CLOCKS
+CLK: [Clock_Name] | [Clock_Owner] | [Progress] | [Advanced_This_Session: Y/N] | [Trigger_Fired: —/text]
+ADV: [advances_when; semicolon-separated] | HALT: [halts_when] | RED: [reduces_when]
+TRG: [trigger_on_completion]
+
+NPCs
+NPC: [Name] @ [Zone] | [Status] | Rel: [Relationships_Touched or —] | [Appearance]
+OBJ: [Objective] | K: [Knowledge] | ACT: [Next_Action]
+BX: AC=<>, HD=<>, hp=<>, AT=<>, Dmg=<>, ML=<> [Tags: <>]
+
+FACTIONS
+FAC: [Name] | [Status] | [Power:↑/↓/→] | [Disposition] | [Actions]
+
+RELATIONSHIPS 
+REL: [Parties] | [Type] | [Visibility] | [Clocks or —]
+CHG: [Old] → [New] | Trust: [shift] | Loyalty: [shift] | [Basis]
+
+DISCOVERIES 
+DISC: [Entity] | [UA or —] | [Reliability] | [Visibility] | [Source]
+INFO: [information]
+
+ELs 
+EL-DEF
+EL: [Name] | [Randomizer] | FP:[Priority] | [Adjacency]
+1. [entry prose] [optional: UA-cue (GM-facing only; do not print in NARR)]
+2. [entry prose]
+END EL-DEF
+
+ZONE 
+ZONE: [Zone_Name] | [Zone_Type] | [Risk_Profile] | [Controlling_Faction]
+CP: [crossing_point→destination‡/⊙; next_cp→destination] 
+Notes:
+
+Legend: → = to, ‡ = eventful, ⊙ = slow
+
+TEMPLATE: NSV-SEED v3.x
+Campaign_Name:
+Region:
+Scope:
+Tone:
+Genre_Constraints:
+Primary_Threat_Mode:
+Metaphysics_Notes:
+
+FACTIONS (FOUNDATIONAL / HISTORICAL)
+Faction_Name:
+Status:
+Origin:
+Core_Nature:
+Historical_Role:
+Present_Condition:
+Relationship_to_Region:
+
+EXTINCT / FALLEN CULTURES
+Culture_Name:
+Origin:
+Fate:
+Legacy_Sites:
+Responsible_Parties:
+
+MAJOR HISTORICAL EVENTS
+Event_Name:
+Era:
+Participants:
+Outcome:
+Lasting_Consequences:
+
+REGIONAL DYNAMICS
+Threats:
+Environmental_Hazards:
+Supernatural_Conditions:
+Cultural_Taboos:
+
+RELATIONSHIPS (FOUNDATIONAL / HISTORICAL)
+Relationship_ID:
+Parties:
+Relationship_Type:
+Baseline_State:
+Trust_Level:
+Loyalty_Orientation:
+Visibility:
+Notes:
+
+ZONES
+Zone_Name:
+Zone_Type:
+Risk_Profile:
+Controlling_Faction:
+Crossing_Points:
+Notes:
+
+CANONICAL TRUTHS
+- Truth:
+  Visibility: [secret | restricted (NPC/Faction) | public
+(secret=completely unknown | restricted=known only by named NPC/Faction | public=common knowledge)
+
+SEED_NOTES
+
+MAP CANON — STRATEGIC NOTES (NON-PROSE):
+
+TEMPLATE: NSV-DELTA v3.x
+(MACRO PACK v3.0 • CUMULATIVE SNAPSHOT • AUTHORITATIVE)
+Inherits: NSV-SEED v3.x
+
+META
+Session_ID:
+In-Game_Date:
+Active_Zone(s):
+Start_Node: 
+PC_Zone:
+Campaign_Intensity_Level:
+Seasonal_Pressure:
+Tone_Shift:
+Pacing:
+Canon_Narrative_Summary:
+
+PC_STATE_CHANGES
+PC_Name:
+Goals_Updated:
+Psychological_State_Change:
+Relationships_Changed:
+Affection_Shift:
+Secrets_Gained/Lost:
+Reputation_Shift:
+
+DISCOVERIES
+DISC: [Entity/Site] | [UA_Code if present, else —] | [Reliability] | [Visibility] | [Source]
+INFO: [New_Information; fold in Observations/Inferred/Rejected if present]
+
+With UA:
+DISC: UA-01 | confirmed | restricted | direct engagement
+INFO: Undead aspect destroyed; threat neutralised locally
+
+FACTION_STATE_CHANGES
+FAC: [Faction_Name] | [Status_Change] | [Power_Trend: ↑/↓/→] | [Disposition_to_PC] | [Actions_Taken_Offscreen]
+
+NPC_STATE_CHANGES
+NPC: [Name] @ [Zone] | [Status] | Rel: [Relationships_Touched or —]
+OBJ: [Objective_Change] | K: [Knowledge_Gained] | ACT: [Next_Likely_Action]
+
+RELATIONSHIP_STATE_CHANGES
+REL: [Relationship_ID] | [Visibility] | [Linked_Clocks or —]
+CHG: [Previous_State] → [New_State] | Trust: [shift] | Loyalty: [shift] | [Basis]
+
+Note: If Knowledge_vs_Reality is misaligned, add "| K≠R" at end of line 2.
+
+NPC_RISK_FLAGS
+NPC_Name:
+Risk_Type:
+Current_Level:
+Triggers:
+Consequences_If_Triggered:
+Visibility:
+Basis:
+
+ZONE_CHANGES
+ZONE: [Risk_Profile_Change] | [Controlling_Faction_Change] | [Crossing_Points Change] | [Environmental_Changes] | [Cultural_Changes]
+
+DIVINE / METAPHYSICAL CONSEQUENCES
+Deity / Power:
+Nature_of_Intervention:
+Cost_Incurred:
+Jurisdiction_Changed:
+Lingering_Effects:
+Visibility:
+
+PROCEDURAL_ENGINES_ACTIVE
+Engine_Name:
+Engine_Version:
+Authority_Tier:
+Zone_Scope:
+State_Scope:
+Trigger_Event:
+Resolution_Method:
+Persistence:
+Status:
+Linked_Clocks:
+Last_Run:
+Portability_Notes:
+
+ENTITY_CARDS_REGISTRY
+EC-DEF
+Card_ID:
+Entity_Type: PC / NPC / FACTION / ZONE / ITEM / DOCTRINE / OTHER
+Display_Name:
+Scope: global / Zone-local
+Triggers: [keywords/phrases]
+Revision_Notes:
+Reference_Facts:
+- Fact:
+  Visibility:
+Constraints:
+- Constraint:
+Do_Not_Use_For:
+- (e.g., “off-screen agency justification”, “clock advancement justification”)
+END EC-DEF
+
+ENCOUNTER_LISTS_REGISTRY
+EL-DEF
+EL: [EL_Name] | [Runtime_Randomizer] | FP:[Fallback_Priority] | [Adjacency_Notes]
+1. [entry prose] [optional: [UA] if UA-cue permitted]
+2. [entry prose]
+[... continue for all entries ...]
+
+Note: UA-cues are GM-facing only; do not print “[UA]” in NARR. Surface as evidence/behavior instead.
+
+END EL-DEF
+
+PROCEDURAL_ENGINE_DEFS_REGISTRY
+PE-DEF
+Engine_Name:
+Engine_Version:
+Authority_Tier:
+Zone_Scope:
+State_Scope:
+Persistence:
+Cadence: yes/no
+Trigger_Event:
+Inputs:
+Hard_Gates:
+Resolution_Method:
+Outputs:
+State_Updates:
+Clock_Cascades:
+Run_Cap_Notes:
+Failure_Safes:
+Audit_Notes:
+END PE-DEF
+
+
+CLOCKS & PRESSURE
+CLK: [Clock_Name] | [Clock_Owner] | [Progress] | [Advanced_This_Session: Y/N] | [Trigger_Fired: —/text]
+ADV: [advances_when bullets, semicolon-separated] | HALT: [halts_when] | RED: [reduces_when]
+TRG: [trigger_on_completion]
+
+Note: Use "(none)" for empty HALT/RED fields. Semicolons separate multiple conditions in ADV.
+
+CLOCK ENTRY FORMAT (HARD):
+In NSV-DELTA, each clock MUST be written using the full standard clock field set exactly as templated under CLOCKS & PRESSURE.
+Shorthand clock lines (e.g., “Clock Name — 1/4”) are INVALID in NSV-DELTA.
+
+MISSING DEFINITION RULE (HARD):
+A clock is INVALID if any of the following are empty/omitted:
+• Clock_Name
+• Clock_Owner
+• Progress
+• Advances_When
+• Trigger_On_Completion
+The following fields MAY be explicitly set to “(none)”:
+• Halts_When
+• Reduces_When
+A clock with Advances_When set to “Dormant (no triggers defined yet)” is permitted, but then:
+• Progress MUST be 0
+• Trigger_Fired MUST be blank unless changed this session
+
+Invalid clocks MUST be corrected or removed under ERROR CORRECTION MACRO.
+
+SNAPSHOT RULE (HARD):
+All still-active clocks MUST be fully restated every delta, even if unchanged.
+
+LOSSES & IRREVERSIBLES
+Destroyed / Lost / Slain:
+Cause:
+Consequence:
+
+UNRESOLVED_THREADS
+- Thread_Description:
+  UA involvement:
+  Time_Sensitivity:
+
+NEXT_SESSION_PRESSURE
+Immediate_Threats:
+Opportunities:
+Consequences_if_Ignored:
+
+ADJUDICATION_LOG:
+- Resolution_ID:
+  AI_Resolved:
+  Rule_Used:
+  Scope:
+  Trigger_Fired:
+  Randomizer:
+  Inputs:
+  Outcome:
+  Canon_Notes:
+  Consistency_Notes:
+
+ALLIED COMBATANT MECH LOG (per round):
+  AllyAttack: Attacker=<companion>, Target=<foe>, d20=<r>, AT=<at>, Total=<t>, vs AC=<ac> → HIT/MISS
+  AllyDamage: Expr=<diceexpr>, Roll=<d>, FoeHP: <before>→<after>, Kill=<Y/N>
+  AllyHit: Attacker=<foe>, Target=<companion>, d20=<r>, Total=<t>, vs AC=<ac> → HIT/MISS
+  AllyDamage: Expr=<diceexpr>, Roll=<d>, CompHP: <before>→<after>, DOWN=<Y/N>
+  AllyMorale: Trigger=<type>, 2d6=<r>, ML=<ml> → PASS/FAIL, Outcome=<text>
+
+UA_LOG (UA-LOG v3.0 mini-format; session-end only):
+- UA_Code:
+  Status: ACTIVE / PROMOTED / RETIRED
+  Touched_This_Session: yes/no
+  Promotion_Trigger_Fired: yes/no
+
+SEED_OVERRIDE RENDERING (HARD):
+Always include exactly ONE SEED_OVERRIDE block in NSV-DELTA.
+If no authorised seed mutation occurred, populate the three fields with “(none)” exactly.
+
+SEED_OVERRIDE:
+Section_Affected:
+Nature_of_Change:
+Reason:
+
+TEMPLATE: PARTY-SEED v3.x
+Campaign_Name:
+PC_Name:
+Class_and_Level:
+Cultural_Origin:
+Alignment_Tendency:
+Role_in_Party:
+Core_Traits:
+Primary_Motivation:
+Secondary_Motivation:
+Personal_Stakes:
+Fears_and_Aversions:
+Moral_Limits:
+Loyalty_Basis:
+Affection_Level:
+
+RELATIONSHIP_TRACKING
+Relationship_ID:
+Parties:
+Baseline_State:
+Visibility:
+
+Default_Risk_Posture:
+Authority_Response:
+Interpersonal_Tensions:
+Backstory_Anchor:
+
+Campaign_Name:
+PARTY_NPC_Name:
+Class_and_Level:
+AC: <int>, HD <int>, hp: <int>, AT: <int>, Dmg <diceexpr> (NdM(+K)), ML 12
+Skills: [list four] 
+Cultural_Origin:
+Alignment_Tendency:
+Role_in_Party:
+Core_Traits:
+Primary_Motivation:
+Secondary_Motivation:
+Personal_Stakes:
+Fears_and_Aversions:
+Moral_Limits:
+Loyalty_Basis:
+Affection_Level:
+
+RELATIONSHIP_TRACKING
+Relationship_ID:
+Parties:
+Baseline_State:
+Visibility:
+
+Default_Risk_Posture:
+Authority_Response:
+Interpersonal_Tensions:
+Backstory_Anchor:
+
+
+TEMPLATE: PARTY-DELTA v3.x
+(MACRO PACK v3.0 • CUMULATIVE SNAPSHOT • AUTHORITATIVE)
+Inherits: PARTY-SEED v3.x (+ prior deltas)
+
+PC_Name:
+Current_Zone:
+hp_Change: (if applicable; format: <before> → <after> (<reason>))
+Skills_Changed: (if applicable; format: +[skill], -[skill])
+Motivation_Shift:
+Loyalty_Change:
+Affection_Level:
+Relationships_Changed:
+Relationship_Clocks_Changed:
+Stress_or_Fatigue:
+Grievances_Added_or_Resolved
+Agency_Notes: 
+Future_Flashpoints:
+
+NPC_Name:
+Current_Zone:
+With_PC: yes/no/unknown
+Motivation_Shift:
+Loyalty_Change:
+Trust_in_PC:
+Affection_Level:
+Relationships_Changed:
+Relationship_Clocks_Changed:
+Stress_or_Fatigue:
+Grievances_Added_or_Resolved:
+Agency_Notes:
+Future_Flashpoints:
+
+TEMPLATE: PROCEDURAL ENGINE (PE) v3.0
+PE-DEF
+Engine_Name:
+Engine_Version:
+Authority_Tier:
+Zone_Scope:
+State_Scope:
+Persistence:
+Cadence: yes/no
+Cadence_Priority:
+Trigger_Event:
+Inputs:
+Hard_Gates:
+Resolution_Method:
+Outputs:
+State_Updates:
+Clock_Cascades:
+Run_Cap_Notes:
+Failure_Safes:
+Audit_Notes:
+
+
+TEMPLATE: ENTITY_CARD
+NOTE: TEMPLATE: ENTITY_CARD is a convenience copy only; canonical placement/field order is the NSV-DELTA → ENTITY_CARDS_REGISTRY block.
+
+EC-DEF
+Card_ID:
+Entity_Type: PC / NPC / FACTION / ZONE  / ITEM / DOCTRINE / OTHER
+Display_Name:
+Scope: global / Zone-local
+Triggers: [keywords/phrases]
+Revision_Notes:
+Reference_Facts:
+- Fact:
+  Visibility:
+Constraints:
+- Constraint:
+Do_Not_Use_For:
+- (e.g., “off-screen agency justification”, “clock advancement justification”)
+END EC-DEF
+
+TEMPLATE: CANON_NARRATIVE_SUMMARY (CNS) v3.0
+Session_ID:
+In-Game_Date:
+Scope_Notes:
+Narrative_Summary_Prose:
+(400-600 words, continuous prose; may reference only events that occurred this session; must not introduce new facts; if uncertain, say uncertain)
+
+

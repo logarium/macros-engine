@@ -1,0 +1,47 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No reunion occurred at Seawatch/Riverwatch today. Party departed Caras for Grey Plains. ADV bullet not satisfied.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No new tracks found today. Party is travelling Caras to Grey Plains, not in East March. ADV bullet not satisfied.",
+      "state_changes": []
+    },
+    {
+      "id": "req_003",
+      "type": "NPAG",
+      "content": "6 NPCs resolved: Lithoe breakthrough (TRG fired), Lalholm witnesses breakthrough, Thordak tremor report, Conorth reads Vael evidence + fourth Deryth meeting, Joppa preparations continue, Voss patrol rotation",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "NPAG-S8-D1: Lithoe@Khuzdukan: Counter-sequence breakthrough achieved (8/8 TRG FIRED); viable counter-sequence identified; ward failure timeline can be extended; needs Thoron's party to implement"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG-S8-D1: Lalholm@Khuzdukan: Witnessed Lithoe's breakthrough; theological implications of rune-chain severance being assessed; preparing for party arrival"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG-S8-D1: Thordak@Khuzdukan: Reports tremors unchanged in frequency; wardens holding; awaiting Thoron's return with full party"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG-S8-D1: Conorth@Caras: Read Vael evidence packet \u2014 customs anomaly documented; fourth meeting with Deryth (Ironmask agent); Deryth proposes Golden Hind trade route partnership; Conorth considering; does not connect evidence to Golden Hind yet"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG-S8-D1: Joppa@Vornost: Dragon Throne preparations continuing; honour guard drilled; letter confirmed missed at Seawatch; dispatching second courier"
+        },
+        {
+          "type": "fact",
+          "text": "NPAG-S8-D1: Voss@Fort Vanguard: Rotating patrols; Thess still deployed east; garrison stable under Bale"
+        }
+      ]
+    }
+  ]
+}

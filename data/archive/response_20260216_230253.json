@@ -1,0 +1,22 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Thoron not at Seawatch/Riverwatch. No advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No underlayer contact reused today. Valania departed Caras S7. No advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_003",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Suzanne travelling through Khuzduk Hills/Grey Plains toward Seawatch with Guldur. No Orcus contact. No advance.",
+      "state_changes": []
+    }
+  ]
+}

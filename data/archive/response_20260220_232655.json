@@ -1,0 +1,37 @@
+{
+  "responses": [
+    {
+      "id": "cr_001",
+      "type": "NPAG",
+      "content": "NPAG \u2014 6 NPC agency actions resolved (30 Ilrym):\n\n1. Valania Lorethor (Vornost, with PC): Five recall letters dispatched with escort riders before dawn. Caras agent reorders received \u2014 full intelligence profile on Conorth, Golden Hind leadership, and Conorth's secretary. Valania estimates 3 days for Khuzdukan group, 4 for Seawatch pair.\n\n2. Suzanne of Corlaine (Khuzduk Hills \u2192 en route to Fort Seawatch): Departed Khuzdukan with Guldur via the Dwarven Bridge. Yor-Kazh strapped to her back, silent for now. She sets a hard pace. Guldur keeps up but complains about the terrain.\n\n3. Lithoe Wano-Kan (Khuzdukan): Began resonance calibration tests for arcane sending network. Initial results unstable \u2014 the counter-sequence is interfering with signal propagation. Needs to isolate frequencies. Notes anomalous harmonic she cannot explain.\n\n4. Kael Dravorn (Vornost): Began quiet investigation of swamp hangings. Examined ropework from corpse-willow grove \u2014 confirmed old commando knots, pre-founding vintage. Narrowed to original cadre veterans. Three candidates identified, all still serving. Has not yet interrogated.\n\n5. Henric Bale (Fort Vanguard): Received Valania's recall rider. Confused \u2014 orders reference companion convergence at Vornost but Bale has no companion to send. Forwarded intelligence packet to Thoron via same rider: eastern perimeter contact patterns suggest coordinated probing, not random incursion.\n\n6. Harren Vael (Riverwatch): Still awaiting Caras response on customs anomaly evidence. Growing nervous. Began keeping duplicate records in case originals 'disappear' on Conorth's desk.",
+      "state_changes": [
+        {
+          "type": "npc_update",
+          "name": "Valania Lorethor",
+          "next_action": "Monitoring recall timeline; awaiting Caras agent intelligence report"
+        },
+        {
+          "type": "npc_update",
+          "name": "Suzanne of Corlaine",
+          "zone": "Khuzduk Hills",
+          "next_action": "Travelling to Fort Seawatch with Guldur; 2-3 days transit"
+        },
+        {
+          "type": "npc_update",
+          "name": "Guldur Emeldyr",
+          "zone": "Khuzduk Hills",
+          "next_action": "Travelling to Fort Seawatch with Suzanne; complaining about terrain"
+        },
+        {
+          "type": "npc_update",
+          "name": "Kael Dravorn",
+          "next_action": "Three suspects identified from original commando cadre; interrogation pending Thoron's approval"
+        },
+        {
+          "type": "fact",
+          "text": "Recall letters dispatched 30 Ilrym. Suzanne and Guldur en route to Fort Seawatch. Dravorn identified three commando veterans as suspects in swamp hangings. Lithoe's sending network calibration unstable \u2014 counter-sequence interference."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Party travelling to Khuzdukan. No reunion at Seawatch/Riverwatch. Not satisfied.",
+      "state_changes": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Thoron not at Seawatch/Riverwatch. No reunion event. No advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "Suzanne has no Orcus contact this day \u2014 travelling through Khuzduk Hills with Guldur, away from cult infrastructure. No advance.",
+      "state_changes": []
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gammaria — MACROS Engine</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header">
+    <div class="title">GAMMARIA</div>
+    <div class="meta">
+        <span id="h-session">Session —</span>
+        <span id="h-date">—</span>
+        <span id="h-zone">—</span>
+        <span id="h-season">—</span>
+        <span id="h-intensity">—</span>
+    </div>
+    <div class="danger-clocks" id="danger-clocks"></div>
+    <span id="h-call-budget" class="call-budget-badge"></span>
+    <div id="connection-status" class="ws-disconnected">disconnected</div>
+</div>
+
+<!-- TAB BAR -->
+<div id="tab-bar">
+    <button class="tab-btn active" data-tab="play-tab">PLAY</button>
+    <button class="tab-btn" data-tab="party-tab">PARTY</button>
+    <button class="tab-btn" data-tab="track-tab">TRACK</button>
+    <button class="tab-btn" data-tab="forge-tab">FORGE</button>
+    <button class="tab-btn" data-tab="map-tab">MAP</button>
+    <button class="tab-btn" data-tab="logs-tab">LOGS</button>
+</div>
+
+<!-- TAB CONTENT -->
+<div id="tab-content">
+
+    <!-- PLAY -->
+    <div id="play-tab" class="tab-panel active">
+        <!-- Left: main narration column -->
+        <div id="play-main">
+            <div id="narration-area">
+                <div class="narration-entry NARR_ARRIVAL">
+                    <div class="narration-label">Welcome</div>
+                    Loading game state...
+                </div>
+            </div>
+            <div id="waiting-overlay">
+                <div class="waiting-text" id="waiting-text">Waiting for Claude...</div>
+                <div class="waiting-sub" id="waiting-sub">Open Claude Desktop and process pending requests</div>
+            </div>
+            <div id="cp-area">
+                <div id="cp-buttons"></div>
+                <div id="rest-bar">
+                    <select id="rest-days">
+                        <option value="1">1 day</option>
+                        <option value="2">2 days</option>
+                        <option value="3">3 days</option>
+                        <option value="5">5 days</option>
+                        <option value="7">7 days</option>
+                        <option value="14">14 days</option>
+                        <option value="30">30 days</option>
+                    </select>
+                    <button class="rest-btn" onclick="restDays()">Rest &amp; Advance Time</button>
+                </div>
+            </div>
+            <div id="combat-start-area" style="display:none">
+                <div class="combat-start-label">Fight NPC:</div>
+                <div id="combat-start-buttons"></div>
+            </div>
+            <div id="combat-area" style="display:none"></div>
+            <div id="mode-bar">
+                <button class="mode-btn" data-mode="INTENS">INTENS</button>
+                <button class="mode-btn" data-mode="INTIM">INTIM</button>
+                <button class="mode-btn" data-mode="INVESTIG">INVESTIG</button>
+                <button class="mode-btn rumor-btn" data-mode="RUMOR">RUMOR</button>
+                <span id="mode-status"></span>
+            </div>
+            <div id="chat-input-area">
+                <input type="text" id="player-input" placeholder="What do you do?" autocomplete="off">
+                <button id="chat-send-btn" onclick="submitPlayerInput()">Send</button>
+            </div>
+        </div>
+        <!-- Right: collapsible side panel -->
+        <div id="side-panel">
+            <button id="side-panel-toggle" title="Toggle side panel">&laquo;</button>
+            <div id="side-panel-content">
+                <div id="sp-party-section">
+                    <div class="sp-section-label">PARTY</div>
+                    <div id="sp-pc-block"></div>
+                    <div id="sp-companions-block"></div>
+                </div>
+                <div id="sp-log-section">
+                    <div class="sp-section-label">LOG</div>
+                    <div id="sp-log-feed"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARTY -->
+    <div id="party-tab" class="tab-panel">
+        <div id="pc-section"></div>
+        <div class="section-header">Companions</div>
+        <div id="companions-section"></div>
+    </div>
+
+    <!-- TRACK -->
+    <div id="track-tab" class="tab-panel">
+        <div class="section-header">Active Clocks</div>
+        <div id="active-clocks"></div>
+        <div class="section-header">Fired Triggers</div>
+        <div id="fired-clocks"></div>
+        <div class="section-header">Halted</div>
+        <div id="halted-clocks"></div>
+        <div class="section-header">Engines</div>
+        <div id="engines-section"></div>
+        <div class="section-header">Factions</div>
+        <div id="factions-section"></div>
+        <div class="section-header">Open Threads</div>
+        <div id="threads-section"></div>
+        <div style="margin-top: 20px; text-align: center;">
+            <button class="footer-btn session-btn" onclick="exportReport()">Export Session Report</button>
+        </div>
+    </div>
+
+    <!-- FORGE -->
+    <div id="forge-tab" class="tab-panel">
+        <div class="section-header">Forge — Creative Atoms</div>
+        <div id="forge-grid" class="forge-grid"></div>
+        <div id="forge-status" class="forge-status"></div>
+    </div>
+
+    <!-- MAP -->
+    <div id="map-tab" class="tab-panel">
+        <div id="map-container">
+            <img id="map-image" src="/images/gammaria_map.png" alt="Map of Gammaria" draggable="false">
+        </div>
+    </div>
+
+    <!-- LOGS -->
+    <div id="logs-tab" class="tab-panel">
+        <div id="log-content"></div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer">
+    <button class="footer-btn session-btn" onclick="showStartSessionDialog()">New Session</button>
+    <button class="footer-btn" onclick="saveGame()">Save</button>
+    <button class="footer-btn" onclick="showLoadDialog()">Load</button>
+    <button class="footer-btn session-btn" onclick="showEndSessionDialog()">End Session</button>
+    <span class="call-count" id="call-count"></span>
+</div>
+
+<div id="toast-container"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

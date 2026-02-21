@@ -1,0 +1,455 @@
+MACROS ENGINE — MCP TOOL SPECIFICATION v1.0
+(REBUILD REFERENCE DOCUMENT)
+
+Purpose: Complete specification for rebuilding the MACROS Engine MCP server.
+The engine is a Python application with a tkinter GUI and fastmcp MCP server.
+It manages deterministic game state for a solo tabletop RPG campaign.
+
+────────────────────────────────────────────────────────────────────
+ARCHITECTURE
+────────────────────────────────────────────────────────────────────
+
+- Language: Python 3, standard library + fastmcp
+- GUI: tkinter (5 tabs: PLAY, PARTY, TRACK, FORGE, LOGS)
+- State: Single JSON save file (dataclass-backed)
+- MCP: fastmcp server exposing tools to Claude Desktop
+- Principle: Engine handles mechanical truth. Claude handles narrative truth.
+
+State file format: "Session XX - DD MonthName - ZoneName.json"
+State file location: data/ directory relative to engine root
+
+The engine maintains a pending creative request queue. When mechanical
+operations produce results requiring narrative judgment (clock audits,
+NPC forges, encounter narrations, combat aftermath, player input),
+they are queued as creative requests. Claude retrieves them via
+get_pending_requests, processes them, and commits results via
+apply_llm_judgments.
+
+SINGLE PIPE: All content requiring Claude's judgment flows through
+the same pending_creative queue — including player input typed in the
+engine's chat window (tagged as PLAYER_INPUT).
+
+────────────────────────────────────────────────────────────────────
+CALENDAR SYSTEM (Nurrian Calendar — from NSV-WORLD canonical truth)
+────────────────────────────────────────────────────────────────────
+
+Months in order:
+  Day of Awakening (1d), Demes (30d), Fasting (28d), Tryphor (30d),
+  Day of the Moot (1d), Ilrym (30d), Evernew (31d), Jestrim (23d),
+  The Stand (7d), Rannifer (31d), Reapmere (30d), Grismere (30d),
+  Aphistri (31d), Frithium (30d), Revini (31d)
+
+NOTE: Reapmere is omitted from the NSV-WORLD canonical truth entry but IS
+a real month used in THORON-HISTORY and NSV-ENGINES. NSV-WORLD needs updating.
+
+Seasons and pressures (from NSV-ENGINES SRP v1.0):
+  Spring (Tryphor, Ilrym, Evernew): "Feed & Seed — food stores depleted; planting season critical"
+  Summer (Jestrim, Rannifer, Reapmere): "Raw Materials — construction, repairs, military production peak"
+  Autumn (Grismere, Aphistri, Frithium): "Harvest — success/failure determines winter survival"
+  Winter (Revini, Demes, Fasting): "Firewood & Pitch — survival essentials; cold is lethal"
+
+Season transitions (from SRP trigger_event):
+  Demes→Tryphor = Spring, Evernew→Jestrim = Summer,
+  Reapmere→Grismere = Autumn, Frithium→Revini = Winter
+
+────────────────────────────────────────────────────────────────────
+MCP TOOLS — COMPLETE SPECIFICATION
+────────────────────────────────────────────────────────────────────
+
+═══ CORE GAME LOOP ═══
+
+TOOL: run_tp_days
+  Purpose: Run Time & Pressure for N days (1-30). Core mechanical loop.
+  Params: days (int, default 1)
+  Behaviour:
+    - Advances calendar by N days
+    - Runs all registered procedural engines (VP, TSDD, HT-DH, SRP)
+    - Ticks cadence clocks (ONLY if is_cadence=true AND no HALT condition active)
+    - Performs clock audit: scans ADV bullets against daily facts, flags ambiguous matches for Claude review
+    - Rolls encounter gate (1d6, triggers on 6 or zone-specific threshold)
+    - Rolls NPAG gate (1d6, triggers on 5-6, returns eligible NPC count)
+    - If triggers fire, generates creative requests for the queue
+    - If NPC_FORGE needed for new zone, generates creative requests
+    - If EL_FORGE needed for new zone, generates creative requests (BUT must check existing EL-DEFs first)
+    - Checks for clock trigger completions and fires them
+  Returns: Formatted summary of all mechanical events, creative request count
+  Notes:
+    - Clock audit should NOT send reviews for bullets that reference zones the PC is not in/adjacent to
+    - Cadence clocks must respect HALT conditions before ticking
+    - Clock audit keyword matcher must avoid false positives (see bullet writing guidelines)
+
+TOOL: get_pending_requests
+  Purpose: Get all pending creative requests requiring Claude's judgment.
+  Params: none
+  Returns: Formatted list of all pending requests with IDs, types, and full context.
+  Request types:
+    - CLOCK_AUDIT / CLOCK_AUDIT_REVIEW: ADV bullet ambiguity review
+    - NPC_FORGE: Create NPCs for a zone
+    - EL_FORGE: Create encounter list for a zone
+    - NPAG: Resolve N NPC agency actions
+    - NARR_ARRIVAL: Narrate zone arrival after travel
+    - NARR_COMBAT_END: Narrate combat aftermath
+    - PLAYER_INPUT: Player typed intent in engine chat
+    - RUMOR: Generate a rumor (with truth_roll and is_true flag)
+  Each request includes:
+    - id: unique string (e.g. "cr_001", "req_001")
+    - type: request type string
+    - Full context payload (zone data, NPC data, lore, companions, date, season)
+    - CONSTRAINTS dict with max_words, tone, style, voice, instruction
+    - Optional: mode and mode_instruction (for INTIM, NARR-D, etc.)
+
+TOOL: apply_llm_judgments
+  Purpose: Apply Claude's creative judgments to game state.
+  Params: response_json (string) — JSON with this structure:
+    {
+      "responses": [
+        {
+          "id": "cr_001",
+          "type": "CLOCK_AUDIT",
+          "content": "reasoning or narrative text",
+          "state_changes": [
+            {"type": "clock_advance", "clock": "Name", "reason": "why"},
+            {"type": "clock_reduce", "clock": "Name", "reason": "why"},
+            {"type": "fact", "text": "new fact"},
+            {"type": "npc_update", "name": "NPC", "status": "dead", "next_action": "none"},
+            {"type": "npc_create", "name": "Name", "zone": "Zone", "role": "Role",
+             "trait": "x, y", "appearance": "desc", "faction": "name or none",
+             "objective": "obj", "knowledge": "k", "next_action": "act",
+             "bx_ac": 15, "bx_hd": 2, "bx_hp": 12, "bx_hp_max": 12,
+             "bx_at": 2, "bx_dmg": "1d8", "bx_ml": 9}
+          ]
+        }
+      ]
+    }
+  Returns: Confirmation of applied changes, forwarding status
+  Notes: Results are forwarded to the GUI play/chat window for display
+
+TOOL: clear_pending_requests
+  Purpose: Emergency escape hatch — clears all pending requests.
+  Params: none
+  Notes: Use when engine stuck in AWAIT_CREATIVE. Discards without processing.
+
+═══ STATE QUERIES ═══
+
+TOOL: get_game_state
+  Purpose: Comprehensive summary of current state.
+  Params: none
+  Returns: Session ID, date, zone, intensity, season, all active clocks with
+    progress, fired triggers, engine status, recent facts.
+
+TOOL: get_clock_detail
+  Purpose: Detailed info about a specific clock.
+  Params: clock_name (string)
+  Returns: Progress, ADV bullets, HALT conditions, RED conditions, trigger text,
+    advancement history, cadence status, notes.
+
+TOOL: get_npcs
+  Purpose: List all NPCs, optionally filtered by zone.
+  Params: zone (string, optional)
+  Returns: Name, zone, role, status, with_pc flag for each NPC.
+
+TOOL: get_npc_detail
+  Purpose: Full details about a specific NPC including history.
+  Params: npc_name (string)
+  Returns: All NPC fields plus history log.
+
+TOOL: get_factions
+  Purpose: List all factions with status and disposition.
+  Params: none
+  Returns: All faction entries.
+
+═══ DICE ═══
+
+TOOL: roll_dice
+  Purpose: Roll dice using standard expressions.
+  Params: expression (string, default "2d6") — e.g. "1d6", "2d6", "1d8", "1d20", "3d8+5"
+  Returns: Individual dice results and total.
+
+═══ STATE MUTATION ═══
+
+TOOL: advance_clock
+  Purpose: Manually advance a clock by 1.
+  Params: clock_name (string), reason (string)
+  Notes: Checks for trigger firing on completion.
+
+TOOL: set_clock
+  Purpose: Set clock to specific progress value.
+  Params: clock_name (string), progress (int), reason (string)
+  Notes: For error correction, RED bullet processing. Handles unfiring triggers if progress drops below max.
+
+TOOL: set_pc_zone
+  Purpose: Set the PC's current zone.
+  Params: zone (string)
+  Common zones: Caras, Vornost, Fort Vanguard, Grey Plains, Khuzduk Hills,
+    Khuzdukan, Riverwatch, Fort Seawatch, Seawatch Ramparts, Eastern Scarps,
+    Western Scarps, Hinterlands, Deep Swamps, Sighing Swamps, Sea of Birds
+
+TOOL: set_date
+  Purpose: Set in-game date to specific value.
+  Params: date_str (string, e.g. "28 Ilrym"), reason (string)
+
+TOOL: set_session_id
+  Purpose: Set current session number.
+  Params: session_id (int)
+  Notes: Engine should auto-increment at startup. This tool is for corrections.
+
+TOOL: add_fact
+  Purpose: Add a narrative fact to game state.
+  Params: fact (string)
+  Notes: Facts are checked during clock audits against ADV bullets.
+
+TOOL: log_event
+  Purpose: Log any mechanical event to master audit trail.
+  Params: event_type (string), detail (string)
+  Event types: DICE, NPAG, NPAG_RESOLUTION, EL, EL_DEF, BX_COMBAT,
+    BX_ROUND, BX_RESULT, TRAVEL, ZONE_FORGE, NPC_FORGE, CLOCK_FORGE,
+    CLOCK_AUDIT, RULING, LLM_DECISION, SESSION, ENCOUNTER, REACTION,
+    MORALE, ZONE_CHANGE, PARTY, LOOT, REST, ABILITY_CHECK, SAVE,
+    TRIGGER, NARRATIVE_BEAT, CAN_FORGE, FAC_FORGE, PE_FORGE
+
+═══ NPC / COMPANION MANAGEMENT ═══
+
+TOOL: update_npc
+  Purpose: Create or update an NPC in the save.
+  Params: name (required), plus optional: zone, role, trait, appearance, faction,
+    objective, knowledge, negative_knowledge, next_action, status,
+    with_pc ("true"/"false"), is_companion ("true"/"false"), history_event
+  Notes: If NPC exists, only provided fields update. Empty strings ignored.
+
+TOOL: update_companion
+  Purpose: Create or update companion detail.
+  Params: npc_name (required), plus optional: loyalty_change, trust_in_pc,
+    motivation_shift, grievances, stress_or_fatigue, agency_notes,
+    future_flashpoints, affection_json (JSON string), history_event
+
+═══ FACTION MANAGEMENT ═══
+
+TOOL: update_faction
+  Purpose: Create or update a faction.
+  Params: name (required), plus optional: status, trend, disposition,
+    last_action, notes, history_event
+
+═══ RELATIONSHIP MANAGEMENT ═══
+
+TOOL: update_relationship
+  Purpose: Create or update a relationship.
+  Params: rel_id (required, format: REL-NpcA-NpcB-type-NN), plus optional:
+    npc_a, npc_b, rel_type, current_state, trust, loyalty, visibility, history_event
+
+═══ WORLD STATE ═══
+
+TOOL: update_zone
+  Purpose: Create or update a zone.
+  Params: zone_name (required), plus optional: description, threat_level,
+    controlling_faction, intensity, situation_summary, notes
+
+TOOL: add_discovery
+  Purpose: Add a discovery to the save.
+  Params: disc_id (required), plus optional: info, source, zone, certainty,
+    visibility, ua_code
+
+TOOL: add_thread
+  Purpose: Add an unresolved narrative thread.
+  Params: thread_id (required), plus optional: description, zone
+
+TOOL: resolve_thread
+  Purpose: Mark a thread as resolved.
+  Params: thread_id (required), resolution (optional)
+
+TOOL: add_loss
+  Purpose: Record an irreversible loss.
+  Params: description (required)
+
+TOOL: update_ua
+  Purpose: Create or update an Unknown Actor.
+  Params: ua_id (required), plus optional: description, zone, status, touched, promotion, notes
+
+═══ PC STATE ═══
+
+TOOL: update_pc_state
+  Purpose: Update PC state in save.
+  Params (all optional): goals_json, psychological_state_json, secrets_json,
+    conditions_json (JSON arrays), reputation, reputation_levels_json (JSON object),
+    equipment_notes, affection_summary, history_event
+
+═══ SESSION MANAGEMENT ═══
+
+TOOL: add_session_summary
+  Purpose: Add or replace a session narrative summary.
+  Params: session_id (string), summary (string, 400-600 words)
+
+TOOL: update_session_meta
+  Purpose: Store session metadata.
+  Params: session_id (required), plus optional: tone_shift, pacing, next_session_pressure
+
+═══ DIVINE / METAPHYSICAL ═══
+
+TOOL: update_divine
+  Purpose: Create or update divine/metaphysical consequence entry.
+  Params: deity (required), plus optional: nature_of_intervention, cost_incurred,
+    jurisdiction_changed, lingering_effects, visibility
+
+═══ RISK FLAGS ═══
+
+TOOL: update_risk_flag
+  Purpose: Create or update an NPC risk flag.
+  Params: npc_name (required), plus optional: risk_type, level, basis,
+    triggers, consequences, visibility
+
+═══ SEED OVERRIDES ═══
+
+TOOL: update_seed_override
+  Purpose: Track canonical truth restriction changes.
+  Params: section_affected (required), plus optional: nature_of_change, reason, details
+
+═══ EXPORT ═══
+
+TOOL: export_html_report
+  Purpose: Generate formatted HTML audit report.
+  Params: filepath (optional)
+
+TOOL: export_save
+  Purpose: Export save state to JSON file at specified path.
+  Params: filepath (optional)
+
+TOOL: save_game
+  Purpose: Save current game state to JSON file.
+  Params: filename (optional — auto-generates canonical name if empty)
+
+TOOL: load_game
+  Purpose: Load game state from save file.
+  Params: filename (required)
+
+TOOL: list_saves
+  Purpose: List all available save files.
+  Params: none
+
+────────────────────────────────────────────────────────────────────
+GUI SPECIFICATION
+────────────────────────────────────────────────────────────────────
+
+5-tab layout:
+
+PLAY tab:
+  - Chat/play window: scrollable display area for all narrative content
+  - Player input field at bottom (text entry + Send/Enter)
+  - Player input writes to pending_creative queue as PLAYER_INPUT
+  - Travel controls (zone selector, travel button)
+  - T&P controls (days selector, run button)
+  - Rumor button (generates RUMOR request)
+  - Combat button (NPC selector filtered to EXCLUDE dead NPCs, fight button)
+
+PARTY tab:
+  - PC state display
+  - Companion list with status
+  - Relationship tracking
+
+TRACK tab:
+  - All active clocks with progress bars
+  - Fired triggers list
+  - Unresolved threads
+
+FORGE tab:
+  - Manual forge triggers (NPC, EL, Zone, Clock, Faction)
+
+LOGS tab:
+  - Full audit trail
+  - Session log
+  - Adjudication log
+
+────────────────────────────────────────────────────────────────────
+COMBAT SYSTEM
+────────────────────────────────────────────────────────────────────
+
+The engine runs full BX-PLUG combat mechanically:
+  - Initiative: each side rolls 1d6
+  - Attack: d20 + AT vs AC, hit if >= AC
+  - Damage: roll Dmg expression, subtract from hp
+  - Morale: 2d6 <= ML to stand (triggers: first casualty, leader drops,
+    half force down, outnumbered 2:1, surprise reversal)
+  - PC choice each round: ATTACK or FLEE
+  - Companions fight alongside PC using targeting AI
+  - Combat ends: ALL_FOES_DEAD, FOES_BREAK, FLEE_SUCCESS, or PC_DOWN
+
+After combat resolves mechanically, engine queues NARR_COMBAT_END
+request with combat summary for Claude to narrate the aftermath.
+
+NPC selector for manual combat MUST filter out NPCs with status "dead".
+
+────────────────────────────────────────────────────────────────────
+PROCEDURAL ENGINES
+────────────────────────────────────────────────────────────────────
+
+Four engines run during T&P:
+
+1. Vanguard Patrol Doctrine (VP v3.0): 2d6 roll, band-based outcomes
+   affecting Selde Marr and Arvek Morn clocks
+2. Temple of the Sun — Doctrinal Debate (TSDD v3.0): currently inert
+3. Hidden Temple — Demon-Hunt Cadence (HT-DH v3.0): enables clock
+   audit advancement for Hidden Temple clocks
+4. Seasonal Resource Pressure (SRP v1.0): seasonal modifier system
+
+────────────────────────────────────────────────────────────────────
+KNOWN BUGS TO FIX IN REBUILD
+────────────────────────────────────────────────────────────────────
+
+1. EL-DEF LOOKUP: Engine reports "No EL-DEF for zone" when EL-DEFs exist
+   in NSV-ENGINES. Engine must parse NSV-ENGINES for EL-DEF blocks and
+   register them, OR store EL-DEFs in the JSON save's encounter_lists field.
+
+2. CLOCK AUDIT ZONE FILTERING: Engine sends clock audit reviews for
+   ADV bullets referencing zones the PC is not in/adjacent to (e.g.
+   "Reunion at Seawatch/Riverwatch" when PC is in Deep Swamps). Engine
+   should skip reviews where bullet references a zone and PC is not there.
+
+3. CADENCE HALT RESPECT: Cadence clocks must check HALT conditions
+   before auto-advancing. If a HALT condition is active, skip the tick.
+
+4. DEAD NPC FILTER: Combat NPC selector must exclude NPCs with
+   status "dead" to prevent ghost combats.
+
+────────────────────────────────────────────────────────────────────
+CREATIVE REQUEST PAYLOAD CONVENTIONS
+────────────────────────────────────────────────────────────────────
+
+Every creative request includes a CONSTRAINTS dict:
+  max_words: int (word limit for response)
+  tone: "sword_and_sorcery"
+  style: "Compressed prose. Inspirations: Elric, Conan, Dark Crystal, Krull, Willow, LotR."
+  voice: "Second person present tense."
+  instruction: specific task instruction
+
+PLAYER_INPUT requests additionally include:
+  intent: the player's typed text
+  mode: (optional) mode name if active (e.g. "INTIM")
+  mode_instruction: (optional) full mode formatting rules
+
+NPC_FORGE requests include:
+  zone, zone_data, existing_npcs_in_zone, existing_factions,
+  role_hint, faction_hint, session_id, season, lore (forge_spec + zone_atmosphere)
+
+EL_FORGE requests include:
+  zone, zone_data, existing_npcs_in_zone, season, seasonal_pressure,
+  session_id, lore (forge_spec + zone_atmosphere)
+
+NARR_ARRIVAL requests include:
+  zone, travel (from_zone, crossing_point, cp_tag, days_traveled, is_eventful),
+  present_npcs, companions_with_pc, season, seasonal_pressure, in_game_date,
+  recent_facts, lore (zone_atmosphere)
+
+NARR_COMBAT_END requests include:
+  zone, combat_summary (rounds, end_reason, encounter_prompt, pc_hp_final,
+  companions_status, foes_status, key_events), season, in_game_date, lore
+
+NPAG requests include:
+  npc_count, eligible_npcs (full NPC data with objectives, knowledge,
+  next_action, faction, with_pc), pc_zone, in_game_date, lore (companion
+  profiles and faction data)
+
+RUMOR requests include:
+  zone, pc_zone, truth_roll, is_true (bool), season, in_game_date,
+  active_clocks, active_factions, lore
+
+────────────────────────────────────────────────────────────────────
+END SPECIFICATION
+────────────────────────────────────────────────────────────────────

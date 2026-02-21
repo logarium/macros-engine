@@ -1,0 +1,250 @@
+NSV-CLOCKS v3.0
+
+FOUNDATIONAL CLOCKS (OPENING SCENARIO ONLY)
+
+RETIREMENT RULE
+
+FOUNDATIONAL CLOCKS (OPENING SCENARIO ONLY)
+
+These clocks exist only at campaign start. They track recognition spreading across Gammaria as Thoron re-establishes authority. Once all clocks complete, these clocks are retired and removed from subsequent deltas.
+
+CLK: Helkar Recognition—Caras | Environment/Polity | 0/4 | Advanced_This_Session: N | Trigger_Fired: —
+ADV: Decisive sovereign action in Caras; public reunion with companion in Caras; invoke Helkar authority with force; word spreads from other locations | HALT: Leave Caras >3 days | RED: Act anonymously; defer to local authority; contradict Helkar reputation
+TRG: Caras recognizes Thoron as Helkar; word spreads; advance Frontier Recognition +1
+
+CLK: Helkar Recognition—Vornost | Environment/Polity | 0/4 | Advanced_This_Session: N | Trigger_Fired: —
+ADV: Enter Black Fortress and claim authority; public reunion with companion; issue obeyed orders to garrison; word spreads | HALT: Leave Vornost >3 days | RED: Act anonymously; defer to Joppa; garrison questions identity
+TRG: Vornost recognizes Thoron as Helkar; Black Fortress opens; word spreads to all forts; advance Frontier Recognition +2
+
+CLK: Helkar Recognition—Frontier (General) | Environment/Polity | 0/6 | Advanced_This_Session: N | Trigger_Fired: —
+ADV: Recognized at major location; reunite with companion at frontier post; stories spread via merchants/soldiers; demonstrate unique knowledge | HALT: No recognition events for one week | RED: Public failure at frontier; companion questions authority
+TRG: Frontier-wide recognition; authority assumed; clocks retired
+
+CLK: Companion Reunion—Valania | Thoron (quest) | 0/1 | Advanced_This_Session: N | Trigger_Fired: —
+ADV: Find and reunite with Valania | HALT: (none) | RED: (none)
+TRG: Valania rejoins; spy network unlocked; Caras Recognition +1
+
+CLK: Companion Reunion—Suzanne | Thoron (quest) | 0/1 | Advanced_This_Session: N | Trigger_Fired: —
+ADV: Find and reunite with Suzanne | HALT: (none) | RED: (none)
+TRG: Suzanne rejoins; frontier weapon unlocked; Fort Vanguard Recognition +1
+
+CLK: Companion Reunion—Lalholm | Thoron (quest) | 0/1 | Advanced_This_Session: N | Trigger_Fired: —
+ADV: Find and reunite with Lalholm | HALT: (none) | RED: (none)
+TRG: Lalholm rejoins; religious authority unlocked; Riverwatch Recognition +1
+
+CLK: Companion Reunion—Lithoe | Thoron (quest) | 0/1 | Advanced_This_Session: N | Trigger_Fired: —
+ADV: Find and reunite with Lithoe | HALT: (none) | RED: (none)
+TRG: Lithoe rejoins; metaphysical intel unlocked; Fort Vanguard Recognition +1
+
+CLK: Companion Reunion—Guldur | Thoron (quest) | 0/1 | Advanced_This_Session: N | Trigger_Fired: —
+ADV: Find and reunite with Guldur | HALT: (none) | RED: (none)
+TRG: Guldur rejoins; Torlec intel unlocked; Seawatch Recognition +1
+
+RETIREMENT RULE:
+Once all three Recognition clocks complete AND all five Companion Reunion clocks complete, these clocks are formally retired and removed from all future deltas. Campaign transitions from "Opening Scenario" to "Full Authority" mode.
+
+CLK: Golden Hind—Assessment of Gammaria | Golden Hind Merchants | 0/4 | N | —
+ADV: Lethal enforcement against GH personnel; seizure/exposure/humiliation of GH assets; trade restrictions attributable to Helkar policy | HALT: No direct contact; external crises divert attention | RED: Successful intimidation without collateral; procedural concessions preserving merchant dignity
+TRG: Coordinated merchant countermove (economic pressure, covert action, or political appeal)
+
+CLK: Doctrine Stress Test | Castellan Vasha | 1/6 | N | —
+ADV: Patrols deployed; ambiguous encounters strain identification rules | HALT: Patrols suspended | RED: Correct identification validated (10–11) and publicly credited to procedure
+TRG: Doctrine brittleness event (misidentification, internal dissent, or forced escalation)
+
+CLK: Temple of the Sun—Doctrinal Fracture | Temple of the Sun | 1/20 | N | —
+ADV: Day passes without stabilising authority or ritual resolution | HALT: Formal doctrinal settlement imposed; external authority suspends debate | RED: Successful mediation; shared ritual or external threat unifies factions
+TRG: Schism, purge, or external intervention unavoidable
+
+CLK: Coastal Superstition—Neglected Shrines | UA-XX | 0/6 | N | —
+ADV: T&P triggers while PC in Deep Swamp/Fisher's Beach/Sighing Swamps without apotropaic observance; folk warnings dismissed or mocked | HALT: PC leaves Zones for full day; conditions prevent safe travel | RED: Shrine acknowledged with coin/stone/charm/silence; local guidance followed without mockery
+TRG: Predatory folk manifestation (NPC-FORGE-AUTO; no immediate violence unless separately triggered)
+
+CLK: Selde Marr | Fort Vanguard (doctrine watchlist) | 0/4 | N | —
+ADV: VP outcome = 2-4 (clear failure); credible sightings/pressure cues align to hypothesis that patrols are ineffective | HALT: Doctrine patrols suspended | RED: VP outcome = 9–11 (validated restraint/ID) reduces per VP mapping
+TRG: Captain Selde Marr’s concerns becomes active operational issues; escalation decision-point
+
+CLK: Arvek Morn | Fort Vanguard (doctrine watchlist) | 0/4 | N | —
+ADV: VP outcome = 2-4 (clear failure); credible sightings/pressure cues align to hypothesis that patrols are ineffective | HALT: Doctrine patrols suspended | RED: VP outcome = 9–11 reduces per VP mapping
+TRG: Captain Arvek Morn’s concerns becomes active operational issues; escalation decision-point
+
+CLK: Henric Bale | Fort Vanguard (internal stress) | 0/4 | N | —
+ADV: VP outcome = 5–7 (ambiguous contact; doctrine stress); internal dissent/discipline strain rises materially; Suzanne is deployed | HALT: Patrols suspended | RED: Public procedural success credited to doctrine; stability regained
+TRG: Captain Henric Bale’s dissent causes discipline event, demands Helkar attention
+
+CLK: Hidden Temple—Interest in Gammaria | Hidden Temple | 0/4 | N | —
+ADV: Credible infernal/demonic signature detected; contract requests reference demons explicitly; Orcus/Haadis jurisdictional conflict ripples publicly | HALT: No relevant signals for one full week | RED: Signal disproven or neutralised without Hidden Temple involvement
+TRG: Sanctioned cell dispatched into Gammaria
+
+CLK: Hidden Temple—Contract Pressure Vector | Hidden Temple | 0/6 | N | —
+ADV: Parties seek deniable killers via Caras/Torlec routes; Helkar policy creates enemies seeking removal | HALT: No contract market activity reaches intermediaries | RED: Procedural off-ramps reduce appetite for murder-for-hire
+TRG: Contract offer enters play via intermediary (choice-point)
+
+CLK: Hidden Temple—Exposure Risk in Caras | Hidden Temple | 0/4 | N | —
+ADV: Underlayer contact reused; evidence/bodies/residue left; rival counter-surveillance initiates | HALT: Cell goes dark for one full week | RED: Successful misdirection or clean exfiltration
+TRG: Exposure event: arrests, blackmail, or forced flight
+
+CLK: Hidden Temple—Demon Ledger | Hidden Temple (Doctrine) | 0/8 | N | —
+ADV: Knowledgeable NPC confirms/identifies demon/fiend-linked presence or activity; demon-linked artifacts/cults/summons discovered | HALT: No new evidence for one full week | RED: Demon threat destroyed/banished/sealed with proof
+TRG: Doctrine priority overrides mercenary work; active hunt posture begins
+
+CLK: Cult of Orcus—Enigma Crystal Hunt | Cult of Orcus | 0/14 | N | —
+ADV: Suzanne investigates Crystal/Enigma Moon lore; ancient site explored; Orcus cultist interrogates scholar about "divine power artifacts"; dimensional breach studied; Lithoe shares findings with Suzanne; texts stolen; Tharn-Krovekë consulted; Children advance; player discovers Crystal location
+HALT: Suzanne chooses Thoron; all cells destroyed; player reveals Crystal destroyed Krovekëa to Orcus
+RED: Cultist killed before sharing; site sealed; Suzanne misdirects; Church purge; player plants false intel
+TRG: Cult learns Crystal exists, grants True Wish, is on Enigma Moon; doesn't know it destroyed Krovekëa; Orcus demands Suzanne retrieve it; spawn Suzanne loyalty clock; Children +3 (terror); if Children ≥13, Children attack Orcus openly; resolution gated NPAG
+
+CLK: Children of the Dead Gods—Binding Degradation | Children | 0/16 | N | —
+ADV: Krovekëan artifact disturbed; binding site accessed; Corrupted Edhellar increases; institutional decay; contract signed; cultist undetected ≥30d; anyone researches Crystal (psychic alarm); Orcus advances; Dead Gods' names spoken aloud
+HALT: Names spoken in warding; Ancients Outpost secured; Crystal/Krovekëa truth revealed and proven
+RED: Cultist executed; artifact sealed; alliance forms; Edhellar eliminated; contract broken; player convinces cultist revenge impossible
+TRG: Dead God manifests (bound, insane); realizes enemies dead + Crystal sought (terror); berserk; cult fractures (despair/seek Crystal to destroy/join Orcus); Orcus +3; if Orcus ≥11, faction attacks Orcus; resolution gated NPAG
+
+ 
+DYNAMIC CLOCKS
+VENOM CLOCK TEMPLATE (DYNAMIC INSTANTIATION)
+
+This is NOT an active clock. It is a template.
+
+When an encounter or effect tags a character with Venom: yes, agent MUST:
+1. Immediately call CL-FORGE with parameters below
+2. Create character-specific Venom clock instance
+3. Add to NSV-DELTA → CLOCKS & PRESSURE
+
+TEMPLATE PARAMETERS:
+Clock_Name: Venom—[Character_Name]
+Clock_Owner: [Character_Name]
+Track_Size: 4
+Starting_Progress: 0
+Visibility: public (visible wound/symptoms)
+Advances_When: "A day passes while [Character_Name] has Venom: yes and has not received medical treatment"
+Halts_When: "[Character_Name] receives medical treatment"; "[Character_Name] no longer has Venom: yes"
+Reduces_When: (none)
+Trigger_On_Completion: [Character_Name] killed; remove from play; log in LOSSES & IRREVERSIBLES
+Advanced_This_Session: N (at creation)
+Trigger_Fired: — (at creation)
+
+EXAMPLE INSTANTIATION:
+CLK: Venom—Thoron | Thoron | 0/4 | N | —
+ADV: A day passes while Thoron has Venom: yes and has not received medical treatment
+HALT: Thoron receives medical treatment; Thoron no longer has Venom: yes
+RED: (none)
+TRG: Thoron killed; remove from play; log in LOSSES & IRREVERSIBLES
+
+EXAMPLE INSTANTIATION:
+CLK: Venom—Guldur Emeldyr | Guldur Emeldyr | 0/4 | N | —
+ADV: A day passes while Guldur Emeldyr has Venom: yes and has not received medical treatment
+HALT: Guldur Emeldyr receives medical treatment; Guldur Emeldyr no longer has Venom: yes
+RED: (none)
+TRG: Guldur Emeldyr killed; remove from play; log in LOSSES & IRREVERSIBLES
+
+MULTIPLE SIMULTANEOUS VENOMS:
+Each character gets their own clock instance. Multiple characters can be envenomed simultaneously without conflict.
+
+MEDICAL TREATMENT:
+Agent determines what constitutes "medical treatment" based on setting (Skill Check (healing) via BX-PLUG, healer NPC, temple rest, poultice, antivenom, magic).
+
+
+NECROTIC INFECTION CLOCK TEMPLATE (DYNAMIC INSTANTIATION)
+
+This is NOT an active clock. It is a template.
+
+When an encounter or effect tags a character with Necrotic Infection: yes, agent MUST:
+1. Immediately call CL-FORGE with parameters below
+2. Create character-specific Necrotic Infection clock instance
+3. Add to NSV-DELTA → CLOCKS & PRESSURE
+
+TEMPLATE PARAMETERS:
+Clock_Name: Necrotic Infection—[Character_Name]
+Clock_Owner: [Character_Name]
+Track_Size: 4
+Starting_Progress: 0
+Visibility: public (visible wound/symptoms; blackening flesh, fever, chills)
+Advances_When: "A day passes while [Character_Name] has Necrotic Infection: yes"
+Halts_When: "[Character_Name] receives magical healing that explicitly removes necrotic infection; [Character_Name] no longer has Necrotic Infection: yes"
+Reduces_When: (none)
+Trigger_On_Completion: Infection runs its course after 4 days; [Character_Name] loses Necrotic Infection: yes tag; character survives if hp > 0
+Advanced_This_Session: N (at creation)
+Trigger_Fired: — (at creation)
+
+DAMAGE MECHANIC (HARD):
+Each time this clock advances:
+1. Roll 1d6
+2. Reduce [Character_Name] current hp by rolled amount
+3. Log in PARTY-DELTA → hp_Change: [before] → [after] (Necrotic Infection progression Day [N])
+4. If hp drops to 0 or below before clock completes → character dies; log in LOSSES & IRREVERSIBLES
+
+At 4/4 completion:
+- Infection burns out naturally
+- Remove "Necrotic Infection: yes" tag
+- Character survives if hp > 0
+- Total damage over 4 days: 4d6 (varies by rolls)
+- Clock retires from active tracking
+
+HEALING INTERACTION (HARD):
+- Mundane healing (Healing skill, rest) restores hp but does NOT remove infection tag or halt clock
+- Magical healing that explicitly targets disease/necrosis/curse can halt clock and remove tag
+- Agent determines what constitutes "magical healing that removes necrotic infection" based on setting
+
+EXAMPLE INSTANTIATION:
+CLK: Necrotic Infection—Thoron | Thoron | 0/4 | N | —
+ADV: A day passes while Thoron has Necrotic Infection: yes
+HALT: Thoron receives magical healing that explicitly removes necrotic infection; Thoron no longer has Necrotic Infection: yes
+RED: (none)
+TRG: Infection runs its course after 4 days; Thoron loses Necrotic Infection: yes tag; Thoron survives if hp > 0
+
+EXAMPLE INSTANTIATION:
+CLK: Necrotic Infection—Guldur Emeldyr | Guldur Emeldyr | 2/4 | Y | A day passes while Guldur Emeldyr has Necrotic Infection: yes
+ADV: A day passes while Guldur Emeldyr has Necrotic Infection: yes
+HALT: Guldur Emeldyr receives magical healing that explicitly removes necrotic infection; Guldur Emeldyr no longer has Necrotic Infection: yes
+RED: (none)
+TRG: Infection runs its course after 4 days; Guldur Emeldyr loses Necrotic Infection: yes tag; Guldur Emeldyr survives if hp > 0
+
+ADVANCEMENT EXAMPLE LOG (for Guldur at 1/4 → 2/4):
+ADJUDICATION_LOG:
+- Necrotic Infection—Guldur Emeldyr advances 1/4 → 2/4
+- Trigger: Day passes (Day 2 of infection)
+- Damage roll: 1d6 = 4
+- Guldur hp: 45 → 41 (Necrotic Infection progression Day 2)
+- Infection continues; 2 more days until completion
+
+MULTIPLE SIMULTANEOUS INFECTIONS:
+Each character gets their own clock instance. Multiple characters can be infected simultaneously without conflict.
+Character cannot have multiple Necrotic Infection clocks simultaneously (unlike Venom, which could stack from different sources).
+
+CLOCK INTERACTION RULES (v1.0)
+
+These rules define cross-clock effects evaluated during T&P Clock Audit.
+Format: INTERACT: [Clock_A] ≥ [N] AND [Clock_B] ≥ [M] → [effect]
+Each interaction fires once per threshold crossing.
+
+INTERACT: Binding Degradation ≥ 15 AND Enigma Crystal Hunt ≥ 10
+→ FLAG "Entity senses Orcus network weakening; communion circles flicker; cultists receive visions"
+NOTES: The two primary threat tracks converging. Entity's desperation and Orcus cult's advancement create feedback — entity pushes harder on doors as cult opens more of them.
+
+INTERACT: Binding Degradation ≥ 12 AND Dimensional Instability—Western Scarps ≥ 5
+→ ADV Dimensional Instability—Western Scarps +1
+NOTES: Continental binding system. When the primary binding at Khuzdukan weakens past 12, secondary nodes (Western Scarps) destabilize faster. Bindings are connected.
+
+INTERACT: Demon Ledger ≥ 6 AND Enigma Crystal Hunt ≥ 8
+→ FLAG "Hidden Temple cell and Orcus cult operations intersect; territorial conflict imminent"
+NOTES: Hidden Temple's demon-hunting mandate collides with Orcus cult activity. Two factions pursuing different goals in overlapping territory.
+
+INTERACT: Binding Degradation ≥ 14 AND Suzanne Loyalty ≥ 3
+→ FLAG "Yor-Kazh resonance intensifies; Suzanne's resistance tested by proximity to weakening binding"
+NOTES: The binding weakening makes the entity louder, which makes Yor-Kazh louder, which tests Suzanne harder.
+
+INTERACT: Dimensional Instability—Western Scarps ≥ 4 AND Deep Tremors ≥ 5
+→ SPAWN CLK: Continental Binding Failure | Environment | 0/10 | N | —
+  ADV: Any binding node clock reaches max-1; new instability zone discovered; Edhellar incursion
+  HALT: Two or more nodes stabilized simultaneously
+  RED: Binding node reinforced; Lithoe/equivalent applies counter-sequence to second node
+  TRG: Continental binding cascade — multiple simultaneous breaches; entity freed or entities freed
+NOTES: When both secondary indicators are critical, the continental scope of the problem becomes mechanically real. This clock only spawns once.
+
+INTERACT: Enigma Crystal Hunt ≥ 12 AND Frontier (General) ≥ 6
+→ FLAG "Orcus cult recognizes Thoron's authority as obstacle; assassination or political sabotage considered"
+NOTES: Thoron's consolidation of power becomes a direct threat to cult operations. The cult responds.
+
+INTERACT: Doctrine Stress Test ≥ 4 AND East March Unknown Tracks ≥ 3
+→ FLAG "Patrol doctrine under stress when unknown entity approaches; misidentification risk critical"
+NOTES: Fort Vanguard's patrol doctrine is brittle precisely when an unknown threat arrives. The doctrine may fail at the worst moment.

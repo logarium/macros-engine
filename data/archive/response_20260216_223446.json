@@ -1,0 +1,16 @@
+{
+  "responses": [
+    {
+      "id": "error_correction_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "ERROR CORRECTION: Binding Degradation was frozen at 14/16 per Session 8 counter-sequence. RED bullet Counter-sequence applied by Lithoe should have reduced clock and halted Decay cadence. Clock erroneously advanced 14\u219215\u219216. Correcting. Trigger UNFIRED.",
+      "state_changes": [
+        {
+          "type": "clock_advance",
+          "clock": "Children of the Dead Gods\u2014Binding Degradation",
+          "reason": "ERROR CORRECTION: reduce from 16 to 14. Counter-sequence applied S8, Decay halted."
+        }
+      ]
+    }
+  ]
+}

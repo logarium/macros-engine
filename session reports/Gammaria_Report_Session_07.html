@@ -1,0 +1,841 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><title>Gammaria &mdash; Session 7 Audit</title><style>
+body{background:#0d0d1a;color:#d4d4d4;font-family:'Segoe UI',Consolas,sans-serif;max-width:1100px;margin:0 auto;padding:24px;line-height:1.5}
+h1{color:#e67e22;border-bottom:3px solid #e67e22;padding-bottom:10px;font-size:1.8em;letter-spacing:1px}
+h2{color:#f39c12;margin-top:36px;border-bottom:1px solid #555;padding-bottom:6px;font-size:1.3em}
+h3{color:#e0c068;margin-top:18px;font-size:1.1em}
+h4{color:#aaa;margin-top:12px;font-size:0.95em}
+table{border-collapse:collapse;width:100%;margin:8px 0 16px 0;font-size:0.9em}
+th{background:#1a1a30;color:#f39c12;text-align:left;padding:7px 10px;border:1px solid #333;font-weight:600}
+td{padding:5px 10px;border:1px solid #2a2a2a;vertical-align:top}
+tr:nth-child(even){background:#12122a}
+tr:nth-child(odd){background:#0d0d1a}
+.bar-bg{background:#1a1a30;border-radius:4px;height:12px;width:140px;display:inline-block;vertical-align:middle}
+.bar-fill{height:12px;border-radius:4px}
+.fired{color:#e74c3c;font-weight:bold}
+.muted{color:#666;font-size:0.85em}
+.tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:0.8em;margin:1px 2px}
+.tag-cadence{background:#2a1a40;color:#9b59b6;border:1px solid #9b59b6}
+.tag-fired{background:#3a1a1a;color:#e74c3c;border:1px solid #e74c3c}
+.tag-with-pc{background:#1a3a1a;color:#27ae60;border:1px solid #27ae60}
+.tag-adv{background:#1a3a1a;color:#27ae60;border:1px solid #27ae60}
+.section{background:#111128;padding:14px 16px;border-radius:6px;margin:8px 0;border-left:3px solid #e67e22}
+.meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}
+.meta-box{background:#111128;padding:10px;border-radius:6px;text-align:center;border:1px solid #2a2a40}
+.meta-label{color:#888;font-size:0.8em;text-transform:uppercase;letter-spacing:1px}
+.meta-value{color:#f39c12;font-size:1.4em;font-weight:bold}
+.summary-block{background:#111128;padding:16px;border-radius:6px;margin:8px 0;line-height:1.7;white-space:pre-wrap;font-size:0.92em}
+ul{margin:4px 0;padding-left:20px} li{margin:2px 0;font-size:0.92em}
+.toc{background:#111128;padding:16px;border-radius:6px;margin:16px 0}
+.toc a{color:#3498db;text-decoration:none} .toc a:hover{text-decoration:underline} .toc li{margin:4px 0}
+details{margin:4px 0} details summary{cursor:pointer;color:#e0c068;font-weight:500}
+</style></head><body>
+<h1>GAMMARIA &mdash; Session 7 Full Audit Report</h1>
+<div class='meta-grid'>
+<div class='meta-box'><div class='meta-label'>Session</div><div class='meta-value'>7</div></div>
+<div class='meta-box'><div class='meta-label'>Date</div><div class='meta-value'>23rd Ilrym (evening)</div></div>
+<div class='meta-box'><div class='meta-label'>Zone</div><div class='meta-value'>Caras</div></div>
+<div class='meta-box'><div class='meta-label'>Season</div><div class='meta-value'>Spring</div></div>
+</div>
+<p class='muted'>Intensity: medium (player-set via UBER; persistent) | Seasonal Pressure: Spring (Feed &amp; Seed) &#8212; food stores depleted; planting season critical; lean times; bandit pressure exploiting vulnerability</p>
+<div class='toc'><strong>Contents</strong><ul>
+<li><a href='#summary'>Session Summary</a></li>
+<li><a href='#meta'>Session Meta</a></li>
+<li><a href='#pc'>PC State</a></li>
+<li><a href='#risk'>NPC Risk Flags</a></li>
+<li><a href='#clocks'>Clocks</a></li>
+<li><a href='#engines'>Engines</a></li>
+<li><a href='#companions'>Companions</a></li>
+<li><a href='#npcs'>All NPCs</a></li>
+<li><a href='#factions'>Factions</a></li>
+<li><a href='#rels'>Relationships</a></li>
+<li><a href='#discs'>Discoveries</a></li>
+<li><a href='#ua'>Unknown Anomalies</a></li>
+<li><a href='#divine'>Divine / Metaphysical</a></li>
+<li><a href='#threads'>Unresolved Threads</a></li>
+<li><a href='#seed'>Seed Overrides</a></li>
+<li><a href='#losses'>Losses</a></li>
+<li><a href='#log'>Adjudication Log</a></li>
+</ul></div>
+<h2 id='summary'>Session Summary</h2>
+<div class='summary-block'>Thoron, Suzanne, and Guldur departed Riverwatch on the morning of the 23rd of Ilrym, taking the River Koss Ferry north to Caras. The ferry arrived at midmorning. Caras was thick with Conorth&#x27;s soldiers &#8212; gate inspections heavier than Thoron remembered, younger troops, Conorth&#x27;s colours on the gatehouse. The party entered through the river gate without drawing attention; the Helkar remains a title in Caras, not a face.
+
+The three discussed how to find Valania, who was deep cover in the Golden Hind merchant networks beneath the city. Three approaches existed: trigger Hidden Temple contact in the underlayers, infiltrate Golden Hind operations directly, or invoke the covert recognition signals Valania had established during the founding. Guldur proposed using Suzanne&#x27;s Orcus liturgical knowledge as bait to attract Hidden Temple attention &#8212; they hunt demons, and someone who could speak about communion architecture with professional fluency would draw them out. Thoron refused. &quot;She isn&#x27;t bait. Not even for Valania.&quot; The moment landed &#8212; Suzanne heard it, Guldur filed it permanently.
+
+They chose speed over caution. Thoron and Guldur descended into the Caras underlayers through the tanner&#x27;s yard stairs on Millhook Street &#8212; stairs Thoron watched masons cut twenty years ago. Suzanne remained topside to secure lodgings. In the underlayer merchant sub-level, Thoron found two of Valania&#x27;s founding-era recognition signals still maintained: a coin pressed into a mortar seam and a knotted cord on a wall-nail. He adjusted both &#8212; &quot;I am here. Come to me. Urgent. Personal.&quot;
+
+Valania arrived within the hour. The reunion was fierce and raw. She came around the corner with knives drawn, saw Thoron, and stopped. Three years of deep cover broke on two words: &quot;You bastard. You came back.&quot; Guldur withdrew to give them space. Thoron told her everything &#8212; not the factual briefing he gave Guldur, but the emotional weight: the betrayal, the Plane of Fire, Dragon Mountain, coming home to Edhellar in Gammaria, the entity beneath Khuzdukan, Suzanne&#x27;s sword. He told her he had seen Soreth alive at Seawatch Ramparts. That hit hardest.
+
+Then he told her he had shared the Ringur secret with Suzanne. Valania&#x27;s fury was controlled, precise, and professional &#8212; the spymistress recalculating her entire network with a new variable. She did not break. She said: &quot;When this is over, you and I are going to talk about what trust means when it comes to the woman carrying a sword that serves Orcus.&quot;
+
+The party assembled at a rented room above a saddler&#x27;s shop. Valania and Suzanne occupied the same space for the first time &#8212; Gardurth and Yor-Kazh six feet apart, the sister-swords of two women who share a man&#x27;s trust and nothing else. Valania took command of logistics: ride at dawn, Grey Gate, south through the Plains, east to Khuzdukan. Three days if they push. Guldur went to find horses. The session ended with the party preparing to depart Caras at first light, heading for Khuzdukan and whatever waits beneath the mountains.
+&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+END SECTION 01
+NSV-DELTA v3.7 &#8212; SECTION 02 of 10 &#8212; PC_STATE_CHANGES
+Session_ID: 7
+&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
+<h2 id='meta'>Session Meta</h2><div class='section'>
+<b>Tone Shift:</b> Final companion gathered &#8212; all five reunited; party assembling for ride to Khuzdukan; ward failure ~5 days at current Decay rate; Valania extracted from deep cover; Thoron entered Caras through river gate without sovereign display; Conorth&#x27;s soldiers everywhere; Ironmask agent deepening hold on Conorth (third meeting); Vael evidence arrived at Caras; Thoron refused to use Suzanne as bait for Hidden Temple; Valania furious about Ringur secret shared with Suzanne; party dynamic volatile &#8212; Valania and Suzanne in same room for first time; Binding Degradation 11/16<br>
+<b>Pacing:</b> Critical urgency; ward failure ~5 days; Lithoe at 7/8 (one tick from breakthrough); all five companions now reunited; party departing Caras at dawn for Khuzdukan via Grey Gate; entering Grey Plains exposes party to open travel; Conorth will learn Thoron passed through; political consequences deferred for existential threat<br>
+<b>Immediate Threats:</b> Ward failure countdown: ~5 days (Deep Tremors 4/6; Binding Degradation 11/16; daily Decay advance)
+Lithoe&#x27;s Counter-Sequence Research 7/8 &#8212; one tick from breakthrough; will fire during travel if undisturbed
+Three days travel Caras&#8594;Khuzdukan through Grey Plains and Khuzduk Hills (encounters, NPAG, clock advances each day)
+Valania/Suzanne three days in close quarters &#8212; tension will surface
+Grey Plains traverse exposes party to bandit coordination (UA-02)
+Conorth will learn Thoron passed through Grey Gate (Valania&#x27;s assessment: won&#x27;t matter if Khuzdukan crisis resolved)
+Ironmask agent advancing offscreen (fourth meeting likely during travel time)
+Orcus communion cell at Fort Seawatch remains active &#8212; every circle a door if ward breaks
+Binding Degradation past halfway and accelerating via daily Decay
+
+Opportunities:
+All five companions gathered; full party strength for Khuzdukan
+Lithoe 7/8 &#8212; breakthrough imminent (one undisturbed day)
+Lalholm + Lithoe converging on warden recovery (rune-chain candidates identified Session 7 NPAG)
+Valania&#x27;s spy network intelligence (Golden Hind, underlayer contacts, Caras political landscape &#8212; 3 years deep)
+Dragon-Skull Gate available when ready (all companions reunited)
+Frontier Recognition 5/6 &#8212; one tick from full authority
+Guldur provides Caras/merchant intelligence for strategy
+Joppa preparing Vornost &#8212; Dragon Throne ready when Thoron arrives<br>
+<b>Opportunities:</b> All five companions gathered; full party strength for Khuzdukan
+Lithoe 7/8 &#8212; breakthrough imminent (one undisturbed day)
+Lalholm + Lithoe converging on warden recovery (rune-chain candidates identified Session 7 NPAG)
+Valania&#x27;s spy network intelligence (Golden Hind, underlayer contacts, Caras political landscape &#8212; 3 years deep)
+Dragon-Skull Gate available when ready (all companions reunited)
+Frontier Recognition 5/6 &#8212; one tick from full authority
+Guldur provides Caras/merchant intelligence for strategy
+Joppa preparing Vornost &#8212; Dragon Throne ready when Thoron arrives<br>
+<b>Consequences If Ignored:</b> Ward fails &#8212; entity emerges; regional catastrophe; all Orcus circles become doors
+Binding cascade continues; Orcus demands escalate
+Conorth consolidates further; Ironmask agent deepens influence
+Suzanne&#x27;s resistance erodes; Yor-Kazh answers entity
+Temple schism spirals; Eastern entity attacks; Vargol acts
+Evidence on Conorth&#x27;s desk &#8212; response pending; Golden Hind may learn
+Valania/Suzanne tension explodes during travel<br>
+</div>
+<h2 id='pc'>PC State &mdash; Thoron</h2>
+<div class='section'>
+<b>Reputation:</b> Caras: 0&#8594;1 (companion reunion &#8212; private/underground; no public sovereign action; Conorth unaware of Thoron&#x27;s identity); Frontier (General): 5/6 (unchanged); &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;; END SECTION 02; NSV-DELTA v3.7 &#8212; SECTION 03 of 10 &#8212; DISCOVERIES<br>
+<h4>Goals</h4><ul>
+<li>Investigate ward-chamber findings with Lithoe (ACTIVE &#8212; Lithoe researching counter-sequences at Khuzdukan; 7/8; Lalholm assisting; breakthrough imminent)</li>
+<li>Gather remaining companions: ALL FIVE REUNITED (Session 7 &#8212; Valania reunited at Caras)</li>
+<li>Return to Khuzdukan with all companions to investigate deep tremors (oath to Thordak Ironbrow) &#8212; IN PROGRESS (all companions gathered; departing Caras at dawn; ~3 days travel)</li>
+<li>Ride for Vornost with all companions; reclaim Dragon Throne &#8212; DEFERRED (ward crisis takes priority; Dragon-Skull Gate now available)</li>
+<li>Address Corrupted Edhellar threat with full party</li>
+<li>Assess whether Tirris Vargol possesses Ringur &#8212; treat as potential existential threat</li>
+<li>Slow or reverse ward degradation (ACTIVE &#8212; Lithoe 7/8; Lalholm contributing; convergence narrowing)</li>
+<li>Investigate Orcus cell at Fort Seawatch (DEFERRED &#8212; active communion circle confirmed; Corlaine-school; handler-directed)</li>
+<li>Address Torlec ghost ship at Fort Seawatch (DEFERRED)</li>
+<li>Close Valania&#x27;s Golden Hind cover safely (NEW &#8212; Valania closing cover before departure; 1 hour)</li>
+</ul>
+<h4>Psychological State</h4><ul>
+<li>Fifth and final companion reunion achieved (Valania) &#8212; Session 7, 23rd Ilrym</li>
+<li>First real laugh since returning to Gammaria</li>
+<li>Refused to use Suzanne as bait &#8212; protective instinct now open, witnessed by Guldur</li>
+<li>Disclosed Ringur secret sharing to Valania directly &#8212; accepted her fury without deflection</li>
+<li>Valania and Suzanne in same room &#8212; party dynamic volatile but holding</li>
+<li>Strategic clarity: Khuzdukan first, everything else waits</li>
+</ul>
+<h4>Secrets</h4><ul>
+<li>Ringur secret sharing disclosed to Valania &#8212; she now knows Suzanne holds Ringur/Morgil/Well of Time/Vargol knowledge</li>
+<li>Valania&#x27;s cover status: closing down Golden Hind infiltration; cache retrieved; contacts protected</li>
+</ul>
+</div>
+<h2 id='risk'>NPC Risk Flags</h2>
+<table><tr><th>NPC</th><th>Risk</th><th>Level</th><th>Triggers</th><th>Consequences</th></tr>
+<tr><td><b>Suzanne of Corlaine</b></td><td>Orcus burden exposure</td><td>CRITICAL (ESCALATED from elevated &#8212; Valania now knows Ringur secret extends to Suzanne; party approaching Khuzdukan where entity/sword will resonate)</td><td style='font-size:0.85em'>Yor-Kazh responded to Orcus communion circle (same resonance as Khuzdukan entity); Suzanne identified Corlaine-school liturgical work with native fluency (witnessed by Guldur); every communion circle is a door if ward breaks; Yor-Kazh kinship with entity disclosed to Thoron; Guldur drew own conclusions about Suzanne&#x27;s Orcus connection; Valania now knows Ringur secret shared with Suzanne (Session 7); if Lalholm discovers depth &#8594; crisis; approaching Khuzdukan where Yor-Kazh will resonate again; Valania may investigate Suzanne independently</td><td style='font-size:0.85em'>Lalholm&#x27;s god demands Suzanne&#x27;s destruction; party fracture; Guldur&#x27;s aversion becomes active hostility; Valania/Suzanne direct conflict; Suzanne Loyalty clock advances</td></tr>
+<tr><td><b>Valania Lorethor</b></td><td>Cover extraction / emotional volatility</td><td>HIGH (NEW Session 7)</td><td style='font-size:0.85em'>Golden Hind discovers cover blown; Conorth connects Valania to Thoron; Valania confronts Suzanne prematurely; Ringur anger escalates during travel; three days close quarters with Suzanne</td><td style='font-size:0.85em'>Intelligence network compromised; party cohesion damaged; Valania/Suzanne conflict; Valania withdraws trust from Thoron</td></tr>
+<tr><td><b>Wardens Grull and Torvash</b></td><td>Soul-suspension (recovery path identified)</td><td>high (reduced from critical &#8212; recovery path now known; rune-chain candidates identified Session 7 NPAG)</td><td style='font-size:0.85em'>Lalholm communion confirmed entity holds souls through binding architecture; recovery requires severing specific rune-chains; Lithoe and Lalholm working on identification; prolonged suspension may cause permanent damage; binding field expanding</td><td style='font-size:0.85em'>If rune-chains identified and severed &#8594; wardens recovered; if approach fails &#8594; wardens lost permanently; Thordak devastated; Remnant-Wardens morale collapse</td></tr>
+<tr><td><b>Harren Vael</b></td><td>Evidence exposure</td><td>moderate (evidence delivered &#8212; risk shifts to Conorth&#x27;s response)</td><td style='font-size:0.85em'>Conorth suppresses or co-opts evidence; Golden Hind learns of investigation; Ironmask agent intercepts or influences Conorth&#x27;s handling of evidence</td><td style='font-size:0.85em'>Vael targeted; customs investigation compromised; Golden Hind alerted; Conorth may suppress or co-opt findings</td></tr>
+</table>
+<h2 id='clocks'>Clocks</h2>
+<h3>Active (20)</h3>
+<div class='section'><b style='color:#e74c3c'>Lithoe&#x27;s Counter-Sequence Research</b> <span class='tag tag-adv'>ADV</span><br>
+<span class='muted'>Owner: Lithoe Wano-Kan</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:87%"></div></div> <b>7/8</b><br>
+<b>ADV:</b><ul>
+<li>Lithoe completes mapping cycle undisturbed (&#8805;1 day)</li>
+<li>gains access to new precursor inscription source</li>
+<li>Thoron/companion brings relevant lore/artifact</li>
+<li>Academy records recovered</li>
+<li>Lalholm&#x27;s Haadis communion yields binding insight
+HALT: Lithoe interrupted/forced to relocate</li>
+<li>ward-chamber inaccessible</li>
+<li>Lithoe incapacitated
+RED: Binding Degradation advances &#8805;2 ticks in single day
+TRG: Lithoe identifies viable counter-sequence</li>
+<li>ward failure timeline extended</li>
+<li>Binding Degradation gains new RED bullet: &quot;Counter-sequence applied by Lithoe&quot;
+Advanced_This_Session: yes (6&#8594;7</li>
+<li>+1 for undisturbed mapping cycle 23rd Ilrym) | Trigger_Fired: no
+NOTE: Clock created during Session 6 via CL-FORGE. At 7/8, one more tick to trigger. Breakthrough imminent.
+&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+END SECTION 09
+NSV-DELTA v3.7 &#8212; SECTION 10 of 10 &#8212; LOSSES &amp; END MATTER
+Session_ID: 7
+&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Lithoe interrupted/forced to relocate</li>
+<li>ward-chamber inaccessible</li>
+<li>Lithoe incapacitated
+RED: Binding Degradation advances &#8805;2 ticks in single day
+TRG: Lithoe identifies viable counter-sequence</li>
+<li>ward failure timeline extended</li>
+<li>Binding Degradation gains new RED bullet: &quot;Counter-sequence applied by Lithoe&quot;
+Advanced_This_Session: yes (6&#8594;7</li>
+<li>+1 for undisturbed mapping cycle 23rd Ilrym) | Trigger_Fired: no
+NOTE: Clock created during Session 6 via CL-FORGE. At 7/8, one more tick to trigger. Breakthrough imminent.
+&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+END SECTION 09
+NSV-DELTA v3.7 &#8212; SECTION 10 of 10 &#8212; LOSSES &amp; END MATTER
+Session_ID: 7
+&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Binding Degradation advances &#8805;2 ticks in single day</li>
+</ul>
+<b>TRIGGER:</b> Lithoe identifies viable counter-sequence; ward failure timeline extended; Binding Degradation gains new RED bullet: &quot;Counter-sequence applied by Lithoe&quot;<br>
+</div>
+<div class='section'><b style='color:#e74c3c'>Helkar Recognition&#8212;Frontier (General)</b><br>
+<span class='muted'>Owner: Environment/Polity</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:83%"></div></div> <b>5/6</b><br>
+<b>ADV:</b><ul>
+<li>Thoron recognized at major location</li>
+<li>Companion reunion at frontier post</li>
+<li>Stories reach frontier</li>
+<li>Thoron demonstrates Helkar knowledge</li>
+</ul>
+<b>HALT:</b><ul>
+<li>No new recognition events for one full week</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Thoron fails publicly</li>
+<li>Companion questions authority</li>
+</ul>
+<b>TRIGGER:</b> Frontier-wide recognition; authority assumed<br>
+</div>
+<div class='section'><b style='color:#e67e22'>Children of the Dead Gods&#8212;Binding Degradation</b> <span class='tag tag-cadence'>CADENCE</span> <span class='tag tag-adv'>ADV</span><br>
+<span class='muted'>Owner: Children of Dead Gods</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e67e22;width:68%"></div></div> <b>11/16</b><br>
+<b>ADV:</b><ul>
+<li>Artifact disturbed</li>
+<li>Binding site accessed</li>
+<li>Edhellar increases</li>
+<li>Decay</li>
+<li>Contract</li>
+<li>Cultist undetected &#8805;30d</li>
+<li>Crystal researched</li>
+<li>Orcus advances</li>
+<li>Names spoken</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Names in warding</li>
+<li>Outpost secured</li>
+<li>Truth revealed</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Cultist executed</li>
+<li>Artifact sealed</li>
+<li>Alliance</li>
+<li>Edhellar eliminated</li>
+<li>Contract broken</li>
+</ul>
+<b>TRIGGER:</b> Dead God manifests; cult fractures; Orcus +3 (gated)<br>
+</div>
+<div class='section'><b style='color:#e67e22'>Khuzduk Peaks&#8212;Deep Tremors</b><br>
+<span class='muted'>Owner: environment (Khuzduk Peaks)</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e67e22;width:66%"></div></div> <b>4/6</b><br>
+<b>ADV:</b><ul>
+<li>Tremor felt</li>
+<li>Chamber breached</li>
+<li>Week without investigation</li>
+<li>Khuzdukan activity</li>
+<li>Aqueduct traversed</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Source stabilized</li>
+<li>Ward restored</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Chambers reinforced</li>
+<li>Ward confirmed</li>
+<li>Natural cause</li>
+</ul>
+<b>TRIGGER:</b> Ward fails; ancient threat emerges; Khuzdukan/Hills affected; Aqueduct unsafe (gated)<br>
+</div>
+<div class='section'><b style='color:#e67e22'>Helkar Recognition&#8212;Vornost</b><br>
+<span class='muted'>Owner: Environment/Polity</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e67e22;width:50%"></div></div> <b>2/4</b><br>
+<b>ADV:</b><ul>
+<li>Thoron enters Black Fortress</li>
+<li>Thoron reunites with companion in Vornost</li>
+<li>Thoron issues orders and they are obeyed</li>
+<li>Military intelligence confirms identity</li>
+<li>Word spreads</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Thoron leaves Vornost &gt;3 days</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Thoron defers to Joppa</li>
+<li>Garrison questions identity</li>
+</ul>
+<b>TRIGGER:</b> Vornost recognizes Thoron; Black Fortress opens; advance Frontier (General) +2<br>
+</div>
+<div class='section'><b style='color:#e67e22'>Dimensional Instability&#8212;Western Scarps</b><br>
+<span class='muted'>Owner: environment (Western Scarps)</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e67e22;width:50%"></div></div> <b>3/6</b><br>
+<b>ADV:</b><ul>
+<li>Week without stabilization</li>
+<li>Edhellar activity</li>
+<li>T&amp;P in zone</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Source identified and addressed</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Wards placed</li>
+<li>Edhellar driven back</li>
+</ul>
+<b>TRIGGER:</b> Major dimensional breach; Edhellar incursion<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Helkar Recognition&#8212;Caras</b> <span class='tag tag-adv'>ADV</span><br>
+<span class='muted'>Owner: Environment/Polity</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:25%"></div></div> <b>1/4</b><br>
+<b>ADV:</b><ul>
+<li>Thoron takes decisive sovereign action in Caras</li>
+<li>Thoron reunites with companion publicly in Caras</li>
+<li>Thoron invokes Helkar authority with force/evidence in Caras</li>
+<li>Word spreads from another location</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Thoron leaves Caras for more than 3 days</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Thoron acts anonymously or defers to local authority</li>
+</ul>
+<b>TRIGGER:</b> Caras recognizes Thoron as Helkar; advance Frontier (General) +1<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Helkar Recognition&#8212;Seawatch/Riverwatch</b><br>
+<span class='muted'>Owner: Environment/Polity</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:25%"></div></div> <b>1/4</b><br>
+<b>ADV:</b><ul>
+<li>Reunion at Seawatch/Riverwatch</li>
+<li>Port crisis resolved</li>
+<li>Helkar authority invoked</li>
+<li>Word spreads</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Leaves both regions &gt;7 days</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Anonymous action</li>
+<li>Public failure</li>
+</ul>
+<b>TRIGGER:</b> Coastal officials recognize Thoron; advance Frontier (General) +1<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Hidden Temple&#8212;Interest in Gammaria</b> <span class='tag tag-adv'>ADV</span><br>
+<span class='muted'>Owner: Hidden Temple</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:25%"></div></div> <b>1/4</b><br>
+<b>ADV:</b><ul>
+<li>Infernal/demonic signature</li>
+<li>Contract references demons</li>
+<li>Orcus/Haadis conflict ripples</li>
+</ul>
+<b>HALT:</b><ul>
+<li>No signals for one week</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Signal disproven</li>
+</ul>
+<b>TRIGGER:</b> Sanctioned cell dispatched<br>
+</div>
+<div class='section'><b style='color:#27ae60'>East March Unknown Tracks</b><br>
+<span class='muted'>Owner: environment (East March)</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:25%"></div></div> <b>1/4</b><br>
+<b>ADV:</b><ul>
+<li>New tracks found</li>
+<li>Patrol encounter</li>
+<li>Week without resolution</li>
+<li>Entity sighted</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Entity identified</li>
+<li>Tracks cease</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Patrol destroys source</li>
+<li>Natural cause</li>
+</ul>
+<b>TRIGGER:</b> Entity reveals itself; confrontation unavoidable<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Cult of Orcus&#8212;Enigma Crystal Hunt</b><br>
+<span class='muted'>Owner: Cult of Orcus</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:21%"></div></div> <b>3/14</b><br>
+<b>ADV:</b><ul>
+<li>Suzanne investigates Crystal</li>
+<li>Ancient site explored</li>
+<li>Cultist interrogates</li>
+<li>Dimensional breach studied</li>
+<li>Lithoe shares findings</li>
+<li>Texts stolen</li>
+<li>Tharn-Krovek&#235; consulted</li>
+<li>Children advance</li>
+<li>Player discovers Crystal</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Suzanne chooses Thoron</li>
+<li>Cells destroyed</li>
+<li>Crystal destruction revealed</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Cultist killed</li>
+<li>Site sealed</li>
+<li>Suzanne misdirects</li>
+<li>Church purge</li>
+<li>False intel</li>
+</ul>
+<b>TRIGGER:</b> Cult learns Crystal exists on Enigma Moon; Orcus demands Suzanne retrieve; spawn loyalty clock; Children +3 (gated)<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Doctrine Stress Test</b><br>
+<span class='muted'>Owner: Fort Vanguard (Bale)</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:16%"></div></div> <b>1/6</b><br>
+<b>ADV:</b><ul>
+<li>Patrols deployed</li>
+<li>Ambiguous encounters strain rules</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Patrols suspended</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Correct ID validated publicly</li>
+</ul>
+<b>TRIGGER:</b> Doctrine brittleness event<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Hidden Temple&#8212;Demon Ledger</b> <span class='tag tag-cadence'>CADENCE</span> <span class='tag tag-adv'>ADV</span><br>
+<span class='muted'>Owner: Hidden Temple</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:12%"></div></div> <b>1/8</b><br>
+<b>ADV:</b><ul>
+<li>NPC confirms demon presence</li>
+<li>Demon artifacts discovered</li>
+</ul>
+<b>HALT:</b><ul>
+<li>No evidence for one week</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Demon destroyed/sealed</li>
+</ul>
+<b>TRIGGER:</b> Doctrine priority overrides mercenary work; active hunt<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Golden Hind&#8212;Assessment</b><br>
+<span class='muted'>Owner: Golden Hind Merchants</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:0%"></div></div> <b>0/4</b><br>
+<b>ADV:</b><ul>
+<li>Lethal enforcement</li>
+<li>Seizure/humiliation of assets</li>
+<li>Trade restrictions from Helkar policy</li>
+</ul>
+<b>HALT:</b><ul>
+<li>No contact</li>
+<li>External crises divert</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Intimidation without collateral</li>
+<li>Procedural concessions</li>
+</ul>
+<b>TRIGGER:</b> Coordinated merchant countermove<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Coastal Superstition&#8212;Neglected Shrines</b><br>
+<span class='muted'>Owner: UA-XX</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:0%"></div></div> <b>0/6</b><br>
+<b>ADV:</b><ul>
+<li>T&amp;P in coastal zones without observance</li>
+<li>Warnings dismissed</li>
+</ul>
+<b>HALT:</b><ul>
+<li>PC leaves zone</li>
+<li>Travel prevented</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Shrine acknowledged</li>
+<li>Local guidance followed</li>
+</ul>
+<b>TRIGGER:</b> Predatory folk manifestation (gated)<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Selde Marr</b><br>
+<span class='muted'>Owner: Fort Vanguard</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:0%"></div></div> <b>0/4</b><br>
+<b>ADV:</b><ul>
+<li>VP 2-4 (clear failure)</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Patrols suspended</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>VP 9-11 reduces</li>
+</ul>
+<b>TRIGGER:</b> Selde Marr&#x27;s concerns become operational; escalation decision-point<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Arvek Morn</b><br>
+<span class='muted'>Owner: Fort Vanguard</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:0%"></div></div> <b>0/4</b><br>
+<b>ADV:</b><ul>
+<li>VP 2-4 (clear failure)</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Patrols suspended</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>VP 9-11 reduces</li>
+</ul>
+<b>TRIGGER:</b> Arvek Morn&#x27;s concerns become operational; escalation decision-point<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Hidden Temple&#8212;Contract Pressure Vector</b><br>
+<span class='muted'>Owner: Hidden Temple</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:0%"></div></div> <b>0/6</b><br>
+<b>ADV:</b><ul>
+<li>Deniable killers sought</li>
+<li>Helkar policy creates enemies</li>
+</ul>
+<b>HALT:</b><ul>
+<li>No contract activity</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Off-ramps reduce appetite</li>
+</ul>
+<b>TRIGGER:</b> Contract offer enters play<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Hidden Temple&#8212;Exposure Risk in Caras</b><br>
+<span class='muted'>Owner: Hidden Temple</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:0%"></div></div> <b>0/4</b><br>
+<b>ADV:</b><ul>
+<li>Contact reused</li>
+<li>Evidence left</li>
+<li>Counter-surveillance</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Cell goes dark</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Misdirection/exfiltration</li>
+</ul>
+<b>TRIGGER:</b> Exposure event<br>
+</div>
+<div class='section'><b style='color:#27ae60'>Suzanne Loyalty&#8212;Helkar vs Orcus</b><br>
+<span class='muted'>Owner: Suzanne</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#27ae60;width:0%"></div></div> <b>0/6</b><br>
+<b>ADV:</b><ul>
+<li>Orcus contact</li>
+<li>Crystal lead</li>
+<li>Helkar power witnessed</li>
+<li>Thoron shares trust</li>
+<li>Asked to choose</li>
+</ul>
+<b>HALT:</b><ul>
+<li>Not in play + no cult contact for one week</li>
+</ul>
+<b style='color:#27ae60'>RED:</b><ul>
+<li>Lead disproven</li>
+<li>Thoron demonstrates loyalty</li>
+<li>Intermediary eliminated</li>
+</ul>
+<b>TRIGGER:</b> Choice-point (gated)<br>
+</div>
+<h3 class='fired'>Fired Triggers (10)</h3>
+<div class='section'><b class='fired'>Helkar Recognition&#8212;Riverwatch/Temple</b> <span class='tag tag-fired'>FIRED</span><br>
+<span class='muted'>Owner: Environment/Polity</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:25%"></div></div> <b>1/4</b><br>
+<b>Trigger:</b> HALTED (&gt;3 days absent, Session 3 Day 4)<br>
+</div>
+<div class='section'><b class='fired'>Helkar Recognition&#8212;Fort Vanguard</b> <span class='tag tag-fired'>FIRED</span><br>
+<span class='muted'>Owner: Environment/Polity</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:100%"></div></div> <b>4/4</b><br>
+<b>Trigger:</b> TRG FIRED Session 4<br>
+</div>
+<div class='section'><b class='fired'>Companion Reunion&#8212;Valania</b> <span class='tag tag-fired'>FIRED</span><br>
+<span class='muted'>Owner: Thoron</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:100%"></div></div> <b>1/1</b><br>
+<b>Trigger:</b> TRG FIRED Session 7 &#8212; RETIRED<br>
+</div>
+<div class='section'><b class='fired'>Companion Reunion&#8212;Suzanne</b> <span class='tag tag-fired'>FIRED</span><br>
+<span class='muted'>Owner: Thoron</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:100%"></div></div> <b>1/1</b><br>
+<b>Trigger:</b> COMPLETE (Session 4) &#8212; RETIRED<br>
+</div>
+<div class='section'><b class='fired'>Companion Reunion&#8212;Lalholm</b> <span class='tag tag-fired'>FIRED</span><br>
+<span class='muted'>Owner: Thoron</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:100%"></div></div> <b>1/1</b><br>
+<b>Trigger:</b> COMPLETE (Session 2) &#8212; RETIRED<br>
+</div>
+<div class='section'><b class='fired'>Companion Reunion&#8212;Lithoe</b> <span class='tag tag-fired'>FIRED</span><br>
+<span class='muted'>Owner: Thoron</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:100%"></div></div> <b>1/1</b><br>
+<b>Trigger:</b> COMPLETE (Session 5) &#8212; RETIRED<br>
+</div>
+<div class='section'><b class='fired'>Companion Reunion&#8212;Guldur</b> <span class='tag tag-fired'>FIRED</span><br>
+<span class='muted'>Owner: Thoron</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:100%"></div></div> <b>1/1</b><br>
+<b>Trigger:</b> COMPLETE (Session 6) &#8212; RETIRED<br>
+</div>
+<div class='section'><b class='fired'>Temple of the Sun&#8212;Doctrinal Fracture</b> <span class='tag tag-fired'>FIRED</span><br>
+<span class='muted'>Owner: Temple of the Sun</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:100%"></div></div> <b>20/20</b><br>
+<b>Trigger:</b> TRG FIRED Session 6 (20th Ilrym)<br>
+</div>
+<div class='section'><b class='fired'>Henric Bale</b> <span class='tag tag-fired'>FIRED</span><br>
+<span class='muted'>Owner: Fort Vanguard</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:100%"></div></div> <b>4/4</b><br>
+<b>Trigger:</b> TRG FIRED Session 3; RETIRED Session 4<br>
+</div>
+<div class='section'><b class='fired'>Wyvern Territory Dispute</b> <span class='tag tag-fired'>FIRED</span><br>
+<span class='muted'>Owner: environment (Eastern Scarps)</span><br>
+<div class="bar-bg"><div class="bar-fill" style="background:#e74c3c;width:100%"></div></div> <b>4/4</b><br>
+<b>Trigger:</b> TRG FIRED Session 5<br>
+</div>
+<h2 id='engines'>Engines</h2>
+<div class='section'><b style='color:#888'>Seasonal Resource Pressure</b> [SRP v1.0]<br>
+<span class='muted'>Authority: GLOBAL | Zone: Gammaria (all settlements) | Status: active (current season: Spring &#8212; Feed &amp; Seed Pressure; next threshold: Ilrym&#8594;Evernew = Summer)</span><br>
+<b>Linked:</b> (none)<br>
+<b>Resolution:</b> Non-random seasonal pressure determination<br>
+<span class='muted'>Last: Session 0 (1st Ilrym &#8212; Spring detected)</span><br>
+</div>
+<div class='section'><b style='color:#888'>Vanguard Patrol Doctrine</b> [VP v3.0]<br>
+<span class='muted'>Authority: ZONE-GLOBAL | Zone: Global | Status: active (NOTE: Henric Bale clock RETIRED; Vasha dead; command restructured &#8212; VP engine continues running under new command structure; Selde and Arvek clocks at floor (0/4); VP outputs currently inert but engine persists)</span><br>
+<b>Linked:</b> Doctrine Stress Test; Selde Marr; Arvek Morn; Henric Bale (RETIRED)<br>
+<b>Resolution:</b> Randomizer 2d6; mapping per VP v3.0<br>
+<span class='muted'>Last: Session 7 Day 1 (23rd Ilrym: roll=9, correct restraint, no clock advance)</span><br>
+</div>
+<div class='section'><b style='color:#888'>Temple of the Sun &#8212; Doctrinal Debate</b> [TSDD v3.0]<br>
+<span class='muted'>Authority: ZONE-LOCAL | Zone: Temple of the Sun | Status: active (NOTE: Temple Fracture 20/20 TRG FIRED Session 6; TSDD continues to run but linked clock is complete &#8212; engine outputs inert)</span><br>
+<b>Linked:</b> Temple of the Sun&#8212;Doctrinal Fracture (TRG FIRED)<br>
+<b>Resolution:</b> Non-random accumulation<br>
+<span class='muted'>Last: Session 7 Day 1 (23rd Ilrym: TRG fired, inert)</span><br>
+</div>
+<div class='section'><b style='color:#888'>Hidden Temple &#8212; Demon-Hunt Cadence</b> [HT-DH v3.0]<br>
+<span class='muted'>Authority: GLOBAL | Zone: Any region where demon/fiend evidence exists | Status: active (Demon Ledger = 1; activated retroactively Session 6 Day 6, 22nd Ilrym &#8212; ERROR-CORRECTION-S7-01)</span><br>
+<b>Linked:</b> Demon Ledger; Interest; Contract Pressure Vector<br>
+<b>Resolution:</b> Non-random doctrine escalation<br>
+<span class='muted'>Last: Session 6 Day 6 (22nd Ilrym, retroactive) + Session 7 Day 1 (23rd Ilrym)</span><br>
+</div>
+<h2 id='companions'>Companions</h2>
+<div class='section'><b>Valania Lorethor</b><br>
+<span class='muted'>Zone: Caras (with Thoron)</span><br>
+<b>Trust:</b> very high (strained by Ringur disclosure but not broken; deferred confrontation)<br>
+<b>Affection:</b> Thoron (love &#8212; reaffirmed; fierce and furious), Suzanne (aversion &#8212; active; first encounter; Ringur secret adds weight), Lalholm (dislike &#8212; unchanged)<br>
+<b>Motivation:</b> Deep cover abandoned for Thoron; fury over Ringur disclosure controlled but unresolved; strategic focus on Khuzdukan; took logistics command immediately; three years of cover distilled into one hour of closure<br>
+<b>Loyalty:</b> (none &#8212; absolute loyalty to Thoron persists through anger)<br>
+<b>Stress:</b> High (three years deep cover closing in one hour; emotional reunion; Ringur fury; first Suzanne encounter; immediate departure logistics)<br>
+<b>Grievances:</b> ADDED &#8212; Ringur secret shared with Suzanne without Valania&#x27;s knowledge or consent; deferred &quot;when this is over&quot;<br>
+<b>Agency:</b> Responded to founding-era recognition signals within one hour; arrived with knives drawn; reunion fierce (&quot;You bastard. You came back.&quot;); received full emotional briefing from Thoron; learned: betrayal, Plane of Fire, Dragon Mountain, return, Edhellar, Khuzdukan entity, Suzanne&#x27;s sword (partial &#8212; Yor-Kazh kinship not fully detailed), Vargol agent in Caras, Conorth situation (3 years direct experience confirms), Soreth alive at Seawatch; learned Ringur secret shared with Suzanne &#8212; controlled fury; said &quot;When this is over, you and I are going to talk about what trust means when it comes to the woman carrying a sword that serves Orcus&quot;; took logistics command &#8212; ride at dawn, Grey Gate, Grey Plains, Khuzdukan, three days; closed cover (cache, gear, Gardurth retrieved; Golden Hind contacts protected); first direct encounter with Suzanne &#8212; aversion active but professionally managed; departed for cache; returned within the hour with travelling gear<br>
+<b>Flashpoints:</b> Three days travel with Suzanne (tension will surface); Ringur confrontation deferred but inevitable; Khuzdukan entity (partial knowledge &#8212; does not know Yor-Kazh kinship depth, ossuary details, communion circle specifics); Golden Hind cover closed but intelligence retained; Conorth situation (3 years experience; knows his patterns); does NOT know: Lalholm/Suzanne attraction, Lithoe&#x27;s research specifics, Guldur&#x27;s ossuary witness<br>
+</div>
+<div class='section'><b>Suzanne of Corlaine</b><br>
+<span class='muted'>Zone: Caras (with Thoron)</span><br>
+<b>Trust:</b> very high (Thoron heeds her without question; refused her exposure; protected her from Hidden Temple contact)<br>
+<b>Affection:</b> Thoron (attraction &#8212; deepening further), Valania (aversion &#8212; first encounter; controlled; stayed at window), Lalholm (aversion &#8212; unchanged), Guldur (aversion &#8212; professionally managed)<br>
+<b>Motivation:</b> Yor-Kazh/entity kinship disclosed to Thoron (Session 6); ossuary investigation confirmed training as weapon and wound; Thoron refused to use her as bait &#8212; protective moment witnessed; approaching Khuzdukan where entity and sword will resonate; first encounter with Valania &#8212; stayed at window, said nothing, gave no ground<br>
+<b>Loyalty:</b> (none &#8212; deepening toward Thoron alongside Orcus obligation)<br>
+<b>Stress:</b> Moderate (Yor-Kazh concealed under cloak in Caras; Valania encounter managed but tense; approaching Khuzdukan entity)<br>
+<b>Agency:</b> Travelled with Thoron and Guldur from Riverwatch to Caras; pulled cloak over Yor-Kazh in city; heard Guldur&#x27;s bait proposal; heard Thoron&#x27;s refusal; said nothing &#8212; moment absorbed; remained topside while Thoron and Guldur descended to underlayers; secured lodgings at saddler&#x27;s shop; waited at window with Yor-Kazh across knees; Valania arrived &#8212; first direct encounter; stayed at window; Valania gave logistics orders; Suzanne nodded; no words exchanged between them; departing at dawn<br>
+<b>Flashpoints:</b> Yor-Kazh approaching Khuzdukan entity (resonance expected); three days travel with Valania (aversion + Ringur knowledge = volatile); Valania may infer Ringur disclosure extends to Suzanne; Lalholm at Khuzdukan (attraction secret; theological collision imminent if depth discovered); communion circle knowledge both asset and exposure risk; approaching the entity that is kin to her sword<br>
+</div>
+<div class='section'><b>Guldur Emeldyr</b><br>
+<span class='muted'>Zone: Caras (with Thoron)</span><br>
+<b>Trust:</b> very high (absolute; reaffirmed)<br>
+<b>Affection:</b> Thoron (like &#8212; deepening), Suzanne (aversion &#8212; professionally managed), Lithoe (like &#8212; separated; love interest at Khuzdukan), Valania (professional respect)<br>
+<b>Motivation:</b> Underlayer operation with Thoron reignited old partnership rhythm; proposed Suzanne-as-bait (pragmatic not cruel); accepted Thoron&#x27;s refusal without argument; witnessed Thoron&#x27;s protectiveness &#8212; filed permanently; left room fastest when Valania arrived; finding horses for dawn departure<br>
+<b>Loyalty:</b> (none &#8212; friendship deepening)<br>
+<b>Stress:</b> Moderate (comfortable idleness replaced by urgent purpose; processing party dynamics; finding horses)<br>
+<b>Agency:</b> Travelled with Thoron from Riverwatch to Caras; proposed three finding methods for Valania; suggested Suzanne as Hidden Temple bait (pragmatic &#8212; &quot;someone who can talk about it like a professional&quot;); accepted Thoron&#x27;s refusal (&quot;Right.&quot;); descended into underlayers with Thoron; found knotted cord signal; waited with wine and three jokes (Lalholm, Golden Hind, Crandurth); Valania arrived &#8212; withdrew ten paces with back turned; heard Ringur disclosure and pretended not to; left saddler&#x27;s room fastest when Valania and Suzanne occupied same space; finding horses; does NOT know Ringur disclosure details (only that something private was said)<br>
+<b>Flashpoints:</b> Three days travel (party dynamics volatile; Guldur as social buffer); Lithoe at Khuzdukan (love interest &#8212; reunion imminent; three days away); Suzanne aversion persists (ossuary evidence filed; Orcus connection confirmed); intelligence value at Khuzdukan (merchant/port knowledge); comedy as coping mechanism under pressure<br>
+</div>
+<div class='section'><b>Father Lalholm</b><br>
+<span class='muted'>Zone: Khuzdukan</span><br>
+<b>Trust:</b> high<br>
+<b>Affection:</b> Thoron (like &#8212; deepening through service), Suzanne (attraction &#8212; secret; separated), Conorth (dislike &#8212; unchanged)<br>
+<b>Motivation:</b> Communion completed (Session 5); now actively assisting Lithoe with counter-sequence research; rune-chain candidate identification (Session 7 NPAG)<br>
+<b>Loyalty:</b> (none &#8212; friendship with Thoron deepening through service)<br>
+<b>Stress:</b> Moderate (intensive research; communion aftermath; theological implications of entity holding souls)<br>
+<b>Agency:</b> Continued assisting Lithoe at Khuzdukan; rune-chain candidates identified (Session 7 NPAG); does NOT know about Sessions 6-7 events (ossuaries, Yor-Kazh kinship, Guldur reunion, Valania reunion, Thoron at Caras); working on warden soul recovery (sever specific rune-chains); communion results shared with Lithoe<br>
+<b>Flashpoints:</b> Thoron arriving with full party including Suzanne (~3 days); Suzanne proximity (attraction secret; theological collision &#8212; Orcus vs Haadis); Yor-Kazh kinship disclosure (does not know &#8212; if discovered, crisis); rune-chain severance attempt imminent; entity confrontation with party<br>
+</div>
+<div class='section'><b>Lithoe Wano-Kan</b><br>
+<span class='muted'>Zone: Khuzdukan</span><br>
+<b>Trust:</b> low-moderate (unchanged; no interaction Session 7)<br>
+<b>Affection:</b> Guldur (love &#8212; separated; approaching reunion), Thoron (dislike &#8212; thawing), Valania (like &#8212; unchanged)<br>
+<b>Motivation:</b> Counter-sequence research 7/8; breakthrough imminent; narrowing convergence; rune-chain candidates identified with Lalholm&#x27;s assistance<br>
+<b>Loyalty:</b> (none &#8212; dislike of Thoron thawing; no direct interaction)<br>
+<b>Stress:</b> High (intensive metaphysical research; ward pressure; isolation with Lalholm)<br>
+<b>Agency:</b> Continued counter-sequence mapping at Khuzdukan (7/8); narrowing convergence; rune-chain candidates identified with Lalholm; does NOT know about Sessions 6-7 companion events; one undisturbed day from breakthrough<br>
+<b>Flashpoints:</b> Breakthrough imminent (one tick); Thoron arriving with full party including Guldur (~3 days &#8212; love interest reunion); party arrival may interrupt research (HALT trigger); entity confrontation with party; Yor-Kazh kinship (does not know); counter-sequence application decision<br>
+</div>
+<h2 id='npcs'>All NPCs</h2>
+<table><tr><th>Name</th><th>Zone</th><th>Status</th><th>Objective</th><th>Knowledge</th><th>Action</th></tr>
+<tr><td><b>Valania Lorethor</b></td><td>Caras (with Thoron)</td><td>Active (companion, reunited Session 7, 23rd Ilrym)</td><td style='font-size:0.85em'>Ride to Khuzdukan with party; close Golden Hind cover safely; confront Ringur/Suzanne trust issue after crisis resolved</td><td style='font-size:0.85em'>Full emotional briefing from Thoron (betrayal, Plane of Fire, Dragon Mountain, return, Edhellar, Khuzdukan entity, Suzanne&#x27;s sword partial, Vargol agent, Conorth, Soreth sighting, Wizeowel/Krovekea reference); Ringur secret shared with Suzanne (furious); Conorth&#x27;s Caras (3 years direct experience); Golden Hind operations (3 years infiltration); does NOT know: ossuary details, communion circle specifics, Lalholm/Suzanne attraction, Lithoe&#x27;s research specifics, Yor-Kazh kinship depth, Guldur ossuary witness</td><td style='font-size:0.85em'>Close cover (1 hour); retrieve cache; depart at dawn via Grey Gate
+With_PC: yes (reunited Session 7)
+BX: AC=21, HD=10, hp=60/60, AT=+10, Dmg=1d8+8, ML=10</td></tr>
+<tr><td><b>Suzanne of Corlaine</b></td><td>Caras (with Thoron)</td><td>Active (companion, reunited Session 4)</td><td style='font-size:0.85em'>Ride with Thoron to Khuzdukan; manage Yor-Kazh proximity to entity</td><td style='font-size:0.85em'>All prior knowledge + Thoron refused to use her as bait for Hidden Temple; Valania reunited; party departing for Khuzdukan; Ringur secret now known to Valania (she may infer this)</td><td style='font-size:0.85em'>Lodgings secured; Yor-Kazh concealed; depart at dawn
+With_PC: yes
+BX: AC=19, HD=7, hp=70/70, AT=+16, Dmg=1d8+10, ML=12</td></tr>
+<tr><td><b>Father Lalholm</b></td><td>Khuzdukan (surface)</td><td>Active (companion, rejoined Session 2)</td><td style='font-size:0.85em'>Assist Lithoe with counter-sequence research; provide theological insight; attempt warden soul recovery</td><td style='font-size:0.85em'>All prior knowledge + surface communion completed (19th Ilrym) &#8212; Haadis confirmed entity holds wardens&#x27; souls, not Haadis; recovery requires breaking entity&#x27;s hold; Haadis cannot reclaim what another power grips; architecture IS the grip &#8212; sever rune-chains to free souls; sharing findings with Lithoe; convergence narrowing; rune-chain candidates identified (Session 7 NPAG); does NOT know about Sessions 6-7 events (ossuaries, Yor-Kazh kinship, Guldur reunion, Valania reunion, Thoron at Caras)</td><td style='font-size:0.85em'>Work with Lithoe on binding-soul interaction; research candidate rune-chains from communion vision; support counter-sequence development
+With_PC: no (remained at Khuzdukan)</td></tr>
+<tr><td><b>Lithoe Wano-Kan</b></td><td>Khuzdukan (deep halls)</td><td>Active (companion, reunited Session 5)</td><td style='font-size:0.85em'>Map counter-sequences to slow/reverse ward degradation</td><td style='font-size:0.85em'>All prior knowledge + Lalholm&#x27;s communion data integrated (entity holds souls through architecture; counter-sequence must address architecture, not entity); approach adjusted; breakthrough narrowing; tremors increasing in frequency (Thordak report); rune-chain candidates identified (Session 7 NPAG); does NOT know about Sessions 6-7 companion events</td><td style='font-size:0.85em'>Continue mapping; integrate Lalholm&#x27;s theological data; two inputs converging; needs uninterrupted time; 7/8 &#8212; one tick from breakthrough
+With_PC: no (remained at Khuzdukan)</td></tr>
+<tr><td><b>Guldur Emeldyr</b></td><td>Caras (with Thoron)</td><td>Active (companion, reunited Session 6, 21st Ilrym)</td><td style='font-size:0.85em'>Support Thoron; find horses for dawn departure; provide intelligence on merchant/port activity</td><td style='font-size:0.85em'>All of Thoron&#x27;s history told (Bastard Squad betrayal, Plane of Fire, Dragon Mountain, return, Gammaria&#x27;s fractures, Khuzdukan entity, ward failure); Seawatch intelligence (Torlec ghost ship, Golden Hind smuggling, Orcus ossuaries, Merrow Kest situation); witnessed Suzanne&#x27;s Orcus liturgical expertise in ossuaries (drew own conclusions &#8212; filed silently); Temple schism news; Soreth sighting; Valania reunited; Thoron refused Suzanne-as-bait; underlayer operation with Thoron; does NOT know about Ringur/Morgil/Orcus depth/Yor-Kazh kinship; does NOT know Ringur disclosure details (only that something private was said between Thoron and Valania)</td><td style='font-size:0.85em'>Finding horses for dawn departure via Grey Gate
+With_PC: yes (reunited Session 6)</td></tr>
+<tr><td><b>Castellan Joppa</b></td><td>Vornost</td><td>Active (Castellan)</td><td style='font-size:0.85em'>Hold Vornost; prepare Black Fortress for Thoron</td><td style='font-size:0.85em'>Helkar confirmed heading SW with female companion (Grey Plains patrol confirmation, Session 6 NPAG); Dragon Throne preparations advanced; honour guard roster drafted; sealed letter dispatched to Seawatch for Thoron (&quot;Vornost awaits. Dragon Throne prepared. Come when you are ready. &#8212;J&quot;); letter missed Thoron (confirmed Session 7 NPAG); preparations continue (Session 7 NPAG)</td><td style='font-size:0.85em'>Continue preparations; await Thoron; letter missed</td></tr>
+<tr><td><b>Kael Dravorn</b></td><td>Vornost</td><td>Active (commando captain)</td><td style='font-size:0.85em'>Be ready for whatever ruler commands</td><td style='font-size:0.85em'>Standing orders (updated by Joppa)</td><td style='font-size:0.85em'>Await orders; prepare deployments</td></tr>
+<tr><td><b>Harren Vael</b></td><td>Riverwatch</td><td>Active (Castellan)</td><td style='font-size:0.85em'>Oppose smuggling; run efficient customs</td><td style='font-size:0.85em'>Customs anomaly; identical clearance stamps discovered; evidence compiled into sealed report; report dispatched to Caras via trusted courier (Session 6, 22nd Ilrym) &#8212; courier arrived (Session 7 NPAG; passed gate inspections; evidence now on Conorth&#x27;s desk); nervous awaiting response (Session 7 NPAG)</td><td style='font-size:0.85em'>Evidence delivered; awaiting Conorth&#x27;s response; exposed if investigation leaks</td></tr>
+<tr><td><b>Henric Bale</b></td><td>Fort Vanguard</td><td>Active (Castellan of Fort Vanguard, appointed Session 4)</td><td style='font-size:0.85em'>Hold Fort Vanguard; enforce discipline with integrity; protect soldiers</td><td style='font-size:0.85em'>Thoron confirmed as Helkar; Vasha executed; appointed Castellan; Voss promoted; Thoron departed for Khuzdukan</td><td style='font-size:0.85em'>Hold command; maintain patrols; monitor eastern approaches threat (UA-09)
+BX: AC=16, HD=3, hp=22/22, AT=+4, Dmg=1d8+2, ML=9</td></tr>
+<tr><td><b>Hadrien Voss</b></td><td>Fort Vanguard</td><td>Active (Patrol Commander, promoted Session 4)</td><td style='font-size:0.85em'>Run frontier patrols; secure eastern approaches</td><td style='font-size:0.85em'>Thoron confirmed as Helkar; Vasha executed; promoted; Thoron departed for Khuzdukan; Mira Thess deployed on deep scout east (Session 6 NPAG &#8212; UA-09 investigation advancing)</td><td style='font-size:0.85em'>Deploy patrols; three-squad rotation; task Thess; sweep eastern approaches
+BX: (to be instantiated if combat occurs)</td></tr>
+<tr><td><b>Selde Marr</b></td><td>Fort Vanguard</td><td>Active (adjutant, Session 4)</td><td style='font-size:0.85em'>Document everything; enforce accountability</td><td style='font-size:0.85em'>Full witness to Session 4 events; Thoron departed</td><td style='font-size:0.85em'>Document; catalog; advise Bale; maintain records
+BX: AC=15, HD=2, hp=14/14, AT=+3, Dmg=1d6+1, ML=8</td></tr>
+<tr><td><b>Arvek Morn</b></td><td>Fort Vanguard</td><td>Active (officer, Session 4)</td><td style='font-size:0.85em'>Keep soldiers alive; steady enlisted ranks</td><td style='font-size:0.85em'>Full witness to Session 4 events; Thoron departed</td><td style='font-size:0.85em'>Maintain discipline; steady morale; support command
+BX: AC=16, HD=3, hp=20/20, AT=+4, Dmg=1d8+1, ML=9</td></tr>
+<tr><td><b>Castellan Vasha @ Fort Vanguard | DEAD (executed Session 4) | &#8212; | nervous, harried</b></td><td>&mdash;</td><td>&mdash;</td><td style='font-size:0.85em'>&mdash;</td><td style='font-size:0.85em'>&mdash;</td><td style='font-size:0.85em'>&mdash;</td></tr>
+<tr><td><b>Conorth Baerkudth</b></td><td>Caras</td><td>Active (Castellan)</td><td style='font-size:0.85em'>Maintain military strength; consolidate power</td><td style='font-size:0.85em'>Unaware of Thoron&#x27;s return; unaware of Vasha&#x27;s execution; denied Vasha&#x27;s transfer requests three times; Ironmask agent &quot;Deryth&quot; granted third meeting (Session 7 NPAG &#8212; Conorth receptive to trade route proposal; Conorth does not know agent serves Vargol); Vael evidence courier arrived &#8212; customs anomaly evidence now on Conorth&#x27;s desk (Session 7 NPAG)</td><td style='font-size:0.85em'>Gate inspections maintained; processing Vael evidence; agent rapport deepening
+NOTE: Ironmask assessment of Conorth: &quot;ambitious, isolated, vulnerable to flattery &#8212; recommend patience&quot;</td></tr>
+<tr><td><b>Ironmask Agent &quot;Deryth&quot;</b></td><td>Caras</td><td>Active (covert)</td><td style='font-size:0.85em'>Cultivate Conorth for Vargol&#x27;s interests</td><td style='font-size:0.85em'>Conorth assessed as &quot;ambitious, isolated, vulnerable to flattery&quot;; third meeting secured (Session 7 NPAG); Conorth receptive to trade route proposal; does not know Thoron has returned</td><td style='font-size:0.85em'>Deepen rapport; await Vargol instructions</td></tr>
+<tr><td><b>Merrow Kest</b></td><td>Seawatch</td><td>Active (Castellan)</td><td style='font-size:0.85em'>Juggle law and smugglers; scan for Orcus</td><td style='font-size:0.85em'>Pirates and cultists observed; Torlec vessel refused inspection (harbour watch doubled); Temple schism news (concerned about pilgrim influx and religious violence in port)</td><td style='font-size:0.85em'>Maintain port security; doubled harbour watch; managing multiple threats</td></tr>
+<tr><td><b>Tirris Vargol</b></td><td>Whiteagle Keep</td><td>Active (Tirris)</td><td style='font-size:0.85em'>Seize throne</td><td style='font-size:0.85em'>Unaware of Thoron&#x27;s return; agent &quot;Deryth&quot; in Caras reporting &#8212; Conorth assessed as &quot;ambitious, isolated, vulnerable to flattery&quot;; agent advised patience</td><td style='font-size:0.85em'>Position as successor; await agent developments</td></tr>
+<tr><td><b>Warden Kellis</b></td><td>Eastern Scarps</td><td>Active</td><td style='font-size:0.85em'>Monitor pilgrim routes and wyverns</td><td style='font-size:0.85em'>Helkar returned; Edhellar confirmed; Wyvern TRG fired &#8212; territory now requires escort</td><td style='font-size:0.85em'>Hold station; organize escort requirements; spread word</td></tr>
+<tr><td><b>Scout Aedrin</b></td><td>Eastern Scarps</td><td>Active</td><td style='font-size:0.85em'>Map cairn warnings; track predators</td><td style='font-size:0.85em'>Thoron is last Gammarian commando; wyvern patterns shifting; territory dispute critical</td><td style='font-size:0.85em'>Update markers; brief Kellis; maintain vigilance</td></tr>
+<tr><td><b>Captain Rendal</b></td><td>Grey Plains</td><td>Active</td><td style='font-size:0.85em'>Protect caravans; suppress bandits</td><td style='font-size:0.85em'>Bandit coordination; spring vulnerability</td><td style='font-size:0.85em'>Deploy patrols; escort caravans; request reinforcements</td></tr>
+<tr><td><b>Mara Vence</b></td><td>Grey Plains</td><td>Active</td><td style='font-size:0.85em'>Move grain safely</td><td style='font-size:0.85em'>Golden Hind undercutting; Conorth&#x27;s gate inspections delayed entry (Session 3)</td><td style='font-size:0.85em'>Grain delivery completed (Session 3); seeking return cargo</td></tr>
+<tr><td><b>Drover Pellan</b></td><td>Grey Plains</td><td>Active (Session 3)</td><td style='font-size:0.85em'>Move cattle to Caras market</td><td style='font-size:0.85em'>Golden Hind undercutting; lost cattle to bandits; heard Helkar returned but doesn&#x27;t believe it</td><td style='font-size:0.85em'>Push herd; hire guards; complain
+BX: AC=11, HD=1, hp=6/6, AT=+1, Dmg=1d4, ML=6</td></tr>
+<tr><td><b>Brecca Dun</b></td><td>Riverwatch</td><td>Active (Session 3)</td><td style='font-size:0.85em'>Keep Grand Lock running</td><td style='font-size:0.85em'>Knows every barge captain; suspicious of fast-tracked manifests</td><td style='font-size:0.85em'>Maintain lock schedules
+BX: AC=12, HD=1, hp=7/7, AT=+1, Dmg=1d4, ML=7</td></tr>
+<tr><td><b>Torva Selk</b></td><td>Riverlands</td><td>Active (Session 3)</td><td style='font-size:0.85em'>Run barge traffic without interference</td><td style='font-size:0.85em'>Dangerous river stretches; Golden Hind running without lights</td><td style='font-size:0.85em'>Move cargo south; avoid trouble
+BX: AC=11, HD=1, hp=5/5, AT=+1, Dmg=1d4, ML=6</td></tr>
+<tr><td><b>Widow Hassal</b></td><td>Riverlands</td><td>Active (Session 3)</td><td style='font-size:0.85em'>Feed travelers; survive spring</td><td style='font-size:0.85em'>Hears all rumours; knows patrol ambushed upriver</td><td style='font-size:0.85em'>Bake; sell; gossip cautiously
+BX: AC=10, HD=0, hp=4/4, AT=+0, Dmg=1d3, ML=5</td></tr>
+<tr><td><b>Dael Urrwood</b></td><td>Narrows</td><td>Active (Session 3)</td><td style='font-size:0.85em'>Guide travelers; avoid elven attention</td><td style='font-size:0.85em'>Cairn lines; horn-calls increasing; paid in Thoron&#x27;s silver (may have noticed face)</td><td style='font-size:0.85em'>Guide for coin; keep head down
+BX: AC=13, HD=2, hp=12/12, AT=+3, Dmg=1d6, ML=7</td></tr>
+<tr><td><b>Sereth Kale</b></td><td>Western Scarps</td><td>Active (Session 3)</td><td style='font-size:0.85em'>Walk Penitent&#x27;s Way; guard pilgrim routes</td><td style='font-size:0.85em'>Dimensional flickers worsening; marks safe paths</td><td style='font-size:0.85em'>Patrol; warn; pray
+BX: AC=14, HD=3, hp=18/18, AT=+4, Dmg=1d8, ML=9</td></tr>
+<tr><td><b>Old Maren</b></td><td>Western Scarps</td><td>Active (Session 3)</td><td style='font-size:0.85em'>Tend sheep; survive</td><td style='font-size:0.85em'>Seen Edhellar more than once; &quot;they only kill if you run&quot;</td><td style='font-size:0.85em'>Graze; avoid ruins at night; talk
+BX: AC=10, HD=0, hp=3/3, AT=+0, Dmg=1d3, ML=8</td></tr>
+<tr><td><b>Pilgrim Ossar</b></td><td>Eastern Scarps</td><td>Active (Session 3)</td><td style='font-size:0.85em'>Complete pilgrimage</td><td style='font-size:0.85em'>Wyvern combat ongoing; matriarch death caused chaos</td><td style='font-size:0.85em'>Walk; pray; accept whatever comes
+BX: AC=10, HD=0, hp=4/4, AT=+0, Dmg=1d3, ML=10</td></tr>
+<tr><td><b>Ketta Brune</b></td><td>Khuzduk Hills</td><td>Active (Session 3)</td><td style='font-size:0.85em'>Strip ruins safely</td><td style='font-size:0.85em'>Predator active (UA-07); partner Tomasz killed; dead traveler found; warned party (Session 3)</td><td style='font-size:0.85em'>Scavenge cautiously; avoid predator territory
+BX: AC=13, HD=1, hp=8/8, AT=+2, Dmg=1d6, ML=7</td></tr>
+<tr><td><b>Vossk</b></td><td>Khuzduk Hills</td><td>Active (Session 3)</td><td style='font-size:0.85em'>Consecrate disturbed sites; protect sacred bones</td><td style='font-size:0.85em'>Graves being robbed by scavengers; predator killing near sacred ground</td><td style='font-size:0.85em'>Consecrate; patrol; threaten scavengers
+BX: AC=14, HD=2, hp=15/15, AT=+3, Dmg=1d8, ML=9</td></tr>
+<tr><td><b>Thordak Ironbrow</b></td><td>Khuzdukan</td><td>Active (Session 3-7)</td><td style='font-size:0.85em'>Defend Khuzdukan; manage wardens; secure ward-chamber</td><td style='font-size:0.85em'>All ward-chamber events; Thoron rescued wardens; Kh&#x27;a&#x27;Vash accepted; Helkar oath received; tremors increasing in frequency but not yet intensity (Session 6 report); Kelda posted at Aqueduct; Lithoe researching in deep halls; Lalholm conducting communion</td><td style='font-size:0.85em'>Maintain ward-chamber security; report tremor changes; support Lithoe/Lalholm; tend soul-suspended wardens
+BX: AC=16, HD=3, hp=22/22, AT=+4, Dmg=1d8+2, ML=10</td></tr>
+<tr><td><b>Corporal Edda Wynne</b></td><td>East March</td><td>Active (Session 5)</td><td style='font-size:0.85em'>Run checkpoint; verify patrol rotation</td><td style='font-size:0.85em'>Thoron passed through with Suzanne and Lalholm; standing orders from Voss</td><td style='font-size:0.85em'>Maintain checkpoint; enforce protocols
+BX: (to be instantiated if combat occurs)</td></tr>
+<tr><td><b>Drover Tomas Fell</b></td><td>East March</td><td>Active (Session 5)</td><td style='font-size:0.85em'>Keep livestock alive</td><td style='font-size:0.85em'>Animals vanishing without remains; something wrong in East March</td><td style='font-size:0.85em'>Guard herd; report losses
+BX: (to be instantiated if combat occurs)</td></tr>
+<tr><td><b>Warden Durik Ashpick</b></td><td>Khuzduk Peaks</td><td>Active (Session 5)</td><td style='font-size:0.85em'>Hold Dwarven Steps watch</td><td style='font-size:0.85em'>Wardens Grull and Torvash sent to ward-chamber, now rescued but soul-suspended; tremors worsening</td><td style='font-size:0.85em'>Hold watch; report to Thordak
+BX: (to be instantiated if combat occurs)</td></tr>
+<tr><td><b>Scavenger Rulf</b></td><td>Khuzdukan</td><td>Active (Session 5)</td><td style='font-size:0.85em'>Strip Khuzdukan upper halls</td><td style='font-size:0.85em'>Ruins accessible; avoids deep halls</td><td style='font-size:0.85em'>Salvage; avoid depth
+BX: (to be instantiated if combat occurs)</td></tr>
+<tr><td><b>Warden Kelda Firebrand</b></td><td>Khuzdukan</td><td>Active (Session 5)</td><td style='font-size:0.85em'>Guard aqueduct approach; watch Lithoe</td><td style='font-size:0.85em'>Lithoe goes deep alone; Thoron&#x27;s party arrived and departed; Lalholm remained; tremors continuing</td><td style='font-size:0.85em'>Maintain aqueduct watch; posted by Thordak
+BX: (to be instantiated if combat occurs)</td></tr>
+<tr><td><b>Warden Grull</b></td><td>Khuzdukan</td><td>Active (soul-suspended)</td><td style='font-size:0.85em'>&#8212;</td><td style='font-size:0.85em'>&#8212;</td><td style='font-size:0.85em'>Soul-suspended; entity holds soul through binding architecture (Lalholm communion confirmed); recovery requires severing specific rune-chains; Lalholm and Lithoe working on identification; rune-chain candidates identified (Session 7 NPAG)
+BX: AC=16, HD=2, hp=14/14, AT=+3, Dmg=1d8+1, ML=9</td></tr>
+<tr><td><b>Warden Torvash</b></td><td>Khuzdukan</td><td>Active (soul-suspended)</td><td style='font-size:0.85em'>&#8212;</td><td style='font-size:0.85em'>&#8212;</td><td style='font-size:0.85em'>Soul-suspended; same state and recovery path as Grull
+BX: AC=16, HD=2, hp=14/14, AT=+3, Dmg=1d8+1, ML=9</td></tr>
+<tr><td><b>Scout Mira Thess</b></td><td>East March</td><td>Active (deployed Session 6)</td><td style='font-size:0.85em'>Investigate unknown tracks (UA-09)</td><td style='font-size:0.85em'>Deployed by Voss; tracking unknown entity in eastern approaches</td><td style='font-size:0.85em'>Deep scout east; continue investigation; report findings
+&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+END SECTION 05
+NSV-DELTA v3.7 &#8212; SECTION 06 of 10 &#8212; RELATIONSHIP_STATE_CHANGES
+Session_ID: 7
+&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</td></tr>
+</table>
+<h2 id='factions'>Factions</h2>
+<table><tr><th>Name</th><th>Status</th><th>Trend</th><th>Disposition</th><th>Actions</th></tr>
+<tr><td><b>Children of the Dead Gods</b></td><td>Active</td><td>&#8593;</td><td>unknown</td><td style='font-size:0.85em'>Binding Degradation 11/16 (advancing daily via Decay); entity holds wardens&#x27; souls through binding architecture; Thoron described entity as &quot;on same level as Orcus &#8212; not tanar&#x27;ri, baatezu perhaps&quot; referencing Wizeowel&#x27;s Krovekea account</td></tr>
+<tr><td><b>Church of Haadis</b></td><td>Active</td><td>&#8593;</td><td>testing boundaries</td><td style='font-size:0.85em'>Lalholm&#x27;s communion completed (19th Ilrym) &#8212; Haadis confirmed entity holds souls, not Haadis; cannot reclaim what another power grips; jurisdictional expansion continuing; Lalholm assisting Lithoe at Khuzdukan with rune-chain research</td></tr>
+<tr><td><b>Confluence Bargemen</b></td><td>Active (Session 3)</td><td>&#8595;</td><td>neutral (transactional)</td><td style='font-size:0.85em'>Loose barge operator association at Riverlands confluence; nervous about night travel since patrol disappearance (UA-04)</td></tr>
+<tr><td><b>Corrupted Edhellar</b></td><td>Active</td><td>&#8593;</td><td>hostile</td><td style='font-size:0.85em'>Confirmed in Eastern and Western Scarps; wyvern matriarch killed; ridgeline sighting; dimensional instability worsening; Lithoe confirms Edhellar corrupted by proximity to bound entity &#8212; corruption may intensify as bindings weaken</td></tr>
+<tr><td><b>Cult of Orcus</b></td><td>Active</td><td>&#8593;</td><td>unknown</td><td style='font-size:0.85em'>Enigma Crystal Hunt 3/14; active communion cell confirmed beneath Fort Seawatch (Session 6) &#8212; Corlaine-school, handler-directed, professional; Yor-Kazh responding to communion site and Khuzdukan entity; ossuaries rooted deep and unmapped; Suzanne assessment: every communion circle becomes a door if ward breaks</td></tr>
+<tr><td><b>East March Patrol Command</b></td><td>Active (Session 4)</td><td>&#8595;</td><td>loyal (Gammarian; Helkar-recognized)</td><td style='font-size:0.85em'>Subordinate to Fort Vanguard; restructured &#8212; Bale as Castellan, Voss as Patrol Commander; garrison unified under new command; eastern approaches threat unresolved (UA-09); Thoron departed for Khuzdukan (Session 5); Mira Thess deployed on deep scout east (Session 6 NPAG)</td></tr>
+<tr><td><b>Free Hope Merchants</b></td><td>Active</td><td>&#8595;</td><td>strained</td><td style='font-size:0.85em'>Competing with Golden Hind; Mara Vence completed grain delivery to Caras (Session 3)</td></tr>
+<tr><td><b>Gnome Clans of Furdach</b></td><td>Active</td><td>&#8595;</td><td>unknown</td><td style='font-size:0.85em'>(no offscreen actions resolved)</td></tr>
+<tr><td><b>Golden Hind Merchants</b></td><td>Active</td><td>&#8593;</td><td>aggressive expansion</td><td style='font-size:0.85em'>Undercutting prices; customs anomaly confirmed at both Riverwatch and Fort Seawatch (Session 6); cargo/coin mismatch; warehouse seals changed overnight; something large being moved regularly for at least one year; Ironmask agent using Golden Hind caravan routes for untraceable dispatches to Vargol; Valania embedded in networks (cover now closing Session 7); warehouse district south of Caras cattle pens</td></tr>
+<tr><td><b>Hidden Temple</b></td><td>Active</td><td>&#8593;</td><td>awakening</td><td style='font-size:0.85em'>Deniable node in Caras underlayers confirmed (Guldur intelligence); demon-hunting mandate; not contacted this session; Valania&#x27;s findability method linked to triggering their contact; Demon Ledger 1/8 (Orcus cell discovery Session 6 retroactive); Interest in Gammaria 1/4 (demonic signature detected retroactive); HT-DH engine now active &#8212; Hidden Temple beginning to stir</td></tr>
+<tr><td><b>Hill Scavengers</b></td><td>Active (Session 3)</td><td>&#8595;</td><td>neutral (opportunistic)</td><td style='font-size:0.85em'>Ruin-strippers in Khuzduk Hills; threatened by predator (UA-07); despised by Blacktooth Orcs</td></tr>
+<tr><td><b>Imperial Torlec</b></td><td>Active</td><td>&#8595;</td><td>unknown</td><td style='font-size:0.85em'>Torlec vessel at Fort Seawatch refused inspection, anchored in bay without clearance (4+ days, no contact); pushing boundaries at port</td></tr>
+<tr><td><b>Ironmask Council</b></td><td>Active</td><td>&#8593;</td><td>advancing</td><td style='font-size:0.85em'>Agent &quot;Deryth&quot; in Caras cultivating Conorth &#8212; third meeting secured (Session 7 NPAG); Conorth receptive to trade route proposal; assessed Conorth as &quot;ambitious, isolated, vulnerable to flattery&quot;; dispatches routed via Golden Hind caravan (untraceable); Vargol advised patience; Thoron unaware of agent&#x27;s progress</td></tr>
+<tr><td><b>Khuzduk</b></td><td>Active (dead culture; active sites)</td><td>&#8595;</td><td>unknown</td><td style='font-size:0.85em'>(no offscreen actions resolved)</td></tr>
+<tr><td><b>Khuzduk Remnant-Wardens</b></td><td>Active (Session 3-7)</td><td>&#8593;</td><td>allied (Kh&#x27;a&#x27;Vash + oath + wardens rescued)</td><td style='font-size:0.85em'>~20 dwarven holdouts; Kh&#x27;a&#x27;Vash accepted; Thoron&#x27;s oath to return received; deep tremors threatening; Thordak maintaining ward-chamber security; tremors increasing in frequency (Session 6 NPAG); wardens Grull and Torvash soul-suspended &#8212; entity holds souls through binding architecture (Lalholm communion); Kelda posted at Aqueduct; Lithoe and Lalholm researching counter-sequences; rune-chain candidates identified (Session 7 NPAG)</td></tr>
+<tr><td><b>Lost Settlers</b></td><td>Active (dispersed remnants)</td><td>&#8595;</td><td>unknown</td><td style='font-size:0.85em'>(no offscreen actions resolved)</td></tr>
+<tr><td><b>Narrows Pathwardens</b></td><td>Active (Session 3)</td><td>&#8595;</td><td>neutral (protective)</td><td style='font-size:0.85em'>Guide network maintaining cairn line; tolerated by elves conditionally</td></tr>
+<tr><td><b>Nation of Gammaria</b></td><td>Active</td><td>&#8595;</td><td>responsive (multiple fronts active)</td><td style='font-size:0.85em'>Joppa tracking Thoron SW &#8212; sealed letter dispatched to Seawatch (missed Thoron; confirmed Session 7 NPAG); Conorth tightening Caras gates &#8212; Ironmask agent cultivating (third meeting); Fort Vanguard under Bale; Vael evidence delivered to Conorth (Session 7 NPAG); Temple schism fired; Thoron at Caras departing for Khuzdukan at dawn; all five companions reunited</td></tr>
+<tr><td><b>Penitent&#x27;s Way Wardens</b></td><td>Active (Session 3)</td><td>&#8595;</td><td>neutral (devoted)</td><td style='font-size:0.85em'>Sundancer Dervish splinter-group; marking safe paths in Western Scarps</td></tr>
+<tr><td><b>People of the Ziggurat</b></td><td>Active (fallen/undead remnants)</td><td>&#8595;</td><td>unknown</td><td style='font-size:0.85em'>(no offscreen actions resolved)</td></tr>
+<tr><td><b>Ravenroost Brigands</b></td><td>Active</td><td>&#8595;</td><td>aggressive</td><td style='font-size:0.85em'>Coordinated Grey Plains raids; spring exploitation; possible organized leadership (UA-02)</td></tr>
+<tr><td><b>Scarp Watch</b></td><td>Active (Session 3)</td><td>&#8595;</td><td>loyal (Gammarian)</td><td style='font-size:0.85em'>Ranger detachment in Eastern Scarps; Warden Kellis commands; undermanned since matriarch death; Eastern Scarps now require escort (Wyvern TRG)</td></tr>
+<tr><td><b>Sundancer Dervishes</b></td><td>Active</td><td>&#8595;</td><td>unknown</td><td style='font-size:0.85em'>(Penitent&#x27;s Way Wardens are splinter-group)</td></tr>
+<tr><td><b>Temple of the Sun</b></td><td>Active</td><td>&#8595;</td><td>SCHISM FIRED</td><td style='font-size:0.85em'>Doctrinal Fracture 20/20 TRG FIRED (Session 6, 20th Ilrym); Ush&#x27;n&#x27;Elthar and Ush&#x27;n&#x27;Taalgith split irreversible; fistfights in nave; pilgrims choosing sides; schism/purge/external intervention unavoidable</td></tr>
+<tr><td><b>Ush&#x27;n&#x27;Elthar Nomads</b></td><td>Active</td><td>&#8595;</td><td>unknown</td><td style='font-size:0.85em'>Temple schism &#8212; faction position uncertain</td></tr>
+<tr><td><b>Ush&#x27;n&#x27;Taalgith Nomads</b></td><td>Active</td><td>&#8595;</td><td>unknown</td><td style='font-size:0.85em'>Temple schism &#8212; faction position uncertain</td></tr>
+</table>
+<h2 id='rels'>Relationships</h2>
+<table><tr><th>ID</th><th>Visibility</th><th>Change</th></tr>
+<tr><td style='font-size:0.85em'>REL-Thoron-Valania-love-01</td><td>public</td><td>love &#8594; love (reaffirmed; fierce reunion; Ringur disclosure strained but not broken) | Trust: very high (raw emotional disclosure; accepted fury without deflection; deferred confrontation) | Loyalty: absolute (strained by Ringur disclosure; not broken) | Session 7: reunion in Caras underlayers; three years deep cover broke on contact; Valania furious about Ringur shared with Suzanne; said &quot;When this is over, you and I are going to talk about what trust means when it comes to the woman carrying a sword that serves Orcus&quot;; departed for cache; returned within hour; took logistics command</td></tr>
+<tr><td style='font-size:0.85em'>REL-Lithoe-Valania-friends-01</td><td>restricted</td><td>attraction &#8594; attraction | Trust: (none) | Loyalty: (none) | Baseline; no interaction Session 7</td></tr>
+<tr><td style='font-size:0.85em'>REL-Lalholm-Suzanne-lust-01</td><td>secret</td><td>attraction &#8594; attraction (continuing; Lalholm at Khuzdukan, Suzanne traveling with Thoron &#8212; physical separation may intensify or cool) | Trust: (none) | Loyalty: (none) | Session 7: separated; no new interaction</td></tr>
+<tr><td style='font-size:0.85em'>REL-Suzanne-Thoron-attraction-01</td><td>secret</td><td>deepening further &#8594; deepening further (Thoron refused to use her as bait; protective instinct now open; witnessed by Guldur) | Trust: very high (Thoron heeds her without question; protects her secrets; refused her exposure to Hidden Temple) | Loyalty: Thoron/devotion (increasing alongside Orcus obligation) | Session 7: heard Thoron&#x27;s refusal; said nothing; Yor-Kazh quiet; stayed at window when Valania arrived; gave no ground</td></tr>
+<tr><td style='font-size:0.85em'>REL-Guldur-Lithoe-love-01</td><td>secret</td><td>love &#8594; love | Trust: (none) | Loyalty: (none) | Baseline; separated (Lithoe at Khuzdukan, Guldur at Caras with Thoron; reunion approaching &#8212; ~3 days travel)</td></tr>
+<tr><td style='font-size:0.85em'>REL-Lithoe-Thoron-dislike-01</td><td>secret</td><td>dislike &#8594; thawing (continuing; no new interaction &#8212; Lithoe remained at Khuzdukan) | Trust: growing | Loyalty: engagement | Session 7: no direct interaction; relationship state persists from Session 5</td></tr>
+<tr><td style='font-size:0.85em'>REL-Lalholm-Thoron-friends-01</td><td>restricted</td><td>deepening friendship &#8594; deepening friendship (continuing; Lalholm remained at Khuzdukan working on Thoron&#x27;s behalf voluntarily) | Trust: high | Loyalty: Thoron/friendship | Session 7: no direct interaction; Lalholm conducting research for Thoron&#x27;s cause; rune-chain candidates identified</td></tr>
+<tr><td style='font-size:0.85em'>REL-Thordak-Thoron-pact-01</td><td>restricted (Session 3-7)</td><td>devoted &#8594; devoted | Trust: pact-bound + wardens rescued | Loyalty: ancestral obligation + personal debt | Session 7: no direct interaction; Thordak maintaining security per Thoron&#x27;s mandate</td></tr>
+<tr><td style='font-size:0.85em'>REL-Guldur-Thoron-friends-01</td><td>public</td><td>like (reaffirmed) &#8594; like (deepening; underlayer operation together; old rhythm returned; witnessed protectiveness of Suzanne; filed it permanently) | Trust: absolute | Loyalty: Thoron/friendship | Session 7: proposed Suzanne-as-bait (pragmatic); accepted Thoron&#x27;s refusal; descended into underlayers together; Valania reunion witnessed; left room fastest when Valania/Suzanne occupied same space; finding horses</td></tr>
+<tr><td style='font-size:0.85em'>REL-Guldur-Suzanne-aversion-01</td><td>restricted</td><td>aversion (confirmed; professionally managed) &#8594; aversion (professionally managed; Guldur proposed using Suzanne as bait &#8212; pragmatic not cruel; accepted Thoron&#x27;s refusal without argument; left room fastest during Valania/Suzanne standoff) | Trust: low (distrust based on supernatural taboo, not personal) | Loyalty: none | Session 7: proposed bait plan; accepted refusal; aversion persists alongside grudging acknowledgment of value</td></tr>
+<tr><td style='font-size:0.85em'>REL-Valania-Suzanne-aversion-01</td><td>restricted</td><td>(NEW &#8212; first direct encounter) aversion (baseline) &#8594; aversion (active; controlled hostility; professional coexistence under extreme tension) | Trust: none | Loyalty: none | Session 7: first time in same room; Gardurth and Yor-Kazh six feet apart; Valania furious about Ringur secret shared with Suzanne; Suzanne stayed at window, said nothing; Valania gave logistics orders and departed for cache; no words exchanged between them</td></tr>
+</table>
+<h2 id='discs'>Discoveries</h2>
+<table><tr><th>Name</th><th>Certainty</th><th>Visibility</th><th>Source</th><th>Info</th></tr>
+<tr><td><b>Companion Locations</b></td><td style='color:#27ae60'>confirmed</td><td>public</td><td style='font-size:0.85em'>Session 7 events</td><td style='font-size:0.85em'>Suzanne @ Caras (WITH PC); Guldur @ Caras (WITH PC); Valania @ Caras (WITH PC; reunited Session 7, 23rd Ilrym; deep cover closed; departing at dawn); Lalholm @ Khuzdukan (communion completed; assisting Lithoe); Lithoe @ Khuzdukan (counter-sequence research 7/8); ALL FIVE COMPANIONS REUNITED</td></tr>
+<tr><td><b>Recognition Status</b></td><td style='color:#27ae60'>confirmed</td><td>public</td><td style='font-size:0.85em'>Session 7 events</td><td style='font-size:0.85em'>Fort Vanguard garrison recognizes Thoron as Helkar (4/4 TRG FIRED); Vornost 2/4 (Joppa confirmed); Eastern Scarps patrol recognizes; Frontier Recognition 5/6; Seawatch/Riverwatch 1/4 (Guldur reunion); Caras 1/4 (Valania reunion &#8212; private; Conorth unaware); Riverwatch/Temple 1/4 (HALTED)</td></tr>
+<tr><td><b>Wyvern Matriarch Death</b></td><td style='color:#27ae60'>confirmed</td><td>public</td><td style='font-size:0.85em'>Thoron investigation (Session 1)</td><td style='font-size:0.85em'>Killed by Corrupted Edhellar (hoarfrost patterns, precise throat wound, dimensional cold signature, barefoot humanoid tracks with too-light stride); surgical kill without feeding; dimensional instability involvement; active existential threat in Eastern Scarps; purpose unknown (territorial destabilization suspected)</td></tr>
+<tr><td><b>Bandit Coordination&#8212;Grey Plains</b></td><td style='color:#e67e22'>uncertain</td><td>secret</td><td style='font-size:0.85em'>Captain Rendal suspicions (Session 1)</td><td style='font-size:0.85em'>Bandit raids show unusual coordination; timing suggests communication between groups; spring planting season exploitation deliberate; possible leadership organizing scattered brigands</td></tr>
+<tr><td><b>Caras Tensions</b></td><td style='color:#27ae60'>confirmed</td><td>public</td><td style='font-size:0.85em'>Captain Rendal + Lalholm intelligence + Session 7 direct observation</td><td style='font-size:0.85em'>Food stores low after winter; planting season critical; Golden Hind undercutting Free Hope Merchants; Castellan Conorth military-focused; underlayers dark and tangled; Valania embedded in merchant networks (cover now closing Session 7); Ironmask agent &quot;Deryth&quot; cultivating Conorth (Session 6 NPAG &#8212; third meeting secured Session 7 NPAG; Conorth receptive to trade route proposal; Thoron unaware of agent&#x27;s progress); Conorth&#x27;s gate inspections heavier; younger troops; Conorth&#x27;s colours on gatehouse; Vael evidence courier arrived at Caras (Session 7 NPAG &#8212; passed gate inspection; now on Conorth&#x27;s desk)</td></tr>
+<tr><td><b>Riverwatch Operations</b></td><td style='color:#27ae60'>confirmed</td><td>public</td><td style='font-size:0.85em'>Captain Rendal + direct observation</td><td style='font-size:0.85em'>Castellan Harren Vael runs locks efficiently; bureaucratic but predictable; trade/customs hub; cleaner than Caras; Vael dispatched sealed customs evidence to Caras via courier (Session 6 NPAG &#8212; arrived Session 7 NPAG; passed gate inspection; on Conorth&#x27;s desk); Vael nervous awaiting response (Session 7 NPAG)</td></tr>
+<tr><td><b>Customs Records Anomaly</b></td><td style='color:#e67e22'>uncertain</td><td>secret</td><td style='font-size:0.85em'>environmental observation (Session 2) + Vael investigation (Session 3) + Guldur confirmation (Session 6)</td><td style='font-size:0.85em'>Certain merchant vessels pass inspection unusually fast; clerks cite &quot;priority clearance&quot; but manifest contents vary wildly; identical clearance stamps across multiple clerks &#8212; possible stamp forgery; same pattern confirmed at Fort Seawatch by Guldur (Golden Hind cargo/coin mismatch; warehouse seals changed overnight); Vael evidence packet now delivered to Conorth at Caras (Session 7 NPAG)</td></tr>
+<tr><td><b>Political Landscape&#8212;Gammaria</b></td><td style='color:#27ae60'>confirmed</td><td>restricted</td><td style='font-size:0.85em'>Lalholm intelligence (Session 2) + NPAG updates (Sessions 3-7)</td><td style='font-size:0.85em'>Conorth @ Caras consolidating military power; gate inspections increased; Ironmask agent &quot;Deryth&quot; assessed Conorth as &quot;ambitious, isolated, vulnerable to flattery&quot; &#8212; cultivating (third meeting secured Session 7; Conorth receptive to trade route proposal; Thoron unaware of agent&#x27;s progress); Tirris Vargol @ Whiteagle Keep positioning as successor; Temple of the Sun doctrinal fracture 20/20 TRG FIRED &#8212; irreversible schism; Church of Haadis expanding jurisdictional claims; Joppa @ Vornost confirmed Thoron heading SW &#8212; Dragon Throne preparations advanced; sealed letter dispatched to Seawatch (missed Thoron; confirmed Session 7 NPAG)</td></tr>
+<tr><td><b>Route Options to Fort Vanguard</b></td><td style='color:#27ae60'>confirmed</td><td>public</td><td style='font-size:0.85em'>Lalholm tactical assessment (Session 2)</td><td style='font-size:0.85em'>Caras route (3 days; political exposure); Scarp route (4 days; wilderness). Thoron chose overland route avoiding both &#8212; 8 days total through Riverlands, Narrows, Western Scarps, Eastern Scarps, Grey Plains, Khuzduk Hills, Khuzduk Peaks, East March.</td></tr>
+<tr><td><b>River Patrol Ambush&#8212;Confluence</b></td><td style='color:#e67e22'>uncertain</td><td>public</td><td style='font-size:0.85em'>Widow Hassal rumor (Session 3)</td><td style='font-size:0.85em'>Gammarian river patrol attacked upriver; four men; barge found drifting empty, oars still shipped; no blood, no bodies; barge crews avoiding night travel on River of Skulls</td></tr>
+<tr><td><b>Elven Horn-Call Frequency</b></td><td style='color:#e67e22'>uncertain</td><td>public</td><td style='font-size:0.85em'>Dael Urrwood (Session 3)</td><td style='font-size:0.85em'>Horn-calls from Highfell Forest increased this spring; three notes, descending, direction unclear; elves more active; cause unknown</td></tr>
+<tr><td><b>Dimensional Instability&#8212;Western Scarps</b></td><td style='color:#e67e22'>uncertain</td><td>public</td><td style='font-size:0.85em'>Sereth Kale (Session 3)</td><td style='font-size:0.85em'>Dimensional flickers near Edhellar ruins increasing; sky shifts, ground tilts, voices in reverse; Sundancers marking safe paths; cause unknown but linked to Edhellar activity</td></tr>
+<tr><td><b>Corrupted Edhellar Sighting&#8212;Western Scarps</b></td><td style='color:#e67e22'>uncertain</td><td>public</td><td style='font-size:0.85em'>Old Maren (Session 3)</td><td style='font-size:0.85em'>Edhellar sighted on ridgeline; stood watching an hour, then gone; &quot;they only kill if you run&quot;; confirms Edhellar presence in Western Scarps as well as Eastern</td></tr>
+<tr><td><b>Wyvern Territorial Combat&#8212;Eastern Scarps</b></td><td style='color:#27ae60'>confirmed</td><td>public</td><td style='font-size:0.85em'>direct observation + Pilgrim Ossar (Session 3)</td><td style='font-size:0.85em'>Two wyverns fighting over territory; third day of combat; matriarch&#x27;s death caused territorial chaos; no new matriarch; Wyvern Territory Dispute 4/4 TRG FIRED &#8212; Eastern Scarps travel requires escort</td></tr>
+<tr><td><b>Predator Activity&#8212;Khuzduk Hills</b></td><td style='color:#e67e22'>uncertain</td><td>public</td><td style='font-size:0.85em'>Ketta Brune + direct observation (Sessions 3, 6)</td><td style='font-size:0.85em'>Dead traveler with torn throat (claws, something with hands); drag marks uphill into boulder field; Brune found identical marks three days prior; something large, non-human; additional dead traveler observed Session 6 travel (same signature &#8212; UA-07 confirmed active)</td></tr>
+<tr><td><b>Deep Tremors&#8212;Khuzduk Peaks</b></td><td style='color:#27ae60'>confirmed</td><td>restricted (Khuzduk Remnant-Wardens, Thoron, Lalholm, Suzanne, Lithoe)</td><td style='font-size:0.85em'>Thordak Ironbrow (Session 3) + direct investigation (Session 5) + Thordak report (Session 6 NPAG)</td><td style='font-size:0.85em'>Tremors and grinding sounds from deep beneath peaks; deep ward in ancient inscriptions failing; tremors increasing in frequency but not yet intensity (Thordak Session 6 report); ward-chamber accessed Session 5 &#8212; runes actively rewriting; rewrite boundary expanding; malignant entity confirmed; estimated two weeks to complete ward failure (16th Ilrym); ~5 days remaining as of 23rd Ilrym</td></tr>
+<tr><td><b>Kh&#x27;a&#x27;Vash Invoked&#8212;Khuzduk Peaks</b></td><td style='color:#27ae60'>confirmed</td><td>restricted (Thoron, Lalholm, Khuzduk Remnant-Wardens)</td><td style='font-size:0.85em'>live scene (Session 3)</td><td style='font-size:0.85em'>Blood-pact invoked and accepted; palm-to-fist binding gesture; terms: passage and peace for silence of stone; Krenn&#x27;s Binding Arch carvings spoke of Thoron (&quot;a man with a sword that drinks, a man who threw it away&quot;)</td></tr>
+<tr><td><b>Thoron&#x27;s Oath to Khuzduk</b></td><td style='color:#27ae60'>confirmed</td><td>restricted (Thoron, Lalholm, Khuzduk Remnant-Wardens)</td><td style='font-size:0.85em'>live scene (Session 3)</td><td style='font-size:0.85em'>Thoron swore to return for Khuzdukan when Six Founders reunite and Dragon-Skull Gate opened; freely given beyond Kh&#x27;a&#x27;Vash; witnessed by stone and blood</td></tr>
+<tr><td><b>Unknown Tracks&#8212;East March</b></td><td style='color:#e67e22'>uncertain</td><td>restricted (East March Patrol Command)</td><td style='font-size:0.85em'>Mira Thess + Suzanne briefing (Session 3-4)</td><td style='font-size:0.85em'>Tracks in eastern approaches &#8212; too large for human, wrong gait for orc; recurring, never same location twice; bipedal, heavy, purposeful movement; Suzanne initially dismissed, now acknowledges; Durn has also seen tracks</td></tr>
+<tr><td><b>Frozen Warrior&#8212;Khuzduk Peaks</b></td><td style='color:#e67e22'>uncertain</td><td>restricted (Thoron, Lalholm, Remnant-Wardens)</td><td style='font-size:0.85em'>direct observation (Session 3)</td><td style='font-size:0.85em'>Ancient dwarven warrior frozen in glacier; pre-colonial armor; rune-work; war-hammer in hand; ice cracking/melting; running toward something, not away</td></tr>
+<tr><td><b>Unsealed Ruin&#8212;Khuzduk Peaks</b></td><td style='color:#e67e22'>uncertain</td><td>restricted (Thoron, Suzanne, Lalholm)</td><td style='font-size:0.85em'>direct observation (Session 5)</td><td style='font-size:0.85em'>Ruin entrance found unsealed during Peaks traverse; old incense smell; tremors intensify nearby; purpose unknown</td></tr>
+<tr><td><b>Eastern Approaches Entity</b></td><td style='color:#e67e22'>uncertain</td><td>restricted (Fort Vanguard command + Thoron)</td><td style='font-size:0.85em'>Suzanne briefing + Mira Thess + Durn (Session 3-4)</td><td style='font-size:0.85em'>Recurring inhuman tracks; persistent rhythmic sound from the east after dark; ritualistic animal kill-site (deer dismantled and organs arranged deliberately); entity is thinking, watching, approaching; left for Voss/Bale to monitor</td></tr>
+<tr><td><b>Suzanne&#x27;s Orcus Burden</b></td><td style='color:#27ae60'>confirmed</td><td>secret (Thoron only)</td><td style='font-size:0.85em'>private disclosure (Session 4)</td><td style='font-size:0.85em'>Orcus&#x27;s hold deepening; hunger escalates with killing; whispers nightly promising greater power if she &quot;lets go&quot;; she has been resisting but resistance is eroding; has told no one else; fears Lalholm&#x27;s god would demand her destruction if he knew the depth; killing the bandit boy (18, running, burned camp) &#8212; she enjoyed the chase; Yor-Kazh sang when it fed</td></tr>
+<tr><td><b>Ward-Chamber Investigation&#8212;Khuzdukan</b></td><td style='color:#27ae60'>confirmed</td><td>restricted (party + Thordak)</td><td style='font-size:0.85em'>direct investigation (Session 5)</td><td style='font-size:0.85em'>Ward-chamber is circular, ~40ft diameter, domed ceiling; floor covered in concentric rune-inscriptions &#8212; precursor binding architecture; central inscriptions actively shifting in stone; rewrite boundary expanded from central circle to walls in 3 days; boundary expanding ~5ft/day and accelerating; wardens Grull and Torvash found soul-suspended within active field; Thoron crossed boundary, resisted holding effect, carried both wardens out; direct contact with bound entity: vast, patient, malignant, old beyond reckoning, aware, pleased; Lithoe estimates complete ward failure in two weeks or less; binding architecture is continental system with multiple nodes; Lalholm reports Haadis considers entity a rival; Yor-Kazh responded to proximity</td></tr>
+<tr><td><b>Lithoe&#x27;s Research Findings&#8212;Khuzdukan</b></td><td style='color:#27ae60'>confirmed</td><td>restricted (party + Thordak)</td><td style='font-size:0.85em'>Lithoe disclosure (Session 5) + NPAG updates (Sessions 6-7)</td><td style='font-size:0.85em'>Deep ward is pre-Khuzdukan; rune-architecture belongs to unknown precursor tradition; structural grammar matches Ancients-era binding work from Kal Therryn inscriptions; precursors bound something beneath continent; bindings were imperfect; Edhellar corrupted by proximity; rune-sequences being rewritten from beneath &#8212; deliberate revision by entity; Lithoe integrated Lalholm&#x27;s communion data (Session 6): entity holds wardens&#x27; souls through binding architecture itself, not independent power; counter-sequence must address architecture, not entity directly; approach adjusted; breakthrough narrowing; rune-chain candidates identified (Session 7 NPAG)</td></tr>
+<tr><td><b>Haadis Theological Assessment&#8212;Khuzdukan</b></td><td style='color:#27ae60'>confirmed</td><td>restricted (party)</td><td style='font-size:0.85em'>Lalholm prayer + assessment (Session 5) + communion (Session 6 NPAG)</td><td style='font-size:0.85em'>Haadis interested in bound entity &#8212; rare; entity operates in souls domain; wardens&#x27; souls preserved not consumed; Haadis considers entity a rival; Lalholm suspects Orcus/binding connection; Session 6: Lalholm&#x27;s surface communion completed (19th Ilrym) &#8212; Haadis confirmed entity holds wardens&#x27; souls, not Haadis; recovery requires breaking entity&#x27;s hold, not divine intercession alone; Haadis cannot reclaim what another power grips; Lalholm shared findings with Lithoe &#8212; architecture IS the grip; sever specific rune-chains to free souls</td></tr>
+<tr><td><b>Yor-Kazh Entity Kinship</b></td><td style='color:#27ae60'>confirmed</td><td>secret (Thoron + Suzanne only)</td><td style='font-size:0.85em'>Suzanne disclosure during travel (Session 6, 19th Ilrym)</td><td style='font-size:0.85em'>Yor-Kazh was &quot;resonating&quot; in Khuzdukan deep halls &#8212; vibrating like a tuning fork; started in Aqueduct, intensified near ward-chamber; Yor-Kazh was happy &#8212; first time Suzanne has heard joy from the weapon; entity beneath Khuzdukan and thing inside Yor-Kazh are not the same but are kin &#8212; &quot;same species, different scale&quot;; if ward breaks, Yor-Kazh will answer; Suzanne does not know if she can stop it</td></tr>
+<tr><td><b>Orcus Communion Cell&#8212;Fort Seawatch</b></td><td style='color:#27ae60'>confirmed</td><td>restricted (Thoron, Suzanne, Guldur)</td><td style='font-size:0.85em'>direct investigation (Session 6, 21st Ilrym)</td><td style='font-size:0.85em'>Active Cult of Orcus communion cell beneath Fort Seawatch in ancient ossuaries; three known entrances (chandlery on Saltgate, sea-cave at harbour wall base at low tide, warehouse on Kraken Row with deed to nonexistent name); ritual chamber ~200 paces in past second branching &#8212; round, ~30ft, high ceiling; nine-point invocation circle with layered candle wax (months of use); bone resonance amplifiers (ribs interlocking spirals, vertebrae concentric rings, skull receiver facing up, jaw wired open); Suzanne identified as Corlaine-school seminary-level liturgical work &#8212; communion rite, not summoning; handler-directed (someone receiving instructions from higher cult node); corpse tallow binding agent (yellow wax layer &#8212; human fat); used within last 10 days; Yor-Kazh hummed in chamber (same resonance as Khuzdukan entity); Suzanne assessment: every Orcus communion circle becomes a door the entity can knock on if ward breaks; practitioner Corlaine-trained (narrows to ~dozen people alive with that training)</td></tr>
+<tr><td><b>Torlec Ghost Ship&#8212;Fort Seawatch</b></td><td style='color:#27ae60'>confirmed</td><td>restricted (Thoron, Suzanne, Guldur)</td><td style='font-size:0.85em'>Guldur intelligence (Session 6)</td><td style='font-size:0.85em'>Torlec merchant vessel refused inspection; sailed into bay without clearance; anchored 4+ days; no movement on deck, no lights at night, no signals, no one ashore; harbour watch observing via glasses &#8212; nothing; Merrow Kest doubled harbour watch; vessel is waiting for something</td></tr>
+<tr><td><b>Seawatch Golden Hind Operations</b></td><td style='color:#27ae60'>confirmed</td><td>restricted (Thoron, Guldur)</td><td style='font-size:0.85em'>Guldur intelligence (Session 6)</td><td style='font-size:0.85em'>Golden Hind coin moves through Seawatch in quantities that don&#x27;t match manifests; crates heavier than paperwork declares; same customs stamp anomaly as Riverwatch; warehouse seals changed overnight; regular, large, ongoing for at least one year; Guldur does not yet know what is being moved</td></tr>
+<tr><td><b>Temple of the Sun Schism</b></td><td style='color:#27ae60'>confirmed</td><td>public</td><td style='font-size:0.85em'>news at Seawatch Ramparts (Session 6, 20th Ilrym)</td><td style='font-size:0.85em'>Temple of the Sun doctrinal fracture 20/20 TRG FIRED &#8212; irreversible schism between Ush&#x27;n&#x27;Elthar and Ush&#x27;n&#x27;Taalgith; fistfights in nave; pilgrims choosing sides; schism/purge/external intervention now unavoidable</td></tr>
+<tr><td><b>Valania&#x27;s Finding Method</b></td><td style='color:#27ae60'>confirmed</td><td>restricted</td><td style='font-size:0.85em'>Session 7 direct action</td><td style='font-size:0.85em'>Three methods confirmed: trigger Hidden Temple contact (underlayer demon-hunting order), infiltrate Golden Hind operations (warehouse district south of cattle pens), invoke covert signals in Caras merchant quarter (founding-era recognition marks &#8212; coin in mortar seam, knotted cord). Thoron used covert signals method; two marks found and adjusted; Valania responded within one hour. Cover now closing.</td></tr>
+<tr><td><b>Caras Underlayers</b></td><td style='color:#27ae60'>confirmed</td><td>restricted</td><td style='font-size:0.85em'>Session 7 direct observation</td><td style='font-size:0.85em'>Accessed via tanner&#x27;s yard stairs on Millhook Street; merchant quarter sub-level used by Golden Hind for shadow logistics; crates, chalk tallies, lamp oil and salted meat; Valania&#x27;s founding-era recognition signals still maintained after three years; Hidden Temple node exists somewhere in underlayers (not contacted this session) &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; END SECTION 03 NSV-DELTA v3.7 &#8212; SECTION 04 of 10 &#8212; FACTION_STATE_CHANGES Session_ID: 7 &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</td></tr>
+</table>
+<h2 id='ua'>Unknown Anomalies</h2>
+<p class='muted'>None</p>
+<h2 id='divine'>Divine / Metaphysical</h2>
+<p class='muted'>None</p>
+<h2 id='threads'>Unresolved Threads</h2>
+<p class='muted'>None</p>
+<h2 id='seed'>Seed Overrides</h2>
+<p class='muted'>None</p>
+<h2 id='losses'>Losses &amp; Irreversibles</h2>
+<p class='muted'>None</p>
+<h2 id='log'>Adjudication Log</h2>
+<p class='muted'>No entries</p>
+<hr><p class='muted'>Generated from delta files | Session 7 | Gammaria MACROS</p>
+</body></html>

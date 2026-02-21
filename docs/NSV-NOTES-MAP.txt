@@ -1,0 +1,26 @@
+NSV-NOTES-MAP v3.0
+
+SEED_NOTES
+
+MAP CANON — STRATEGIC NOTES
+
+MAP CANON — COMPASS BEARINGS
+
+SEED_NOTES
+
+
+MAP CANON — STRATEGIC NOTES
+• Vornost dominates Sighing Swamps physically and symbolically
+• Khuzdukan is legacy power site with unresolved risk
+• Only Vallandor Mountains to west protect Gammaria from Imperial Torlec
+
+MAP CANON — COMPASS BEARINGS
+
+SETTLEMENTS: Forgaard(NC); FortAmon(NWc); TempleSun(Nc); Caras(Ce); Vornost(Cs); Khuzdukan(Ec); FortVanguard(ES); FortSeawatch(SWc); FortHighguard(ScE); Furdach(SE); Riverwatch(WcS); WhiteagleKeep(SW)
+
+ZONES: EasternScarps(N of TempleSun/Forgaard); WesternScarps(NW of FortAmon); GreyPlains(C between Caras/Vornost); KhuzdukHills(Ce); KhuzdukPeaks(E of Khuzdukan); BlacktoothForest(NE/E of Caras); Floodplain(E core; S RiverStone); EastMarch(around FortVanguard); SouthernScarps(S of FortVanguard); FurdachForest(N of Furdach); HangingCliffs(E Seawatch; N Highguard); SighingSwamps(S Vornost; N SeaBirds); FishersBeach(SW edge swamps); SeaOfBirds(S-central); Hinterlands(W/SW Vornost); GloatburrowHills(S core; W Highguard); Narrows(W core; NE Riverwatch); HighfellForest(far W/NW); Riverlands(W core); SeawatchRamparts(around Seawatch); VargolsReach(far SW); RiverBirds(delta near Seawatch)
+
+HYDRO: RiverKoss(Vornost→W to Riverwatch); RiverSkulls(Riverwatch→S to Seawatch); RiverBirds(Seawatch→SeaBirds); RiverStone(E Khuzdukan→Floodplain); SeaOfBirds(S-central sea)
+
+Legend: N/S/E/W=cardinal; C=center; c=central (NC=North-Central)
+

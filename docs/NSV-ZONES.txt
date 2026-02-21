@@ -1,0 +1,143 @@
+NSV-ZONES v3.0
+
+ZONES
+
+ZONES
+
+**Note:** Crossing Points compressed using arrows and tags
+
+**Legend:**
+- CP = Crossing_Points
+- → = to
+- ‡ = eventful
+- ⊙ = slow
+- 1d = 1 day transit
+
+ZONE: Barrow Moors | wasteland, barrows, aggressive highland goats | high|
+CP: Barrows Gate→Forgaard‡ 
+
+ZONE: Blacktooth Forest | dark, brooding, home to Blacktooth Orcs | moderate | Blacktooth Orcs
+CP: narrow gulch→Eastern Scarps‡, Golden Downs→Eastern Scarps⊙, The Claw→Grey Plains‡, Dwarven Bridge→Khuzduk Hills 
+
+ZONE: Caras | Active city |Capital of Vornost, primary trade hub | low |  Nation of Gammaria
+CP: Grey Gate→Grey Plains, River Koss Ferry→Riverwatch 
+Notes: Ongoing mercantile tension between merchant houses
+
+ZONE: Deep Swamps | nightmarish morass, hobgoblin hunters, ghouls | high | Bloodswamp Hobgoblins
+CP: Sunken Shore→Sea of Birds‡, broken causeway→Sighing Swamps‡ 
+
+ZONE: East March | windswept moors, frontier | moderate |
+CP: Old East Road→Fort Vanguard, game trail→Southern Scarps, eroded slopes→Floodplain, Dwarven Steps→Khuzduk Peaks 
+
+ZONE: Eastern Scarps | bleak highlands, predatorial wyverns | moderate |
+CP: narrow gulch→Blacktooth Forest‡, Golden Downs→Blacktooth Forest⊙, poor road→Grey Plains‡, good road→Grey Plains⊙, Pilgrim's Walk→Temple of the Sun, Amon's Causeway→Western Scarps, High Fell→Forgaard‡ 
+
+ZONE: Fisher's Beach | lonely dunes, Fisher Shrines, the sea is watching | low |
+CP: beach trail→Sighing Swamps‡, cold beach→Sea of Birds‡, Coast Road→Seawatch Ramparts, windswept trail→Hinterlands 
+
+ZONE: Floodplain | broken culverts, sunken ruins, high weirdness | high |
+CP: eroded slopes→East March, waterfall→Khuzduk Peaks‡ | River of Stone→Outer Wetlands | culvert→Fort Vanguard 
+
+ZONE: Forgaard | Active frontier fort | high | Nation of Gammaria
+CP: High Fell→Eastern Scarps‡, Barrows Gate→Barrow Moors 
+Notes: Bleak northern outpost, wilderness beyond
+
+ZONE: Fort Amon | Active frontier fort | medium | Nation of Gammaria
+CP: down Amon's Causeway→Western Scarps | elf path→Highfell Forest 
+Notes: Northern defensive/observation post, wary peace with elves in nearby forest
+
+ZONE: Fort Highguard | Active frontier fort | medium | Nation of Gammaria
+CP: Pinnacle Gate→Hanging Cliffs | high paths→Furdach Forest 
+Notes: Southern defensive bastion
+
+ZONE: Fort Seawatch | Active port-fort | medium | Nation of Gammaria
+CP: main canal→River of Birds‡, River of Skulls Ferry→Riverwatch, Kraken Gate→Seawatch Ramparts 
+Notes: Lively, boisterous trade port, naval supply hub, fiercely independent
+
+ZONE: Fort Vanguard | Active frontier fort | high | Nation of Gammaria
+CP: Old East Road→East March | culvert→Floodplain 
+Notes: Eastern outpost, constant vigil
+
+ZONE: Furdach | Independent gnome enclave | medium | Gnome clans of Furdach
+CP: narrow tunnel→Furdach Forest | goblin tunnel→Gloatburrow Hills 
+Notes: perpetual goblin war
+
+ZONE: Furdach Forest | mossy woodland, lively fauna, dark sylvan | moderate | Gnome Clans of Furdach
+CP: narrow tunnel→Furdach, scree slopes→Gloatburrow Hills, easy track→Southern Scarps, high paths→Fort Highguard 
+
+ZONE: Gloatburrow Hills | goblin-infested hell-hole, you will be eaten | lethal |
+CP: scree slopes→Furdach Forest‡, Conorth's Stair→Hanging Cliffs‡, broken woodland→Southern Shore‡, River of Skulls→River of Birds‡, low pass→Vargol's Reach⊙ | goblin tunnel→Furdach 
+
+ZONE: Grey Plains | heartland, merchants, pilgrims, nomads, soldiers, dust or mud | low | Nation of Gammaria
+CP: Dragon-Skull Gate→Vornost, Merchant's Highway→Hinterlands, poor road→Eastern Scarps‡, good road→Eastern Scarps⊙, The Claw→Blacktooth Forest‡, riverbank→Khuzduk Hills⊙, dwarf trail→Khuzduk Hills‡, boggy track→Sighing Swamps‡ 
+
+ZONE: Hanging Cliffs | pinnacles of near-inaccessible stone, seagulls | moderate |
+CP: Conorth's Stair→Gloatburrow Hills‡, Pinnacle Gate→Fort Highguard, high paths→Furdach Forest 
+
+ZONE: Highfell Forest | death to all who enter — elven terrain | lethal |
+CP: forest tracks→Narrows‡, elf path→Fort Amon 
+
+ZONE: Hinterlands | western prairie, sunset, sweeping vistas | low |
+CP: Merchant's Highway→Grey Plains‡, waterlogged track→Sighing Swamps‡, windswept trail→Fishers Beach, Fishers Causeway→Seawatch Ramparts, Drummer's Bridge→Vargol's Reach‡ 
+
+ZONE: Khuzduk Hills | rolling hills, dwarven ruins, wandering bears | moderate |
+CP: Dwarven Bridge→Blacktooth Forest, crumbling steps→Sighing Swamps‡, cairn path→Khuzduk Peaks, riverbank→Grey Plains⊙, dwarf trail→Grey Plains‡, River Koss→Vornost, Dwarven Gate→Khuzdukan‡ 
+
+ZONE: Khuzduk Peaks | weathered mountains, ancient ruins, deep secrets | high|
+CP: cairn path→Khuzduk Hills, waterfall→Floodplain‡, Dwarven Steps→East March | Dwarven Aqueduct→Khuzdukan 
+
+ZONE: Khuzdukan | Ruined dwarf citadel/active remnant | high | None (contested/abandoned)
+CP: Dwarven Gate→Khuzduk Hills‡ | Dwarven Aqueduct→Khuzduk Peaks 
+
+ZONE: Narrows | grassy uplands, overshadowed by elven forest | high |
+CP: Amon's Gully→Western Scarps, forest tracks→Highfell Forest‡, Havar's Bridge→Vargol's Reach‡, old Elven road→Riverlands 
+
+ZONE: Outer Wetlands | waterways, hillocks, pine tree, ravens, eerie sounds | medium |
+CP: River of Stone→Floodplain
+
+ZONE: River of Birds | river delta, lowlands, rushes, reeds, fantasy bird-life | low |
+CP: River of Skulls→Gloatburrow Hills‡, main canal→Fort Seawatch‡, River of Skulls towpath→Riverlands, Seawatch Road→Seawatch Ramparts⊙ 
+
+ZONE: Riverlands | confluence of Koss and Skulls, busy trade route | low |
+CP: River of Skulls towpath→River of Birds, tundra trail→Vargol's Reach, old Elven road→Narrows, Grand Lock→Riverwatch 
+
+ZONE: Riverwatch | Customs outpost | low | Nation of Gammaria
+CP: Grand Lock→Riverlands, River Koss Ferry→Caras, River of Skulls Ferry→Fort Seawatch 
+Notes: Overlooks confluence of River Koss and River of Skulls
+
+ZONE: Sea of Birds | Inland sea, river to Torlec, birds flock shores, horrors in deep | high |
+CP: Sunken Shore→Deep Swamps‡, shale beach→Southern Shore‡, cold beach→Fisher's Beach‡, old docks→Seawatch Ramparts‡ 
+
+ZONE: Seawatch Ramparts | defensive bulwarks, docks, trade houses, sea near | low | Nation of Gammaria
+CP: Coast Road→Fisher's Beach, South Road→Southern Shore, old docks→Sea of Birds‡, Seawatch Road→River of Birds⊙, Fishers Causeway→Hinterlands, Kraken Gate→Fort Seawatch 
+
+ZONE: Sighing Swamps | rushes whispering, strange birds, Vornost looms | medium |
+CP: broken causeway→Deep Swamps‡, crumbling steps→Khuzduk Hills‡, waterlogged track→Hinterlands‡, boggy track→Grey Plains‡, beach trail→Fishers Beach‡, low stairs→Vornost 
+
+ZONE: Southern Scarps | gorse moors, heather, birds of prey, overlooks wilderness | medium |
+CP: game trail→East March, easy track→Furdach Forests 
+
+ZONE: Southern Shore | stony beaches, driftwood, weird things washed up, seagulls, the sea is waiting | low |
+CP: South Road→Seawatch Ramparts, broken woodland→Gloatburrow Hills‡, shale beach→Sea of Birds‡ 
+
+ZONE: Temple of the Sun | Doctrinal crucible and legitimacy contest site | low | none – contested 
+CP: Pilgrim's Walk→Eastern Scarps | Penitent’s Way→Western Scarps 
+Notes: Continual religious debate, doctrinal conflict unresolved and self-sustaining, produces factional tension, reputational risk, legitimacy drift, pressure accumulates unless stabilised
+
+ZONE: Vallandor Mountains | impassable peaks, Torlec's vicious House Vallandor patrols, none shall pass | high |
+CP: postern gate→Whiteagle Keep, rough trail→Gloatburrow Hills‡, steep slope→Vargol's Reach⊙ 
+
+ZONE: Vargol's Reach | southern tundra, roaming wolves, dragons overhead | medium |
+CP: low pass→Gloatburrow Hills⊙, Drummer's Bridge→Hinterlands‡, Havar's Bridge→Narrows‡, tundra trail→Riverlands, steep slope→Vallandor Mountains⊙, Glaurung's Gate→Whiteagle Keep 
+
+ZONE: Vornost | Fortress-citadel | low | Nation of Gammaria
+CP: low stairs→Sighing Swamps, Dragon-Skull Gate→Grey Plains, River Koss→Khudzduk Hills 
+Notes: Seat of the Helkar – the Dragon Throne
+
+ZONE: Western Scarps | rugged highlands, Edhellar ruins, dimensional weirdness | medium |
+CP: Amon's Causeway→Eastern Scarps, down Amon's Causeway→Fort Amon, Amon's Gully→Narrows | Penitent’s Way→Temple of the Sun 
+
+ZONE: Whiteagle Keep | Active fortress | medium | Ironmask Council
+CP: postern gate→Vallandor Mountains, Glaurung's Gate→Vargol's Reach 
+Notes: Border fortress in mountains dividing Gammaria from Torlec, guards chief pass, home to Tirris Vargol
+

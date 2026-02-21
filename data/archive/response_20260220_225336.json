@@ -1,0 +1,15 @@
+{
+  "responses": [
+    {
+      "id": "cr_001",
+      "type": "PLAYER_INPUT",
+      "content": "Joppa sets down the duty roster he's been marking and looks at you with the expression of a man who's been waiting for this question.\n\n'Soreth comes and goes,' he says carefully. 'Roosts on the upper battlements \u2014 the old watchtower, where you used to keep the nest. Stays a night, sometimes two. Then gone again, south toward the coast. The garrison knows not to approach. The younger soldiers are terrified of her. The older ones...' He pauses. 'The older ones remember when she'd eat from your hand.'\n\nHe pulls a leather folio from beneath the table \u2014 patrol reports, tabbed and dated in his precise script.\n\n'Last sighting was eight days ago. Seawatch Ramparts sent a runner \u2014 she was seen circling the harbour for half a morning, then flew northeast. Before that, she roosted here for a full night. Didn't hunt. Didn't feed. Just sat on the tower and watched the swamps.'\n\nJoppa meets your eyes. 'She's looking for something. Or someone. I didn't want to presume, but since you're asking \u2014 I think she knows you're back. Dragons sense these things. The old bonds don't break clean.'\n\nValania, leaning against the doorframe, says nothing. But her hand moves to the hilt of Gardurth \u2014 sister-sword to Crandurth. If Soreth felt the one, she'd feel the other.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "Joppa reports Soreth roosts intermittently on Vornost upper battlements. Last sighting 8 days ago at Seawatch Ramparts. Pattern: circling coast then returning to Vornost. Joppa believes Soreth senses Thoron's return."
+        }
+      ]
+    }
+  ]
+}

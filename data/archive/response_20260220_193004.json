@@ -1,0 +1,91 @@
+{
+  "responses": [
+    {
+      "id": "cr_004",
+      "type": "NPC_FORGE",
+      "content": "NPC: Drenn Mossfoot @ Sighing Swamps | active | Rel: \u2014 | Gaunt man in a mud-caked cloak, missing three fingers on his left hand, pole and reed-basket across his back\nTRAIT: wary, practical\nOBJ: Survive; sell eel and marsh-herb to Vornost garrison | K: Knows every safe path through the swamps; knows the low stairs schedule; has seen strange lights near the bone-reed thickets at night | ACT: Netting eels near the black water crossing",
+      "state_changes": [
+        {
+          "type": "npc_create",
+          "name": "Drenn Mossfoot",
+          "zone": "Sighing Swamps",
+          "role": "Marsh eel-fisher",
+          "trait": "wary, practical",
+          "appearance": "Gaunt, mud-caked cloak, missing three fingers, pole and reed-basket",
+          "faction": "none",
+          "objective": "Survive; sell eel and marsh-herb to Vornost garrison",
+          "knowledge": "Knows safe swamp paths; low stairs schedule; strange lights near bone-reed thickets",
+          "next_action": "Netting eels near the black water crossing",
+          "bx_ac": 10,
+          "bx_hd": 1,
+          "bx_hp": 3,
+          "bx_hp_max": 3,
+          "bx_at": 1,
+          "bx_dmg": "1d4",
+          "bx_ml": 6
+        }
+      ]
+    },
+    {
+      "id": "cr_005",
+      "type": "NPC_FORGE",
+      "content": "NPC: Skratha Ironjaw @ Sighing Swamps | active | Rel: Bloodswamp Hobgoblins | Squat hobgoblin woman, filed iron teeth, bone-and-leather armour, shortbow strung with sinew\nTRAIT: silent, territorial\nOBJ: Patrol swamp perimeter for Bloodswamp clan; report intruders | K: Bloodswamp hunting routes; location of submerged hobgoblin camps; aware Vornost garrison patrols have increased | ACT: Observing from reed cover near broken causeway",
+      "state_changes": [
+        {
+          "type": "npc_create",
+          "name": "Skratha Ironjaw",
+          "zone": "Sighing Swamps",
+          "role": "Bloodswamp perimeter scout",
+          "trait": "silent, territorial",
+          "appearance": "Squat hobgoblin, filed iron teeth, bone-leather armour, shortbow",
+          "faction": "Bloodswamp Hobgoblins",
+          "objective": "Patrol swamp perimeter; report intruders to clan",
+          "knowledge": "Bloodswamp hunting routes; submerged hobgoblin camps; Vornost patrols increasing",
+          "next_action": "Observing from reed cover near broken causeway",
+          "bx_ac": 15,
+          "bx_hd": 2,
+          "bx_hp": 15,
+          "bx_hp_max": 15,
+          "bx_at": 2,
+          "bx_dmg": "1d8",
+          "bx_ml": 9
+        }
+      ]
+    },
+    {
+      "id": "cr_006",
+      "type": "EL_FORGE",
+      "content": "NOTE: Sighing Swamps already has an EL-DEF registered in NSV-ENGINES (1d8 table, 8 entries including marsh gas, Vornost patrol, bone-reed thicket, sinking ground, heron-fisher, fever-mist, corpse-willow grove, black water crossing). This EL-DEF should be loaded into the engine's zone data rather than creating a duplicate. Flagging EL-DEF lookup bug \u2014 engine reports 'No EL-DEF for zone' but the definition exists in NSV-ENGINES.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "ENGINE BUG: Sighing Swamps EL-DEF exists in NSV-ENGINES but engine reports none. EL_FORGE request skipped to avoid duplicate. Existing EL: 1d8, 8 entries."
+        }
+      ]
+    },
+    {
+      "id": "cr_001",
+      "type": "CLOCK_AUDIT",
+      "content": "no_advance. Thoron is travelling from Vornost to Sighing Swamps. No reunion event occurred at Seawatch or Riverwatch. Party is nowhere near those zones.",
+      "state_changes": []
+    },
+    {
+      "id": "cr_002",
+      "type": "CLOCK_AUDIT",
+      "content": "no_advance. No narrative event involving Underlayer contacts in Caras today. Thoron is in the Sighing Swamps, not Caras. No evidence or counter-surveillance activity established.",
+      "state_changes": []
+    },
+    {
+      "id": "cr_003",
+      "type": "CLOCK_AUDIT",
+      "content": "no_advance. The Children of the Dead Gods' Binding Degradation cadence clock ticked \u2014 that is a mechanical decay, not the faction taking deliberate action against Orcus or a third party. No faction agency occurred. New bullet wording correctly excludes this.",
+      "state_changes": []
+    },
+    {
+      "id": "cr_007",
+      "type": "NARR_ARRIVAL",
+      "content": "You descend the low stairs into grey-green murk, Valania a half-step behind. The stone is slick with moss and the air thickens with each step \u2014 warm, wet, tasting of rot and growing things. Above, Vornost's black walls shrink against a pale sky.\n\nThe swamp opens before you like a wound. Reed beds stretch in every direction, broken by stands of corpse-willow whose trailing branches drag the surface of water that reflects nothing. Somewhere deep in the rushes, birds call \u2014 harsh, repeating notes that sound almost like speech.\n\nValania wraps a cloth across her nose. 'Charming,' she says, scanning the tree line. Her hand rests on her belt knife. She knows this place \u2014 the back door, the way things come and go that Vornost pretends not to notice.\n\nThe path is a suggestion at best. Tussocks of marsh grass offer uncertain footing between stretches of black water. Yellow mist clings to the hollows, and the air sighs through the reeds with a sound that gives the swamps their name \u2014 a long, low exhalation, as if the land itself is breathing.\n\nSpring has not been kind here. The water runs high, the paths half-drowned. Somewhere ahead, the broken causeway leads deeper toward hobgoblin territory. Behind you, the low stairs and Vornost's shadow.\n\nYou are between worlds down here. Between the fortress and the wild. Between what you were and what you must become.",
+      "state_changes": []
+    }
+  ]
+}

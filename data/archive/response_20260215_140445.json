@@ -1,0 +1,16 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No reunion at Seawatch/Riverwatch today. Party is travelling Caras\u2192Grey Plains. ADV bullet not satisfied.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No one in East March today. No facts establish new tracks found. ADV bullet not satisfied.",
+      "state_changes": []
+    }
+  ]
+}

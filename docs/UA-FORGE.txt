@@ -1,0 +1,53 @@
+UA-FORGE
+1 Agent assigns persistent threat a UA-XX Code.
+1.1 UA-XX codes unique, persistent, never reused.
+1.2 If identity later confirmed, retain UA-XX code.
+
+2 UA.CREATE ANCHOR (HARD)
+2.1 A UA-XX may be introduced only if immediately anchored in one of:
+2.1.1 JSON save → discoveries, or
+2.1.2 JSON save → unresolved_threads, or
+2.1.3 JSON save → clocks.
+2.1.4 else: UA MUST NOT be created.
+
+3 UA.DISCIPLINE (HARD)
+3.2 Any theory about UA identity/allegiance/motive must be labeled INFERRED with supporting observations.
+3.3 Confirmation requires explicit JSON save entry; otherwise UNKNOWN.
+
+4 UA.REQUIRED USE (HARD)
+4.1 If observable effects imply agency (surveillance, pursuit, message delivery, sabotage, enforcement) and actor is not already named in authoritative vectors, MUST use UA-XX (or descriptor) instead of stable personal identity.
+
+5 UA.PROMOTION THRESHOLD GATE (HARD)
+5.1 Before 7.1.2 may apply, all must be true:
+5.1.1 ≥2 logged effects across time) OR (1 effect + player explicit intent to pursue/retain/interact/rely/investigate)
+5.1.2 ≥1 effect imposes durable constraint (leverage/retaliation capacity/custody/control over access|info|movement)
+5.1.3 suspicion/prominence alone insufficient
+
+6 UA→RESOLUTION TRIGGER (HARD)
+6.1 If player indicates intent to meaningfully engage UA-XX (investigate, follow, confront, bargain, identify, stop, recruit, rely on), UA must resolve immediately into ONE of:
+6.1.1 NPC (invoke NPC-FORGE / NPC-FORGE-AUTO),
+6.1.2 Faction (invoke FAC-FORGE / FAC-FORGE-AUTO),
+6.1.3 Non-person persistent element (invoke CL-FORGE, or create/advance a Thread/Discovery via CAN-FORGE),
+6.1.4 Environment/system pressure (Clock_Owner = environment; no person invented).
+6.2 After engagement is declared, do not keep UA as a handwave. Resolve now and update JSON save.
+
+7 UA→NPC-FORGE PROMOTION TRIGGERS (HARD)
+7.1 If ANY fires → invoke NPC-FORGE immediately (or NPC-FORGE-AUTO if delegated); no deferral.
+7.1.1 Direct contact / custody
+7.1.2: Persistence past a scene with stakes (subject to threshold gate)
+7.1.3: Repeat signature (≥2 discrete incidents)
+7.1.4: UA becomes Clock_Owner / pressure owner
+7.1.5: Stable identity required for adjudication
+
+8 UA→FAC-FORGE CASCADE (HARD)
+8.1 If UA→NPC-FORGE result logically requires a persistent faction that does not exist, Invoke FAC-FORGE (or FAC-FORGE-AUTO if delegated)
+
+9 UA.SOFT LANDING (HARD)
+9.1 If UA effects are observable only (no custody/dialogue/irreversible constraints) and no trigger fires, UA-coded effects may continue without NPC-FORGE.
+
+10 UA.LOGGING (HARD)
+10.1 UA accounting appears ONLY in JSON save → ua_log:
+10.1.1 UA_Code
+10.1.2 Status = ACTIVE|PROMOTED|RETIRED
+10.1.3 Touched_This_Session yes/no
+10.2.4 Promotion_Trigger_Fired yes/no

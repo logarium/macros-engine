@@ -1,0 +1,740 @@
+NSV-ENGINES v3.0
+
+PE REGISTRY
+
+EL REGISTRY
+
+PE REGISTRY
+
+VANGUARD PATROL DOCTRINE (VP v3.0)
+PE-DEF
+Engine_Name: Vanguard Patrol Doctrine
+Engine_Version: VP v3.0
+Authority_Tier: ZONE-GLOBAL
+Zone_Scope: Global
+State_Scope: Fort Vanguard patrol cycle; linked clocks named below only
+Persistence: yes (stored in NSV-DELTA PROCEDURAL_ENGINES_ACTIVE + normal clock logging)
+Cadence: yes
+Trigger_Event:
+• TIME & PRESSURE invoked with time passing, OR
+• Player explicitly declares ≥1 day passage, OR
+• Explicit that Vasha sends out a patrol
+Inputs:
+• Required_State_Refs: linked clocks named below
+• Optional_State_Refs: none
+• Player_Delegations_Required: none (Cadence: yes; randomizer+mapping defined in Resolution_Method)
+Resolution_Method:
+• Randomizer: 2d6 (engine-defined; no player delegation required)
+• Mapping:
+2-4: Clear failure — threat missed or misidentified → advance Selde Marr + Arvek Morn clocks
+5–7: Ambiguous contact — doctrine stress → advance Henric Bale clock
+8–9: Correct restraint — good logs, no escalation → no advance (minor reductions only if explicitly stated by player or justified by same off-screen resolution)
+10–11: Correct identification, no engagement → reduce Selde Marr + Arvek Morn clocks
+12: Correct ID + threat→ Suzanne deployed legitimately if she is at Fort Vanguard; advance Bale clock; run CAN-FORGE-AUTO and create [UA] threat
+Outputs:
+• Operational consequence only; no true identity/motive assertion absent evidence
+• Misidentification remains INFERRED unless later confirmed
+
+State_Updates:
+• CLOCKS & PRESSURE (doctrine-linked clocks only)
+• DISCOVERIES (procedural observations only)
+• NPC_STATE_CHANGES (only if explicitly mapped)
+• ADJUDICATION_LOG (when randomizer used)
+Clock_Cascades:
+• May advance/reduce ONLY these named clocks if they exist in authoritative state:
+  – Doctrine Stress Test
+  – Selde Marr (existing clock)
+  – Arvek Morn (existing clock)
+  – Henric Bale (existing clock)
+Run_Cap_Notes:
+• Max one VP run per explicit day
+Failure_Safes:
+• Linked clocks absent → halt and ask
+Audit_Notes:
+• Log die, outcome band, and mapped outcome in ADJUDICATION_LOG when used
+END PE-DEF
+
+TEMPLE OF THE SUN DOCTRINAL DEBATE
+PE-DEF
+Engine_Name: Temple of the Sun — Doctrinal Debate
+Engine_Version: TSDD v3.0
+Authority_Tier: ZONE-LOCAL
+Zone_Scope: Temple of the Sun
+State_Scope: Religious legitimacy, factional cohesion, linked clock only
+Persistence: yes
+Cadence: yes
+Trigger_Event:
+• TIME & PRESSURE resolves ≥1 day OR
+• “a day passes”
+Inputs:
+• Required_State_Refs: linked clock below
+Resolution_Method:
+• Non-random procedural pressure accumulation
+Outputs:
+• Legitimacy drift without immediate violence
+State_Updates:
+• CLOCKS & PRESSURE only
+Clock_Cascades:
+• Temple of the Sun — Doctrinal Fracture
+Run_Cap_Notes:
+• Max one run per explicit day
+Failure_Safes:
+• Missing clock → halt and ask
+Audit_Notes:
+• Pressure only; no agency resolution
+END PE-DEF
+
+HIDDEN TEMPLE — DEMON-HUNT CADENCE (HT-DH V3.0)
+PE-DEF
+
+Engine_Name: Hidden Temple — Demon-Hunt Cadence
+Engine_Version: HT-DH v3.0
+Authority_Tier: GLOBAL (doctrinal network)
+Zone_Scope: Any region where demon/fiend evidence exists
+State_Scope: Hidden Temple doctrine clocks only
+Persistence: yes
+Cadence: yes
+Trigger_Event:
+• TIME & PRESSURE resolves ≥1 day, AND
+• Hidden Temple — Demon Ledger progress ≥ 1
+Hard_Gates: If Demon Ledger = 0 → do not run (dormant)
+Resolution_Method: Non-random doctrine escalation
+Linked_Clocks:
+• Hidden Temple — Demon Ledger
+• Hidden Temple — Interest in Gammaria
+• Hidden Temple — Contract Pressure Vector
+END PE-DEF
+
+
+SEASONAL RESOURCE PRESSURE (SRP v1.0)
+PE-DEF
+Engine_Name: Seasonal Resource Pressure
+Engine_Version: SRP v1.0
+Authority_Tier: GLOBAL
+Zone_Scope: Gammaria (all settlements)
+State_Scope: Economic/environmental tone-setting only
+Persistence: yes
+Cadence: yes (seasonal; triggers on season change)
+Trigger_Event:
+• In-game date crosses seasonal threshold (Demes→Tryphor = Spring; Ilrym→Evernew = Summer; Rannifer→Grismere = Autumn; Frithium→Revini = Winter)
+Inputs:
+• Current season (derived from Nurrian Calendar date in META)
+Hard_Gates:
+• Must have valid In-Game_Date in NSV-DELTA META
+Resolution_Method:
+• Non-random seasonal pressure determination
+• SPRING (Tryphor/Ilrym/Evernew): Feed & Seed Pressure
+  - Food stores depleted over winter; planting season critical
+  - Tone: Lean times, rationing, anxiety about planting
+  - NPAG influence: Factions hoard grain, bandits raid caravans, desperate theft increases
+• SUMMER (Jestrim/Rannifer/Reapmere): Raw Materials Pressure
+  - Construction, repairs, military production peak
+  - Tone: Competition for iron/timber/stone, trade leverage shifts
+  - NPAG influence: Trade disputes, resource control conflicts, infrastructure strain
+• AUTUMN (Grismere/Aphistri/Frithium): Harvest Pressure
+  - Success/failure determines winter survival
+  - Tone: Urgency, labor demands, vulnerability to disruption
+  - NPAG influence: Raids to disrupt harvest, extortion, labor disputes
+• WINTER (Revini/Demes/Fasting): Firewood & Pitch Pressure
+  - Survival essentials; cold is lethal without preparation
+  - Tone: Isolation, cold, desperation, rationing
+  - NPAG influence: Fuel theft, hypothermia deaths, garrison morale drops
+Outputs:
+• Seasonal tone logged in NSV-DELTA META → Seasonal_Pressure field
+• No direct clock advancement; influences NPAG decision-making
+State_Updates:
+• META → Seasonal_Pressure: current season + pressure type
+• ADJUDICATION_LOG: log season change and pressure type
+Clock_Cascades:
+• None (pressure is tonal, not mechanical)
+Run_Cap_Notes:
+• Runs once per season transition (4 times per in-game year)
+Failure_Safes:
+• Invalid date → skip with note
+Audit_Notes:
+• Log season transition and resulting pressure type
+• NPAG may reference pressure when advancing faction/economic clocks
+END PE-DEF
+ 
+EL REGISTRY
+ 
+BLACKTOOTH FOREST
+EL-DEF
+EL: Blacktooth Forest | 1d8 | FP:1 | in forest, near forest
+1. Orc hunting sign - fresh spoor, butchered game hung high; warning without witnesses
+2. Orc Patrol – 2d4 scouts trail, assess, confront, measure response
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=13, HD=1, hp=6/6, AT=+2, Dmg=1d6, ML=8
+4. Blood-slick stones by stream - no body, no drag; silence thicker than it should be
+5. Fetish poles bound with bone/cord - not orc-make; left recently; purpose unreadable [UA]
+6. Sudden stillness - birds vanish, wind dies; pressure without contact; resumes after leaving
+7. Bear! - massive brown bear erupts from undergrowth. 
+Run BX-PLUG: reaction roll, possible combat.
+   BX: AC=14, HD=4, hp=30/30, AT=+6, Dmg=2d6, ML=7
+8. Old cairn disturbed - offerings scattered not stolen; message unclear; watchers implied [UA]
+END EL-DEF
+ 
+CARAS
+EL-DEF
+EL: Caras | 2d6 | FP:1 | capital streets, merchant quarter, underlayers, docks
+2. Bread shortage protest - crowd gathers, militia watches; tense but not violent yet; mediation or escalation
+3. Public execution - criminal hanged in square, crowd jeers or cheers; justice or tyranny, impossible to tell
+4. Barge recruiter seeks volunteers - offers coin and glory; hard sell but not kidnapping; resist or consider
+5-6. Merchant house brawl – 1d4+2 rival traders clash in street, knives drawn, watch paid to look away; pick side or flee. Run BX-PLUG: reaction roll, possible combat.
+   BX: AC=10, HD=1, hp=6/6, AT=+1, Dmg=1d4, ML=7
+7. Underlayer deal - whispered offer in alley, contraband or intelligence for sale; coin now, consequences later
+Run BX-PLUG: Skill Check (Observation) grants insight depending on roll; reaction roll
+8. Merchant mistake - trader assumes you're a mercenary for hire, offers coin to deliver urgent message to "the Helkar, wherever he's got to"
+Run BX-PLUG: Skill Check (Bureaucracy) grants advantage depending on roll; reaction roll
+9. Assassination attempt witnessed - knife in crowd, target down, killer flees; help or hinder, choose fast
+10. Plague house marked - yellow cloth on door, family dying inside, possessions ripe for taking or offer help; healer inside might reward courage
+11. Temple confrontation - Haadis cultist preaches in square, 1d4 Ush'n'Taalgith nomads object; violence imminent [UA]
+Run BX-PLUG: reaction roll, possible combat.
+   Haadis Cultist: BX: AC=15, HD=4, hp=25/25, AT=+8, Dmg=1d6+3, ML=9
+Ush’n’Taalgith Protestors: AC=12, HD=0, hp=6/6, Dmg=1d4, ML=7
+12. Hidden Temple contact - hooded figure approaches with message or offer; legitimate or trap, no way to know [UA]
+Run BX-PLUG: Skill Check (Knowledge) grants insight depending on roll; reaction roll
+
+END EL-DEF
+ 
+DEEP SWAMPS
+EL-DEF
+EL: Deep Swamps | 2d6 | FP:1 | Deep Swamps, Sighing Swamps, Sea of Birds
+2. Whitefang viper - unseen snake bites party member (agent chooses); tag as Venom:yes, invoke CL-FORGE to create Venom-[Character_Name] clock - see NSV-CLOCKS for template
+3. Bloodswamp hobgoblin hunting party - archers pin movement while ground traps the slow. BX-PLUG: reaction roll, possible combat.
+   BX: AC=15, HD=2, hp=10/10, AT=+2, Dmg=1d8, ML=9
+4. Drowned dead rise - 2d8 ghouls forms pull from peat and water; hunger-driven, relentless. Run BX-PLUG: reaction roll, possible combat
+   BX: AC=14, HD=2, hp=12/12, AT=+3, Dmg=1d6, ML=12
+5-6. False footing - crusted ground collapses into sucking black; armour and weapons drag victims under if not abandoned
+Run BX-PLUG: Save (PC, NPCs present) – on fail, remove item or weapon from that character permanently (record in LOSSES & IRREVERSIBLES).
+7-8. Swamp-gas ignition - lantern or spell-light triggers explosive vapour; fire, panic, choking smoke spread instantly
+Run BX-PLUG: Save (PC, NPCs present) – on fail, lose 2d6 hp.
+9. Totem of warding violated - ancient marker broken; territorial spirits or bound things respond with lethal force [UA]
+10. Channel ambush - narrow waterway funnels movement; submerged attackers strike boats, legs, mounts first – all characters present lose 1d6 hp [UA]
+11. Hunger-mire - necrotic seep drains strength with every step; exhaustion sets fast; collapse invites scavengers
+12. The deep watcher - pressure without form; those who linger feel singled out; disappearance leaves no tracks [UA]
+END EL-DEF
+ 
+EAST MARCH
+EL-DEF
+EL: East March | 1d8 | FP:1 | windswept moors, frontier, patrol routes
+1. Patrol skirmish aftermath - Gammarian soldiers dead, enemy fled, wounded man asks for water; grateful or suspicious depending on treatment
+2. Bandit toll-post - rope across trail, 1d4+2 armed men demand coin; escalates to violence if refused [UA]
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=13, HD=1, hp=6/6, AT=+2, Dmg=1d6, ML=8
+3. Weathered dolmen - eroded digit of lichen-crusted stone; carvings reveal existence of People of the Henge (see CANONICAL_TRUTHS in NSV-WORLD)
+4. Moorland farmstead - dry stone walls, sod roofs; wary welcome but hospitality if respectful
+5. Deserter caught - soldier claims he saw something in the East that broke his nerve; Vasha wants him questioned, not hanged (agent chooses Extinct/Fallen Culture, possible Discovery)
+6. Mercenary offer - captain seeks blades-for-hire, coin upfront, no questions about the work; odds of survival unknown
+7. Tribal nomads crossing - armed, wary, claim right-of-passage; respect or conflict, no middle ground
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=12, HD=2, hp=12/12, AT=+3, Dmg=1d6, ML=8
+8. Dragon! - Red wyrm, adult, scouring for prey, humans insignificant; this is Ragnoth (see NSV-WORLD)
+   Run BX-PLUG: reaction roll; if hostile → demands tribute, combat if denied
+   BX: AC=21, HD=9, hp=45/45, AT=+9, Dmg=3d10, ML=10
+END EL-DEF
+ 
+EASTERN SCARPS
+EL-DEF
+EL: Eastern Scarps | 1d8 | FP:2 | bleak highlands, wyvern-haunted, pilgrim routes
+1. Wyvern descends - predator strikes from above, talons first; fight or scatter; the weak are taken
+   Run BX-PLUG: combat
+   BX: AC=17, HD=8, hp=50/50, AT=+8, Dmg=3d8, ML=9
+2. Crucified bandits - three bodies nailed to posts, throats cut, coin purses empty; someone enforces law here [UA]
+3. Pilgrim camp attacked - tents burned, survivors fled east; tracks suggest raiders, not monsters [UA]
+4. Cairn of skulls - stacked knee-high, bleached white, eye sockets facing the path; territorial marker or curse-site [UA]
+5. Wounded mercenary - gutshot, fevered, begs for water; suspicious but human; help or leave
+6. Wyvern nest visible - rocky outcrop above, bones scattered below, shrieking young; mother circles overhead
+   Run BX-PLUG: reaction roll; if hostile → dives and threatens, if PC does not leave →combat
+   BX: AC=17, HD=8, hp=50/50, AT=+8, Dmg=3d8, ML=9
+7. Slave coffle passing - chain-gang of 12, hooded drivers, no questions answered; one prisoner mouths "help" silently [UA]
+8. Standing stones bleed - ancient megaliths weep red at dusk, but at dawn they shine gold; locals say both curse and blessing; trigger T&P while hallucinating being figment of someone else's dream
+END EL-DEF
+ 
+FISHER'S BEACH
+EL-DEF
+EL: Fisher's Beach | 1d6 | FP:1 | lonely dunes, Fisher Shrines, sea-watching
+1. Beached leviathan - massive sea-beast rotting on shore, scavengers feeding; meat spoiled but bones valuable
+2. Fisher ritual at tide-line - hooded figures chant, offerings laid; outsiders unwelcome but not attacked if respectful
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=12, HD=2, hp=15/15, AT=+3, Dmg=1d8, ML=11
+3. Fisher Shrine - cairn bound with twine, bait, lures, perform apotropaic offering?
+4. Smuggler cache discovered - buried crates in dunes, marked with unknown sigil; claim it or report it
+5. Sea-mist brings voices - fog rolls in thick, whispers heard but no speakers seen; locals flee indoors immediately
+6. Drowned bodies wash ashore - three corpses, hands bound, faces eaten by fish; murder upstream, current delivers evidence [UA]
+END EL-DEF
+ 
+FLOODPLAIN
+EL-DEF
+EL: Floodplain | 1d8 | FP:3 | broken culverts, sunken ruins, high weirdness
+1. Sinkhole opens - ground collapses, reveals ancient structure below; agent chooses from Extinct/Fallen Cultures; explore or avoid, instability remains
+2. The Lost Patrol – 2d4 undead Gammarian soldiers march in formation, purposeful, ignoring living unless approached; bypass or engage
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=22, HD=6, hp=45/45, AT=+10, Dmg=2d8, ML=12
+3. Ruined aqueduct crossing - ancient dwarven stonework crumbling, must cross or detour; collapse risk high
+   Run BX-PLUG: Save or lose 2d6 hp from collapse
+4. Flooded dwarven tomb entrance - water risen, stone door visible beneath surface; drain or dive, drowning risk
+Run BX-PLUG: Skill Check (Athletics) or lose 5d6 hp from inhaling water; if PC survives, agent creates Discovery for stone door.
+5. Necrotic seepage - ground oozes black fluid, plants dead, standing water toxic; cross carefully or detour
+   Run BX-PLUG: Save or agent tag as Necrotic Infection: yes, invoke CL-FORGE to create Venom-[Character_Name] clock - see NSV-CLOCKS for template
+6. Voidbeast Prison - self-devouring creature, spawn of Ziggurat, bound in ruins; insane, vicious. If PC investigates, it escapes – escalates into MAJOR threat over time [UA]
+7. Buried treasure exposed - flood erosion reveals cache, ancient coins and relics; claim it or report it
+8. Silence-Zone - area where no sound carries, unnatural, locals flee immediately; cross quickly or avoid entirely; Tharn-Krovekë is watching
+END EL-DEF
+ 
+FORGAARD
+EL-DEF
+EL: Forgaard | 1d6 | FP:2 | northern outpost, bleak, wilderness beyond, isolation
+**Note:** Forgaard is bleak but garrison endures; shared meals, dark humor, camaraderie under pressure
+1. Supply caravan late - expected days ago, garrison nervous; send patrol or wait
+2. Patrol lost - six soldiers overdue from Eastern Scarps, blood found, no bodies [UA]
+3. Morale sags - soldier caught hoarding supplies, others restless; discipline fraying but not broken
+4. Strange lights - seen on northern horizon, scouts report nothing; investigate or ignore [UA]
+5. Desertion attempt - soldier caught fleeing south, claims "something's coming"; execute or listen
+6. Northern trader arrives - claims passage through wilderness, offers strange goods; trust or suspicion
+END EL-DEF
+ 
+FORT AMON
+EL-DEF
+EL: Fort Amon | 1d6 | FP:2 | northern defensive post, elven forest proximity, wary peace
+1. Elf sighting - figure observed at forest edge, watching, gone when approached [UA]
+2. Patrol returns silent - soldiers back from Narrows, refuse to speak, eyes haunted; trauma or curse
+3. Forest gift - venison left at gate, no tracks; elves provide as wary peace-offering; accept with gratitude
+4. Guard vanishes - soldier on night watch missing, no alarm, no struggle; search or cover up [UA]
+5. Elf-shot warning - arrow embedded in gate at dawn, no message, meaning unclear; provocation or caution
+6. Dreams plague garrison - all report same nightmare (forest, voices, running); coincidence or magic
+END EL-DEF
+ 
+FORT HIGHGUARD
+EL-DEF
+EL: Fort Highguard | 1d6 | FP:2 | southern defensive bastion, conditions unknown
+1. Patrol overdue - expected from Hanging Cliffs, no word, supplies for rescue limited
+2. Cliff-fall victim - soldier's body recovered from rocks below, fall or push unclear [UA]
+3. Supply theft - stores pilfered, inside job suspected, morale fragile
+Run BX-PLUG: Skill Check (Observation) to gain insight [UA]
+4. Southern signals - smoke seen from Gloatburrow direction, goblin activity or worse [UA]
+5. Garrison sickness - fever spreads through fort, healer overwhelmed; quarantine or risk
+Run BX-PLUG: Skill Check (Healing) to stem fever [UA]
+6. Mercenary desertion - hired blades flee south, take supplies, no explanation given
+END EL-DEF
+ 
+FORT SEAWATCH - DOCKS AND ALLEYS
+EL-DEF
+EL: Fort Seawatch - Docks and Alleys | 2d6 | FP:1 | docks, alleys, warehouses, tavern belt, customs sheds, sea wall
+2. Dockside argument turns physical - sailors vs warehouse hands over unloading priority; blades almost drawn; watch slow to intervene
+3. Sea-wall stench and dead water - slick tide laps wrong; fish float belly-up near stones. Locals avert eyes.
+4. Customs delay without explanation - manifests returned with new markings; clerk quietly suggests "come back later"
+5. Shadowed tally-man - unmarked figure notes cargo movements from alley, never stopping long [UA]
+6. Tavern belt rumor - talk of ship arrived early, paid nobody; voices drop when Torlec mentioned
+7. Sudden squall off Sea of Birds - lines snap, crates shift; someone swears they heard singing beneath wind
+8. Warehouse seal changed overnight - official wax differs from yesterday; owner insists proper
+9. Harbour-watch pass-through - guards walk past without comment, eyes forward, as if instructed not to see [UA]
+10. Drowned thing hauled up - half-seen, quickly re-tarped; dockmaster orders dumped back before questions
+11. Coin-for-silence offer - runner proposes paying for discretion about schedules, no names
+12. Night lanterns dim - lamps gutter along sea wall; superstition says tide is "listening"
+END EL-DEF
+ 
+FORT VANGUARD
+EL-DEF
+EL: Fort Vanguard | 1d8 | FP:1 | eastern frontier, constant vigil, doctrine patrols
+1. Patrol returns bloodied - ambush in East March, casualties, survivors report contact; escalation pending [UA]
+2. Doctrine dispute – 1d4+2 soldiers argue over identification protocols, tension high; Vasha intervenes or violence erupts
+Run BX-PLUG: Reaction Roll, possible combat.
+   BX: AC=15, HD=3, hp=20/20, AT=+4, Dmg=1d8+2, ML=9
+3. Campfire story - off-duty soldiers tell tales of "the Helkar who founded this place years ago, before any of us signed up"; descriptions don't match you; they don't notice
+4. Desertion discovered - soldier fled in night, patrol sent to retrieve; dead or alive decision needed
+5. Mercenary offer - captain seeks blades for dangerous patrol, coin good, survival uncertain [UA]
+6. Metaphysical anomaly - Lithoe Wano-Kan investigates strange readings, requests escort; danger unknown [UA]
+7. Shared meal in barracks - soldiers invite you to break bread; stories, laughter, brief respite from frontier tension
+8. Patrol departs - disciplined commandos check gear, exchange grim jokes, march east; professionalism under pressure
+END EL-DEF
+ 
+FORT VANGUARD - YARDS & APPROACHES
+EL-DEF
+EL: Fort Vanguard - Yards & Approaches | 1d6 | FP:2 | yards, gate approaches, immediate exterior, river/floodplain edge, no interiors
+1. Fort Vanguard guards - papers / intent / inspection
+2. Toll or "donation" demanded by two guards  at chokepoint - corruption / leverage
+Run BX-PLUG: Reaction Roll, possible combat.
+   BX: AC=15, HD=3, hp=20/20, AT=+4, Dmg=1d8+2, ML=9
+3. Local dispute spills into path - civil tension / distraction
+4. Shadowed follower at medium distance - surveillance [UA]
+5. Sudden curfew enforcement - authority clamp / time pressure
+6. Gate-side theft attempt - petty crime / chase [UA]
+END EL-DEF
+ 
+FORT SEAWATCH
+EL-DEF
+EL: Fort Seawatch | 1d10 | FP:1 | port-fort, naval hub, boisterous independence, smuggling
+1. Naval brawl – 2d4 sailors vs marines, tavern destroyed, watch overwhelmed; join or flee
+   Run BX-PLUG: → combat
+   BX: AC=13, HD=1, hp=6/6, AT=+2, Dmg=1d6, ML=8
+2. Smuggler's offer - captain seeks cargo escort through customs, coin generous, risk high
+3. Press-gang violence - recruiters forcibly conscript dockworkers, crowd resists; help or hinder
+   Run BX-PLUG: Reaction roll, possible combat
+   BX: AC=13, HD=1, hp=6/6, AT=+2, Dmg=1d6, ML=8
+4. Pirate rumor - whispers of raiders offshore, naval patrols doubled; panic or preparation
+5. Torlec envoy arrives - unmarked vessel docks, diplomats disembark, port officials nervous [UA]
+6. Warehouse fire - arson suspected, rival merchant blamed, mob forms; justice or lynching
+7. Plague ship - vessel quarantined offshore, crew dying, captain begs for supplies; mercy or quarantine
+8. Secret cargo unloaded - crates moved at night, guard paid off, contents unknown; investigate or profit [UA]
+9-10. Tavern rumor - sailors debate what Helkar looks like; descriptions wildly contradict; "I heard he's seven feet tall"; "Nah, he's a woman"; "Pretty sure he's dead"
+END EL-DEF
+ 
+FURDACH
+EL-DEF
+EL: Furdach | 1d6 | FP:2 | gnome enclave, independent, militarized, tunnel-fighters
+1. Tunnel collapse - mining accident or goblin sabotage, gnomes trapped, rescue needed urgently
+Run BX-PLUG: Skill Check (Athletics) – successful roll saves more gnomes
+2. Surface patrol - gnomes intercept, screen for goblin spies, stern but professional; explain yourself, earn passage
+   Run BX-PLUG: If PC presses without permission→combat
+   BX: AC=16, HD=2, hp=12/12, AT=+2, Dmg=1d6, ML=8
+3. Trade dispute - gnome merchant claims fraud, threatens to close tunnel access; resolve or escalate
+4. Military drill - gnome warriors train in surface compound, impressive and intimidating; observe or join
+5. Exile encountered - gnome banished from Furdach, bitter, offers intelligence for coin; trust or distrust
+6. Tunnel invitation - rare honor; guided tour reveals gnomish engineering marvels; respect earns trust
+END EL-DEF
+ 
+FURDACH FOREST
+EL-DEF
+EL: Furdach Forest | 1d6 | FP:2 | mossy woodland, dark sylvan, gnome territory
+1. Gnome patrol intercepts - armed, professional, demands explanation for presence; satisfactory answer or confrontation
+   Run BX-PLUG: Reaction roll, possible combat
+   BX: AC=16, HD=2, hp=12/12, AT=+2, Dmg=1d6, ML=8
+2. Forest trap triggered - snare or pit, gnome-made, non-lethal but embarrassing; gnomes arrive to "discuss" trespass
+3. Corpse in tree - strangled, displayed; gnome justice or murder; investigate if you dare [UA]
+4. Carved warnings on trees - symbols mean nothing to outsiders, but locals flee immediately; heed or ignore
+5. Woodland shrine - moss-covered stones, wildflowers, sense of old peace; locals say gifts here bring luck
+6. Mushroom circle glowing - faint phosphorescence at dusk, locals say step inside means never returning; superstition or truth; trigger T&P (3 days), narrate unearthly phantasmagoric dream.
+END EL-DEF
+ 
+GLOATBURROW HILLS
+EL-DEF
+EL: Gloatburrow Hills | 2d6 | FP:4 | goblin-infested hell, lethal terrain
+2. Goblin warband ambush – 3d8 fighters, coordinated, vicious; escape or die; they take prisoners for sport; 1d6 - on a 6, one Party NPC is abducted
+   Run BX-PLUG: Reaction roll, possible combat
+   BX: AC=14, HD=1, hp=5/5, AT=+1, Dmg=1d6, ML=6
+3. Pitfall trap - concealed with branches, stakes below, goblin-made; impalement; envenomed; party member (agent chooses) tagged as Venom:yes, invoke CL-FORGE to create Venom-[Character_Name] clock - see NSV-CLOCKS for template
+4. Tortured captive - human or dwarf, mutilated, begging for death; goblins return soon; mercy killing or rescue attempt
+5-6. Goblin feast-site - fire-pit with human bones, still smoldering; warriors nearby, drunk on stolen wine; vulnerable or trap
+7-8. Hunting party tracking you - goblins shadow your movement, waiting for weakness; ambush inevitable unless you strike first [UA]
+9. Slave pens - wooden cages with captives, starved and beaten; guarded lightly but escape draws pursuit
+10. Chieftain's camp visible - smoke and drums, 50+ goblins, sacrificial altar with fresh blood; avoid or assault
+   Run BX-PLUG: Reaction roll, possible combat
+   Goblins: BX: AC=14, HD=1, hp=5/5, AT=+1, Dmg=1d6, ML=6
+   Goblin Champion: BX: AC=18, HD=3, hp=20/20, AT=+3, Dmg=1d8, ML=9
+   Goblin Chief: BX: AC=20, HD=5, hp=40/40, AT=+8, Dmg=1d8+4, ML=10
+11. Wounded goblin left behind - dying, vicious, attempts to wound or poison even in death-throes; no surrender; party member (agent chooses) tagged as Venom:yes, invoke CL-FORGE to create Venom-[Character_Name] clock - see NSV-CLOCKS for template
+12. Goblin corpse-pile - territorial marker or battlefield aftermath, reeking, fly-covered; message or warning
+END EL-DEF
+ 
+GREY PLAINS
+EL-DEF
+EL: Grey Plains | 1d8 | FP:1 | heartland, merchant roads, pilgrim routes, nomad crossings
+1. Bandit toll - armed men demand coin, nervous not vicious; negotiate or intimidate; violence avoidable
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=13, HD=1, hp=6/6, AT=+2, Dmg=1d6, ML=8
+2. Caravan convergence - three trade lines intersect unexpectedly; guards negotiate right-of-way while scribes argue precedence; one merchant offers to share camp and wine; road-camaraderie eases tension
+3. Pilgrims under escort - mixed group bound for shrine passes with official tokens; one escort watches horizon instead of road [UA]
+4. Nomad encampment at distance - banners mark lawful passage; watchers mirror your movement without approach [UA]
+5. Messenger relay - exhausted rider swaps horses at speed, refusing questions; destination sealed and stamped
+6. Broken cart - farmer's grain spilled, family struggling; help earns gratitude and local goodwill
+7. Rumour-market - travellers trade news of edicts, executions, border shifts; consensus fractures mid-conversation [UA]
+8. Silent patrol crossing - disciplined troops move perpendicular to road, neither slowing nor acknowledging witnesses; insignia deliberately plain [UA]
+END EL-DEF
+ 
+HANGING CLIFFS
+EL-DEF
+EL: Hanging Cliffs | 1d6 | FP:2 | pinnacles, near-inaccessible, seagull colonies
+1. Climber's corpse - body dangling from rope halfway down cliff-face, gear intact, cause of death unclear
+2. Seagull attack - nesting colony defends territory; dive-bombing, claws, beaks; retreat or endure
+Run BX-PLUG: Skill Check (Animal Handling) negates attack; on fail take 1d6 Dmg
+3. Cliff-path crumbles - ancient trail collapses underfoot; catch yourself or fall to rocks below
+Run BX-PLUG: Save or character falls, taking 5d6 Dmg
+4. Hermit cave-dweller - mad or holy, living in cliff-face hollow, offers wisdom or violence; impossible to predict [UA]
+5. Rope bridge half-cut - sabotage or decay, spans chasm, sways dangerously; cross carefully or find another route
+6. Smuggler's cache hidden - cliff-face hollow conceals stolen goods; claim it, report it, or ignore it
+END EL-DEF
+ 
+HINTERLANDS
+EL-DEF
+EL: Hinterlands | 1d6 | FP:1 | western prairie, sunset vistas, merchant routes
+1. Caravan attacked - survivors wounded, grateful for escort; share stories and supplies around fire
+2. Prairie nomads demand tribute - horsemen block path, no threat yet, but hands rest on weapons; pay or fight [UA]
+3. Cattle stampede - panic-driven herd of shaaggy cattle crashes through camp or path; dodge or be trampled
+Run BX-PLUG: Save or take 3d6 Dmg
+4. Wildfire on horizon - smoke billows, wind shifts, flames race across dry grass; outrun it or find shelter
+Run BX-PLUG: Save or take 5d6 Dmg
+5. Plague-marked homestead - dead inside, but one child survived, hiding, terrified; save or leave
+6. Sunset stone circle - megaliths cast long shadows, locals say dead walk here after dark; avoid or investigate; narrate warping of time, future v past, UBER - Reduce all active clocks 1 step (min 1)
+END EL-DEF
+ 
+KHUZDUK HILLS
+EL-DEF
+EL: Khuzduk Hills | 1d8 | FP:2 | rolling hills, dwarven ruins, cairn paths
+1. Bear charges - territorial, hungry, or defending cubs; steel or retreat
+Run BX-PLUG: reaction roll, possible combat.
+   BX: AC=14, HD=4, hp=30/30, AT=+6, Dmg=2d6, ML=7
+2. Dwarven tomb cracked open - sarcophagus lid smashed, grave goods scattered, something dragged out recently
+3. Scavenger camp - five men picking ruins clean, nervous, armed; offer to share loot or demand you leave
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=13, HD=1, hp=6/6, AT=+2, Dmg=1d6, ML=8
+4. Runic warning stone - dwarven script, unreadable but ominous; carved faces scream silently in the rock
+5. Abandoned mine entrance - timber supports rotted, rope dangling into dark; echoes suggest vast space below
+6. Cairn path splits - left route marked with white stones (safe?), right with black (forbidden?); locals never explain [UA]
+7. Dead traveler, throat torn - body days old, pack looted, drag marks lead uphill into boulder field [UA]
+8. Hilltop ruins smoke at night - no fire visible by day, but ash-smell lingers; locals avoid the place
+END EL-DEF
+ 
+KHUZDUK PEAKS
+EL-DEF
+EL: Khuzduk Peaks | 1d6 | FP:3 | high mountains, ancient ruins, deep secrets
+1. Rockslide triggered - unstable scree gives way; dodge or be swept downslope with broken bones
+Run BX-PLUG: Save or take 3d6 Dmg
+2. Frozen corpse in ice - face pressed against glacier surface, eyes open, ancient armor visible beneath; ice cracks sometimes
+3. Mountain shrine defiled - offerings smashed, idols toppled, blood dried on stone; foul marks of Cult of Orcus [UA]
+4. High pass ambush – 1d3+2 bandits use altitude and terrain; demand toll or blood; no mercy for the weak [UA]
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=17, HD=4, hp=25/25, AT=+7, Dmg=2d6, ML=10
+5. Ruin entrance unsealed - massive stone door ajar, darkness beyond, wind howls out carrying old incense smell
+6. Dragon sign - claw marks in rock face, scales glittering in crevices, sulfur stench; something roosts here [UA]
+END EL-DEF
+ 
+KHUZDUKAN
+EL-DEF
+EL: Khuzdukan | 1d8 | FP:3 | ruined dwarven realm, contested, abandoned, legacy power
+1. Tomb raiders - scavengers picking through ruins, armed, nervous; share loot or fight
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=17, HD=4, hp=25/25, AT=+7, Dmg=2d6, ML=10
+2. Dwarven ghost sighting - spectral figure in ancient armor, vanishes when approached [UA]
+3. Collapse danger - unstable ruins shift, deadly rockfall imminent; flee or stabilize
+Run BX-PLUG: Save or take 3d6 Dmg
+4. Runic trap triggered - ancient ward activates, magic or mechanism, damage likely
+Run BX-PLUG: Save or take 5d6 Dmg
+5. Treasure cache found - dwarven gold and weapons, cursed or blessed, impossible to tell
+6. Dwarven survivors - pockets endure, fiercely resilient, trust is earned, not granted [UA]
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=22, HD=2, hp=10/10, AT=+2, Dmg=1d6, ML=8
+7. Deep entrance unsealed - stairs descending into dark, fresh air rising, something opened it recently
+8. Underground sound - hammering or drumming from below, rhythmic, relentless; investigate or flee [UA]
+END EL-DEF
+ 
+NARROWS
+EL-DEF
+EL: Narrows | 1d6 | FP:3 | grassy uplands, overshadowed by Highfell Forest
+1. Forest-edge watchers - shapes in trees at distance, never quite visible; tracking or evaluating [UA]
+2. Elf-shot corpse - traveler dead, single arrow wound, elven make, no warning; territorial enforcement
+3. Cairn warning line - stones mark boundary, beyond is Highfell; locals never cross, say those who do vanish
+4. Distant horn-call - three notes, elven, direction unclear; answer or silence, consequences unknown
+5. Game trail blocked - rope across path, no sign, no guard; cross and be watched, detour and admit fear
+6. Murdered patrol - Gammarian soldiers dead, arrows in backs, dragged to forest edge as display [UA]
+END EL-DEF
+ 
+RIVER OF BIRDS
+EL-DEF
+EL: River of Birds | 1d6 | FP:1 | delta lowlands, rushes, fantasy bird-life
+1. Barge collision - two boats tangle, crews fight over blame, cargo spills; intervene or exploit
+2. Bird attack - massive waterfowl swarm defends nesting ground; retreat or endure pecking assault - not the pecking assault! aaiieeee!!!
+Run BX-PLUG: Skill Check (Animal Handling) negates attack; failure deals 3d6 Dmg and humiliation
+3. Drowned smuggler - body caught in reeds, cargo sunk nearby, rival smugglers watching to see who claims it [UA]
+4. Fisherman's curse - nets empty for days, locals blame outsiders, violence brewing; appease or ignore
+5. River-shrine violated - offerings scattered, idol broken, locals demand justice or blood; find culprit or become scapegoat
+6. Plague barge - flatboat drifts unmanned, yellow cloth tied to mast, corpses visible; salvage or avoid
+END EL-DEF
+ 
+RIVERLANDS
+EL-DEF
+EL: Riverlands | 1d6 | FP:1 | confluence, trade routes, customs, barge traffic
+1. Barge dispute turns violent - Golden Hind and Free Hope merchants brawl over right-of-way; blood in water, bodies floating; law absent or ignored
+2. River corpse caught in weeds - bloated, naked, throat cut, purse missing; current brought it from upstream [UA]
+3. Toll-collector murdered - official found knifed in customs shed, records burned, coins stolen; investigation pending [UA]
+4. Smuggler's bribe offer - whispered proposal to look away while cargo passes; coin now, consequences later
+5. Drowned child recovered - fisher nets body, crowd grieves; locals suspect foul play upriver [UA]
+6. Barge-master's warning - Free Hope captain speaks low: "River's taking too many. Don't travel alone. Don't travel at night."
+END EL-DEF
+ 
+RIVERWATCH
+EL-DEF
+EL: Riverwatch | 1d8 | FP:1 | river confluence, customs sheds, lockworks, merchant quarter
+1. Blacktooth orc traders barter with Ush'n'Elthar - loud but good-natured; cultural tension without violence
+2. River lock dispute - barge crews shout over priority; watch officer cites regulation while someone mutters "orders from above"
+3. Warehouse hush - workers fall silent as you pass; eyes flick to door marked with fresh chalk sigil [UA]
+4. Smuggler caught - contraband discovered, owner claims innocence, crowd gathering; mercy or law
+5. Sudden inspection - patrol searches for contraband with unusual care; list short, specific, unexplained; seeking signs of Cult of Orcus [UA]
+6. Customs confusion - official demands papers, asks your business; if you mention identity a Helkar, he sighs: "Everyone claims Helkar sent them. Show me a seal or move along."
+7. Riverbank omen - fish drift belly-up in narrow eddy; locals pretend not to see, step wide around water [UA]
+8. Messengers' shadow - runner swaps satchels behind customs sheds; when noticed, both vanish into routine traffic too cleanly [UA]
+END EL-DEF
+ 
+SEA OF BIRDS
+EL-DEF
+EL: Sea of Birds | 2d6 | FP:3 | inland sea, deep horrors, bird colonies on shore
+2. Leviathan surfaces - massive form breaches, capsizes small craft, disappears; survival or adrift
+Run BX-PLUG: Skill Check (survival) or invoke T&P (1 day spent adrift)
+3-4. Storm strikes - wind, waves, lightning; vessel damage likely, navigation impossible; ride it out or beach. Invoke T&P – no travel for one day.
+5-6. Drowned dead rise – 1d4 ghouled corpses claw at hull or shore, hunger-driven, relentless; fight or flee
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=12, HD=2, hp=10/10, AT=+2, Dmg=1d6, ML=8
+7-8. Salvage opportunity - wrecked vessel visible, cargo floating; claim it before rivals or before it sinks
+9-10. Pirates approach - armed boat, aggressive posture, demand cargo or blood; negotiate or fight [UA]
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=16, HD=3, hp=15/15, AT=+3, Dmg=1d6, ML=8
+11. Sea-mist brings madness - thick fog, voices heard, direction lost; those who wander too far never return
+12. Kraken sign - massive tentacle visible at distance, capsized boats, locals flee shore immediately [UA] The God of the Deep Wakes!
+END EL-DEF
+ 
+SEAWATCH RAMPARTS
+EL-DEF
+EL: Seawatch Ramparts | 1d8 | FP:1 | defensive bulwarks, trade houses, sea proximity
+1. Brawl in trade district – 2d4 sailors vs merchants, knives drawn, watch slow to respond; join or avoid
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=13, HD=1, hp=6/6, AT=+2, Dmg=1d6, ML=8
+2. Press-gang attempt -1d2+1 naval recruiter seeks "volunteers," targets lone travelers; resist or comply
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=13, HD=1, hp=6/6, AT=+2, Dmg=1d6, ML=8
+3. Tavern rumor-trade - whispered intelligence for sale, accuracy unknown; coin now, truth later
+4. Customs shakedown - official demands "fee" for passage, legal or not; pay or escalate
+5. Warehouse fire - arson or accident, goods burning, owner screaming about theft; help or loot
+6. Public execution - pirate or smuggler hanged at dock's edge, crowd watches; justice or warning
+7. Covert meeting - Whispers of ancient powers; denial; arcane tattoos glimpsed; the Dead Gods of Krovekea hunger
+8. White wyrm - Young white dragon sighted; curious; unafraid; few know it is Soreth
+   Run BX-PLUG: reaction roll; if hostile → mocks and defecates on PC, leaves laughing
+   BX: AC=17, HD=7, hp=35/35, AT=+7, Dmg=3d8, ML=5
+
+END EL-DEF
+
+SIGHING SWAMPS 
+EL-DEF
+EL: Sighing Swamps | 1d8 | FP:1 | rushes whispering, strange birds, Vornost looms
+1. Marsh gas pocket ignites — lantern or torch triggers explosive vapour
+Run BX-PLUG: Save or 2d6 fire damage; smoke draws predators [UA]
+2. Vornost patrol — garrison soldiers on marsh perimeter, professional but wary; papers checked; "Castellan's orders: no unauthorized approach to low stairs"; escort offered or enforced
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=13, HD=1, hp=6/6, AT=+2, Dmg=1d6, ML=8
+3. Bone-reed thicket — rushes sigh with voices; old battlefield beneath; disturbing them wakes restless spirits; 
+Run BX-PLUG: Save or nightmares plague next rest (narrate when time passes)
+4. Sinking ground — stable-seeming path collapses into sucking black mud
+Run BX-PLUG: Save (Athletics grants +2) or trapped waist-deep; armor/heavy gear drags victim under in 1d6 rounds unless aided
+5. Heron-fisher's warning — local woman netting eels, sees you approaching Vornost's shadow; "The low stairs? Folk who use that entrance don't want to be seen. You in trouble, or making it?" — offers marsh-path guidance for coin; honest but wary
+6. Fever-mist rolls in — thick yellow fog smelling of rot
+Run BX-PLUG: All in mist Save or contract Swamp Fever (lose 1 hp/day for 3 days; Healing skill halts); visibility drops to arm's length; disorientation; voices heard in mist [UA]
+7. Corpse-willow grove — gnarled trees hung with moss and... rags? No. Bodies. Old. Hanged men, throats cut, Vornost garrison tabards rotted through. Deserters or traitors. Message without words. Do not linger. [UA]
+8. Black water crossing — deep channel, no bridge; swim (exhausting) or find hidden fisherman's raft (Observation skill check reveals); submerged things brush legs; harmless but unnerving
+END EL-DEF
+
+SOUTHERN SCARPS
+EL-DEF
+EL: Southern Scarps | 1d6 | FP:2 | gorse moors, heather, birds of prey, wilderness overlook
+1. Raptor nest overhead - giant eagles or hawks; swoop to defend territory; retreat or fight uphill battle
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=13, HD=4, hp=25/25, AT=+4, Dmg=2d8, ML=6
+2. Moorland hermit - lives in stone hut, offers shelter and stew; strange but kind; prophecies cryptic but true
+3. Ancient battlefield - bones in heather, rusted swords; at dusk, faint music heard; sorrow not menace
+4. Wildfire scar - burnt moorland, ash-covered, unstable footing; evidence of deliberate burn, not lightning
+5. Standing stone with offerings - piled gifts, some fresh; locals say leave something or face bad luck; superstition or curse
+6. Hunter's corpse - bow nearby, throat torn, no animal tracks; killed by something that walks upright [UA]
+END EL-DEF
+ 
+SOUTHERN SHORE
+EL-DEF
+EL: Southern Shore | 1d6 | FP:1 | stony beaches, driftwood, weird things washed up
+1. Beachcomber murdered - throat cut, bag of salvage stolen, killer's tracks lead into surf and vanish [UA]
+2. Strange idol washed up - carved stone, tentacled form, eyes follow observer; locals pay to destroy it or keep it secret
+3. Slaver skiff beached - oars broken, chains empty, captain dead; cargo escaped or was taken [UA]
+4. Tide brings rot - fish by thousands dead on shore, stinking, inedible; locals say sea is sick, omen of worse to come
+5. Hermit's driftwood shack - mad prophet or dangerous cultist, offers prophecy or curses; wisdom or madness, impossible to tell
+6. Stone circle submerged - visible only at low tide, carved with warnings in unknown script; water rises fast, cutting off retreat; learn existence of Dead God of Krovekea
+END EL-DEF
+ 
+TEMPLE OF THE SUN
+EL-DEF
+EL: Temple of the Sun | 1d8 | FP:2 | doctrinal conflict, legitimacy contest, religious pressure
+1. Doctrinal riot - Ush'n'Elthar, Ush'n'Taalgith clash in temple grounds, blood spilled on sacred stone; end it or flee
+2. Heretic trial - Sundancer Dervish accused, crowd divided; reasoned voices argue for mercy; outcome unclear
+3. Pilgrimage interrupted - travelers attacked en route, survivors shelter in temple; bandits or doctrine [UA]
+4. Schism declared - senior dervish announces separation from own faction; civil war or reconciliation
+5. Prophet arrives - wandering holy man claims visions, draws crowds; madman or messenger; reveals one secret/Canonical_Truth
+6. Sacrifice ritual - blood offering traditional but symbolic; animal not human; solemn not horrific
+7. Temple guards clash - two patrols from rival factions meet, weapons drawn; intervene or watch
+8. Divine manifestation - light or voice from altar, crowd falls prostrate; miracle or trick [UA]
+END EL-DEF
+ 
+VALLANDOR MOUNTAINS
+EL-DEF
+EL: Vallandor Mountains | 1d8 | FP:4 | impassable peaks, House Vallandor patrols, brutal enforcement
+1. Vallandor patrol – 1d6+5 armored riders, challenge and demand papers; satisfactory or execution [UA]
+   Run BX-PLUG: reaction roll; if hostile → demand papers, combat if refused
+   BX: AC=16, HD=2, hp=10/10, AT=+3, Dmg=1d8, ML=9
+2. Mountain pass ambush - bandits or deserters, desperate, hidden above; fight through or negotiate
+3. Avalanche Zone - unstable snow, one wrong step kills; navigate carefully or trigger collapse
+Run BX-PLUG: Save or take 3d6 damage
+4. Frozen corpse on trail - Torlec soldier, weeks dead, armor intact, warning marker or casualty
+5. Border fort in distance - Vallandor banner, smoke rising, drums audible; avoid or approach at risk
+6. Smuggler's tunnel entrance - concealed cave, rope and pitons, dangerous but avoids patrols; collapse risk high
+7. Border warning - empty cages suspended from cliff; Vallandor message without current victims
+8. Dragon lair visible - cave entrance high above, sulfur smell, claw marks in stone; Glaurungoriel or another
+END EL-DEF
+ 
+VARGOL'S REACH
+EL-DEF
+EL: Vargol's Reach | 1d8 | FP:2 | southern tundra, wolves, dragon sightings
+1. Worg pack hunts – 1d6+6  animals, coordinated, desperate; fight or flight, blood either way
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=14, HD=5, hp=30/30, AT=+5, Dmg=2d4, ML=6
+2. Dragon overhead - Glaurungoriel passes low, shadow sweeps across tundra, it sees, knows, will remember you
+3. Frozen battlefield - old war site, corpses preserved in ice, weapons and armor intact; cursed or treasure
+4. Grey Moon barbarian warband - 20 riders, furs and steel, challenge or tribute demanded; single combat offered as alternative [UA]
+   Run BX-PLUG: reaction roll; if hostile → demand papers, combat if refused
+   BX: AC=16, HD=2, hp=10/10, AT=+3, Dmg=1d8, ML=9
+5. Blizzard strikes - visibility drops to arm's length, cold kills in hours; shelter or die
+6. Dire worg - sighting of single majestic beast, observes, vanishes (Pony, pet to Thoron, secret)
+7. Avalanche Zone - unstable snowpack above, one wrong step triggers collapse; bury or be buried
+Run BX-PLUG: Save or take 5d6 damage
+8. Ice-wyrm den - massive tunnel carved through permafrost, scales glittering in walls; something lives here
+END EL-DEF
+ 
+VORNOST
+EL-DEF
+EL: Vornost | 1d10 | FP:1 | fortress-capital, Black Fortress, military heart, court intrigue
+1-2. Guard inspection hardens - papers demanded, questioning aggressive; someone's orders, but whose [UA]
+3. Court summons - messenger seeks you, or Castellan Joppa requests audience; ignore at your peril
+4. Barracks dice game - soldiers gamble and joke; invite you to join; camaraderie before violence
+5. Political rival encountered - faction opposed to Helkar, offers alliance or threat; choose sides or stay neutral
+6. Spy caught - suspected infiltrator dragged to dungeons, screaming innocence; truth or lies unknown [UA]
+7. Religious confrontation - Haadis priest vs Sundancer dervish, crowd gathering; violence brewing
+8. Secret meeting proposed - note delivered, midnight rendezvous, location dangerous; opportunity or ambush [UA]
+9. Dragon! Young white dragon departs, returns, roosts (Soreth)
+   Run BX-PLUG: reaction roll; if hostile → roars in defiance, then flies quickly away
+   BX: AC=17, HD=7, hp=35/35, AT=+7, Dmg=3d8, ML=5
+10. Guard challenge - gate guard stops you: "State your business." If you claim you are Helkar, young guard laughs nervously, older guard studies you carefully, says nothing
+END EL-DEF
+ 
+WESTERN SCARPS
+EL-DEF
+EL: Western Scarps | 1d6 | FP:3 | rugged highlands, Edhellar ruins, dimensional weirdness
+1. Ruin entrance unsealed - Edhellar architecture, door ajar, darkness beyond; something opened it from inside
+2. Reality flicker - sky shifts color, ground tilts, voices speak in reverse; dimensional instability, passes quickly but disorients; set any Venom:yes to Venom:no
+3. Corrupted Edhellar sighting - warped elf-shape at distance, watching, then gone; territorial or hunting [UA]
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=30, HD=10, hp=60/60, AT=+15, Dmg=3d8, ML=9
+4. Stone circle hums - low vibration, headache-inducing, locals say approach causes madness; cross quickly or detour
+5. Traveler's corpse, no wound - body intact, expression of terror, no marks; locals say "the land took him"
+6. Time distortion - sun position wrong, shadows fall at impossible angles; navigate by landmarks, not sky
+END EL-DEF
+ 
+WHITEAGLE KEEP
+EL-DEF
+EL: Whiteagle Keep | 1d8 | FP:2 | mountain fortress, Torlec border, dragon proximity
+1. Border incident - Vallandor patrol violated Gammarian territory, Whiteagle officers debate response; war or restraint
+2. Dragon! - Glaurungoriel lands in immense nest above keep, roars, proclaiming territory, none defy
+   Run BX-PLUG: reaction roll; if hostile → demands obeisance, combat if refused
+   BX: AC=18, HD=10, hp=70/70, AT=+12, Dmg=5d10, ML=11
+3. Supply shortage - stores depleted, winter coming, rationing imposed; morale fragile
+4. Spy suspected - officer accused of Torlec contact, evidence thin; interrogate or trust
+5. Avalanche warning - scouts report unstable snowpack above keep; evacuate or reinforce
+Run BX-PLUG: Save or take 3d6 damage
+6. Deserter caught - soldier fled toward Torlec lines, brought back in chains; execute or question
+7. Mountain pass blocked - rockslide or sabotage, trade route cut; dig out or find alternate
+8. Torlec envoy requests parley - diplomat at gate, terms unclear; negotiate or refuse [UA]
+END EL-DEF
+
+

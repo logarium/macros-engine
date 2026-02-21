@@ -1,0 +1,21 @@
+{
+  "responses": [
+    {
+      "id": "req_001",
+      "type": "CLOCK_AUDIT_REVIEW",
+      "content": "No reunion at Seawatch/Riverwatch this day. Party departing Khuzdukan. No advance.",
+      "state_changes": []
+    },
+    {
+      "id": "req_002",
+      "type": "NPAG",
+      "content": "5 NPCs act offscreen on 27th Ilrym. Lithoe begins rest (sending network prep deferred until rested). Lalholm tends to Lithoe, begins theological prep for sending anchor. Thordak maintains ward-chamber security, reports silence holds. Joppa at Vornost continues Dragon Throne preparations, second courier returns confirming Thoron heading south. Conorth at Caras processes Vael evidence \u2014 initial review, no action yet.",
+      "state_changes": [
+        {
+          "type": "fact",
+          "text": "NPAG 27th Ilrym: Lithoe resting (critical exhaustion); Lalholm theological prep; Thordak ward-chamber watch (silence holds); Joppa Dragon Throne prep (second courier returned); Conorth reviewing Vael customs evidence (no action yet)"
+        }
+      ]
+    }
+  ]
+}
