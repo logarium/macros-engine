@@ -732,8 +732,8 @@ class GameLoop:
         self.state.reset_session()
         self.creative_queue.call_count = 0
 
-        # Run ZONE-FORGE cascade (DG-13)
-        forge_result = run_zone_forge(self.state)
+        # Run ZONE-FORGE cascade (DG-13) — session_start triggers NARR_SESSION_START
+        forge_result = run_zone_forge(self.state, session_start=True)
 
         self._log_action("SESSION",
                          f"=== SESSION {sid} STARTED ===")
