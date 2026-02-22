@@ -53,7 +53,7 @@ def _with_pc_cohesion(state, zone_name: str) -> list:
     return moved
 
 
-def run_zone_forge(state) -> dict:
+def run_zone_forge(state, session_start: bool = False) -> dict:
     """
     ZONE-FORGE cascade (DG-13) — full 7-step implementation.
 
@@ -179,9 +179,10 @@ def run_zone_forge(state) -> dict:
         )
         forge_requests.append(req)
 
-    # ── SESSION START NARRATION (fires after all mechanical forges) ──
-    narr_req = build_narr_session_start(state)
-    forge_requests.append(narr_req)
+    # ── SESSION START NARRATION (only on actual session start) ──
+    if session_start:
+        narr_req = build_narr_session_start(state)
+        forge_requests.append(narr_req)
 
     return {
         "status": "ok",

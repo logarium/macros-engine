@@ -1959,11 +1959,12 @@ def export_save(filepath: str = "") -> str:
 
 
 @server.tool()
-def zone_forge(zone_name: str = "") -> str:
+def zone_forge(zone_name: str = "", session_start: bool = False) -> str:
     """
     Run ZONE-FORGE checks for a zone (DG-13). Determines what content
     gaps exist and queues only necessary creative requests.
     If zone_name is empty, uses current PC zone.
+    Set session_start=true to include NARR_SESSION_START scene-setting.
     Returns a summary of what was found and what was queued.
     """
     global _pending_llm_requests, _day_logs
@@ -1977,7 +1978,7 @@ def zone_forge(zone_name: str = "") -> str:
     state.pc_zone = zone_name
 
     from zone_forge import run_zone_forge
-    result = run_zone_forge(state)
+    result = run_zone_forge(state, session_start=session_start)
 
     # Restore pc_zone if this was a manual check on a different zone
     if zone_name != old_zone:
