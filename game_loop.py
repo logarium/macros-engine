@@ -307,13 +307,26 @@ class GameLoop:
             with open(engines_path, "r", encoding="utf-8") as f:
                 raw_blocks = extract_el_def_blocks(f.readlines())
             seeded = 0
+            patched = 0
             for block_lines in raw_blocks:
                 parsed = parse_block(block_lines)
                 if not parsed:
                     continue
                 zone = parsed["zone"]
                 if zone in state.encounter_lists:
-                    continue  # Don't overwrite save data
+                    # Patch missing entries into existing EL
+                    existing = state.encounter_lists[zone]
+                    existing_ranges = {e.range for e in existing.entries}
+                    for e in parsed["entries"]:
+                        if e["range"] not in existing_ranges:
+                            existing.entries.append(EncounterEntry(
+                                range=e["range"],
+                                prompt=e["prompt"],
+                                ua_cue=e.get("ua_cue", False),
+                                bx_plug=e.get("bx_plug", {}),
+                            ))
+                            patched += 1
+                    continue
                 entries = []
                 for e in parsed["entries"]:
                     entries.append(EncounterEntry(
@@ -330,9 +343,9 @@ class GameLoop:
                     entries=entries,
                 )
                 seeded += 1
-            if seeded:
-                self._log_action("SESSION",
-                                 f"EL-DEF backfill: seeded {seeded} encounter list(s)")
+            if seeded or patched:
+                msg = f"EL-DEF backfill: seeded {seeded}, patched {patched} entries"
+                self._log_action("SESSION", msg)
         except Exception as e:
             self._log_action("SESSION", f"EL-DEF backfill failed: {e}")
 
