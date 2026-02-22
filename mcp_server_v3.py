@@ -768,6 +768,13 @@ def update_npc(
     with_pc: str = "",
     is_companion: str = "",
     history_event: str = "",
+    bx_ac: int = -1,
+    bx_hd: int = -1,
+    bx_hp: int = -1,
+    bx_hp_max: int = -1,
+    bx_at: int = -1,
+    bx_dmg: str = "",
+    bx_ml: int = -1,
 ) -> str:
     """
     Create or update an NPC in the save file.
@@ -775,6 +782,7 @@ def update_npc(
     If NPC does not exist, a new entry is created.
     with_pc and is_companion: pass "true" or "false" as strings.
     history_event: if provided, appends to the NPC's history log.
+    BX stats: pass -1 to leave unchanged; 0+ to set. bx_dmg uses "" to leave unchanged.
     """
     state = _get_state()
     npc = state.get_npc(name)
@@ -802,6 +810,15 @@ def update_npc(
         npc.is_companion = True
     elif is_companion.lower() in ("false", "no"):
         npc.is_companion = False
+
+    # BX combat stats (-1 = unchanged, 0+ = set)
+    if bx_ac >= 0: npc.bx_ac = bx_ac
+    if bx_hd >= 0: npc.bx_hd = bx_hd
+    if bx_hp >= 0: npc.bx_hp = bx_hp
+    if bx_hp_max >= 0: npc.bx_hp_max = bx_hp_max
+    if bx_at >= 0: npc.bx_at = bx_at
+    if bx_dmg: npc.bx_dmg = bx_dmg
+    if bx_ml >= 0: npc.bx_ml = bx_ml
 
     npc.last_updated_session = state.session_id
 

@@ -782,11 +782,36 @@ def encounter_gate(state: GameState) -> dict:
                     "ua_cue": entry.ua_cue,
                     "bx_plug": entry.bx_plug if has_bx else None,
                 }
+
+                # BX-PLUG §2.1: Reaction roll on first NPC contact
+                reaction = None
+                if has_bx:
+                    reaction_roll = roll_dice("2d6", "Reaction roll (BX-PLUG §2.1)")
+                    rt = reaction_roll["total"]
+                    if rt <= 2:
+                        reaction_band = "hostile"
+                    elif rt <= 5:
+                        reaction_band = "unfriendly"
+                    elif rt <= 8:
+                        reaction_band = "neutral"
+                    elif rt <= 11:
+                        reaction_band = "friendly"
+                    else:
+                        reaction_band = "enthusiastic"
+                    reaction = {
+                        "roll": reaction_roll,
+                        "total": rt,
+                        "band": reaction_band,
+                    }
+                    result["encounter"]["reaction"] = reaction
+                    state.add_fact(f"Reaction roll: 2d6={rt} -> {reaction_band}")
+
                 result["llm_request"] = {
                     "type": "NARR_ENCOUNTER",
                     "context": f"Encounter in {state.pc_zone}: {entry.prompt}",
                     "bx_plug": has_bx,
                     "bx_plug_detail": entry.bx_plug if has_bx else None,
+                    "reaction": reaction,
                     "ua_cue": entry.ua_cue,
                 }
                 state.add_fact(f"Encounter in {state.pc_zone}: {entry.prompt}")

@@ -19,7 +19,7 @@ from dataclasses import dataclass, field
 
 from dataclasses import asdict as _asdict
 from models import GameState, state_to_json, state_from_json
-from engine import run_day
+from engine import run_day, clock_audit, evaluate_halt_conditions
 from travel import get_crossing_points, execute_travel, validate_travel
 from creative_bridge import (
     CreativeQueue, CreativeRequest, CreativeResponse,
@@ -673,8 +673,43 @@ class GameLoop:
                 self._log_action("ERROR",
                                  f"[{entry.get('applied', '?')}] {entry['error']}")
 
+        # Re-run clock audit against facts added by creative responses
+        # (NPAG actions, player input, etc. may satisfy clock ADV bullets)
+        new_reviews = []
+        if self.state.daily_facts:
+            post_halt = evaluate_halt_conditions(self.state)
+            for h in post_halt:
+                self._log_action("CLOCK_AUDIT",
+                                 f"HALTED (post-creative): {h['clock']} -- {h['condition'][:60]}")
+
+            post_audit = clock_audit(self.state)
+            for a in post_audit.get("auto_advanced", []):
+                ar = a["advance_result"]
+                self._log_action("CLOCK_ADVANCE",
+                                 f"Post-creative audit: {a['clock']}: "
+                                 f"{ar['old']}->{ar['new']}/{ar.get('max', '?')}")
+            for rv in post_audit.get("needs_llm_review", []):
+                self._log_action("CLOCK_AUDIT",
+                                 f"Post-creative: {rv['clock']} needs review "
+                                 f"({len(rv['ambiguous_bullets'])} bullets)")
+                review_req = build_clock_audit(
+                    clock_name=rv["clock"],
+                    progress=rv["progress"],
+                    ambiguous_bullets=rv["ambiguous_bullets"],
+                    daily_facts=rv["daily_facts"],
+                )
+                new_reviews.append(review_req)
+
         self.creative_queue.clear_pending()
         self._clear_pending_file()
+
+        # If post-creative audit found ambiguous bullets, queue for next round
+        if new_reviews:
+            self.creative_queue.enqueue_many(new_reviews)
+            self._write_pending_file()
+            self._log_action("CREATIVE",
+                             f"{len(new_reviews)} post-creative clock review(s) queued")
+
         self._auto_save()
 
         # DG-16: If pending combat, transition to IN_COMBAT instead of IDLE
@@ -701,8 +736,11 @@ class GameLoop:
                 self._log_action("ERROR", f"Failed to start combat: {e}")
                 self._pending_combat_data = None
 
-        # Transition
-        self._set_phase(GamePhase.IDLE)
+        # Transition — stay in AWAIT_CREATIVE if new reviews were queued
+        if new_reviews:
+            self._set_phase(GamePhase.AWAIT_CREATIVE)
+        else:
+            self._set_phase(GamePhase.IDLE)
 
         return {
             "success": True,
@@ -1524,6 +1562,12 @@ class GameLoop:
                     self._log_action("ENCOUNTER",
                                      f"PASS (d6={rv}, {intensity}) -> "
                                      f"{enc.get('prompt', 'no table')[:60]}")
+                    # Log reaction roll if present (BX-PLUG §2.1)
+                    reaction = enc.get("reaction")
+                    if reaction:
+                        self._log_action("MECH",
+                                         f"Reaction: 2d6={reaction['total']} -> "
+                                         f"{reaction['band']}")
                 else:
                     self._log_action("ENCOUNTER", f"fail (d6={rv}, {intensity})")
 

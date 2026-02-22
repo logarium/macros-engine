@@ -457,6 +457,7 @@ const PORTRAIT_MAP = {
     'lalholm': '/images/lalholm_gpt.png',
     'lithoe': '/images/lithoe_gpt.png',
     'guldur': '/images/guldur_gpt.png',
+    'crandurth': '/images/crandurth_gpt.png',
 };
 
 function getPortraitUrl(name) {

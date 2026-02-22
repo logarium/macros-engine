@@ -1618,7 +1618,11 @@ def _apply_state_change(state, req_id: str, change: dict) -> Optional[dict]:
         npc_name = change.get("name", "") or change.get("npc", "")
         npc = state.get_npc(npc_name)
         if npc:
-            for field_name in ("zone", "status", "next_action", "objective"):
+            for field_name in ("zone", "status", "next_action", "objective",
+                               "role", "trait", "appearance", "faction",
+                               "knowledge", "negative_knowledge",
+                               "bx_ac", "bx_hd", "bx_hp", "bx_hp_max",
+                               "bx_at", "bx_dmg", "bx_ml"):
                 if field_name in change:
                     setattr(npc, field_name, change[field_name])
             return {"applied": "npc_update", "npc": npc_name}
