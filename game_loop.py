@@ -521,10 +521,16 @@ class GameLoop:
         # Apply state changes
         log_entries = self.creative_queue.apply_responses(self.state)
 
+        # Only these types display in chat; forges go to log only
+        CHAT_DISPLAY_TYPES = {
+            "PLAYER_INPUT", "NPAG", "RUMOR",
+            "NARR_SESSION_START", "NARR_ARRIVAL", "NARR_TIME_PASSAGE",
+            "NARR_COMBAT_END", "NARR_ENCOUNTER",
+        }
+
         # Extract narration and handle special response types
         for resp in responses:
-            # All responses with content display in the chat window
-            if resp.content and resp.type != "SESSION_SUMMARY":
+            if resp.content and resp.type in CHAT_DISPLAY_TYPES:
                 display_type = resp.type
                 if resp.type == "PLAYER_INPUT":
                     display_type = "NARR_PLAYER_RESPONSE"

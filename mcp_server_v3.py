@@ -351,12 +351,19 @@ def apply_llm_judgments(response_json: str) -> str:
 
     entries = apply_response(state, response)
 
-    # Collect full content from responses to display
+    # Only these types display in chat; everything else is log-only
+    CHAT_DISPLAY_TYPES = {
+        "PLAYER_INPUT", "NPAG", "RUMOR",
+        "NARR_SESSION_START", "NARR_ARRIVAL", "NARR_TIME_PASSAGE",
+        "NARR_COMBAT_END", "NARR_ENCOUNTER",
+    }
     full_content_blocks = []
     for resp in response.get("responses", []):
-        if resp.get("content", "").strip():
+        rtype = resp.get("type", "")
+        content = resp.get("content", "").strip()
+        if content and rtype in CHAT_DISPLAY_TYPES:
             full_content_blocks.append({
-                "type": resp.get("type", "UNKNOWN"),
+                "type": rtype,
                 "content": resp["content"],
             })
 
