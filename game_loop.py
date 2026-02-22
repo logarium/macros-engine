@@ -1329,8 +1329,11 @@ class GameLoop:
     # INTERNAL HELPERS
     # ─────────────────────────────────────────────────
 
-    def _convert_engine_request(self, raw_req: dict) -> CreativeRequest:
-        """Convert a raw engine llm_request dict into a typed CreativeRequest."""
+    def _convert_engine_request(self, raw_req) -> CreativeRequest:
+        """Convert a raw engine llm_request dict into a typed CreativeRequest.
+        If already a CreativeRequest (from forge builders), return as-is."""
+        if isinstance(raw_req, CreativeRequest):
+            return raw_req
         req_type = raw_req.get("type", "")
 
         if req_type == "CLOCK_AUDIT_REVIEW":
