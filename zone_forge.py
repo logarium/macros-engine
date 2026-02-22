@@ -18,6 +18,7 @@ import random
 from creative_bridge import (
     build_npc_forge, build_el_forge, build_fac_forge,
     build_cl_forge, build_pe_forge, build_can_forge, build_zone_expansion,
+    build_narr_session_start,
 )
 
 # NPC-FORGE fires when active NPC count in zone is 3 or less
@@ -177,6 +178,10 @@ def run_zone_forge(state) -> dict:
             cp_count=cp_count,
         )
         forge_requests.append(req)
+
+    # ── SESSION START NARRATION (fires after all mechanical forges) ──
+    narr_req = build_narr_session_start(state)
+    forge_requests.append(narr_req)
 
     return {
         "status": "ok",

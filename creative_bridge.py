@@ -39,6 +39,7 @@ REQUEST_TYPES = {
     "UA_FORGE",           # Create Unknown Actor entry
     "ZONE_EXPANSION",     # Create new zones via CP expansion (ZONE-FORGE 3.0)
     "NARR_TIME_PASSAGE",  # Time passage narration after rest/T&P
+    "NARR_SESSION_START", # Session opening scene after ZONE-FORGE cascade
 }
 
 # State change types that can appear in responses
@@ -633,6 +634,92 @@ def build_narr_combat_end(state, combat_state) -> CreativeRequest:
                 "Do NOT re-narrate the mechanical combat round by round — "
                 "the engine already resolved that. Focus on the aftermath, "
                 "mood, and what happens next."
+            ),
+        },
+    )
+
+
+# ─────────────────────────────────────────────────────
+# SESSION START NARRATION
+# ─────────────────────────────────────────────────────
+
+def build_narr_session_start(state) -> CreativeRequest:
+    """Build NARR_SESSION_START — opening scene after ZONE-FORGE cascade."""
+    zone = state.zones.get(state.pc_zone)
+    zone_context = {}
+    if zone:
+        zone_context = {
+            "zone_name": zone.name,
+            "description": zone.description,
+            "threat_level": zone.threat_level,
+            "controlling_faction": zone.controlling_faction,
+        }
+
+    companions = []
+    for npc in state.companions_with_pc():
+        companions.append({
+            "name": npc.name,
+            "trait": npc.trait,
+            "status": npc.status,
+        })
+
+    npcs_in_zone = []
+    for npc in state.npcs_in_zone(state.pc_zone):
+        if not npc.is_companion:
+            npcs_in_zone.append({
+                "name": npc.name,
+                "role": npc.role,
+                "trait": npc.trait,
+            })
+
+    # 3 most recent open threads
+    open_threads = [t for t in state.unresolved_threads if not t.resolved]
+    recent_threads = [
+        {"id": t.id, "description": t.description}
+        for t in open_threads[-3:]
+    ]
+
+    # Previous session summary
+    prev_summary = state.session_summaries.get(
+        str(state.session_id - 1), ""
+    )
+
+    # DG-20: Lore injection
+    lore = get_lore_index()
+    lore_dict = {}
+    zone_lore = lore.get_zone_lore(state.pc_zone)
+    if zone_lore:
+        lore_dict["zone_atmosphere"] = zone_lore
+    for comp in companions:
+        npc_lore = lore.get_npc_lore(comp["name"], max_lines=15)
+        if npc_lore:
+            lore_dict[f"npc:{comp['name']}"] = npc_lore
+
+    return CreativeRequest(
+        id=_next_id(),
+        type="NARR_SESSION_START",
+        context={
+            "zone": zone_context,
+            "session_id": state.session_id,
+            "in_game_date": state.in_game_date,
+            "season": state.season,
+            "seasonal_pressure": state.seasonal_pressure,
+            "companions_with_pc": companions,
+            "npcs_in_zone": npcs_in_zone,
+            "active_threads": recent_threads,
+            "previous_session_summary": prev_summary,
+            "lore": lore_dict,
+        },
+        constraints={
+            **DEFAULT_CONSTRAINTS, "max_words": 400,
+            "instruction": (
+                "Set the opening scene for this session. "
+                "Establish where the PC is, the zone atmosphere, "
+                "who is present (companions and notable NPCs), "
+                "and weave in the active threads as stakes the player can feel. "
+                "This is the first thing the player reads — set tone, ground them "
+                "in the world, and give them something to react to. "
+                "Do NOT advance time, resolve encounters, or trigger mechanical gates."
             ),
         },
     )

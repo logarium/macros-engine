@@ -525,7 +525,11 @@ def load_game(filename: str) -> str:
             _state = state_from_json(f.read())
         _pending_llm_requests = []
         _day_logs = []
-        return f"📂 Loaded: {filename}\n  Date: {_state.in_game_date}\n  Zone: {_state.pc_zone}\n  Session: {_state.session_id}"
+        return (
+            f"Loaded: {filename}\n"
+            f"  Session {_state.session_id} | {_state.in_game_date} | {_state.pc_zone}\n"
+            f"  Run zone_forge to begin session."
+        )
     except Exception as e:
         return f"Error loading: {e}"
 
