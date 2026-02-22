@@ -740,6 +740,7 @@ body {
 .log-entry.SAVE { color: var(--text-dim); }
 .log-entry.COMBAT { color: var(--red); }
 .log-entry.MECH { color: var(--orange); }
+.log-entry.ERROR { color: var(--red); font-weight: bold; background: rgba(255,50,50,0.1); }
 
 /* ─── FORGE TAB ─── */
 .forge-grid {

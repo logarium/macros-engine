@@ -17,6 +17,7 @@ from enum import Enum
 from datetime import datetime
 from dataclasses import dataclass, field
 
+from dataclasses import asdict as _asdict
 from models import GameState, state_to_json, state_from_json
 from engine import run_day
 from travel import get_crossing_points, execute_travel, validate_travel
@@ -47,6 +48,16 @@ class GamePhase(str, Enum):
     AWAIT_CREATIVE = "await_creative"
     NARRATE = "narrate"
     IN_COMBAT = "in_combat"          # DG-16: BX-PLUG combat active
+
+
+class _EngineEncoder(json.JSONEncoder):
+    """Handle CreativeRequest (and other dataclass) objects in day_log steps."""
+    def default(self, obj):
+        if hasattr(obj, 'to_dict'):
+            return obj.to_dict()
+        if hasattr(obj, '__dataclass_fields__'):
+            return _asdict(obj)
+        return super().default(obj)
 
 
 class GameLoop:
@@ -103,7 +114,7 @@ class GameLoop:
             path = self._pending_file_path()
             os.makedirs(os.path.dirname(path), exist_ok=True)
             with open(path, "w", encoding="utf-8") as f:
-                json.dump(payload, f, indent=2, ensure_ascii=False)
+                json.dump(payload, f, indent=2, ensure_ascii=False, cls=_EngineEncoder)
         except Exception as e:
             self._log_action("ERROR", f"Failed to write pending file: {e}")
 
@@ -1467,10 +1478,14 @@ class GameLoop:
             elif sn == "cadence_clocks":
                 for cr in step.get("results", []):
                     if "error" not in cr:
-                        self._log_action("CADENCE",
-                                         f"{cr['clock']}: {cr['old']}->{cr['new']}/{cr['max']}")
-                        if cr.get("trigger_fired"):
-                            self._log_action("TRIGGER", f"FIRED: {cr.get('trigger_text', '')}")
+                        if cr.get("action") == "cadence_eligible_for_audit":
+                            self._log_action("CADENCE",
+                                             f"{cr['clock']}: audit-eligible (no cadence_bullet)")
+                        else:
+                            self._log_action("CADENCE",
+                                             f"{cr['clock']}: {cr['old']}->{cr['new']}/{cr['max']}")
+                            if cr.get("trigger_fired"):
+                                self._log_action("TRIGGER", f"FIRED: {cr.get('trigger_text', '')}")
 
             elif sn == "clock_audit":
                 for a in r.get("auto_advanced", []):
