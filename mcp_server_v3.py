@@ -223,7 +223,7 @@ def run_tp_days(days: int = 1) -> str:
     if new_llm_requests:
         _day_logs.extend(all_logs)
         _pending_llm_requests.extend(new_llm_requests)
-        output.append(f"\n⚡ {len(new_llm_requests)} creative request(s) queued — use get_pending_requests to process")
+        output.append(f"\n>> {len(new_llm_requests)} creative request(s) queued — use get_pending_requests to process")
 
     _auto_save(state)
     return "\n".join(output)
@@ -375,10 +375,10 @@ def apply_llm_judgments(response_json: str) -> str:
             output.append(f"    → Clock reduced")
             state.log({"type": "CLOCK_REDUCE", "detail": "Clock reduced (LLM)"})
         elif e.get("applied") == "fact":
-            output.append(f"    📌 {e['text'][:80]}")
+            output.append(f"    FACT: {e['text'][:80]}")
             state.log({"type": "FACT", "detail": e["text"][:200]})
         elif e.get("error"):
-            output.append(f"    ❌ {e['error']}")
+            output.append(f"    ERROR: {e['error']}")
 
     _pending_llm_requests = []
     _day_logs = []
@@ -404,7 +404,7 @@ def apply_llm_judgments(response_json: str) -> str:
         fwd_req.add_header("Content-Type", "application/json")
         with urllib.request.urlopen(fwd_req, timeout=5) as resp:
             resp.read()
-        output.append("  ↪ Forwarded to web UI.")
+        output.append("  -> Forwarded to web UI.")
     except Exception:
         pass  # Web server not running — that's fine
 
@@ -520,7 +520,7 @@ def save_game(filename: str = "") -> str:
     filepath = os.path.join(data_dir, filename)
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(state_to_json(state))
-    return f"💾 Saved: {filename}"
+    return f"Saved: {filename}"
 
 
 @server.tool()
@@ -607,7 +607,7 @@ def add_fact(fact: str) -> str:
     state.add_fact(fact)
     state.log({"type": "FACT", "detail": fact[:300]})
     _auto_save(state)
-    return f"📌 {fact}"
+    return f"FACT: {fact}"
 
 
 @server.tool()
@@ -1095,7 +1095,7 @@ def resolve_thread(thread_id: str, resolution: str = "") -> str:
             state.log({"type": "NARRATIVE_BEAT",
                        "detail": f"Thread resolved: {thread_id} | {resolution[:80]}"})
             _auto_save(state)
-            return f"✅ Thread resolved: {thread_id}"
+            return f"OK: Thread resolved: {thread_id}"
 
     return f"Error: Thread {thread_id} not found"
 
@@ -2028,7 +2028,7 @@ def zone_forge(zone_name: str = "", session_start: bool = False) -> str:
         lines.append(f"  Gaps ({len(gaps)}):")
         for g in gaps:
             lines.append(f"    - {g}")
-        lines.append(f"  ⚡ {len(forge_requests)} creative request(s) queued")
+        lines.append(f"  >> {len(forge_requests)} creative request(s) queued")
     else:
         lines.append("  No gaps found.")
     return "\n".join(lines)
