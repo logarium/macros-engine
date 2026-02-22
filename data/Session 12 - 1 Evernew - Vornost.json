@@ -5976,7 +5976,7 @@
       "negative_knowledge": "Cannot perceive events when sheathed or stored. Does not know what happens when Thoron is away from him.",
       "next_action": "Comment on whatever is happening. Preferably something cutting.",
       "with_pc": true,
-      "is_companion": false,
+      "is_companion": true,
       "class_level": "",
       "bx_ac": 0,
       "bx_hd": 0,

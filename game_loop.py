@@ -425,7 +425,8 @@ class GameLoop:
         all_llm_requests = []
 
         for i in range(days):
-            day_log = run_day(self.state)
+            # skip_zone_gap=True: zone_forge handles NPC/EL deficits on arrival
+            day_log = run_day(self.state, skip_zone_gap=True)
             day_log["day_number"] = i + 1
             all_day_logs.append(day_log)
 
@@ -1517,20 +1518,24 @@ class GameLoop:
 
             elif sn == "encounter_gate":
                 rv = r["roll"]["total"]
+                intensity = r.get("intensity", "?")
                 if r["passed"]:
                     enc = r.get("encounter", {})
                     self._log_action("ENCOUNTER",
-                                     f"PASS (d6={rv}) -> {enc.get('description', 'no table')[:60]}")
+                                     f"PASS (d6={rv}, {intensity}) -> "
+                                     f"{enc.get('prompt', 'no table')[:60]}")
                 else:
-                    self._log_action("ENCOUNTER", f"fail (d6={rv})")
+                    self._log_action("ENCOUNTER", f"fail (d6={rv}, {intensity})")
 
             elif sn == "npag_gate":
                 rv = r["roll"]["total"]
+                intensity = r.get("intensity", "?")
                 if r["passed"]:
                     self._log_action("NPAG",
-                                     f"PASS (d6={rv}) -> {r['npc_count']['count']} NPCs")
+                                     f"PASS (d6={rv}, {intensity}) -> "
+                                     f"{r['npc_count']['count']} NPCs")
                 else:
-                    self._log_action("NPAG", f"fail (d6={rv})")
+                    self._log_action("NPAG", f"fail (d6={rv}, {intensity})")
 
     def _log_action(self, action_type: str, detail: str):
         """Add an entry to the action log."""

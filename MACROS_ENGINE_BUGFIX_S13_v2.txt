@@ -1,0 +1,119 @@
+MACROS ENGINE — BUG STATUS UPDATE (Session 13 Testing, Post-Travel)
+
+════════════════════════════════════════════════════════════════════
+FIXED — CONFIRMED WORKING
+════════════════════════════════════════════════════════════════════
+
+✓ Bug 1: CreativeRequest JSON serialization — FIXED. 11 requests
+  serialized and reached Claude via MCP.
+
+✓ Bug 4: Cadence clock auto-advance — FIXED. Hidden Temple clocks
+  now show "audit-eligible (no cadence_bullet)" instead of
+  auto-advancing. Correct behavior.
+
+✓ Bug 5: Display routing — FIXED. NARR_SESSION_START and
+  NARR_ARRIVAL both display in chat. Forge responses go to log.
+
+✓ NARR_SESSION_START request type — IMPLEMENTED. Rich payload with
+  zone, date, season, companions, NPCs, active threads, previous
+  session summary. Working correctly.
+
+✓ NARR_ARRIVAL request type — IMPLEMENTED. Fires after travel.
+  Working correctly.
+
+════════════════════════════════════════════════════════════════════
+BUG 2: CRITICAL — DOUBLE-FIRE ON TRAVEL (STILL BROKEN)
+════════════════════════════════════════════════════════════════════
+
+The entire travel sequence runs TWICE. Every log entry is
+duplicated at the same timestamp. This produces duplicate
+creative requests — e.g. 11 requests queued when there should
+be 6. Claude can catch and skip duplicates but this wastes
+context window and will cause state corruption if both sets
+of clock advances persist.
+
+Evidence from log:
+  09:56:19[TRAVEL] Vornost -> Sighing Swamps via low stairs (1d)
+  ... full sequence ...
+  09:56:19[CREATIVE] 11 requests queued for Claude (6 forge + 5 T&P/narr)
+  09:56:19[TRAVEL] Vornost -> Sighing Swamps via low stairs (1d)
+  ... identical sequence repeated ...
+  09:56:19[CREATIVE] 11 requests queued for Claude (6 forge + 5 T&P/narr)
+
+Fix: Find the double invocation in travel_to() or the method that
+calls run_day() after travel. The entire travel+T&P+zone_forge
+pipeline must execute exactly once per travel action.
+
+════════════════════════════════════════════════════════════════════
+BUG 3: PARTIALLY FIXED — Crandurth cleared as non-companion
+════════════════════════════════════════════════════════════════════
+
+The with_pc cohesion fix correctly keeps non-companions in place:
+  [WITH_PC] Cohesion: Castellan Joppa: with_pc cleared (not companion)
+
+But Crandurth was also cleared:
+  [WITH_PC] Cohesion: Crandurth: with_pc cleared (not companion)
+
+Crandurth IS a companion — it is Thoron's sentient sword. It goes
+everywhere Thoron goes. Always.
+
+Fix: Set is_companion=true for Crandurth in the save file. This
+is a data fix, not a code fix. Verify the save has:
+  "Crandurth": { "is_companion": true, ... }
+
+════════════════════════════════════════════════════════════════════
+BUG 6: NEW — NPAG gate logic wrong
+════════════════════════════════════════════════════════════════════
+
+Log shows:
+  [NPAG] fail (d6=5)
+
+NPAG gate triggers on 5 OR 6 (per MACROS spec). A roll of 5
+should be a PASS, not a fail. Only 1-4 should fail.
+
+Fix: NPAG gate condition must be: d6 >= 5 (i.e. 5 or 6 = pass).
+Currently appears to be: d6 >= 6 (only 6 = pass), which is the
+ENCOUNTER gate threshold, not NPAG.
+
+  ENCOUNTER gate: triggers on 6 only (d6 >= 6)
+  NPAG gate: triggers on 5 or 6 (d6 >= 5)
+
+These are different gates with different thresholds.
+
+════════════════════════════════════════════════════════════════════
+BUG 7: NEW — Error messages flash and vanish
+════════════════════════════════════════════════════════════════════
+
+Error messages appear briefly then disappear from the UI. User
+cannot read them.
+
+Fix: All errors must persist in the LOG tab with [ERROR] prefix
+and remain visible. Do not auto-dismiss error messages.
+
+════════════════════════════════════════════════════════════════════
+STILL OUTSTANDING FROM EARLIER FIX SPEC
+════════════════════════════════════════════════════════════════════
+
+Verify each of these from MACROS_ENGINE_FIX_SPEC.txt:
+
+H1: Calendar month order and day counts
+H2: Season assignments
+H3: Halt condition keyword matching (whole-word)
+H4: load_game() missing backfill calls
+H5: Blacktooth Forest EL missing entry 3
+M1: 13 creative builders missing CONSTRAINTS fields
+M2: build_narr_arrival missing instruction
+M3: npc_update key mismatch ("npc" vs "name")
+M4: NPAG eligible_npcs missing role and trait
+M5: NPAG lore missing companion profiles
+M6: Zone name substring matching in bullet filter
+M7: Double session_id increment
+M8: Vornost empty threat_level
+L1-L6: Cleanup items
+
+════════════════════════════════════════════════════════════════════
+PRIORITY ORDER:
+  Bug 2 (double-fire) → Bug 6 (NPAG gate) → Bug 3 (Crandurth) →
+  Bug 7 (error persistence) → verify earlier fix spec items
+════════════════════════════════════════════════════════════════════
+END

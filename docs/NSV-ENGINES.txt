@@ -165,6 +165,9 @@ EL: Blacktooth Forest | 1d8 | FP:1 | in forest, near forest
 2. Orc Patrol – 2d4 scouts trail, assess, confront, measure response
    Run BX-PLUG: reaction roll; if hostile → combat
    BX: AC=13, HD=1, hp=6/6, AT=+2, Dmg=1d6, ML=8
+3. Forest wasps - 5d6 swarm near their hive, defend aggressively
+   Run BX-PLUG: reaction roll; if hostile → combat
+   BX: AC=13, HD=1, hp=3/3, AT=+0, Dmg=1d3 plus tag as Venom:yes, invoke CL-FORGE to create Venom-[Character_Name] clock - see NSV-CLOCKS for template, ML=9
 4. Blood-slick stones by stream - no body, no drag; silence thicker than it should be
 5. Fetish poles bound with bone/cord - not orc-make; left recently; purpose unreadable [UA]
 6. Sudden stillness - birds vanish, wind dies; pressure without contact; resumes after leaving

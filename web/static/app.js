@@ -68,6 +68,8 @@ function handleEvent(event, data) {
             break;
         case 'error':
             showToast(data.message || 'An error occurred', 'error');
+            addLogEntry({type: 'ERROR', detail: data.message || 'An error occurred',
+                         timestamp: new Date().toISOString()});
             break;
     }
 }
@@ -1519,8 +1521,15 @@ function showToast(message, type = 'info', duration = 5000) {
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
     toast.textContent = message;
+    if (type === 'error') {
+        // Error toasts persist until clicked
+        toast.style.cursor = 'pointer';
+        toast.title = 'Click to dismiss';
+        toast.addEventListener('click', () => toast.remove());
+    } else {
+        setTimeout(() => { if (toast.parentElement) toast.remove(); }, duration);
+    }
     container.appendChild(toast);
-    setTimeout(() => { if (toast.parentElement) toast.remove(); }, duration);
 }
 
 // ─── INIT ───

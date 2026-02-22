@@ -879,10 +879,11 @@ def _zone_gap_check(state: GameState) -> dict:
 # MAIN T&P DAY LOOP
 # ─────────────────────────────────────────────────────
 
-def run_day(state: GameState) -> dict:
+def run_day(state: GameState, skip_zone_gap: bool = False) -> dict:
     """
     Execute one complete T&P day.
     Returns comprehensive audit log of everything that happened.
+    skip_zone_gap: True when zone_forge will handle NPC/EL deficits (travel).
     """
     # Reset per-day tracking
     state.reset_day()
@@ -978,11 +979,13 @@ def run_day(state: GameState) -> dict:
         day_log["llm_requests"].append(npag_result["llm_request"])
 
     # ── §6.5 Zone gap check (NPC/EL deficits) ──
-    gap_result = _zone_gap_check(state)
-    if gap_result["gaps"]:
-        day_log["steps"].append({"step": "zone_gap_check", "result": gap_result})
-        for req in gap_result.get("llm_requests", []):
-            day_log["llm_requests"].append(req)
+    # Skipped during travel — zone_forge handles these comprehensively
+    if not skip_zone_gap:
+        gap_result = _zone_gap_check(state)
+        if gap_result["gaps"]:
+            day_log["steps"].append({"step": "zone_gap_check", "result": gap_result})
+            for req in gap_result.get("llm_requests", []):
+                day_log["llm_requests"].append(req)
 
     # ── §6.3 Log to adjudication log ──
     state.log({

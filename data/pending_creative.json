@@ -1,10 +1,158 @@
 {
   "requests": [
     {
-      "id": "cr_001",
+      "id": "cr_002",
+      "type": "NPC_FORGE",
+      "context": {
+        "zone": "Sighing Swamps",
+        "zone_data": {
+          "description": "",
+          "threat_level": "",
+          "controlling_faction": "Bloodswamp Hobgoblins",
+          "intensity": "medium"
+        },
+        "existing_npcs_in_zone": [
+          {
+            "name": "Valania Lorethor",
+            "role": "Spymistress / companion",
+            "faction": "Nation of Gammaria"
+          },
+          {
+            "name": "Crandurth",
+            "role": "Thoron's sword / advisor / dark conscience",
+            "faction": "None (aligned to wielder)"
+          }
+        ],
+        "existing_factions": [
+          "Blacktooth Orcs",
+          "Bloodswamp Hobgoblins",
+          "Children of the Dead Gods",
+          "Church of Haadis",
+          "Confluence Bargemen",
+          "Corrupted Edhellar",
+          "Cult of Orcus",
+          "East March Patrol Command",
+          "Free Hope Merchants",
+          "Gnome Clans of Furdach",
+          "Golden Hind Merchants",
+          "Hidden Temple",
+          "Hill Scavengers",
+          "Imperial Torlec",
+          "Ironmask Council",
+          "Khuzduk",
+          "Khuzduk Remnant-Wardens",
+          "Lost Settlers",
+          "Narrows Pathwardens",
+          "Nation of Gammaria",
+          "Penitent's Way Wardens",
+          "People of the Ziggurat",
+          "Ravenroost Brigands",
+          "Scarp Watch",
+          "Sundancer Dervishes",
+          "Temple of the Sun",
+          "Ush'n'Elthar Nomads",
+          "Ush'n'Taalgith Nomads",
+          "Conorth Baerkudth"
+        ],
+        "role_hint": "",
+        "faction_hint": "Bloodswamp Hobgoblins",
+        "max_clocks": 2,
+        "session_id": 12,
+        "season": "Spring",
+        "lore": {
+          "forge_spec": "NPC-FORGE\n\n1 NPC CREATION MACRO\n1.1 Trigger: NPC-FORGE\n1.2 Purpose: introduce new named NPCs as delta-ready inserts only (no scenes, no dialogue).\n\n2 INPUTS (by caller):\n2.1 Agent populates NPC fields:\n2.1.2 Name [appropriate to canon]\n2.1.3 @ Zone [Current_Zone]\n2.1.4 Status [active/inactive (notes)]\n2.1.5 Rel [Relationships touched or —] \n2.1.6 Appearance [short identifying phrase]\n2.1.7 BX Stat Block (BX: AC=<>, HD=<>, hp=<>/<>, AT=<>, Dmg=<>, ML=<> (agent chooses appropriate for canon)\n2.2 ZONE-FORGE mode (structured):\n2.2.1 Required: NPC_Function, Current_Zone\n2.3 Optional: Scene_Use, Seed_From_FAC-FORGE_Stub (yes/no, default: no — reads NPC stub from prior FAC-FORGE output), Max_Clocks (override default 2, range 0-5)\n2.4 Protocol: agent supplies all inputs in structured block. Missing required → HARD STOP + log to ADJUDICATION_LOG.\n\n3 Player mode (stepwise):\n3.1 Required: NPC_Function, Current_Zone, Scene_Use\n3.2 Protocol: ask one at a time, STOP until answered.\n\n4 Authority & Caps (HARD):\n4.1 Amount of New named NPCs: 1d3\n4.2 Optional new faction: 1\n4.2.1 Player mode: only if no existing faction in NSV-FACTIONS or JSON save plausibly fits\n4.2.2 ZONE-FORGE mode: faction must already exist in NSV-FACTIONS or JSON save.\n4.3 Optional new clocks: 1d2 (or Max_Clocks override if provided)\n4.4 Must NOT narrate scenes, dialogue, or AGENCY ACTIONS.\n4.5 Must NOT advance time.\n\n5 Canon Discipline (HARD):\n5.1 Use only existing authoritative state (including LORE-NPCS for canonical NPC history, LORE-FACTIONS for faction culture/voice, LORE-WORLD for historical/cosmological context) + player-provided inputs in this invocation.\n5.2 Unsupported detail = UNKNOWN / INFERRED (do not promote).\n5.3 Prefer existing factions from NSV-FACTIONS or JSON save when plausible.\n5.3.1 If NPC being created has a canonical entry or relationship in LORE-NPCS, that entry constrains personality, faction alignment, and relationship fields.\n5.3.2 If NPC belongs to a faction with an entry in LORE-FACTIONS, faction culture and internal politics constrain the NPC's voice, objectives, and loyalties.\n5.4 Clock owners: \n5.4.1 NPC created by NPC-FORGE invocation may own clocks. \n5.4.2 Other clock owners (factions, other NPCs, UA-XX) must already exist in authoritative state.\n5.4.3 In player mode: FAC-FORGE may be invoked during NPC-FORGE if faction owner needed. \n5.4.4 In ZONE-FORGE mode: all non-NPC clock owners must already exist.\n\n6 Output (ONLY these JSON save insert sections, in this order; then STOP):\n6.1. NPC_STATE_CHANGES (new NPC entry)\n6.1.1 Format:\n6.1.2 NPC: [Name] @ [Zone] | [Status] | Rel: [Relationships_Touched or —] | [Appearance]\n   TRAIT: [1-2 word personality sketch, e.g., \"gruff, loyal\" or \"nervous, meticulous\"]\n   OBJ: [Objective] | K: [Knowledge] | ACT: [Next_Action]\n6.2. FACTION_STATE_CHANGES (only if faction touched/created)\n6.3. CLOCKS & PRESSURE (only if clocks created/updated)\n6.4. UNRESOLVED_THREADS (optional; only if durable stake introduced)\n\n7 Hard Stops:\n7.1 Missing inputs: Player = ask & STOP. ZONE-FORGE = HARD STOP + log.\n7.2 Contradiction: Player = request ruling. ZONE-FORGE = HARD STOP + log.\n7.3 >3 NPC: HARD STOP (both modes).",
+          "zone_atmosphere": "The marshland south of Vornost, where rushes whisper and strange birds call from reed beds that shouldn't be deep enough to hold them. Vornost looms above, its shadow falling across the black water. The low stairs connect the swamps to the fortress — the entrance you use when you don't want to be seen. Marsh gas ignites without warning. Bone-reed thickets grow from old battlefields; disturbing them wakes restless spirits. Sinking ground swallows the unwary. Fever-mist rolls in yellow and stinking, and the voices in it aren't the wind. A corpse-willow grove hangs with what looks like rags until you look closer — bodies, old, Vornost garrison tabards rotted through. Deserters or traitors. Message without words. The Sighing Swamps are Gammaria's back door, and everything that comes through them is either desperate or dangerous.",
+          "faction:Bloodswamp Hobgoblins": "Type: Local, entrenched. Quiet, stealthy hunters, rangers, trackers. Nomads settled in swamps generations ago.\nHistory: Helped Gammaria in early years. Careful isolation in Sighing Swamps depths. Uneasy co-existence.\nTerritory: Deep Swamps / Sighing Swamps.\nCurrent state: Active. No offscreen actions resolved. Status unknown."
+        }
+      },
+      "constraints": {
+        "max_words": 100,
+        "tone": "sword_and_sorcery",
+        "style": "Compressed prose. Inspirations: Elric, Conan, Dark Crystal, Krull, Willow, LotR.",
+        "voice": "Second person present tense. The player IS the character. 'You stand at the gate' not 'Thoron stood at the gate'. Never use the PC name as subject.",
+        "max_clocks": 2,
+        "instruction": "Create one NPC for this zone. Return a state_change with type 'npc_create'. Required fields: name, zone, role, trait (1-2 words), appearance (short identifying phrase), faction (from existing factions or 'none'). Optional: objective, knowledge, next_action. BX stats: bx_ac (9-20), bx_hd (1-8), bx_hp (rolled from HD), bx_hp_max (same as hp), bx_at (HD-based), bx_dmg (weapon die string), bx_ml (5-12). Optional new clocks: up to 2 (use clock_create state_changes). Do NOT duplicate existing NPC names in this zone."
+      }
+    },
+    {
+      "id": "cr_003",
+      "type": "NPC_FORGE",
+      "context": {
+        "zone": "Sighing Swamps",
+        "zone_data": {
+          "description": "",
+          "threat_level": "",
+          "controlling_faction": "Bloodswamp Hobgoblins",
+          "intensity": "medium"
+        },
+        "existing_npcs_in_zone": [
+          {
+            "name": "Valania Lorethor",
+            "role": "Spymistress / companion",
+            "faction": "Nation of Gammaria"
+          },
+          {
+            "name": "Crandurth",
+            "role": "Thoron's sword / advisor / dark conscience",
+            "faction": "None (aligned to wielder)"
+          }
+        ],
+        "existing_factions": [
+          "Blacktooth Orcs",
+          "Bloodswamp Hobgoblins",
+          "Children of the Dead Gods",
+          "Church of Haadis",
+          "Confluence Bargemen",
+          "Corrupted Edhellar",
+          "Cult of Orcus",
+          "East March Patrol Command",
+          "Free Hope Merchants",
+          "Gnome Clans of Furdach",
+          "Golden Hind Merchants",
+          "Hidden Temple",
+          "Hill Scavengers",
+          "Imperial Torlec",
+          "Ironmask Council",
+          "Khuzduk",
+          "Khuzduk Remnant-Wardens",
+          "Lost Settlers",
+          "Narrows Pathwardens",
+          "Nation of Gammaria",
+          "Penitent's Way Wardens",
+          "People of the Ziggurat",
+          "Ravenroost Brigands",
+          "Scarp Watch",
+          "Sundancer Dervishes",
+          "Temple of the Sun",
+          "Ush'n'Elthar Nomads",
+          "Ush'n'Taalgith Nomads",
+          "Conorth Baerkudth"
+        ],
+        "role_hint": "",
+        "faction_hint": "Bloodswamp Hobgoblins",
+        "max_clocks": 2,
+        "session_id": 12,
+        "season": "Spring",
+        "lore": {
+          "forge_spec": "NPC-FORGE\n\n1 NPC CREATION MACRO\n1.1 Trigger: NPC-FORGE\n1.2 Purpose: introduce new named NPCs as delta-ready inserts only (no scenes, no dialogue).\n\n2 INPUTS (by caller):\n2.1 Agent populates NPC fields:\n2.1.2 Name [appropriate to canon]\n2.1.3 @ Zone [Current_Zone]\n2.1.4 Status [active/inactive (notes)]\n2.1.5 Rel [Relationships touched or —] \n2.1.6 Appearance [short identifying phrase]\n2.1.7 BX Stat Block (BX: AC=<>, HD=<>, hp=<>/<>, AT=<>, Dmg=<>, ML=<> (agent chooses appropriate for canon)\n2.2 ZONE-FORGE mode (structured):\n2.2.1 Required: NPC_Function, Current_Zone\n2.3 Optional: Scene_Use, Seed_From_FAC-FORGE_Stub (yes/no, default: no — reads NPC stub from prior FAC-FORGE output), Max_Clocks (override default 2, range 0-5)\n2.4 Protocol: agent supplies all inputs in structured block. Missing required → HARD STOP + log to ADJUDICATION_LOG.\n\n3 Player mode (stepwise):\n3.1 Required: NPC_Function, Current_Zone, Scene_Use\n3.2 Protocol: ask one at a time, STOP until answered.\n\n4 Authority & Caps (HARD):\n4.1 Amount of New named NPCs: 1d3\n4.2 Optional new faction: 1\n4.2.1 Player mode: only if no existing faction in NSV-FACTIONS or JSON save plausibly fits\n4.2.2 ZONE-FORGE mode: faction must already exist in NSV-FACTIONS or JSON save.\n4.3 Optional new clocks: 1d2 (or Max_Clocks override if provided)\n4.4 Must NOT narrate scenes, dialogue, or AGENCY ACTIONS.\n4.5 Must NOT advance time.\n\n5 Canon Discipline (HARD):\n5.1 Use only existing authoritative state (including LORE-NPCS for canonical NPC history, LORE-FACTIONS for faction culture/voice, LORE-WORLD for historical/cosmological context) + player-provided inputs in this invocation.\n5.2 Unsupported detail = UNKNOWN / INFERRED (do not promote).\n5.3 Prefer existing factions from NSV-FACTIONS or JSON save when plausible.\n5.3.1 If NPC being created has a canonical entry or relationship in LORE-NPCS, that entry constrains personality, faction alignment, and relationship fields.\n5.3.2 If NPC belongs to a faction with an entry in LORE-FACTIONS, faction culture and internal politics constrain the NPC's voice, objectives, and loyalties.\n5.4 Clock owners: \n5.4.1 NPC created by NPC-FORGE invocation may own clocks. \n5.4.2 Other clock owners (factions, other NPCs, UA-XX) must already exist in authoritative state.\n5.4.3 In player mode: FAC-FORGE may be invoked during NPC-FORGE if faction owner needed. \n5.4.4 In ZONE-FORGE mode: all non-NPC clock owners must already exist.\n\n6 Output (ONLY these JSON save insert sections, in this order; then STOP):\n6.1. NPC_STATE_CHANGES (new NPC entry)\n6.1.1 Format:\n6.1.2 NPC: [Name] @ [Zone] | [Status] | Rel: [Relationships_Touched or —] | [Appearance]\n   TRAIT: [1-2 word personality sketch, e.g., \"gruff, loyal\" or \"nervous, meticulous\"]\n   OBJ: [Objective] | K: [Knowledge] | ACT: [Next_Action]\n6.2. FACTION_STATE_CHANGES (only if faction touched/created)\n6.3. CLOCKS & PRESSURE (only if clocks created/updated)\n6.4. UNRESOLVED_THREADS (optional; only if durable stake introduced)\n\n7 Hard Stops:\n7.1 Missing inputs: Player = ask & STOP. ZONE-FORGE = HARD STOP + log.\n7.2 Contradiction: Player = request ruling. ZONE-FORGE = HARD STOP + log.\n7.3 >3 NPC: HARD STOP (both modes).",
+          "zone_atmosphere": "The marshland south of Vornost, where rushes whisper and strange birds call from reed beds that shouldn't be deep enough to hold them. Vornost looms above, its shadow falling across the black water. The low stairs connect the swamps to the fortress — the entrance you use when you don't want to be seen. Marsh gas ignites without warning. Bone-reed thickets grow from old battlefields; disturbing them wakes restless spirits. Sinking ground swallows the unwary. Fever-mist rolls in yellow and stinking, and the voices in it aren't the wind. A corpse-willow grove hangs with what looks like rags until you look closer — bodies, old, Vornost garrison tabards rotted through. Deserters or traitors. Message without words. The Sighing Swamps are Gammaria's back door, and everything that comes through them is either desperate or dangerous.",
+          "faction:Bloodswamp Hobgoblins": "Type: Local, entrenched. Quiet, stealthy hunters, rangers, trackers. Nomads settled in swamps generations ago.\nHistory: Helped Gammaria in early years. Careful isolation in Sighing Swamps depths. Uneasy co-existence.\nTerritory: Deep Swamps / Sighing Swamps.\nCurrent state: Active. No offscreen actions resolved. Status unknown."
+        }
+      },
+      "constraints": {
+        "max_words": 100,
+        "tone": "sword_and_sorcery",
+        "style": "Compressed prose. Inspirations: Elric, Conan, Dark Crystal, Krull, Willow, LotR.",
+        "voice": "Second person present tense. The player IS the character. 'You stand at the gate' not 'Thoron stood at the gate'. Never use the PC name as subject.",
+        "max_clocks": 2,
+        "instruction": "Create one NPC for this zone. Return a state_change with type 'npc_create'. Required fields: name, zone, role, trait (1-2 words), appearance (short identifying phrase), faction (from existing factions or 'none'). Optional: objective, knowledge, next_action. BX stats: bx_ac (9-20), bx_hd (1-8), bx_hp (rolled from HD), bx_hp_max (same as hp), bx_at (HD-based), bx_dmg (weapon die string), bx_ml (5-12). Optional new clocks: up to 2 (use clock_create state_changes). Do NOT duplicate existing NPC names in this zone."
+      }
+    },
+    {
+      "id": "cr_004",
       "type": "CL_FORGE",
       "context": {
-        "owner": "Nation of Gammaria",
+        "owner": "Bloodswamp Hobgoblins",
         "trigger_context": "zone-forge: existing zone clocks=[]",
         "existing_clocks": [
           {
@@ -225,8 +373,8 @@
           "Ush'n'Taalgith Nomads",
           "Conorth Baerkudth"
         ],
-        "pc_zone": "Vornost",
-        "session_id": 14,
+        "pc_zone": "Sighing Swamps",
+        "session_id": 12,
         "season": "Spring",
         "lore": {
           "forge_spec": "CL-FORGE\n1 DESIGN 1 CLOCK\n1.1 Trigger: CL-FORGE\n\n2 STRUCTURED INPUT MODE (when Caller = ZONE-FORGE):\n2.1 Required:\n2.1.1 Clock_Name: (what this clock tracks)\n2.1.2 Clock_Owner: (NPC/faction/UA-XX/environment — must already exist in authoritative state)\n2.1.3 Track_Size: (how many segments, typically 4-6)\n2.1.4 Advances_When: (list of 1-6 trigger bullets, each quotable)\n2.1.5 Trigger_On_Completion: (what happens when clock completes)\n2.1.6 If implies AGENCY ACTIONS, include: \"Resolution gated pending NPAG / authorised PE\"\n2.1.7 Optional (with sensible defaults):\n2.1.7.1 Starting_Progress: (default: 0)\n2.1.7.2 Visibility: (default: secret)\n2.1.7.3 Halts_When: (default: (none))\n2.1.7.4 Reduces_When: (default: (none))\n2.2 Protocol: all inputs in structured block. Missing required → HARD STOP + log to ADJUDICATION_LOG.\n\n3 CLOCK OWNER VALIDATION (HARD):\n3.1 When Caller = ZONE-FORGE, Clock_Owner MUST already exist in authoritative state in NSV-FACTIONS, JSON save, or PARTY-SEED:\n3.1.1 JSON save npcs section, OR\n3.1.2 JSON save factions section, OR\n3.1.3 UA_LOG, OR\n3.1.4 Clock_Owner = \"environment\"\n3.2 If Clock_Owner does not exist → HARD STOP with error logged to ADJUDICATION_LOG; abort this CL-FORGE call.\n\n4 INPUT PROTOCOL:\n4.1 Player mode: stepwise protocol (ask field, STOP, ask next field, STOP)\n4.2 ZONE-FORGE mode: all inputs provided in structured block upfront; apply defaults for omitted optional fields\n4.2.1 Apply defaults for any omitted optional fields. \n4.2.2 Clock_Owner must already exist (no NPC-FORGE/FAC-FORGE path in batch mode).\n\n5 Inputs (player mode — stepwise; STOP after each):\n5.1 Identity: Clock_Name, Clock_Owner (existing NPC/faction/UA-XX/environment)\n5.1.1 New named owner → require NPC-FORGE/FAC-FORGE path.\n5.2 Track: Track_Size, Starting_Progress (default 0), Visibility\n5.3 Triggers: Advances_When (1–6 bullets; quotable)\n5.4 Controls: Halts_When, Reduces_When (may be (none))\n5.5 Completion: Trigger_On_Completion\n5.5.1 If implies AGENCY ACTIONS → include \"Resolution gated pending NPAG / authorised PE\".\n5.6 Session Fields: set Advanced_This_Session = no, Trigger_Fired = blank\n\n6 Rules (HARD):\n6.1 Full field set required; no shorthand.\n6.2 No canon invention embedded.\n\n7 Output (HARD):\n7.1 Emit one complete clock entry; then STOP.\n7.1.1 Use \"(none)\" for empty HALT/RED fields"
@@ -241,11 +389,11 @@
       }
     },
     {
-      "id": "cr_002",
+      "id": "cr_005",
       "type": "PE_FORGE",
       "context": {
-        "engine_name": "Vornost Zone Engine",
-        "zone_scope": "Vornost",
+        "engine_name": "Sighing Swamps Zone Engine",
+        "zone_scope": "Sighing Swamps",
         "trigger_event": "zone-forge",
         "existing_engines": [
           {
@@ -277,11 +425,11 @@
             "trigger_event": "In-game date crosses seasonal threshold"
           }
         ],
-        "pc_zone": "Vornost",
-        "session_id": 14,
+        "pc_zone": "Sighing Swamps",
+        "session_id": 12,
         "lore": {
           "forge_spec": "PE-FORGE\nDESIGN 1 PERSISTENT PROCEDURAL ENGINE\nTrigger: PE-FORGE | DESIGN PE | CREATE PE | Caller = ZONE-FORGE\n\nSTRUCTURED INPUT MODE (when Caller = ZONE-FORGE):\nRequired:\n  • Engine_Name: (what this PE does)\n  • Zone_Scope: (where it operates)\n  • Trigger_Event: (when it fires, 1-3 phrases)\nOptional (with defaults):\n  • Authority_Tier: (default: ZONE-LOCAL)\n  • Cadence: (default: no)\n  • Resolution_Method: (default: agent designs from canon)\n  • Persistence: (default: yes)\nProtocol: all inputs in structured block. Agent designs remaining fields from canon + Zone_Scope characteristics.\n\nINPUT PROTOCOL:\n  • Player mode: stepwise protocol (ask field, STOP, ask next field, STOP)\n  • ZONE-FORGE mode: all inputs in structured block; agent completes PE-DEF\nRequired Fields (collect across steps):\n•\tIdentity: Engine_Name, Engine_Version, Authority_Tier, Registry_Target (CSEM|SSM_1A|NSV_DELTA_REGISTRY)\n•\tScope: Zone_Scope, State_Scope\n•\tPersistence: Persistence (yes/no), Cadence (yes/no), Cadence_Priority (int; default 0 if cadence=yes)\n•\tActivation: Trigger_Event (1–3 phrases)\n•\tInputs/Gates: Inputs, Hard_Gates\n•\tResolution: Resolution_Method\no\tRandomizer allowed only if Cadence PE defines it; otherwise mark “requires player delegation at runtime”.\n•\tEffects: Outputs, State_Updates, Clock_Cascades (existing clocks only), Run_Cap_Notes, Failure_Safes, Audit_Notes\nBoundaries (HARD):\n•\tNo canon invention; no new named NPC/faction/Zone as facts.\n•\tNo clocks created inside PE-DEF.\n•\tRespect registry immutability once registered.\nOutput (HARD):\n•\tEmit one full PE-DEF in exact template order; then STOP.",
-          "zone_atmosphere": "The Black Fortress. Seat of the Helkar. The Dragon Throne. Thoron cleared the great rock pillar on Evernew 9th, 14501 — Lithoe killed a family of giant lizards with Fireball so they could build on it — and Vornost was completed Grismere 19th, 14503, the last and greatest structure of the founding. It dominates the Sighing Swamps physically and symbolically. The low stairs descend into the marsh. Dragon-Skull Gate opens onto the Grey Plains — and it remains closed to Thoron until all five companions have rejoined him and they ride through together. Castellan Joppa holds it, trim and officious, preparing the Black Fortress for a return he's confirmed from a patrol report. Kael Dravorn and the commandos wait for orders. Vornost is the endgame — the seat of power Thoron built and cannot yet enter."
+          "zone_atmosphere": "The marshland south of Vornost, where rushes whisper and strange birds call from reed beds that shouldn't be deep enough to hold them. Vornost looms above, its shadow falling across the black water. The low stairs connect the swamps to the fortress — the entrance you use when you don't want to be seen. Marsh gas ignites without warning. Bone-reed thickets grow from old battlefields; disturbing them wakes restless spirits. Sinking ground swallows the unwary. Fever-mist rolls in yellow and stinking, and the voices in it aren't the wind. A corpse-willow grove hangs with what looks like rags until you look closer — bodies, old, Vornost garrison tabards rotted through. Deserters or traitors. Message without words. The Sighing Swamps are Gammaria's back door, and everything that comes through them is either desperate or dangerous."
         }
       },
       "constraints": {
@@ -293,13 +441,13 @@
       }
     },
     {
-      "id": "cr_003",
+      "id": "cr_006",
       "type": "CAN_FORGE",
       "context": {
-        "zone": "Vornost",
+        "zone": "Sighing Swamps",
         "zone_data": {
           "description": "",
-          "threat_level": "low"
+          "threat_level": ""
         },
         "trigger": "zone-forge",
         "mode": "ZONE-FORGE",
@@ -311,45 +459,9 @@
             "status": "active"
           },
           {
-            "name": "Castellan Joppa",
-            "role": "Castellan",
-            "faction": "Nation of Gammaria",
-            "status": "active"
-          },
-          {
-            "name": "Kael Dravorn",
-            "role": "Commando captain",
-            "faction": "Nation of Gammaria",
-            "status": "active"
-          },
-          {
             "name": "Crandurth",
             "role": "Thoron's sword / advisor / dark conscience",
             "faction": "None (aligned to wielder)",
-            "status": "active"
-          },
-          {
-            "name": "Edric Tull",
-            "role": "Golden Hind clerk / turned double agent",
-            "faction": "Golden Hind (cover) / Nation of Gammaria (turned)",
-            "status": "active — awaiting release"
-          },
-          {
-            "name": "Torben",
-            "role": "Sergeant / covert internal security operative",
-            "faction": "Nation of Gammaria",
-            "status": "active — sanctioned"
-          },
-          {
-            "name": "Maren",
-            "role": "Private / suspected gatekeeper for external intelligence operation",
-            "faction": "Unknown (suspected Golden Hind / external)",
-            "status": "in custody"
-          },
-          {
-            "name": "Oskar",
-            "role": "Commando, founding-era veteran",
-            "faction": "Nation of Gammaria",
             "status": "active"
           }
         ],
@@ -706,12 +818,12 @@
           "Whiteagle Keep"
         ],
         "next_ua_code": "UA-12",
-        "pc_zone": "Vornost",
-        "session_id": 14,
+        "pc_zone": "Sighing Swamps",
+        "session_id": 12,
         "season": "Spring",
         "lore": {
           "forge_spec": "CAN-FORGE\n1 Trigger: CAN-FORGE\n1.1 Caller = ZONE-FORGE/THREAT-SCAN/PLAYER-INVOKED\n1.2 If PLAYER-INVOKED →  2.0; else → 3.0\n\n2.0 PLAYER-INVOKED FULL MODE\n2.1 Run FAC-FORGE and create 1 new Faction for Current_Zone.\n2.2 Run NPC-FORGE and create 1 new_named_npc for Current_Zone\n2.3 Run CL-FORGE and create 1d2 new clocks for Current_Zone\n2.4 Run EL-FORGE and create 1 EL for Current_Zone\n2.5 Run PE-FORGE and create 1 PE for Current_Zone\n2.6 Run UA-FORGE and create 1 UA for Current_Zone\n\n3.0 DISCOVERIES AND THREADS\n3.1 Agent creates 1 new DISCOVERY in Current_Zone\n3.2 Agent creates 1 new UNRESOLVED_THREAD in Current_Zone\n\n4.0 STRUCTURED INPUT MODE (when Caller = ZONE-FORGE/THREAT-SCAN):\n4.1 Required: Zone_Scope (which Zone to populate)\n4.2 Fixed (non-overrideable):\n4.2.1 Output_Mode: ZONE-FORGE\n4.2.2 Visibility_Policy: secret\n4.2.3 PC_Targeting: forbidden\n\n5 INPUT PROTOCOL:\n5.1 Player: ask Zone_Scope, Visibility_Policy, Output_Mode. If missing, STOP.\n5.2 CAN-FORGE-AUTO: UA-only mode, secret, PC_Targeting forbidden, Zone auto.\n5.3 ZONE-FORGE: Zone_Scope in structured input, ZONE-FORGE mode fixed, secret, PC_Targeting forbidden.\n\n6 CAN-FORGE.AUTHORITY (HARD)\n6.1 CAN-FORGE may create JSON save inserts only:\n6.1.1 UA codes\n6.1.2 clocks\n6.1.3 unresolved threads\n6.1.4 discoveries\n6.1.5 optional EL-DEF / PE-DEF blocks (registry inserts)\n6.2 CAN-FORGE MUST NOT:\n6.2.1 resolve AGENCY ACTIONS\n6.2.2 advance time\n6.2.3advance clocks (new clocks start at 0 unless player authorises 1)\n\n7 CAN-FORGE.OWNERSHIP GATES (HARD)\n7.1 If output would create a named NPC → NPC-FORGE required (or NPC-FORGE-AUTO if delegated)\n7.2 If output would create a new faction → FAC-FORGE required (or FAC-FORGE-AUTO if delegated)\n7.3 UA-only mode may create UA codes without NPC-FORGE/FAC-FORGE (UA rules still apply)\n\n8 CAN-FORGE.CAPS (by Output_Mode):\n8.1 UA-only mode:\n8.1.1 new_UA_codes: 1\n8.1.2 new_discoveries: 1 (UA anchor only)\n8.1.4 new unresolved_threads: 1\n8.1.4 All other caps: 0\n\n9 ZONE-FORGE mode:\n9.1 new_UA_codes: 1\n9.2 new_clocks: 1 (owner = the UA just created, or environment)\n9.3 new_discoveries: 1\n9.4 All other caps: 0\n\n10 Full mode (defaults unless player authorises more):\n10.1 new_factions: 1\n10.2 new_named_npcs: 1 (requires NPC-FORGE path)\n10.3 new_clocks: 1d2\n10.4 new_EL_DEF: 1\n10.5 new_PE_DEF: 1\n10.6 Plus: UA codes, discoveries, threads as needed within above caps\n\n11 CAN-FORGE.AUTO\n11.1 Permitted only if session delegation exists (CAN-FORGE-AUTO) AND anti-overlap satisfied AND cooldown satisfied.\n11.2 Auto params fixed:\n11.2.1 Output_Mode: UA-only (creates UA codes only, no clocks/threads/EL/PE)\n11.2.2 Visibility_Policy: secret\n11.3.3 PC_Targeting: forbidden\n11.3.4 ZONE-FORGE does not use CAN-FORGE-AUTO. It invokes CAN-FORGE directly via structured caller path with Output_Mode = ZONE-FORGE.\n\n12 CAN-FORGE.REGISTRY WRITING (HARD)\n12.1 Any EL-DEF/PE-DEF created by CAN-FORGE MUST be emitted as save-ready registry inserts:\n12.2 ENCOUNTER_LISTS_REGISTRY (EL-DEF)\n12.3 PROCEDURAL_ENGINE_DEFS_REGISTRY (PE-DEF)\n12.4 Registry immutability: once registered, redefine only under UBER.\n\n13 CAN-FORGE.OUTPUT SHAPE (HARD)\n13.1 CAN-FORGE outputs ONLY save-ready inserts, limited to these sections:\n13.1.1 DISCOVERIES (mandatory)\n13.1.2 CLOCKS & PRESSURE (if clocks created)\n13.1.3 UNRESOLVED_THREADS (if durable stakes created)\n13.1.4 ENCOUNTER_LISTS_REGISTRY (if EL-DEF created)\n13.1.5 PROCEDURAL_ENGINE_DEFS_REGISTRY (if PE-DEF created)\n13.1.6 PROCEDURAL_ENGINES_ACTIVE (only if created PE is declared active now)\n13.1.7 JSON save npcs section (only if NPC-FORGE run)\n13.1.8 JSON save factions section (only if FAC-FORGE run)\n13.1.9 ADJUDICATION_LOG (mandatory: record trigger, scope, mode, caps used; cold-state proof if auto)\n13.2 No narration/prose inside inserts.",
-          "zone_atmosphere": "The Black Fortress. Seat of the Helkar. The Dragon Throne. Thoron cleared the great rock pillar on Evernew 9th, 14501 — Lithoe killed a family of giant lizards with Fireball so they could build on it — and Vornost was completed Grismere 19th, 14503, the last and greatest structure of the founding. It dominates the Sighing Swamps physically and symbolically. The low stairs descend into the marsh. Dragon-Skull Gate opens onto the Grey Plains — and it remains closed to Thoron until all five companions have rejoined him and they ride through together. Castellan Joppa holds it, trim and officious, preparing the Black Fortress for a return he's confirmed from a patrol report. Kael Dravorn and the commandos wait for orders. Vornost is the endgame — the seat of power Thoron built and cannot yet enter."
+          "zone_atmosphere": "The marshland south of Vornost, where rushes whisper and strange birds call from reed beds that shouldn't be deep enough to hold them. Vornost looms above, its shadow falling across the black water. The low stairs connect the swamps to the fortress — the entrance you use when you don't want to be seen. Marsh gas ignites without warning. Bone-reed thickets grow from old battlefields; disturbing them wakes restless spirits. Sinking ground swallows the unwary. Fever-mist rolls in yellow and stinking, and the voices in it aren't the wind. A corpse-willow grove hangs with what looks like rags until you look closer — bodies, old, Vornost garrison tabards rotted through. Deserters or traitors. Message without words. The Sighing Swamps are Gammaria's back door, and everything that comes through them is either desperate or dangerous."
         }
       },
       "constraints": {
@@ -735,83 +847,551 @@
       }
     },
     {
-      "id": "cr_004",
-      "type": "NARR_SESSION_START",
+      "id": "cr_001",
+      "type": "NPAG",
+      "context": {
+        "npc_count": 7,
+        "eligible_npcs": [
+          {
+            "name": "Valania Lorethor",
+            "zone": "Vornost",
+            "role": "Spymistress / companion",
+            "trait": "cunning, vivacious",
+            "objective": "Dispatch recall letters to all companions; redirect Caras agent to full intelligence gathering on Conorth, Golden Hind, and Conorth's secretary; investigate Ringur/Parandia rumours; coordinate companion convergence",
+            "knowledge": "All prior + ceremony protocol; Conorth's systematic garrison weakening (Vanguard, Seawatch, Vornost transfers denied); Torlec imperial strategy hypothesis; Ringur retrieval concern; rewriting Caras agent orders for full intelligence on Conorth + Golden Hind + Conorth's secretary",
+            "next_action": "Run Torben; monitor south landing for 3 Evernew meeting; prepare Tull for Caras release",
+            "faction": "Nation of Gammaria",
+            "with_pc": true
+          },
+          {
+            "name": "Suzanne of Corlaine",
+            "zone": "Khuzduk Hills",
+            "role": "Warrior-priestess / companion",
+            "trait": "volatile, fierce",
+            "objective": "Destroy Fort Seawatch Orcus communion circle; capture cultist for interrogation",
+            "knowledge": "All prior + entity true nature (briefed by Thoron); communion circle reverse-broadcast analysis (her own); Thoron pledge to save her; party split plan",
+            "next_action": "Assault communion cell warehouse tomorrow night with Guldur",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Father Lalholm",
+            "zone": "Khuzdukan",
+            "role": "Priest of Haadis / companion",
+            "trait": "controlled, devout",
+            "objective": "Hold binding with Lithoe; support warden soul recovery; theological research on entity",
+            "knowledge": "All prior + Grull faintly responsive to Haadis invocation; Torvash unresponsive; entity proximity may suppress recovery",
+            "next_action": "Arriving Vornost late tonight or dawn 3 Evernew",
+            "faction": "Church of Haadis",
+            "with_pc": false
+          },
+          {
+            "name": "Lithoe Wano-Kan",
+            "zone": "Khuzdukan",
+            "role": "Sorceress / companion",
+            "trait": "reserved, intense",
+            "objective": "Maintain binding integrity; build arcane sending network; strengthen counter-sequence; support warden soul recovery with Lalholm",
+            "knowledge": "All prior + entity true nature (briefed by Thoron); communion circles reverse-broadcast (Suzanne); Haadis opposes entity (Lalholm); sending network commission",
+            "next_action": "Travelling to Vornost; ETA 3-4 Evernew",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Guldur Emeldyr",
+            "zone": "Khuzduk Hills",
+            "role": "Intelligence gatherer / companion",
+            "trait": "quiet, observant",
+            "objective": "Escort Suzanne to Fort Seawatch; destroy Orcus communion circle; capture cultist",
+            "knowledge": "All prior + entity true nature (briefed by Thoron); communion circle intelligence (Suzanne); party split plan; knows Seawatch port and contacts",
+            "next_action": "Support warehouse assault; handle informant",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Castellan Joppa",
+            "zone": "Vornost",
+            "role": "Castellan",
+            "trait": "steady, perceptive",
+            "objective": "Prepare Dragon-Skull Gate ceremony; control garrison information; keep Thoron's presence quiet until companions arrive; drill ceremonial formations",
+            "knowledge": "Thoron confirmed in Vornost; Vargol claiming stewardship; Valania drafting companion recall; ceremony timeline 3-4 days; Thoron's strategic analysis of Conorth's garrison weakening pattern; Torlec hypothesis discussed; aware Thoron suspects coordinated imperial strategy",
+            "next_action": "Continue ceremony prep; monitor south landing",
+            "faction": "Nation of Gammaria",
+            "with_pc": true
+          },
+          {
+            "name": "Kael Dravorn",
+            "zone": "Vornost",
+            "role": "Commando captain",
+            "trait": "ready, disciplined",
+            "objective": "Investigate swamp hangings — identify killer using commando ropework analysis; maintain commando readiness",
+            "knowledge": "Thoron is Helkar; swamp hangings resolved; Maren recruited by marsh-trader paying Torlec gold; 3 founding-era routes unsealed; trader identity unknown",
+            "next_action": "Trace marsh-trader identity; report to Thoron",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Harren Vael",
+            "zone": "Riverwatch",
+            "role": "Castellan",
+            "trait": "precise, principled",
+            "objective": "Oppose smuggling; run efficient customs",
+            "knowledge": "Customs anomaly; evidence dispatched to Caras; second anomaly — Golden Hind cargo weight discrepancy; awaiting authority",
+            "next_action": "Document Golden Hind cargo discrepancy; await authority to act",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Henric Bale",
+            "zone": "Fort Vanguard",
+            "role": "Castellan (appointed S4)",
+            "trait": "principled, rigid",
+            "objective": "Hold Fort Vanguard; enforce discipline; protect soldiers",
+            "knowledge": "Thoron confirmed as Helkar; Vasha executed; appointed Castellan; Voss promoted; Thoron departed",
+            "next_action": "Maintain garrison routine",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Hadrien Voss",
+            "zone": "Fort Vanguard",
+            "role": "Patrol Commander (promoted S4)",
+            "trait": "competent, ambitious",
+            "objective": "Run frontier patrols; secure eastern approaches",
+            "knowledge": "Thoron confirmed; Vasha executed; promoted; Thess deployed on deep scout east (UA-09)",
+            "next_action": "Address patrol failure; consider search party for overdue Thess",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Selde Marr",
+            "zone": "Fort Vanguard",
+            "role": "Adjutant (S4)",
+            "trait": "cautious, methodical",
+            "objective": "Document everything; enforce accountability",
+            "knowledge": "Full witness S4 events",
+            "next_action": "Document; catalog; advise Bale",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Arvek Morn",
+            "zone": "Fort Vanguard",
+            "role": "Officer (S4)",
+            "trait": "blunt, protective",
+            "objective": "Keep soldiers alive; steady enlisted ranks",
+            "knowledge": "Full witness S4 events",
+            "next_action": "Maintain discipline; steady morale",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Conorth Baerkudth",
+            "zone": "Caras",
+            "role": "Castellan",
+            "trait": "militant, stubborn",
+            "objective": "Maintain military strength; consolidate power",
+            "knowledge": "Unaware of Thoron's return; denied Vasha's transfers 3x; Ironmask agent Deryth granted third meeting (receptive to trade proposal; does not know agent serves Vargol); Vael evidence on desk",
+            "next_action": "Consolidate Caras position; exploit succession uncertainty",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Ironmask Agent Deryth",
+            "zone": "Caras",
+            "role": "Covert agent",
+            "trait": "",
+            "objective": "Cultivate Conorth for Vargol's interests",
+            "knowledge": "Conorth assessed as ambitious, isolated, vulnerable to flattery; third meeting; receptive; does not know Thoron returned",
+            "next_action": "Continue cultivating Conorth's secretary; assess Conorth's awareness of Thoron's movements",
+            "faction": "Ironmask Council",
+            "with_pc": false
+          },
+          {
+            "name": "Merrow Kest",
+            "zone": "Fort Seawatch",
+            "role": "Castellan",
+            "trait": "pragmatic, stretched thin",
+            "objective": "Juggle law/smugglers; scan for Orcus",
+            "knowledge": "Pirates/cultists observed; Torlec vessel refused inspection; Temple schism news; pilgrim influx concern",
+            "next_action": "Maintain port security; doubled harbour watch; managing multiple threats",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Tirris Vargol",
+            "zone": "Whiteagle Keep",
+            "role": "Claimant / Ironmask leader",
+            "trait": "heroic, resentful",
+            "objective": "Seize throne",
+            "knowledge": "Unaware of Thoron's return; agent Deryth reporting — Conorth assessed; patience advised",
+            "next_action": "Await Conorth's response to stewardship claim; position for regency",
+            "faction": "Ironmask Council",
+            "with_pc": false
+          },
+          {
+            "name": "Warden Kellis",
+            "zone": "Eastern Scarps",
+            "role": "Scarp Watch commander",
+            "trait": "",
+            "objective": "Monitor pilgrim routes and wyverns",
+            "knowledge": "Helkar returned; Edhellar confirmed; Wyvern TRG — escort required",
+            "next_action": "Hold station; organize escorts; spread word",
+            "faction": "Scarp Watch",
+            "with_pc": false
+          },
+          {
+            "name": "Scout Aedrin",
+            "zone": "Eastern Scarps",
+            "role": "Scout",
+            "trait": "",
+            "objective": "Map cairn warnings; track predators",
+            "knowledge": "Thoron is last Gammarian commando; wyvern patterns shifting",
+            "next_action": "Update markers; brief Kellis; vigilance",
+            "faction": "Scarp Watch",
+            "with_pc": false
+          },
+          {
+            "name": "Captain Rendal",
+            "zone": "Grey Plains",
+            "role": "Cavalry captain",
+            "trait": "",
+            "objective": "Protect caravans; suppress bandits",
+            "knowledge": "Bandit coordination; spring vulnerability",
+            "next_action": "Expand patrol routes; request reinforcements from Vornost",
+            "faction": "Nation of Gammaria",
+            "with_pc": false
+          },
+          {
+            "name": "Mara Vence",
+            "zone": "Grey Plains",
+            "role": "Merchant",
+            "trait": "",
+            "objective": "Move grain safely",
+            "knowledge": "Golden Hind undercutting; Conorth's gate delays",
+            "next_action": "Grain delivered S3; seeking return cargo",
+            "faction": "Free Hope Merchants",
+            "with_pc": false
+          }
+        ],
+        "pc_zone": "Sighing Swamps",
+        "in_game_date": "2 Evernew",
+        "lore": {
+          "npc:Valania Lorethor": "SUMMARY: Half-elf assassin. Thoron's great love. Spymistress of Gammaria. The woman who built a king and knows exactly what he's made of.\n\nAPPEARANCE: Long dark hair, dark eyes, beautiful, shapely. Carries Gardurth, sister-sword to Thoron's Crandurth. Wears revealing leather armour — this is not vanity but professional practice; people look where she wants them to look. The Ace of Spades on her armband marked her as an assassin when Morgil first met her; she has never bothered to hide what she is from those sharp enough to read the signs.\n\nVOICE & MANNER: Cunning, vivacious, mischievous. Valania is the most socially intelligent person in any room she enters. She reads people the way Lithoe reads spellbooks — with total absorption and absolute retention. Her humour is dry, warm, and slightly dangerous. She teases Thoron with the confidence of a woman who knows she is loved and does not need to prove it. With others she is charming, attentive, and precisely calibrated — she gives each person exactly the version of herself that will be most useful. This is not deception in the way Thoron deceived Merokan. It is craft. Valania believes unity is strength, and she shapes unity through understanding.\n\nShe is Lawful Evil — not in the sense of cruelty, but in the sense of absolute commitment to a structure she has chosen. That structure is Thoron's kingdom and Thoron's cause. Within that structure she will do anything. Outside it she has no loyalties at all.\n\nORIGIN — DYRN ETH MAL: Valania was born in Dyrn eth Mal on Xanthia, the City of the Wise. Her mother was Alda Suza, a prostitute who worked the seedy Old Temple district. Her father was Vallas Lorethor, an elven trader. Vallas and Alda had a series of encounters over one summer — Valania was the result.\n\n[...truncated]",
+          "faction:Nation of Gammaria": "Type: Emerging border state. Militarised survival polity. Founded by Thoron and companions.\nHistory: First durable human realm in region. Expanding outward from Caras and Vornost. Actively contesting hostile wilderness. Founded 14501 AS. Census 14502: Military 1,574, Tallaki 1,433, Settler 4,017, Total 7,024 (excluding PCs).\nCurrent state: Active, responsive. Joppa tracking Thoron east; Conorth tightening Caras gates; Bale crisis at Vanguard; patrols active.\nStructure: Helkar (King = Thoron), Tirris (High Council member = Vargol), Castellan (oversees location = Joppa at Vornost, Conorth at Caras, Bale at Fort Vanguard, Merrow Kest at Seawatch, Harren Vael at Riverwatch).",
+          "npc:Suzanne of Corlaine": "SUMMARY: Anti-Paladin of Orcus. Frontier warrior. The wild heart of the party. A girl who wanted to be a knight. A woman whose parents sold her soul before she was old enough to understand.\n\nAPPEARANCE: Short dark hair, blue eyes, powerful, muscular. Carries Yor-Kazh the Unholy Reaver, an immense war-sword. There is nothing subtle about Suzanne. She is built for violence and she looks it. Her beauty is the beauty of a storm — compelling, dangerous, and indifferent to your comfort.\n\nVOICE & MANNER: Sensual and emotional. Violent. Direct to the point of brutality. Suzanne says what she thinks, hits what angers her, and wants what she wants without apology. \"The strong rule, the weak serve\" — this is not philosophy for her, it is survival doctrine. She nearly came to blows with Drauglos in a bar in Nega the night they met, and by the next morning she was following him into the wilderness. That is Suzanne in miniature: confrontation as courtship, violence as intimacy, defiance as the only form of trust she knows.\n\nShe is Chaotic Evil — but this does not mean she is without loyalty or love. It means she recognises no authority except strength and no bond except those she chooses. She chose Thoron. She chose Gammaria. She chose the frontier. Everything else — Orcus included — is obligation imposed on her, not devotion freely given.\n\nORIGIN — CORLAINE: Suzanne is from Corlaine, a beautiful region of forests, hills, valleys, and rivers on the island of Parandia near the continent of Gorramythnm. Corlaine is known for its gorgeous views and wonderful wildlife. And its demon worship.\n\n[...truncated]",
+          "npc:Father Lalholm": "SUMMARY: Reaver of Haadis. Death-priest. The bedrock of the party. A boy who was beaten until he died, who met a god on a beach of black sand, and who has spent every day since trying to return to that shore.\n\nAPPEARANCE: Short brown hair, dark eyes. Grim. Moody. Carries a studded black mace. There is nothing inviting about Lalholm's appearance. He looks like what he is — a man who has made death his profession and his devotion. His eyes are patient and watchful and miss very little.\n\nVOICE & MANNER: Domineering. Nihilistic. Devout. Lalholm speaks with the careful precision of a man who believes every word matters because every soul matters. He does not waste language. When he offers counsel, it is considered and deliberate. When he disagrees, he is direct but controlled. He has been right three times when others doubted him — Suzanne has acknowledged this (\"three times right, Lalholm\") — and this gives his advice a weight that even people who distrust him cannot entirely dismiss.\n\nHe is Neutral Evil — his morality is entirely subordinate to his faith. Haadis is all. Every other god is to be opposed. Every soul is to be sent to Haadis with proper blessing at the moment of death. This is not cruelty — it is cosmic housekeeping, from Lalholm's perspective. Souls belong to Haadis. His job is to ensure they arrive.\n\nHis authority response is to dominate. His risk posture is confrontational. But these are tempered by genuine loyalty to Thoron, which he expresses through counsel, through presence, through the steady, unglamorous work of being the person who stays when everything is falling apart. He is the bedrock. He does not crack.\n\n[...truncated]",
+          "faction:Church of Haadis": "Type: Global, entrenched. Malevolent, patient, doctrinally absolute. Ancient religion elevated to transnational church. Ruled by Jezrath Hallowsbane in Ellethea - High Reavers have regional control.\nHistory: Transnational legitimacy-competitor. Unofficially invested in Gammaria through Father Lalholm. Tests moral/jurisdictional boundaries. Officially neutral; slow infiltration; long-horizon pressure. The Church's true concerns are theological - send souls to Haadis by whatever means possible.\nCanonical truth (restricted): Haadis desires to devour souls sent by his Reavers.\nCurrent state: Active. Testing boundaries. Lalholm's departure from Riverwatch may delay or accelerate jurisdictional push.\nKey NPC: Father Lalholm (companion, with Thoron). The Church's investment is through him whether he likes it or not.",
+          "npc:Lithoe Wano-Kan": "SUMMARY: Wizard. Lore keeper. The party's most powerful spellcaster and its loneliest soul. A woman who spoke one word of a dead god's language and blinded herself for six months. Still hungry for more.\n\nAPPEARANCE: Medium blonde hair, blue eyes, thin, focused. Carries a gnarled Staff of Power. Lithoe looks like what she is — a person consumed by study. There is an intensity to her focus that is both impressive and slightly unnerving. She does not relax easily. Even in casual moments she has the air of someone whose mind is elsewhere, running calculations, tracing patterns, solving problems no one else has noticed.\n\nVOICE & MANNER: Selfish, reserved, lonely. Lithoe speaks precisely when she speaks at all, and often doesn't. She is not rude so much as absent — the world of people and their needs often fails to register against the far more interesting world of arcane theory. When she does engage socially, it tends to be transactional: she needs something, or she has information to share, or someone has intruded on her attention and she needs to deal with them before returning to what matters.\n\nShe is Neutral Evil — not through malice but through indifference. Other people's concerns simply do not weigh against her own needs unless she has specifically chosen to care about them. The people she has chosen to care about are a very short list: Guldur, Valania, and to a diminishing degree, the party as a collective entity that provides her protection.\n\nHer authority response is to appease. Her risk posture is self-preservation. She does not fight for dominance — she avoids conflict until it becomes unavoidable, then deploys devastating force.\n\n[...truncated]",
+          "npc:Guldur Emeldyr": "SUMMARY: Fighter. Friend. The human heart of an inhuman party. A lazy rich boy who lost everything to a plague and accidentally became the most decent person in a band of killers.\n\nAPPEARANCE: Short sandy hair, blue eyes, handsome, cheerful. Carries a bottle of cheap wine. That last detail is the most important one. In a party of legendary warriors, assassins, death-priests, and demon-bound anti-paladins, Guldur carries a bottle of cheap wine. He is the human-scale character, and he knows it, and he has made it his identity.\n\nVOICE & MANNER: Dry sense of humour. Nimble physically and mentally. Sarcastic. Guldur's primary motivation is — and this is canonical — \"always have a killer joke, pun, or quip ready for the occasion.\" This is not comic relief. This is survival strategy. When you travel with people who can level buildings and command dragons, the safest thing to be is the one who makes them laugh. Nobody kills the funny one.\n\nBut underneath the wit is something more serious. Guldur's authority response is to insult — he deflects tension with mockery, redirects aggression with humour, and uses sarcasm as a diagnostic tool. If he's joking about something, he's noticed it. If he stops joking, it's serious. His role in the party is joker and foil, but the seed document also says he \"makes the hard calls.\" That combination — the man who laughs at everything and then, when it matters, speaks the truth nobody else will — is what makes him essential.\n\nHe is Chaotic Neutral. He will not harm innocents. This is his moral limit, and in a party where the alignment tendencies are Chaotic Evil, Lawful Evil, Neutral Evil, and Neutral Evil, it makes him the closest thing to a conscience the group has.\n\n[...truncated]",
+          "companion:Valania Lorethor": {
+            "trust_in_pc": "Very high — Thoron's strategic analysis impressed her ('Good instinct. You saw it before either of us did')",
+            "motivation_shift": "Fully engaged in war council; strategic partnership with Thoron at peak; Torlec hypothesis has sharpened focus from domestic politics to potential imperial threat",
+            "grievances": "Ringur confrontation resolved. Residual tension: Suzanne situation still active risk.",
+            "agency_notes": "Took full operational control of intelligence network; rewriting Caras agent orders; dispatching recall letters; proposed tactical counters to Ringur (Lithoe/Ragnoth, Suzanne/Yor-Kazh)"
+          },
+          "companion:Suzanne of Corlaine": {
+            "trust_in_pc": "very high (Thoron's farewell speech strengthened bond)",
+            "motivation_shift": "Thoron's direct commitment strengthened resolve; sheathed Yor-Kazh voluntarily; mission-focused on communion circle destruction",
+            "grievances": "",
+            "agency_notes": "Maintained silence with Valania; Yor-Kazh trembled approaching Khuzdukan; blade blazed black; entity called; screamed in rage not fear; held; deliberately sheathed; eyes wet"
+          },
+          "companion:Father Lalholm": {
+            "trust_in_pc": "high",
+            "motivation_shift": "Counter-sequence anchor confirmed Haadis's opposition to entity; theological purpose clear; committed to holding Khuzdukan",
+            "grievances": "",
+            "agency_notes": "Anchored at threshold; Haadis opposed entity's architectural claim; bled from nose; on knees after; wiped blood; stood; 'You saw something in there. When it flinched.' — not a question"
+          },
+          "companion:Lithoe Wano-Kan": {
+            "trust_in_pc": "growing (counter-sequence success jointly achieved)",
+            "motivation_shift": "Counter-sequence success validated approach; collaborative dependence with Thoron deepened; Guldur departure emotional cost contained",
+            "grievances": "",
+            "agency_notes": "Breakthrough 24th Ilrym (8/8 TRG); worked from outside boundary; Staff pulsing; 'It held. The counter-sequence held.' Then: 'bought weeks, maybe months, not forever'; collapsed; Guldur reunion — heartbeat, mastered; 'Good.'"
+          },
+          "companion:Guldur Emeldyr": {
+            "trust_in_pc": "absolute",
+            "motivation_shift": "Three-way split abandoned; recall to Vornost pending",
+            "grievances": "",
+            "agency_notes": "Social buffer during travel; horses secured from Caras; caught Thoron physically; hasn't let go; Lithoe reunion — saw her among charcoal diagrams; emotional moment controlled"
+          }
+        }
+      },
+      "constraints": {
+        "max_words": 350,
+        "tone": "sword_and_sorcery",
+        "style": "Compressed prose. Inspirations: Elric, Conan, Dark Crystal, Krull, Willow, LotR.",
+        "voice": "Second person present tense. The player IS the character. 'You stand at the gate' not 'Thoron stood at the gate'. Never use the PC name as subject.",
+        "instruction": "Resolve agency actions for 7 NPCs. Choose NPCs with active objectives. Describe off-screen actions. Note any clock ADV bullets their actions satisfy."
+      }
+    },
+    {
+      "id": "cr_007",
+      "type": "NARR_ARRIVAL",
       "context": {
         "zone": {
-          "zone_name": "Vornost",
+          "zone_name": "Sighing Swamps",
           "description": "",
-          "threat_level": "low",
-          "controlling_faction": "Nation of Gammaria"
+          "threat_level": "",
+          "situation_summary": "",
+          "controlling_faction": "Bloodswamp Hobgoblins"
         },
-        "session_id": 14,
-        "in_game_date": "1 Evernew",
-        "season": "Spring",
-        "seasonal_pressure": "Feed & Seed — food stores depleted; planting season critical",
+        "travel": {
+          "from_zone": "Vornost",
+          "crossing_point": "low stairs",
+          "cp_tag": null,
+          "days_traveled": 1,
+          "is_eventful": false
+        },
+        "present_npcs": [
+          {
+            "name": "Valania Lorethor",
+            "role": "Spymistress / companion",
+            "trait": "cunning, vivacious",
+            "is_companion": true
+          },
+          {
+            "name": "Crandurth",
+            "role": "Thoron's sword / advisor / dark conscience",
+            "trait": "morbid, curious, selfish, pragmatic, battle-joyful",
+            "is_companion": true
+          }
+        ],
         "companions_with_pc": [
           {
             "name": "Valania Lorethor",
             "trait": "cunning, vivacious",
             "status": "active"
-          }
-        ],
-        "npcs_in_zone": [
-          {
-            "name": "Castellan Joppa",
-            "role": "Castellan",
-            "trait": "steady, perceptive"
-          },
-          {
-            "name": "Kael Dravorn",
-            "role": "Commando captain",
-            "trait": "ready, disciplined"
           },
           {
             "name": "Crandurth",
-            "role": "Thoron's sword / advisor / dark conscience",
-            "trait": "morbid, curious, selfish, pragmatic, battle-joyful"
-          },
-          {
-            "name": "Oskar",
-            "role": "Commando, founding-era veteran",
-            "trait": "observant, steady, loyal, troll-scarred"
+            "trait": "morbid, curious, selfish, pragmatic, battle-joyful",
+            "status": "active"
           }
         ],
-        "active_threads": [
-          {
-            "id": "UT-torlec-imperial-strategy-01",
-            "description": "Hypothesis: Torlec orchestrating Conorth (garrison hoarding), Vargol (stewardship), Golden Hind (economic leverage) as coordinated imperial destabilization. Valania's agent investigating. Guldur's Seawatch intelligence needed."
-          },
-          {
-            "id": "UT-ringur-retrieval-01",
-            "description": "Concern that Vargol may have retrieved Ringur from Well of Time on Parandia. Valania deploying intelligence network. If confirmed, changes entire nature of succession conflict — soul-drinking sword vs Crandurth."
-          },
-          {
-            "id": "UT-valania-caras-intelligence-01",
-            "description": "Valania's agent in Caras redirected from trade flow monitoring to full intelligence: Conorth's meetings, secretary's contacts, Golden Hind factor activity, grain/cattle flows out of borders. Results expected before Lalholm arrives (2-3 days)."
-          }
+        "season": "Spring",
+        "seasonal_pressure": "Feed & Seed — food stores depleted; planting season critical",
+        "in_game_date": "2 Evernew",
+        "recent_facts": [
+          "Date advanced to 2 Evernew",
+          "VP engine ran: roll=8, band=8-9: Correct restraint",
+          "HT-DH engine active — Hidden Temple clocks eligible for audit advancement",
+          "NPAG triggered: 7 NPCs act"
         ],
-        "previous_session_summary": "",
         "lore": {
-          "zone_atmosphere": "The Black Fortress. Seat of the Helkar. The Dragon Throne. Thoron cleared the great rock pillar on Evernew 9th, 14501 — Lithoe killed a family of giant lizards with Fireball so they could build on it — and Vornost was completed Grismere 19th, 14503, the last and greatest structure of the founding. It dominates the Sighing Swamps physically and symbolically. The low stairs descend into the marsh. Dragon-Skull Gate opens onto the Grey Plains — and it remains closed to Thoron until all five companions have rejoined him and they ride through together. Castellan Joppa holds it, trim and officious, preparing the Black Fortress for a return he's confirmed from a patrol report. Kael Dravorn and the commandos wait for orders. Vornost is the endgame — the seat of power Thoron built and cannot yet enter.",
+          "zone_atmosphere": "The marshland south of Vornost, where rushes whisper and strange birds call from reed beds that shouldn't be deep enough to hold them. Vornost looms above, its shadow falling across the black water. The low stairs connect the swamps to the fortress — the entrance you use when you don't want to be seen. Marsh gas ignites without warning. Bone-reed thickets grow from old battlefields; disturbing them wakes restless spirits. Sinking ground swallows the unwary. Fever-mist rolls in yellow and stinking, and the voices in it aren't the wind. A corpse-willow grove hangs with what looks like rags until you look closer — bodies, old, Vornost garrison tabards rotted through. Deserters or traitors. Message without words. The Sighing Swamps are Gammaria's back door, and everything that comes through them is either desperate or dangerous.",
+          "faction:Bloodswamp Hobgoblins": "Type: Local, entrenched. Quiet, stealthy hunters, rangers, trackers. Nomads settled in swamps generations ago.\nHistory: Helped Gammaria in early years. Careful isolation in Sighing Swamps depths. Uneasy co-existence.\nTerritory: Deep Swamps / Sighing Swamps.\nCurrent state: Active. No offscreen actions resolved. Status unknown.",
           "npc:Valania Lorethor": "SUMMARY: Half-elf assassin. Thoron's great love. Spymistress of Gammaria. The woman who built a king and knows exactly what he's made of.\n\nAPPEARANCE: Long dark hair, dark eyes, beautiful, shapely. Carries Gardurth, sister-sword to Thoron's Crandurth. Wears revealing leather armour — this is not vanity but professional practice; people look where she wants them to look. The Ace of Spades on her armband marked her as an assassin when Morgil first met her; she has never bothered to hide what she is from those sharp enough to read the signs.\n\nVOICE & MANNER: Cunning, vivacious, mischievous. Valania is the most socially intelligent person in any room she enters. She reads people the way Lithoe reads spellbooks — with total absorption and absolute retention. Her humour is dry, warm, and slightly dangerous. She teases Thoron with the confidence of a woman who knows she is loved and does not need to prove it. With others she is charming, attentive, and precisely calibrated — she gives each person exactly the version of herself that will be most useful. This is not deception in the way Thoron deceived Merokan. It is craft. Valania believes unity is strength, and she shapes unity through understanding.\n\nShe is Lawful Evil — not in the sense of cruelty, but in the sense of absolute commitment to a structure she has chosen. That structure is Thoron's kingdom and Thoron's cause. Within that structure she will do anything. Outside it she has no loyalties at all.\n\nORIGIN — DYRN ETH MAL: Valania was born in Dyrn eth Mal on Xanthia, the City of the Wise. Her mother was Alda Suza, a prostitute who worked the seedy Old Temple district. Her father was Vallas Lorethor, an elven trader. Vallas and Alda had a series of encounters over one summer — Valania was the result.\n\nShe grew up in poverty, surrounded by pimps, prostitutes, thugs, and johns. And as a half-elf, her childhood lasted far longer than any human's. Her human half-sister Elendia grew to adulthood and beyond. Alda died of old age. Valania was still maturing. But during that extended childhood she learned twice as much as any human could. By thirty, she already knew half a dozen ways to kill a man.\n\nThis is the foundation of everything Valania is. She didn't learn to read people in an academy or a court. She learned it in the Old Temple district, watching her mother's clients, reading the difference between the ones who would pay and leave and the ones who would hurt someone. She learned what men want, what they'll do to get it, and how to position yourself so that their wanting serves your purposes instead of theirs. The vivacious charm, the precise calibration, the ability to give each person exactly the version of herself they need — all of it was survival skill before it was tradecraft.\n\nTHE BANNERS: It was only natural that the Banners — Dyrn eth Mal's shadowy rogues' guild — would take her in as one of their own. Valania rose through the ranks, turning natural aptitudes and learned skills to the task of murder with startling efficiency. Years spent maturing in the underbelly of the City of the Wise had honed her mind. She went from fresh recruit to senior assassin in three years. The Ace of Spades was her calling card.\n[...truncated]"
         }
       },
       "constraints": {
-        "max_words": 400,
+        "max_words": 300,
         "tone": "sword_and_sorcery",
         "style": "Compressed prose. Inspirations: Elric, Conan, Dark Crystal, Krull, Willow, LotR.",
         "voice": "Second person present tense. The player IS the character. 'You stand at the gate' not 'Thoron stood at the gate'. Never use the PC name as subject.",
-        "instruction": "Set the opening scene for this session. Establish where the PC is, the zone atmosphere, who is present (companions and notable NPCs), and weave in the active threads as stakes the player can feel. This is the first thing the player reads — set tone, ground them in the world, and give them something to react to. Do NOT advance time, resolve encounters, or trigger mechanical gates."
+        "instruction": "Narrate arrival at this zone. Cover: journey, first impressions, sensory detail, companion reactions, immediate situation. Do NOT advance time or resolve encounters."
       }
     }
   ],
   "state_summary": {
-    "session_id": 14,
-    "date": "1 Evernew",
-    "zone": "Vornost",
+    "session_id": 12,
+    "date": "2 Evernew",
+    "zone": "Sighing Swamps",
     "season": "Spring"
   },
-  "day_logs": [],
-  "timestamp": "2026-02-22T09:14:26.720507"
+  "day_logs": [
+    {
+      "day_number": 1,
+      "date": "2 Evernew",
+      "steps": [
+        {
+          "step": "date_advance",
+          "result": {
+            "action": "date_advance",
+            "old_date": "1 Evernew",
+            "new_date": "2 Evernew",
+            "season_changed": false
+          }
+        },
+        {
+          "step": "engine:Vanguard Patrol Doctrine",
+          "result": {
+            "engine": "Vanguard Patrol Doctrine",
+            "roll": {
+              "expression": "2d6",
+              "dice": [
+                2,
+                6
+              ],
+              "modifier": 0,
+              "total": 8,
+              "label": "VP roll - 2 Evernew"
+            },
+            "outcome_band": "8-9: Correct restraint",
+            "description": "Good logs, no escalation",
+            "clock_effects_applied": []
+          }
+        },
+        {
+          "step": "engine:Hidden Temple — Demon-Hunt Cadence",
+          "result": {
+            "engine": "Hidden Temple — Demon-Hunt Cadence",
+            "status": "active",
+            "note": "Linked clocks eligible for clock audit this day",
+            "linked_clocks": [
+              "Hidden Temple—Demon Ledger",
+              "Hidden Temple—Interest in Gammaria",
+              "Hidden Temple—Contract Pressure Vector"
+            ]
+          }
+        },
+        {
+          "step": "cadence_clocks",
+          "results": [
+            {
+              "clock": "Hidden Temple—Demon Ledger",
+              "action": "cadence_eligible_for_audit",
+              "reason": "Cadence PE active — clock eligible for audit, not auto-advanced (cadence_bullet is empty)"
+            },
+            {
+              "clock": "Hidden Temple—Interest in Gammaria",
+              "action": "cadence_eligible_for_audit",
+              "reason": "Cadence PE active — clock eligible for audit, not auto-advanced (cadence_bullet is empty)"
+            }
+          ]
+        },
+        {
+          "step": "clock_audit",
+          "result": {
+            "auto_advanced": [],
+            "needs_llm_review": [],
+            "skipped": [
+              {
+                "clock": "Helkar Recognition—Riverwatch/Temple",
+                "reason": "status=halted, advanced_today=False, progress=1/4"
+              },
+              {
+                "clock": "Helkar Recognition—Fort Vanguard",
+                "reason": "status=trigger_fired, advanced_today=False, progress=4/4"
+              },
+              {
+                "clock": "Companion Reunion—Valania",
+                "reason": "status=trigger_fired, advanced_today=False, progress=1/1"
+              },
+              {
+                "clock": "Companion Reunion—Suzanne",
+                "reason": "status=trigger_fired, advanced_today=False, progress=1/1"
+              },
+              {
+                "clock": "Companion Reunion—Lalholm",
+                "reason": "status=trigger_fired, advanced_today=False, progress=1/1"
+              },
+              {
+                "clock": "Companion Reunion—Lithoe",
+                "reason": "status=trigger_fired, advanced_today=False, progress=1/1"
+              },
+              {
+                "clock": "Companion Reunion—Guldur",
+                "reason": "status=trigger_fired, advanced_today=False, progress=1/1"
+              },
+              {
+                "clock": "Golden Hind—Assessment of Gammaria",
+                "reason": "status=halted, advanced_today=False, progress=0/4"
+              },
+              {
+                "clock": "Temple of the Sun—Doctrinal Fracture",
+                "reason": "status=trigger_fired, advanced_today=False, progress=20/20"
+              },
+              {
+                "clock": "Henric Bale",
+                "reason": "status=trigger_fired, advanced_today=False, progress=4/4"
+              },
+              {
+                "clock": "Wyvern Territory Dispute",
+                "reason": "status=trigger_fired, advanced_today=False, progress=4/4"
+              },
+              {
+                "clock": "Lithoe Counter-Sequence Research",
+                "reason": "status=trigger_fired, advanced_today=False, progress=8/8"
+              }
+            ],
+            "no_match": [
+              "Helkar Recognition—Caras",
+              "Helkar Recognition—Vornost",
+              "Helkar Recognition—Frontier (General)",
+              "Helkar Recognition—Seawatch/Riverwatch",
+              "Doctrine Stress Test",
+              "Coastal Superstition—Neglected Shrines",
+              "Selde Marr",
+              "Arvek Morn",
+              "Hidden Temple—Demon Ledger",
+              "Hidden Temple—Interest in Gammaria",
+              "Hidden Temple—Contract Pressure Vector",
+              "Hidden Temple—Exposure Risk in Caras",
+              "Cult of Orcus—Enigma Crystal Hunt",
+              "Suzanne Loyalty—Helkar vs Orcus",
+              "Children of the Dead Gods—Binding Degradation",
+              "Dimensional Instability—Western Scarps",
+              "Khuzduk Peaks—Deep Tremors",
+              "East March Unknown Tracks",
+              "Vornost Legitimacy Crisis"
+            ]
+          }
+        },
+        {
+          "step": "encounter_gate",
+          "result": {
+            "gate": "encounter",
+            "roll": {
+              "expression": "1d6",
+              "dice": [
+                4
+              ],
+              "modifier": 0,
+              "total": 4,
+              "label": "Encounter gate"
+            },
+            "intensity": "medium",
+            "passed": false,
+            "note": "Gate failed (rolled 4, intensity=medium)"
+          }
+        },
+        {
+          "step": "npag_gate",
+          "result": {
+            "gate": "npag",
+            "roll": {
+              "expression": "1d6",
+              "dice": [
+                2
+              ],
+              "modifier": 0,
+              "total": 2,
+              "label": "NPAG gate"
+            },
+            "intensity": "medium",
+            "passed": true,
+            "npc_count": {
+              "count": 7,
+              "roll": {
+                "expression": "2d4",
+                "dice": [
+                  4,
+                  3
+                ],
+                "modifier": 0,
+                "total": 7,
+                "label": "NPAG NPC count (medium)"
+              }
+            },
+            "llm_request": {
+              "type": "NPAG",
+              "npc_count": 7,
+              "context": "Resolve 7 NPC agency actions"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "timestamp": "2026-02-22T10:08:00.655147"
 }
