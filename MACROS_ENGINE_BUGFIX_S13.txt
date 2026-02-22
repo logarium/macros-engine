@@ -1,0 +1,118 @@
+MACROS ENGINE — BUG FIX INSTRUCTIONS (Session 13 Testing)
+ALL ITEMS BLOCKING PLAY. FIX IN ORDER.
+
+────────────────────────────────────────────────────────────────────
+BUG 1: CRITICAL — CreativeRequest not JSON serializable
+────────────────────────────────────────────────────────────────────
+
+Log: [ERROR] Failed to write pending file: Object of type CreativeRequest is not JSON serializable
+
+This blocks ALL creative requests from reaching Claude via MCP.
+The engine builds requests in memory but crashes writing them to
+pending_creative.json.
+
+Fix: Add .to_dict() method to CreativeRequest dataclass, or add
+a custom JSON encoder that handles CreativeRequest objects. Every
+field must serialize to JSON-safe types (strings, ints, lists, dicts).
+
+────────────────────────────────────────────────────────────────────
+BUG 2: CRITICAL — Travel + T&P running twice
+────────────────────────────────────────────────────────────────────
+
+Log shows the entire travel sequence duplicated — same timestamp,
+same results, same clock advances. Everything from [TRAVEL] through
+[ZONE_FORGE] appears twice at 09:08:29.
+
+Fix: Find the double-fire in travel_to() or wherever travel
+triggers run_day(). Travel should execute exactly once.
+
+────────────────────────────────────────────────────────────────────
+BUG 3: HIGH — With_PC cohesion moving non-companions
+────────────────────────────────────────────────────────────────────
+
+Log: [WITH_PC] Cohesion: Castellan Joppa: Vornost -> Sighing Swamps
+
+Joppa is Castellan of Vornost. He is NOT a companion. The cohesion
+system dragged him to Sighing Swamps because with_pc=true.
+
+Fix: With_PC cohesion on travel must ONLY move NPCs where
+is_companion=true. NPCs with with_pc=true but is_companion=false
+stay in their zone. On travel, set their with_pc=false instead
+of moving them.
+
+────────────────────────────────────────────────────────────────────
+BUG 4: HIGH — Cadence clocks auto-advancing when they should be audit-eligible only
+────────────────────────────────────────────────────────────────────
+
+Hidden Temple—Demon Ledger and Hidden Temple—Interest in Gammaria
+are ticking +1 every day as if they are pure time-decay cadence
+clocks. They are NOT.
+
+The HT-DH engine makes its linked clocks ELIGIBLE FOR CLOCK AUDIT,
+not auto-advance. The engine's own log from 23 Ilrym confirms:
+  "action": "cadence_eligible_for_audit"
+  "reason": "Cadence PE active — clock eligible for audit, not
+  auto-advanced (bullet is not pure time-decay)"
+
+But from 24 Ilrym onward they switched to auto-advance and have
+been ticking daily ever since.
+
+Rule: A cadence clock auto-advances ONLY if it has a non-empty
+cadence_bullet (e.g. Binding Degradation has cadence_bullet="Decay").
+If cadence_bullet is empty, the clock is flagged for audit review
+only — it does NOT auto-tick.
+
+Fix: In the cadence clock advancement step of run_day(), check
+cadence_bullet. If empty string or None → flag for audit, do NOT
+advance. If non-empty → auto-advance (subject to HALT check).
+
+Affected clocks:
+  Hidden Temple—Demon Ledger: cadence_bullet="" → AUDIT ONLY
+  Hidden Temple—Interest in Gammaria: cadence_bullet="" → AUDIT ONLY
+  Hidden Temple—Contract Pressure Vector: cadence=false → NOT CADENCE
+  Children of Dead Gods—Binding Degradation: cadence_bullet="Decay" → AUTO (but respect HALT)
+
+────────────────────────────────────────────────────────────────────
+BUG 5: MEDIUM — Display routing still broken
+────────────────────────────────────────────────────────────────────
+
+Forge responses (CL_FORGE, PE_FORGE, CAN_FORGE) were showing in
+the chat window on earlier attempts. NARR_SESSION_START now works.
+Confirm the routing whitelist is:
+
+DISPLAY IN CHAT:
+  PLAYER_INPUT, NPAG, NARR_SESSION_START, NARR_ARRIVAL,
+  NARR_TIME_PASSAGE, NARR_COMBAT_END, NARR_ENCOUNTER, RUMOR
+
+LOG ONLY (never in chat):
+  CL_FORGE, PE_FORGE, CAN_FORGE, NPC_FORGE, EL_FORGE, FAC_FORGE,
+  UA_FORGE, CLOCK_AUDIT, CLOCK_AUDIT_REVIEW, ZONE_EXPANSION
+
+────────────────────────────────────────────────────────────────────
+STILL OUTSTANDING FROM EARLIER FIX SPEC
+────────────────────────────────────────────────────────────────────
+
+These were in MACROS_ENGINE_FIX_SPEC.txt and may or may not have
+been implemented. Verify each:
+
+H1: Calendar month order and day counts (including Reapmere 30d)
+H2: Season assignments
+H3: Halt condition keyword matching (substring → whole-word)
+H4: load_game() missing backfill calls
+H5: Blacktooth Forest EL missing entry 3
+M1: 13 creative builders missing CONSTRAINTS fields
+M2: build_narr_arrival missing instruction
+M3: npc_update key mismatch ("npc" vs "name")
+M4: NPAG eligible_npcs missing role and trait
+M5: NPAG lore missing companion profiles
+M6: Zone name substring matching in bullet filter
+M7: Double session_id increment
+M8: Vornost empty threat_level
+L1-L6: Cleanup items
+
+────────────────────────────────────────────────────────────────────
+IMPLEMENTATION ORDER: Bug 1 → Bug 2 → Bug 3 → Bug 4 → Bug 5 →
+verify earlier fix spec items. Then test: load save, start session,
+travel, confirm pending requests reach Claude.
+────────────────────────────────────────────────────────────────────
+END

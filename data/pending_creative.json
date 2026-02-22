@@ -5,7 +5,7 @@
       "type": "CL_FORGE",
       "context": {
         "owner": "Nation of Gammaria",
-        "trigger_context": "zone-forge: no clocks for zone entities",
+        "trigger_context": "zone-forge: existing zone clocks=[]",
         "existing_clocks": [
           {
             "name": "Helkar Recognition—Caras",
@@ -226,7 +226,7 @@
           "Conorth Baerkudth"
         ],
         "pc_zone": "Vornost",
-        "session_id": 13,
+        "session_id": 14,
         "season": "Spring",
         "lore": {
           "forge_spec": "CL-FORGE\n1 DESIGN 1 CLOCK\n1.1 Trigger: CL-FORGE\n\n2 STRUCTURED INPUT MODE (when Caller = ZONE-FORGE):\n2.1 Required:\n2.1.1 Clock_Name: (what this clock tracks)\n2.1.2 Clock_Owner: (NPC/faction/UA-XX/environment — must already exist in authoritative state)\n2.1.3 Track_Size: (how many segments, typically 4-6)\n2.1.4 Advances_When: (list of 1-6 trigger bullets, each quotable)\n2.1.5 Trigger_On_Completion: (what happens when clock completes)\n2.1.6 If implies AGENCY ACTIONS, include: \"Resolution gated pending NPAG / authorised PE\"\n2.1.7 Optional (with sensible defaults):\n2.1.7.1 Starting_Progress: (default: 0)\n2.1.7.2 Visibility: (default: secret)\n2.1.7.3 Halts_When: (default: (none))\n2.1.7.4 Reduces_When: (default: (none))\n2.2 Protocol: all inputs in structured block. Missing required → HARD STOP + log to ADJUDICATION_LOG.\n\n3 CLOCK OWNER VALIDATION (HARD):\n3.1 When Caller = ZONE-FORGE, Clock_Owner MUST already exist in authoritative state in NSV-FACTIONS, JSON save, or PARTY-SEED:\n3.1.1 JSON save npcs section, OR\n3.1.2 JSON save factions section, OR\n3.1.3 UA_LOG, OR\n3.1.4 Clock_Owner = \"environment\"\n3.2 If Clock_Owner does not exist → HARD STOP with error logged to ADJUDICATION_LOG; abort this CL-FORGE call.\n\n4 INPUT PROTOCOL:\n4.1 Player mode: stepwise protocol (ask field, STOP, ask next field, STOP)\n4.2 ZONE-FORGE mode: all inputs provided in structured block upfront; apply defaults for omitted optional fields\n4.2.1 Apply defaults for any omitted optional fields. \n4.2.2 Clock_Owner must already exist (no NPC-FORGE/FAC-FORGE path in batch mode).\n\n5 Inputs (player mode — stepwise; STOP after each):\n5.1 Identity: Clock_Name, Clock_Owner (existing NPC/faction/UA-XX/environment)\n5.1.1 New named owner → require NPC-FORGE/FAC-FORGE path.\n5.2 Track: Track_Size, Starting_Progress (default 0), Visibility\n5.3 Triggers: Advances_When (1–6 bullets; quotable)\n5.4 Controls: Halts_When, Reduces_When (may be (none))\n5.5 Completion: Trigger_On_Completion\n5.5.1 If implies AGENCY ACTIONS → include \"Resolution gated pending NPAG / authorised PE\".\n5.6 Session Fields: set Advanced_This_Session = no, Trigger_Fired = blank\n\n6 Rules (HARD):\n6.1 Full field set required; no shorthand.\n6.2 No canon invention embedded.\n\n7 Output (HARD):\n7.1 Emit one complete clock entry; then STOP.\n7.1.1 Use \"(none)\" for empty HALT/RED fields"
@@ -242,6 +242,58 @@
     },
     {
       "id": "cr_002",
+      "type": "PE_FORGE",
+      "context": {
+        "engine_name": "Vornost Zone Engine",
+        "zone_scope": "Vornost",
+        "trigger_event": "zone-forge",
+        "existing_engines": [
+          {
+            "name": "Vanguard Patrol Doctrine",
+            "version": "VP v3.0",
+            "status": "active",
+            "zone_scope": "Global",
+            "trigger_event": "TIME & PRESSURE invoked with time passing"
+          },
+          {
+            "name": "Temple of the Sun — Doctrinal Debate",
+            "version": "TSDD v3.0",
+            "status": "inert",
+            "zone_scope": "Temple of the Sun",
+            "trigger_event": "TIME & PRESSURE resolves >=1 day"
+          },
+          {
+            "name": "Hidden Temple — Demon-Hunt Cadence",
+            "version": "HT-DH v3.0",
+            "status": "active",
+            "zone_scope": "Any region where demon/fiend evidence exists",
+            "trigger_event": "TIME & PRESSURE resolves >=1 day AND Demon Ledger >= 1"
+          },
+          {
+            "name": "Seasonal Resource Pressure",
+            "version": "SRP v1.0",
+            "status": "active",
+            "zone_scope": "Gammaria (all settlements)",
+            "trigger_event": "In-game date crosses seasonal threshold"
+          }
+        ],
+        "pc_zone": "Vornost",
+        "session_id": 14,
+        "lore": {
+          "forge_spec": "PE-FORGE\nDESIGN 1 PERSISTENT PROCEDURAL ENGINE\nTrigger: PE-FORGE | DESIGN PE | CREATE PE | Caller = ZONE-FORGE\n\nSTRUCTURED INPUT MODE (when Caller = ZONE-FORGE):\nRequired:\n  • Engine_Name: (what this PE does)\n  • Zone_Scope: (where it operates)\n  • Trigger_Event: (when it fires, 1-3 phrases)\nOptional (with defaults):\n  • Authority_Tier: (default: ZONE-LOCAL)\n  • Cadence: (default: no)\n  • Resolution_Method: (default: agent designs from canon)\n  • Persistence: (default: yes)\nProtocol: all inputs in structured block. Agent designs remaining fields from canon + Zone_Scope characteristics.\n\nINPUT PROTOCOL:\n  • Player mode: stepwise protocol (ask field, STOP, ask next field, STOP)\n  • ZONE-FORGE mode: all inputs in structured block; agent completes PE-DEF\nRequired Fields (collect across steps):\n•\tIdentity: Engine_Name, Engine_Version, Authority_Tier, Registry_Target (CSEM|SSM_1A|NSV_DELTA_REGISTRY)\n•\tScope: Zone_Scope, State_Scope\n•\tPersistence: Persistence (yes/no), Cadence (yes/no), Cadence_Priority (int; default 0 if cadence=yes)\n•\tActivation: Trigger_Event (1–3 phrases)\n•\tInputs/Gates: Inputs, Hard_Gates\n•\tResolution: Resolution_Method\no\tRandomizer allowed only if Cadence PE defines it; otherwise mark “requires player delegation at runtime”.\n•\tEffects: Outputs, State_Updates, Clock_Cascades (existing clocks only), Run_Cap_Notes, Failure_Safes, Audit_Notes\nBoundaries (HARD):\n•\tNo canon invention; no new named NPC/faction/Zone as facts.\n•\tNo clocks created inside PE-DEF.\n•\tRespect registry immutability once registered.\nOutput (HARD):\n•\tEmit one full PE-DEF in exact template order; then STOP.",
+          "zone_atmosphere": "The Black Fortress. Seat of the Helkar. The Dragon Throne. Thoron cleared the great rock pillar on Evernew 9th, 14501 — Lithoe killed a family of giant lizards with Fireball so they could build on it — and Vornost was completed Grismere 19th, 14503, the last and greatest structure of the founding. It dominates the Sighing Swamps physically and symbolically. The low stairs descend into the marsh. Dragon-Skull Gate opens onto the Grey Plains — and it remains closed to Thoron until all five companions have rejoined him and they ride through together. Castellan Joppa holds it, trim and officious, preparing the Black Fortress for a return he's confirmed from a patrol report. Kael Dravorn and the commandos wait for orders. Vornost is the endgame — the seat of power Thoron built and cannot yet enter."
+        }
+      },
+      "constraints": {
+        "max_words": 200,
+        "tone": "sword_and_sorcery",
+        "style": "Compressed prose. Inspirations: Elric, Conan, Dark Crystal, Krull, Willow, LotR.",
+        "voice": "Second person present tense. The player IS the character. 'You stand at the gate' not 'Thoron stood at the gate'. Never use the PC name as subject.",
+        "instruction": "Design one persistent procedural engine (PE-DEF). Return a state_change with type 'pe_create'. Required fields: engine_name, version (e.g. '1.0'), authority_tier (ZONE-LOCAL|GLOBAL), registry_target (CSEM|SSM_1A|NSV_DELTA_REGISTRY), zone_scope, state_scope, cadence (true/false), trigger_event (1-3 phrases), hard_gates (list of strings), resolution_method, run_cap_per_day (int, default 1). Optional: randomizer, linked_clocks (list of existing clock names). No canon invention. No clocks created inside PE-DEF. Respect registry immutability."
+      }
+    },
+    {
+      "id": "cr_003",
       "type": "CAN_FORGE",
       "context": {
         "zone": "Vornost",
@@ -250,6 +302,7 @@
           "threat_level": "low"
         },
         "trigger": "zone-forge",
+        "mode": "ZONE-FORGE",
         "existing_npcs_in_zone": [
           {
             "name": "Valania Lorethor",
@@ -654,7 +707,7 @@
         ],
         "next_ua_code": "UA-12",
         "pc_zone": "Vornost",
-        "session_id": 13,
+        "session_id": 14,
         "season": "Spring",
         "lore": {
           "forge_spec": "CAN-FORGE\n1 Trigger: CAN-FORGE\n1.1 Caller = ZONE-FORGE/THREAT-SCAN/PLAYER-INVOKED\n1.2 If PLAYER-INVOKED →  2.0; else → 3.0\n\n2.0 PLAYER-INVOKED FULL MODE\n2.1 Run FAC-FORGE and create 1 new Faction for Current_Zone.\n2.2 Run NPC-FORGE and create 1 new_named_npc for Current_Zone\n2.3 Run CL-FORGE and create 1d2 new clocks for Current_Zone\n2.4 Run EL-FORGE and create 1 EL for Current_Zone\n2.5 Run PE-FORGE and create 1 PE for Current_Zone\n2.6 Run UA-FORGE and create 1 UA for Current_Zone\n\n3.0 DISCOVERIES AND THREADS\n3.1 Agent creates 1 new DISCOVERY in Current_Zone\n3.2 Agent creates 1 new UNRESOLVED_THREAD in Current_Zone\n\n4.0 STRUCTURED INPUT MODE (when Caller = ZONE-FORGE/THREAT-SCAN):\n4.1 Required: Zone_Scope (which Zone to populate)\n4.2 Fixed (non-overrideable):\n4.2.1 Output_Mode: ZONE-FORGE\n4.2.2 Visibility_Policy: secret\n4.2.3 PC_Targeting: forbidden\n\n5 INPUT PROTOCOL:\n5.1 Player: ask Zone_Scope, Visibility_Policy, Output_Mode. If missing, STOP.\n5.2 CAN-FORGE-AUTO: UA-only mode, secret, PC_Targeting forbidden, Zone auto.\n5.3 ZONE-FORGE: Zone_Scope in structured input, ZONE-FORGE mode fixed, secret, PC_Targeting forbidden.\n\n6 CAN-FORGE.AUTHORITY (HARD)\n6.1 CAN-FORGE may create JSON save inserts only:\n6.1.1 UA codes\n6.1.2 clocks\n6.1.3 unresolved threads\n6.1.4 discoveries\n6.1.5 optional EL-DEF / PE-DEF blocks (registry inserts)\n6.2 CAN-FORGE MUST NOT:\n6.2.1 resolve AGENCY ACTIONS\n6.2.2 advance time\n6.2.3advance clocks (new clocks start at 0 unless player authorises 1)\n\n7 CAN-FORGE.OWNERSHIP GATES (HARD)\n7.1 If output would create a named NPC → NPC-FORGE required (or NPC-FORGE-AUTO if delegated)\n7.2 If output would create a new faction → FAC-FORGE required (or FAC-FORGE-AUTO if delegated)\n7.3 UA-only mode may create UA codes without NPC-FORGE/FAC-FORGE (UA rules still apply)\n\n8 CAN-FORGE.CAPS (by Output_Mode):\n8.1 UA-only mode:\n8.1.1 new_UA_codes: 1\n8.1.2 new_discoveries: 1 (UA anchor only)\n8.1.4 new unresolved_threads: 1\n8.1.4 All other caps: 0\n\n9 ZONE-FORGE mode:\n9.1 new_UA_codes: 1\n9.2 new_clocks: 1 (owner = the UA just created, or environment)\n9.3 new_discoveries: 1\n9.4 All other caps: 0\n\n10 Full mode (defaults unless player authorises more):\n10.1 new_factions: 1\n10.2 new_named_npcs: 1 (requires NPC-FORGE path)\n10.3 new_clocks: 1d2\n10.4 new_EL_DEF: 1\n10.5 new_PE_DEF: 1\n10.6 Plus: UA codes, discoveries, threads as needed within above caps\n\n11 CAN-FORGE.AUTO\n11.1 Permitted only if session delegation exists (CAN-FORGE-AUTO) AND anti-overlap satisfied AND cooldown satisfied.\n11.2 Auto params fixed:\n11.2.1 Output_Mode: UA-only (creates UA codes only, no clocks/threads/EL/PE)\n11.2.2 Visibility_Policy: secret\n11.3.3 PC_Targeting: forbidden\n11.3.4 ZONE-FORGE does not use CAN-FORGE-AUTO. It invokes CAN-FORGE directly via structured caller path with Output_Mode = ZONE-FORGE.\n\n12 CAN-FORGE.REGISTRY WRITING (HARD)\n12.1 Any EL-DEF/PE-DEF created by CAN-FORGE MUST be emitted as save-ready registry inserts:\n12.2 ENCOUNTER_LISTS_REGISTRY (EL-DEF)\n12.3 PROCEDURAL_ENGINE_DEFS_REGISTRY (PE-DEF)\n12.4 Registry immutability: once registered, redefine only under UBER.\n\n13 CAN-FORGE.OUTPUT SHAPE (HARD)\n13.1 CAN-FORGE outputs ONLY save-ready inserts, limited to these sections:\n13.1.1 DISCOVERIES (mandatory)\n13.1.2 CLOCKS & PRESSURE (if clocks created)\n13.1.3 UNRESOLVED_THREADS (if durable stakes created)\n13.1.4 ENCOUNTER_LISTS_REGISTRY (if EL-DEF created)\n13.1.5 PROCEDURAL_ENGINE_DEFS_REGISTRY (if PE-DEF created)\n13.1.6 PROCEDURAL_ENGINES_ACTIVE (only if created PE is declared active now)\n13.1.7 JSON save npcs section (only if NPC-FORGE run)\n13.1.8 JSON save factions section (only if FAC-FORGE run)\n13.1.9 ADJUDICATION_LOG (mandatory: record trigger, scope, mode, caps used; cold-state proof if auto)\n13.2 No narration/prose inside inserts.",
@@ -662,20 +715,103 @@
         }
       },
       "constraints": {
-        "max_words": 500,
+        "max_words": 300,
         "tone": "sword_and_sorcery",
         "style": "Compressed prose. Inspirations: Elric, Conan, Dark Crystal, Krull, Willow, LotR.",
         "voice": "Second person present tense. The player IS the character. 'You stand at the gate' not 'Thoron stood at the gate'. Never use the PC name as subject.",
-        "instruction": "Canonicalize this zone. Player-invoked full mode. Return MULTIPLE state_changes (all required unless noted): 1) faction_create — 1 new faction for this zone. 2) npc_create — 1 new named NPC for this zone (with BX stats). 3) clock_create — 1-2 new clocks (owners must be existing entities). 4) el_create — 1 encounter list for this zone (6 entries with range/prompt). 5) pe_create — 1 persistent procedural engine for this zone. 6) ua_create — 1 Unknown Actor (use ua_id 'UA-12'). 7) discovery_create — 1 discovery (MANDATORY, can serve as UA anchor). 8) thread_create — 1 unresolved thread (if durable stakes introduced). CAN-FORGE outputs ONLY save-ready inserts. No narration, no prose, no scenes, no AGENCY ACTIONS. New clocks start at 0. No canon invention."
+        "mode": "ZONE-FORGE",
+        "visibility": "secret",
+        "pc_targeting": "forbidden",
+        "caps": {
+          "new_ua_codes": 1,
+          "new_clocks": 1,
+          "new_discoveries": 1,
+          "new_factions": 0,
+          "new_npcs": 0,
+          "new_el_def": 0,
+          "new_pe_def": 0
+        },
+        "instruction": "ZONE-FORGE mode. Create ONLY the following state_changes: 1) ua_create — 1 Unknown Actor (use ua_id 'UA-12'). 2) clock_create — 1 clock (owner = new UA or environment). 3) discovery_create — 1 discovery (MANDATORY). Do NOT create: faction, NPC, encounter list, or procedural engine. CAN-FORGE outputs ONLY save-ready inserts. No narration, no prose, no scenes, no AGENCY ACTIONS. New clocks start at 0. No canon invention."
+      }
+    },
+    {
+      "id": "cr_004",
+      "type": "NARR_SESSION_START",
+      "context": {
+        "zone": {
+          "zone_name": "Vornost",
+          "description": "",
+          "threat_level": "low",
+          "controlling_faction": "Nation of Gammaria"
+        },
+        "session_id": 14,
+        "in_game_date": "1 Evernew",
+        "season": "Spring",
+        "seasonal_pressure": "Feed & Seed — food stores depleted; planting season critical",
+        "companions_with_pc": [
+          {
+            "name": "Valania Lorethor",
+            "trait": "cunning, vivacious",
+            "status": "active"
+          }
+        ],
+        "npcs_in_zone": [
+          {
+            "name": "Castellan Joppa",
+            "role": "Castellan",
+            "trait": "steady, perceptive"
+          },
+          {
+            "name": "Kael Dravorn",
+            "role": "Commando captain",
+            "trait": "ready, disciplined"
+          },
+          {
+            "name": "Crandurth",
+            "role": "Thoron's sword / advisor / dark conscience",
+            "trait": "morbid, curious, selfish, pragmatic, battle-joyful"
+          },
+          {
+            "name": "Oskar",
+            "role": "Commando, founding-era veteran",
+            "trait": "observant, steady, loyal, troll-scarred"
+          }
+        ],
+        "active_threads": [
+          {
+            "id": "UT-torlec-imperial-strategy-01",
+            "description": "Hypothesis: Torlec orchestrating Conorth (garrison hoarding), Vargol (stewardship), Golden Hind (economic leverage) as coordinated imperial destabilization. Valania's agent investigating. Guldur's Seawatch intelligence needed."
+          },
+          {
+            "id": "UT-ringur-retrieval-01",
+            "description": "Concern that Vargol may have retrieved Ringur from Well of Time on Parandia. Valania deploying intelligence network. If confirmed, changes entire nature of succession conflict — soul-drinking sword vs Crandurth."
+          },
+          {
+            "id": "UT-valania-caras-intelligence-01",
+            "description": "Valania's agent in Caras redirected from trade flow monitoring to full intelligence: Conorth's meetings, secretary's contacts, Golden Hind factor activity, grain/cattle flows out of borders. Results expected before Lalholm arrives (2-3 days)."
+          }
+        ],
+        "previous_session_summary": "",
+        "lore": {
+          "zone_atmosphere": "The Black Fortress. Seat of the Helkar. The Dragon Throne. Thoron cleared the great rock pillar on Evernew 9th, 14501 — Lithoe killed a family of giant lizards with Fireball so they could build on it — and Vornost was completed Grismere 19th, 14503, the last and greatest structure of the founding. It dominates the Sighing Swamps physically and symbolically. The low stairs descend into the marsh. Dragon-Skull Gate opens onto the Grey Plains — and it remains closed to Thoron until all five companions have rejoined him and they ride through together. Castellan Joppa holds it, trim and officious, preparing the Black Fortress for a return he's confirmed from a patrol report. Kael Dravorn and the commandos wait for orders. Vornost is the endgame — the seat of power Thoron built and cannot yet enter.",
+          "npc:Valania Lorethor": "SUMMARY: Half-elf assassin. Thoron's great love. Spymistress of Gammaria. The woman who built a king and knows exactly what he's made of.\n\nAPPEARANCE: Long dark hair, dark eyes, beautiful, shapely. Carries Gardurth, sister-sword to Thoron's Crandurth. Wears revealing leather armour — this is not vanity but professional practice; people look where she wants them to look. The Ace of Spades on her armband marked her as an assassin when Morgil first met her; she has never bothered to hide what she is from those sharp enough to read the signs.\n\nVOICE & MANNER: Cunning, vivacious, mischievous. Valania is the most socially intelligent person in any room she enters. She reads people the way Lithoe reads spellbooks — with total absorption and absolute retention. Her humour is dry, warm, and slightly dangerous. She teases Thoron with the confidence of a woman who knows she is loved and does not need to prove it. With others she is charming, attentive, and precisely calibrated — she gives each person exactly the version of herself that will be most useful. This is not deception in the way Thoron deceived Merokan. It is craft. Valania believes unity is strength, and she shapes unity through understanding.\n\nShe is Lawful Evil — not in the sense of cruelty, but in the sense of absolute commitment to a structure she has chosen. That structure is Thoron's kingdom and Thoron's cause. Within that structure she will do anything. Outside it she has no loyalties at all.\n\nORIGIN — DYRN ETH MAL: Valania was born in Dyrn eth Mal on Xanthia, the City of the Wise. Her mother was Alda Suza, a prostitute who worked the seedy Old Temple district. Her father was Vallas Lorethor, an elven trader. Vallas and Alda had a series of encounters over one summer — Valania was the result.\n\nShe grew up in poverty, surrounded by pimps, prostitutes, thugs, and johns. And as a half-elf, her childhood lasted far longer than any human's. Her human half-sister Elendia grew to adulthood and beyond. Alda died of old age. Valania was still maturing. But during that extended childhood she learned twice as much as any human could. By thirty, she already knew half a dozen ways to kill a man.\n\nThis is the foundation of everything Valania is. She didn't learn to read people in an academy or a court. She learned it in the Old Temple district, watching her mother's clients, reading the difference between the ones who would pay and leave and the ones who would hurt someone. She learned what men want, what they'll do to get it, and how to position yourself so that their wanting serves your purposes instead of theirs. The vivacious charm, the precise calibration, the ability to give each person exactly the version of herself they need — all of it was survival skill before it was tradecraft.\n\nTHE BANNERS: It was only natural that the Banners — Dyrn eth Mal's shadowy rogues' guild — would take her in as one of their own. Valania rose through the ranks, turning natural aptitudes and learned skills to the task of murder with startling efficiency. Years spent maturing in the underbelly of the City of the Wise had honed her mind. She went from fresh recruit to senior assassin in three years. The Ace of Spades was her calling card.\n[...truncated]"
+        }
+      },
+      "constraints": {
+        "max_words": 400,
+        "tone": "sword_and_sorcery",
+        "style": "Compressed prose. Inspirations: Elric, Conan, Dark Crystal, Krull, Willow, LotR.",
+        "voice": "Second person present tense. The player IS the character. 'You stand at the gate' not 'Thoron stood at the gate'. Never use the PC name as subject.",
+        "instruction": "Set the opening scene for this session. Establish where the PC is, the zone atmosphere, who is present (companions and notable NPCs), and weave in the active threads as stakes the player can feel. This is the first thing the player reads — set tone, ground them in the world, and give them something to react to. Do NOT advance time, resolve encounters, or trigger mechanical gates."
       }
     }
   ],
   "state_summary": {
-    "session_id": 13,
-    "date": "2 Evernew",
+    "session_id": 14,
+    "date": "1 Evernew",
     "zone": "Vornost",
     "season": "Spring"
   },
   "day_logs": [],
-  "timestamp": "2026-02-21T23:47:38.130954"
+  "timestamp": "2026-02-22T09:14:26.720507"
 }

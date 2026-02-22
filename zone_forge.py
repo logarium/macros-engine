@@ -43,13 +43,18 @@ def _roll_starting_zone(state) -> str:
 
 
 def _with_pc_cohesion(state, zone_name: str) -> list:
-    """1.3 — Move all with_pc NPCs to the PC's zone. Returns list of move descriptions."""
+    """1.3 — Move with_pc companions to the PC's zone.
+    Non-companions with with_pc=true stay put and get with_pc cleared."""
     moved = []
     for npc in state.npcs.values():
         if npc.with_pc and npc.zone != zone_name:
-            old_zone = npc.zone or "(none)"
-            npc.zone = zone_name
-            moved.append(f"{npc.name}: {old_zone} -> {zone_name}")
+            if npc.is_companion:
+                old_zone = npc.zone or "(none)"
+                npc.zone = zone_name
+                moved.append(f"{npc.name}: {old_zone} -> {zone_name}")
+            else:
+                npc.with_pc = False
+                moved.append(f"{npc.name}: with_pc cleared (not companion)")
     return moved
 
 

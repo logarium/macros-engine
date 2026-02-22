@@ -295,11 +295,21 @@ ENGINE_RUNNERS = {
 
 def advance_cadence_clocks(state: GameState) -> list:
     """
-    Advance all clocks tagged as cadence (auto-advance each day).
-    E.g., Binding Degradation "Decay" bullet.
+    Advance cadence clocks. Only auto-advance if cadence_bullet is set
+    (e.g. "Decay"). If cadence_bullet is empty, the clock is merely
+    eligible for audit review — it does NOT auto-tick.
     """
     results = []
     for clock in state.cadence_clocks():
+        if not clock.cadence_bullet:
+            # No cadence_bullet → audit-eligible only, not auto-advance
+            results.append({
+                "clock": clock.name,
+                "action": "cadence_eligible_for_audit",
+                "reason": "Cadence PE active — clock eligible for audit, "
+                          "not auto-advanced (cadence_bullet is empty)",
+            })
+            continue
         if clock.can_advance():
             result = clock.advance(
                 reason=f"Cadence: {clock.cadence_bullet}",

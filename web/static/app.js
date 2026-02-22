@@ -1234,22 +1234,33 @@ function renderFooter() {
 
 // ─── ACTIONS ───
 
+let _travelPending = false;
+
 async function doTravel(destination) {
+    if (_travelPending) return; // prevent double-fire
+    _travelPending = true;
+
     // Disable CP buttons during travel
     document.querySelectorAll('.cp-btn').forEach(b => b.disabled = true);
 
-    const resp = await fetch('/api/travel', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ destination }),
-    });
-    const result = await resp.json();
+    try {
+        const resp = await fetch('/api/travel', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ destination }),
+        });
+        const result = await resp.json();
 
-    if (!result.success) {
-        showToast('Travel failed: ' + (result.error || 'unknown error'), 'error');
-        document.querySelectorAll('.cp-btn').forEach(b => b.disabled = false);
+        if (!result.success) {
+            showToast('Travel failed: ' + (result.error || 'unknown error'), 'error');
+            document.querySelectorAll('.cp-btn').forEach(b => b.disabled = false);
+        }
+        // State update will come via WebSocket
+    } catch (e) {
+        showToast('Travel error: ' + e.message, 'error');
+    } finally {
+        _travelPending = false;
     }
-    // State update will come via WebSocket
 }
 
 async function saveGame() {
