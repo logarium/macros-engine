@@ -523,46 +523,20 @@ class GameLoop:
 
         # Extract narration and handle special response types
         for resp in responses:
-            if resp.content and resp.type.startswith("NARR_"):
+            # All responses with content display in the chat window
+            if resp.content and resp.type != "SESSION_SUMMARY":
+                display_type = resp.type
+                if resp.type == "PLAYER_INPUT":
+                    display_type = "NARR_PLAYER_RESPONSE"
                 self.narration_buffer.append({
-                    "type": resp.type,
+                    "type": display_type,
                     "text": resp.content,
                     "timestamp": datetime.now().isoformat(),
                 })
                 if self._on_narration:
-                    self._on_narration(resp.type, resp.content)
+                    self._on_narration(display_type, resp.content)
 
-            elif resp.type == "RUMOR" and resp.content:
-                # DG-22: Display rumor as narration
-                self.narration_buffer.append({
-                    "type": "RUMOR",
-                    "text": resp.content,
-                    "timestamp": datetime.now().isoformat(),
-                })
-                if self._on_narration:
-                    self._on_narration("RUMOR", resp.content)
-
-            elif resp.type == "NPAG" and resp.content:
-                # NPAG results display in chat panel per spec
-                self.narration_buffer.append({
-                    "type": "NPAG",
-                    "text": resp.content,
-                    "timestamp": datetime.now().isoformat(),
-                })
-                if self._on_narration:
-                    self._on_narration("NPAG", resp.content)
-
-            elif resp.type == "PLAYER_INPUT" and resp.content:
-                # Engine Chat: Display Claude's response to player intent
-                self.narration_buffer.append({
-                    "type": "NARR_PLAYER_RESPONSE",
-                    "text": resp.content,
-                    "timestamp": datetime.now().isoformat(),
-                })
-                if self._on_narration:
-                    self._on_narration("NARR_PLAYER_RESPONSE", resp.content)
-
-            elif resp.type == "SESSION_SUMMARY" and resp.content:
+            if resp.type == "SESSION_SUMMARY" and resp.content:
                 # Store session summary (DG-19 ENDS)
                 sid_str = str(self.state.session_id)
                 self.state.session_summaries[sid_str] = resp.content

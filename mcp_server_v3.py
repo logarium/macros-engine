@@ -351,11 +351,20 @@ def apply_llm_judgments(response_json: str) -> str:
 
     entries = apply_response(state, response)
 
+    # Collect full content from responses to display
+    full_content_blocks = []
+    for resp in response.get("responses", []):
+        if resp.get("content", "").strip():
+            full_content_blocks.append({
+                "type": resp.get("type", "UNKNOWN"),
+                "content": resp["content"],
+            })
+
     output = ["═══ LLM JUDGMENTS APPLIED ═══"]
     for e in entries:
         if "content_preview" in e:
-            output.append(f"  🤖 [{e['type']}] {e['content_preview']}")
-            state.log({"type": "LLM_JUDGMENT", "subtype": e["type"], "detail": e["content_preview"][:120]})
+            output.append(f"  [{e['type']}] applied")
+            state.log({"type": "LLM_JUDGMENT", "subtype": e["type"], "detail": e.get("content_preview", "")[:120]})
         elif e.get("applied") == "clock_advance":
             r = e["result"]
             output.append(f"    → {r['clock']}: {r['old']}→{r['new']}")
@@ -374,8 +383,15 @@ def apply_llm_judgments(response_json: str) -> str:
     _pending_llm_requests = []
     _day_logs = []
     _clear_pending_file()
-    output.append("  ✅ Applied.")
     _auto_save(state)
+
+    # Display all creative content (narration, NPAG, forges, etc.)
+    if full_content_blocks:
+        output.append("")
+        for block in full_content_blocks:
+            output.append(f"--- {block['type']} ---")
+            output.append(block["content"])
+            output.append("")
 
     # Forward response to web UI game server (if running)
     try:
@@ -1986,7 +2002,11 @@ def zone_forge(zone_name: str = "", session_start: bool = False) -> str:
 
     forge_requests = result.get("forge_requests", [])
     if forge_requests:
-        _pending_llm_requests.extend(forge_requests)
+        # Serialize CreativeRequest objects to dicts for the pending queue
+        _pending_llm_requests.extend(
+            req.to_dict() if hasattr(req, 'to_dict') else req
+            for req in forge_requests
+        )
         _day_logs.append({
             "step": "zone_forge",
             "zone": zone_name,
