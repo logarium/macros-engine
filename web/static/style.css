@@ -307,6 +307,7 @@ body {
     font-size: 14px;
 }
 
+.narration-entry.NARR_SESSION_START { border-left-color: var(--gold); }
 .narration-entry.NARR_ARRIVAL { border-left-color: var(--gold); }
 .narration-entry.NARR_ENCOUNTER { border-left-color: var(--red); }
 .narration-entry.NARR_COMBAT_END { border-left-color: var(--orange); }

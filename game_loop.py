@@ -116,6 +116,39 @@ class GameLoop:
         except Exception:
             pass
 
+    def _response_file_path(self) -> str:
+        data_dir = getattr(self, "_data_dir",
+                           os.path.join(os.path.dirname(os.path.abspath(__file__)), "data"))
+        return os.path.join(data_dir, "creative_response.json")
+
+    def check_response_file(self) -> dict:
+        """
+        Check for a creative response file written by the MCP server.
+        This is the fallback path when the HTTP forward from MCP fails.
+        Returns result dict with success/skipped/error.
+        """
+        if self.phase != GamePhase.AWAIT_CREATIVE:
+            return {"skipped": True, "reason": "not awaiting creative"}
+
+        path = self._response_file_path()
+        if not os.path.exists(path):
+            return {"skipped": True, "reason": "no response file"}
+
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                response_json = f.read()
+            # Process the response through the normal path
+            result = self.receive_creative_response(response_json)
+            # Remove the file after processing
+            try:
+                os.remove(path)
+            except Exception:
+                pass
+            return result
+        except Exception as e:
+            self._log_action("ERROR", f"Response file pickup failed: {e}")
+            return {"success": False, "error": str(e)}
+
     # ─────────────────────────────────────────────────
     # PLAYER INPUT (Engine Chat — creative queue)
     # ─────────────────────────────────────────────────

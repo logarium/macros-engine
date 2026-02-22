@@ -341,6 +341,23 @@ async def trigger_forge(request: Request):
     return JSONResponse(result)
 
 
+@app.get("/api/creative/check_response")
+async def check_creative_response():
+    """
+    Poll endpoint: check if the MCP server has written a response file.
+    Called by the web UI when waiting for Claude to process requests.
+    This is the fallback path when the HTTP forward from MCP fails.
+    """
+    result = game.check_response_file()
+    if result.get("success"):
+        state_data = game.get_full_state()
+        await manager.broadcast("state_update", state_data)
+        await manager.broadcast("creative_resolved", {
+            "responses_applied": result.get("responses_applied", 0),
+        })
+    return JSONResponse(result)
+
+
 # Also accept raw JSON body (for flexibility)
 @app.post("/api/creative/submit_raw")
 async def submit_creative_response_raw(request: Request):

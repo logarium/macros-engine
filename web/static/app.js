@@ -242,6 +242,8 @@ async function doStartCombat(npcName) {
     }
 }
 
+let _responsePollTimer = null;
+
 function showWaiting(count, types) {
     const overlay = document.getElementById('waiting-overlay');
     overlay.classList.add('active');
@@ -249,13 +251,40 @@ function showWaiting(count, types) {
         `Waiting for Claude... (${count || '?'} requests)`;
     document.getElementById('waiting-sub').textContent =
         'Open Claude Desktop and process pending creative requests';
+    // Start polling for response file (fallback when MCP forward fails)
+    startResponsePolling();
 }
 
 function hideWaiting() {
     document.getElementById('waiting-overlay').classList.remove('active');
     document.getElementById('cp-area').style.display = 'block';
+    stopResponsePolling();
     // Refresh state
     fetchState();
+}
+
+function startResponsePolling() {
+    if (_responsePollTimer) return; // already polling
+    _responsePollTimer = setInterval(async () => {
+        try {
+            const resp = await fetch('/api/creative/check_response');
+            const result = await resp.json();
+            if (result.success) {
+                // Response was picked up from file — stop polling
+                stopResponsePolling();
+                // state_update and creative_resolved come via WebSocket broadcast
+            }
+        } catch (e) {
+            // ignore — server might be busy
+        }
+    }, 3000);
+}
+
+function stopResponsePolling() {
+    if (_responsePollTimer) {
+        clearInterval(_responsePollTimer);
+        _responsePollTimer = null;
+    }
 }
 
 function addNarration(type, text) {

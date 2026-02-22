@@ -115,6 +115,18 @@ def _pending_file_path() -> str:
     return os.path.join(ENGINE_DIR, "data", "pending_creative.json")
 
 
+def _response_file_path() -> str:
+    return os.path.join(ENGINE_DIR, "data", "creative_response.json")
+
+
+def _write_response_file(response_json: str):
+    """Write processed response to shared file for web server pickup."""
+    path = _response_file_path()
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(response_json)
+
+
 def _read_pending_file() -> list:
     """Read pending creative requests from shared file (written by GUI)."""
     path = _pending_file_path()
@@ -400,7 +412,13 @@ def apply_llm_judgments(response_json: str) -> str:
             output.append(block["content"])
             output.append("")
 
-    # Forward response to web UI game server (if running)
+    # Write response to shared file for web server pickup (reliable path)
+    try:
+        _write_response_file(response_json)
+    except Exception as e:
+        output.append(f"  WARNING: Failed to write response file: {e}")
+
+    # Also try direct HTTP forward (best-effort, faster path)
     try:
         import urllib.request
         fwd_req = urllib.request.Request(
@@ -409,11 +427,18 @@ def apply_llm_judgments(response_json: str) -> str:
             method="POST",
         )
         fwd_req.add_header("Content-Type", "application/json")
-        with urllib.request.urlopen(fwd_req, timeout=5) as resp:
+        with urllib.request.urlopen(fwd_req, timeout=10) as resp:
             resp.read()
         output.append("  -> Forwarded to web UI.")
-    except Exception:
-        pass  # Web server not running — that's fine
+        # Remove response file since forward succeeded
+        try:
+            rpath = _response_file_path()
+            if os.path.exists(rpath):
+                os.remove(rpath)
+        except Exception:
+            pass
+    except Exception as e:
+        output.append(f"  -> Web UI forward failed ({e}) — response file written for pickup.")
 
     return "\n".join(output)
 
